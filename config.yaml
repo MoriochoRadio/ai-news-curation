@@ -1,0 +1,19 @@
+topics:
+  - "AI agents"
+  - "LLM reasoning"
+  - "multimodal models"
+  - "open source AI"
+  - "Rust in AI tooling"
+  - "AI safety"
+
+sources:
+  - "Google News"
+  - "HackerNews"
+  - "Reddit r/MachineLearning"
+  - "GitHub Trending"
+  - "ArXiv recent papers"
+
+output:
+  format: "markdown"
+  path: "daily"
+  index: "README.md"
