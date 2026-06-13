@@ -7,7 +7,7 @@
   <style>
     :root {
       color-scheme: light;
-      --bg: #f7f8fb;
+      --bg: #f6f8fb;
       --panel: #ffffff;
       --text: #1f2328;
       --text-secondary: #4a5568;
@@ -18,6 +18,7 @@
       --marker-paper: #8250df;
       --marker-tool: #3fb950;
       --marker-insight: #9a6700;
+      --shadow: 0 2px 6px rgba(17, 22, 26, 0.04);
     }
 
     * {
@@ -43,57 +44,67 @@
     }
 
     .page {
-      max-width: 920px;
+      max-width: 960px;
       margin: 0 auto;
-      padding: 40px 20px 80px;
+      padding: 36px 20px 72px;
     }
 
     .header {
-      margin-bottom: 32px;
+      margin-bottom: 28px;
     }
     .header h1 {
       margin: 0 0 6px;
-      font-size: 28px;
+      font-size: 26px;
     }
     .header p {
       margin: 0;
       color: var(--text-secondary);
       font-size: 14px;
     }
+    .header .meta {
+      margin-top: 6px;
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
 
     .summary {
       background: var(--panel);
       border: 1px solid var(--border);
       border-radius: 12px;
-      padding: 18px 20px 16px;
-      margin-bottom: 26px;
-      box-shadow: 0 2px 6px rgba(17, 22, 26, 0.04);
+      padding: 16px 18px 14px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow);
     }
     .summary-title {
-      font-size: 13px;
+      margin: 0 0 8px;
+      font-size: 12px;
       font-weight: 700;
-      letter-spacing: 0.2px;
+      letter-spacing: 0.15px;
       text-transform: uppercase;
       color: var(--text-secondary);
-      margin: 0 0 10px;
     }
     .summary-list {
       margin: 0;
       padding-left: 18px;
     }
     .summary-list li {
-      margin: 6px 0;
+      margin: 5px 0;
+    }
+    .summary-link {
+      margin-top: 10px;
+      font-size: 13px;
+      color: var(--text-secondary);
     }
 
     .section {
-      margin: 22px 0 28px;
+      margin: 20px 0 26px;
     }
     .section-title {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      margin: 0 0 14px;
-      font-size: 16px;
+      margin: 0 0 12px;
+      font-size: 15px;
     }
     .dot {
       width: 8px;
@@ -117,7 +128,7 @@
     .card-list {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 14px;
+      gap: 12px;
     }
     .card {
       background: var(--panel);
@@ -189,6 +200,12 @@
       font-size: 12px;
       color: var(--text-secondary);
     }
+
+    .status {
+      margin-top: 8px;
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
   </style>
 </head>
 <body>
@@ -196,17 +213,19 @@
     <header class="header">
       <h1>Daily AI News Curation</h1>
       <p>AI 뉴스, 논문, 도구, 인사이트를 매일 자동으로 정리합니다.</p>
+      <p class="meta">
+        <span id="date-label"></span>
+        <span class="status" id="status"></span>
+      </p>
     </header>
 
     <section class="summary" id="today">
       <h2 class="summary-title">오늘의 핵심</h2>
-      <ul class="summary-list">
-        <li>에이전틱 AI 연구·산업 적용이 가속화되고 있습니다.</li>
-        <li>LLM 추론 강화 기법이 소형 모델 성능 개선의 핵심으로 떠오릅니다.</li>
-        <li>오픈소스 생태계가 운영·배포 인프라로 성숙하고 있습니다.</li>
+      <ul class="summary-list" id="summary-list">
+        <li>오늘의 큐레이션을 불러오는 중입니다...</li>
       </ul>
-      <p style="margin: 12px 0 0; font-size: 13px; color: var(--text-secondary);">
-        상세 큐레이션: <a href="daily/2026-06-13.md">2026-06-13</a>
+      <p class="summary-link">
+        상세 보기: <a id="detail-link" href="#" target="_blank">daily/YYYY-MM-DD.md</a>
       </p>
     </section>
 
@@ -215,51 +234,10 @@
         <span class="dot dot-top" aria-hidden="true"></span>
         Trending
       </h2>
-      <div class="card-list">
-        <article class="card">
-          <h3 class="card-title">
-            <a href="https://www.science.org/content/article/ai-algorithms-can-become-agents-chaos" target="_blank" rel="noopener">
-              AI 알고리즘이 '혼돈의 대리인'이 될 수 있다
-            </a>
-          </h3>
-          <p class="card-meta">Science · 자율 AI 시스템의 예측 불가능성과 연쇄 실패 위험</p>
-        </article>
-
-        <article class="card">
-          <h3 class="card-title">
-            <a href="https://www.nature.com/articles/d41586-026-01596-4" target="_blank" rel="noopener">
-              Teams of AI agents boost speed of research
-            </a>
-          </h3>
-          <p class="card-meta">Nature · 다중 AI 에이전트 협업이 연구 속도를 높이는 사례</p>
-        </article>
-
-        <article class="card">
-          <h3 class="card-title">
-            <a href="https://www.nature.com/articles/d41586-025-03246-7" target="_blank" rel="noopener">
-              How AI agents will change research
-            </a>
-          </h3>
-          <p class="card-meta">Nature · 연구자 대상 AI 에이전트 도입 실용 가이드</p>
-        </article>
-
-        <article class="card">
-          <h3 class="card-title">
-            <a href="https://www.science.org/doi/10.1126/science.aeg1895" target="_blank" rel="noopener">
-              Agentic AI and the next intelligence explosion
-            </a>
-          </h3>
-          <p class="card-meta">Science · 자율 목표 추구형 AI의 전망</p>
-        </article>
-
-        <article class="card">
-          <h3 class="card-title">
-            <a href="https://spectrum.ieee.org/tag/ai-agents" target="_blank" rel="noopener">
-              AI agents News & Articles
-            </a>
-          </h3>
-          <p class="card-meta">IEEE Spectrum · AI 에이전트 기술·산업 동향 모음</p>
-        </article>
+      <div class="card-list" id="trending-list">
+        <div class="card">
+          <p>아직 표시할 내용이 없습니다.</p>
+        </div>
       </div>
     </section>
 
@@ -268,51 +246,10 @@
         <span class="dot dot-paper" aria-hidden="true"></span>
         Papers
       </h2>
-      <div class="item-list">
-        <article class="item">
-          <h3 class="item-title">
-            <a href="https://arxiv.org/abs/2506.08379" target="_blank" rel="noopener">
-              Reinforce LLM Reasoning through Multi-Agent Reflection
-            </a>
-          </h3>
-          <p class="item-desc">다중 에이전트 반성 메커니즘으로 추론 품질을 개선하는 연구.</p>
-        </article>
-
-        <article class="item">
-          <h3 class="item-title">
-            <a href="https://arxiv.org/abs/2501.09686" target="_blank" rel="noopener">
-              A Survey of Reinforced Reasoning with Large Language Models
-            </a>
-          </h3>
-          <p class="item-desc">RLHF, RLAIF, 자기 개선 등 추론 강화 기법 정리.</p>
-        </article>
-
-        <article class="item">
-          <h3 class="item-title">
-            <a href="https://github.com/RUCAIBox/Slow_Thinking_with_LLMs" target="_blank" rel="noopener">
-              STILL: Slow Thinking with LLMs
-            </a>
-          </h3>
-          <p class="item-desc">시스템 2 사고를 LLM에 적용하는 프레임워크.</p>
-        </article>
-
-        <article class="item">
-          <h3 class="item-title">
-            <a href="https://github.com/YangLing0818/SuperCorrect-llm" target="_blank" rel="noopener">
-              [ICLR 2025] SuperCorrect
-            </a>
-          </h3>
-          <p class="item-desc">소형 LLM의 추론 능력을 대형 모델 지식으로 보정.</p>
-        </article>
-
-        <article class="item">
-          <h3 class="item-title">
-            <a href="https://www.nature.com/articles/s41467-025-64769-1" target="_blank" rel="noopener">
-              Quantifying the reasoning abilities of LLMs on clinical cases
-            </a>
-          </h3>
-          <p class="item-desc">실제 임상 기반 LLM 추론 정량 평가.</p>
-        </article>
+      <div class="item-list" id="papers-list">
+        <div class="item">
+          <p>아직 표시할 내용이 없습니다.</p>
+        </div>
       </div>
     </section>
 
@@ -321,43 +258,10 @@
         <span class="dot dot-tool" aria-hidden="true"></span>
         Tools & Projects
       </h2>
-      <div class="item-list">
-        <article class="item">
-          <h3 class="item-title">
-            <a href="https://github.com/e2b-dev/awesome-ai-agents" target="_blank" rel="noopener">e2b-dev/awesome-ai-agents</a>
-          </h3>
-          <p class="item-desc">AI 에이전트 프레임워크, 벤치마크, 애플리케이션을 모은 리스트</p>
-        </article>
-        <article class="item">
-          <h3 class="item-title">
-            <a href="https://github.com/ashishpatel26/500-AI-Agents-Projects" target="_blank" rel="noopener">500+ AI Agent Projects & Use Cases</a>
-          </h3>
-          <p class="item-desc">500개 이상의 AI 에이전트 프로젝트를 카테고리별로 정리</p>
-        </article>
-        <article class="item">
-          <h3 class="item-title">
-            <a href="https://github.com/TyrelM10/ai-news-agent" target="_blank" rel="noopener">TyrelM10/ai-news-agent</a>
-          </h3>
-          <p class="item-desc">AI 뉴스 자동 수집·요약·분류 에이전트 구현체</p>
-        </article>
-        <article class="item">
-          <h3 class="item-title">
-            <a href="https://github.com/langfuse/langfuse" target="_blank" rel="noopener">langfuse/langfuse</a>
-          </h3>
-          <p class="item-desc">LLM 평가, 옵저버빌리티, 프롬프트 관리 플랫폼</p>
-        </article>
-        <article class="item">
-          <h3 class="item-title">
-            <a href="https://github.com/bentoml/OpenLLM" target="_blank" rel="noopener">bentoml/OpenLLM</a>
-          </h3>
-          <p class="item-desc">오픈소스 LLM을 API 서버로 실행하고 배포하는 도구</p>
-        </article>
-        <article class="item">
-          <h3 class="item-title">
-            <a href="https://github.com/eugeneyan/open-llms" target="_blank" rel="noopener">eugeneyan/open-llms</a>
-          </h3>
-          <p class="item-desc">상업적 이용이 가능한 오픈 LLM 리스트</p>
-        </article>
+      <div class="item-list" id="tools-list">
+        <div class="item">
+          <p>아직 표시할 내용이 없습니다.</p>
+        </div>
       </div>
     </section>
 
@@ -366,14 +270,10 @@
         <span class="dot dot-insight" aria-hidden="true"></span>
         Insights
       </h2>
-      <div class="insight-block">
-        <p>에이전틱 워크플로우가 산업 표준으로 자리 잡고 있습니다. 단일 모델 중심에서 멀티에이전트 협업으로 패러다임이 이동하고 있습니다.</p>
-      </div>
-      <div class="insight-block">
-        <p>LLM 추론 강화는 지식 증류, 다중 검증, 슬로우 씽킹 세 축에서 병목을 해결하고 있습니다.</p>
-      </div>
-      <div class="insight-block">
-        <p>오픈소스 생태는 평가, 관찰, 배포, 라이선싱까지 커버하는 운영 인프라로 성숙하고 있습니다.</p>
+      <div class="item-list" id="insights-list">
+        <div class="item">
+          <p>아직 표시할 내용이 없습니다.</p>
+        </div>
       </div>
     </section>
 
@@ -381,5 +281,170 @@
       Built by Hermes Agent · Powered by Firecrawl + OpenRouter
     </footer>
   </main>
+
+  <script>
+    const repoBase = window.location.origin;
+    const dateLabel = document.getElementById('date-label');
+    const detailLink = document.getElementById('detail-link');
+    const summaryList = document.getElementById('summary-list');
+    const trendingList = document.getElementById('trending-list');
+    const papersList = document.getElementById('papers-list');
+    const toolsList = document.getElementById('tools-list');
+    const insightsList = document.getElementById('insights-list');
+    const statusEl = document.getElementById('status');
+
+    function parseMarkdown(md) {
+      const lines = md.split(/\r?\n/);
+      const sections = {
+        trending: [],
+        papers: [],
+        tools: [],
+        insights: [],
+        summary: []
+      };
+      let current = null;
+
+      for (const line of lines) {
+        const trimmed = line.trim();
+        if (!trimmed) continue;
+
+        if (trimmed.startsWith('## 오늘의 핵심 3줄') || trimmed.startsWith('## 오늘의 핵심')) {
+          current = 'summary';
+          continue;
+        }
+        if (trimmed === '---') continue;
+
+        const heading = trimmed.match(/^##\s+(.+)$/);
+        if (heading) {
+          const text = heading[1].toLowerCase();
+          if (text.includes('trending') || text.includes('동향')) current = 'trending';
+          else if (text.includes('paper') || text.includes('논문')) current = 'papers';
+          else if (text.includes('tool') || text.includes('프로젝트')) current = 'tools';
+          else if (text.includes('insight') || text.includes('인사이트')) current = 'insights';
+          else current = null;
+          continue;
+        }
+
+        if (!current) continue;
+
+        if (current === 'summary') {
+          const text = trimmed.replace(/^[-*]\s*/, '').replace(/\*\*/g, '').trim();
+          if (text) sections.summary.push(text);
+          continue;
+        }
+
+        if (current === 'tools') {
+          const match = trimmed.match(/^- \[([^\]]+)\]\(([^)]+)\)(.*)$/);
+          if (match) {
+            sections.tools.push({
+              title: match[1],
+              link: match[2],
+              desc: (match[3] || '').trim().replace(/^[-\s]+/, '') || ''
+            });
+            continue;
+          }
+        }
+
+        const linkMatch = trimmed.match(/\*\*(.+?)\*\*.*?[-–—]\s*(.+?)(?:\s*[-–—]\s*(.+))?$/);
+        if (linkMatch) {
+          const title = linkMatch[1].replace(/\[([^\]]+)\]\(([^)]+)\)/, '$1').trim();
+          const source = (linkMatch[2] || '').trim();
+          const extra = (linkMatch[3] || '').trim();
+          const urlMatch = trimmed.match(/https?:\/\/[^\s)]+/);
+          const url = urlMatch ? urlMatch[0] : '';
+          sections[current].push({
+            title,
+            source,
+            extra,
+            url,
+            desc: [source, extra].filter(Boolean).join(' · ')
+          });
+        }
+      }
+
+      return sections;
+    }
+
+    function renderItems(container, items, max = 5) {
+      container.innerHTML = '';
+      if (!items.length) {
+        container.innerHTML = '<div class="item"><p>표시할 항목이 없습니다.</p></div>';
+        return;
+      }
+      const list = items.slice(0, max);
+      list.forEach((item) => {
+        const el = document.createElement('article');
+        el.className = 'item';
+        const title = document.createElement('h3');
+        title.className = 'item-title';
+        const a = document.createElement('a');
+        a.href = item.url || '#';
+        a.target = '_blank';
+        a.rel = 'noopener';
+        a.textContent = item.title;
+        title.appendChild(a);
+        const desc = document.createElement('p');
+        desc.className = 'item-desc';
+        desc.textContent = item.desc || '';
+        el.appendChild(title);
+        el.appendChild(desc);
+        container.appendChild(el);
+      });
+    }
+
+    function renderInsights(container, items) {
+      container.innerHTML = '';
+      (items || []).slice(0, 3).forEach((text) => {
+        const el = document.createElement('div');
+        el.className = 'insight-block';
+        const p = document.createElement('p');
+        p.textContent = text;
+        el.appendChild(p);
+        container.appendChild(el);
+      });
+      if (!items.length) {
+        container.innerHTML = '<div class="item"><p>표시할 인사이트가 없습니다.</p></div>';
+      }
+    }
+
+    async function loadToday() {
+      const today = new Date();
+      const yyyy = today.getFullYear();
+      const mm = String(today.getMonth() + 1).padStart(2, '0');
+      const dd = String(today.getDate()).padStart(2, '0');
+      const dateStr = `${yyyy}-${mm}-${dd}`;
+      dateLabel.textContent = `${yyyy}-${mm}-${dd} 기준`;
+      detailLink.href = `daily/${dateStr}.md`;
+
+      const fallbackMd = `# AI News Curation - ${dateStr}\n\n- Generated at: ${today.toISOString()}\n- Sources: Firecrawl + OpenRouter (free tier)\n\n## 오늘의 핵심\n\n- 큐레이션 데이터를 아직 불러오지 못했습니다.\n- 잠시 후 다시 열어보세요.\n`;
+      let md = fallbackMd;
+
+      try {
+        const res = await fetch(`daily/${dateStr}.md?cache=${Date.now()}`);
+        if (res.ok) {
+          md = await res.text();
+        } else {
+          statusEl.textContent = '금일 큐레이션을 아직 불러오지 못했습니다.';
+        }
+      } catch (err) {
+        statusEl.textContent = '큐레이션을 불러오는 중 문제가 발생했습니다.';
+      }
+
+      const parsed = parseMarkdown(md);
+      summaryList.innerHTML = '';
+      (parsed.summary.length ? parsed.summary : ['오늘의 큐레이션을 불러오는 중입니다.']).forEach((text) => {
+        const li = document.createElement('li');
+        li.textContent = text;
+        summaryList.appendChild(li);
+      });
+
+      renderItems(trendingList, parsed.trending);
+      renderItems(papersList, parsed.papers);
+      renderItems(toolsList, parsed.tools);
+      renderInsights(insightsList, parsed.insights);
+    }
+
+    loadToday();
+  </script>
 </body>
 </html>
