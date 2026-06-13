@@ -7,6 +7,8 @@ on:
 jobs:
   curate:
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
       - uses: actions/checkout@v4
 
@@ -19,6 +21,9 @@ jobs:
         run: pip install requests beautifulsoup4
 
       - name: Run curation
+        env:
+          FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: python scripts/curate.py
 
       - name: Commit results
