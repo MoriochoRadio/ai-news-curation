@@ -16,11 +16,9 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install requests feedparser beautifulsoup4
+        run: pip install requests beautifulsoup4
 
       - name: Run curation
-        env:
-          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: python scripts/curate.py
 
       - name: Commit results
