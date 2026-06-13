@@ -77,13 +77,12 @@ def summarize_openrouter(items, api_key):
         prompt_lines.append(f"{idx}. {title}")
         prompt_lines.append(f"   {link}")
 
-    prompt_lines.append("\nWrite in clean markdown.")
+    prompt_lines.append("\nWrite in clean Korean markdown.")
     messages = [
-        {"role": "system", "content": "You are a helpful AI news curator."},
-        {"role": "user", "content": "\n".join(prompt_lines)},
+        {"role": "user", "content": "\n".join(prompt_lines)}
     ]
     payload = {
-        "model": "mistralai/mistral-7b-instruct:free",
+        "model": "google/gemini-2.0-flash-exp:free",
         "messages": messages,
         "max_completion_tokens": 4000,
     }
