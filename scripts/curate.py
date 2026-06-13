@@ -82,7 +82,7 @@ def summarize_openrouter(items, api_key):
         {"role": "user", "content": "\n".join(prompt_lines)}
     ]
     payload = {
-        "model": "google/gemini-2.0-flash-exp:free",
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
         "messages": messages,
         "max_completion_tokens": 4000,
     }

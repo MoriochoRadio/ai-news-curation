@@ -9,6 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
 
@@ -30,6 +32,7 @@ jobs:
         run: |
           git config user.name "hermes-bot"
           git config user.email "hermes-bot@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/MoriochoRadio/ai-news-curation.git
           git add daily/ README.md || true
           git diff --cached --quiet && exit 0
           git commit -m "chore: daily curation $(date +%Y-%m-%d)"
