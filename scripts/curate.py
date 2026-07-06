@@ -1,17 +1,7 @@
-import os, json, datetime, urllib.request, urllib.error
+import os, json, sys, time, datetime, urllib.request, urllib.error
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DAILY_DIR = os.path.join(ROOT, "daily")
-
-def load_key(path):
-    if not os.path.exists(path):
-        return ""
-    with open(path, "r", encoding="utf-8") as f:
-        for line in f.read().splitlines():
-            line = line.strip()
-            if line and not line.startswith("#") and len(line) > 10:
-                return line
-    return ""
 
 def env_key(*names):
     for name in names:
@@ -20,18 +10,29 @@ def env_key(*names):
             return v
     return ""
 
-def post(url, headers, payload, timeout=120):
+def post(url, headers, payload, timeout=120, retries=3):
+    """POST + JSON 응답. 429/5xx/네트워크 오류는 백오프 재시도, 그 외 4xx(402 등)는 즉시 실패."""
     data = json.dumps(payload).encode("utf-8")
-    req = urllib.request.Request(url, data=data, headers=headers, method="POST")
-    try:
-        with urllib.request.urlopen(req, timeout=timeout) as resp:
+    last_err = None
+    for attempt in range(retries):
+        req = urllib.request.Request(url, data=data, headers=headers, method="POST")
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as resp:
+                body = resp.read().decode("utf-8", errors="ignore")
             try:
-                return json.loads(resp.read().decode("utf-8"))
+                return json.loads(body)
             except Exception:
-                return {"_raw": resp.read().decode("utf-8", errors="ignore")}
-    except urllib.error.HTTPError as e:
-        body = e.read().decode("utf-8", errors="ignore")
-        raise RuntimeError(f"HTTP {e.code}: {body[:500]}")
+                return {"_raw": body}
+        except urllib.error.HTTPError as e:
+            body = e.read().decode("utf-8", errors="ignore")
+            last_err = RuntimeError(f"HTTP {e.code}: {body[:500]}")
+            if e.code != 429 and e.code < 500:
+                raise last_err  # 402(크레딧 소진) 등은 재시도해도 소용없음
+        except (urllib.error.URLError, TimeoutError) as e:
+            last_err = RuntimeError(f"network error: {e}")
+        if attempt < retries - 1:
+            time.sleep(10 * (attempt + 1))
+    raise last_err
 
 def search_firecrawl(query, api_key):
     url = "https://api.firecrawl.dev/v2/search"
@@ -39,21 +40,27 @@ def search_firecrawl(query, api_key):
         "Authorization": f"Bearer {api_key}",
         "Content-Type": "application/json",
     }
+    # scrapeOptions(본문 전체 스크랩)는 크레딧을 대량 소모하는데 결과에서 title/url만
+    # 쓰므로 검색만 수행한다. categories도 같은 이유로 제거(결과를 읽지 않았음).
     payload = {
         "query": query,
         "limit": 8,
         "sources": ["web", "news"],
-        "categories": [{"type": "github"}, {"type": "research"}],
         "timeout": 60000,
-        "scrapeOptions": {
-            "formats": [{"type": "markdown"}],
-            "onlyMainContent": True,
-            "removeBase64Images": True,
-            "blockAds": True,
-            "timeout": 60000,
-        },
     }
     return post(url, headers, payload)
+
+def extract_results(data):
+    """Firecrawl 응답의 data가 dict(소스별 그룹)든 list든 안전하게 항목 리스트로 평탄화."""
+    d = data.get("data")
+    out = []
+    if isinstance(d, dict):
+        for group in d.values():
+            if isinstance(group, list):
+                out.extend(r for r in group if isinstance(r, dict))
+    elif isinstance(d, list):
+        out.extend(r for r in d if isinstance(r, dict))
+    return out
 
 def summarize_openrouter(items, api_key):
     if not items:
@@ -65,11 +72,32 @@ def summarize_openrouter(items, api_key):
         "Content-Type": "application/json",
     }
 
+    # index.html 파서가 이 형식을 그대로 읽으므로 템플릿을 바꾸면 파서도 같이 바꿀 것.
     prompt_lines = [
-        "You are a helpful AI news curator.",
-        "Group these search results into 4 sections: Trending, Papers, Tools & Projects, Insights.",
-        "Keep each item to 1-3 sentences. Preserve source URLs. Use markdown.",
+        "You are a helpful AI news curator. Summarize the search results below",
+        "as Korean markdown, following EXACTLY this template (keep the H2 headers verbatim,",
+        "one line per item, no nested bullets, no extra sections before Raw data):",
         "",
+        "## 오늘의 핵심",
+        "- (오늘 가장 중요한 흐름 요약, 한 문장)",
+        "- (두 번째, 한 문장)",
+        "- (세 번째, 한 문장)",
+        "",
+        "## Trending",
+        "- **한국어 제목** — 한 문장 설명 — https://원본URL",
+        "",
+        "## Papers",
+        "- **한국어 제목** — 한 문장 설명 — https://원본URL",
+        "",
+        "## Tools & Projects",
+        "- **한국어 제목** — 한 문장 설명 — https://원본URL",
+        "",
+        "## Insights",
+        "- (시사점 한 문장)",
+        "",
+        "Rules: 각 항목은 반드시 한 줄로. URL은 아래 입력에 있는 것만 사용. 섹션당 3~6개.",
+        "",
+        "Search results:",
     ]
     for idx, item in enumerate(items[:20], 1):
         title = item.get("title") or item.get("name") or "(untitled)"
@@ -77,7 +105,6 @@ def summarize_openrouter(items, api_key):
         prompt_lines.append(f"{idx}. {title}")
         prompt_lines.append(f"   {link}")
 
-    prompt_lines.append("\nWrite in clean Korean markdown.")
     messages = [
         {"role": "user", "content": "\n".join(prompt_lines)}
     ]
@@ -148,13 +175,12 @@ def main():
     if not openrouter_key:
         errors.append("Missing OPENROUTER_API_KEY")
 
+    # 쿼리 수 = Firecrawl 크레딧 소모량. 커버리지가 겹치는 것은 정리해 4개로 유지.
     queries = [
-        "AI agents latest news",
-        "LLM reasoning 2025",
-        "open source LLM",
-        "multimodal AI models",
-        "AI safety news",
-        "GitHub trending AI",
+        "AI LLM latest news",
+        "open source LLM release",
+        "AI research paper highlights",
+        "GitHub trending AI projects",
     ]
 
     collected = []
@@ -168,8 +194,7 @@ def main():
                 print(f"[search error] {msg}")
                 errors.append(msg)
                 continue
-            results = data.get("data", {}).get("web") or data.get("data", []) or []
-            collected.extend(results)
+            collected.extend(extract_results(data))
     else:
         errors.append("Skipped Firecrawl search because FIRECRAWL_API_KEY is missing")
 
@@ -201,6 +226,12 @@ def main():
     md_path = build_daily_markdown(today, summary, unique, errors=errors)
     update_readme(today)
     print(f"[done] {md_path}")
+
+    # 검색 결과가 하나도 없으면(키 누락·크레딧 소진·전 쿼리 실패) 빈 페이지를 "성공"으로
+    # 게시하지 않고 런을 실패시켜 알림이 오게 한다. 부분 실패는 md에 기록만 하고 통과.
+    if not unique:
+        print("[fatal] 수집 결과 0건 — 런을 실패 처리합니다 (원인은 위 Errors 참조)")
+        sys.exit(1)
 
 if __name__ == "__main__":
     main()

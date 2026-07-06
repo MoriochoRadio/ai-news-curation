@@ -1,39 +1,78 @@
 name: Daily AI Curation
 on:
   schedule:
-    - cron: "0 9 * * *"
+    # 정각(0분)은 GitHub cron 혼잡 시간대라 실제 시작이 최대 4시간 지연됐음 — 어중간한 분으로 회피
+    - cron: "17 8 * * *"
   workflow_dispatch:
+  push: # 코드 push 시 사이트만 재배포 (수집은 건너뜀)
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: daily-curation
+  cancel-in-progress: false
 
 jobs:
   curate:
     runs-on: ubuntu-latest
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+    timeout-minutes: 15
     permissions:
       contents: write
     steps:
       - uses: actions/checkout@v4
 
       - name: Setup Python
+        if: github.event_name != 'push'
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: Install dependencies
-        run: pip install requests beautifulsoup4
-
       - name: Run curation
+        if: github.event_name != 'push'
         env:
           FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: python scripts/curate.py
 
       - name: Commit results
+        if: github.event_name != 'push'
         run: |
           git config user.name "hermes-bot"
           git config user.email "hermes-bot@users.noreply.github.com"
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/MoriochoRadio/ai-news-curation.git
-          git add daily/ README.md || true
-          git diff --cached --quiet && exit 0
-          git commit -m "chore: daily curation $(date +%Y-%m-%d)"
-          git push
+          git add daily/ README.md
+          if git diff --cached --quiet; then
+            echo "변경 없음 — 커밋 생략"
+          else
+            git commit -m "chore: daily curation $(TZ=Asia/Seoul date +%Y-%m-%d)"
+            git pull --rebase origin main
+            git push
+          fi
+
+      # Pages는 legacy(Jekyll) 빌드 대신 이 런에서 직접 배포한다 —
+      # 배포 실패가 같은 런에서 보이고 rerun --failed로 배포만 재시도 가능
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+  deploy:
+    needs: curate
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
+        continue-on-error: true # Pages 일시 장애("try again later")는 1회 재시도로 흡수
+      - if: steps.deployment.outcome == 'failure'
+        run: sleep 90
+      - id: deployment-retry
+        if: steps.deployment.outcome == 'failure'
+        uses: actions/deploy-pages@v4

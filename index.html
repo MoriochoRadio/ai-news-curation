@@ -307,59 +307,60 @@
       for (const line of lines) {
         const trimmed = line.trim();
         if (!trimmed) continue;
-
-        if (trimmed.startsWith('## 오늘의 핵심 3줄') || trimmed.startsWith('## 오늘의 핵심')) {
-          current = 'summary';
-          continue;
-        }
         if (trimmed === '---') continue;
 
-        const heading = trimmed.match(/^##\s+(.+)$/);
+        // H2/H3 모두 허용 — LLM 출력 변형에 관대하게
+        const heading = trimmed.match(/^#{2,3}\s+(.+)$/);
         if (heading) {
           const text = heading[1].toLowerCase();
-          if (text.includes('trending') || text.includes('동향')) current = 'trending';
+          if (text.includes('핵심')) current = 'summary';
+          else if (text.includes('trending') || text.includes('동향')) current = 'trending';
           else if (text.includes('paper') || text.includes('논문')) current = 'papers';
           else if (text.includes('tool') || text.includes('프로젝트')) current = 'tools';
           else if (text.includes('insight') || text.includes('인사이트')) current = 'insights';
+          else if (text.includes('raw results') && !sections.trending.length) current = 'trending'; // 요약 실패 날엔 raw 링크라도 표시
           else current = null;
           continue;
         }
 
         if (!current) continue;
 
-        if (current === 'summary') {
-          const text = trimmed.replace(/^[-*]\s*/, '').replace(/\*\*/g, '').trim();
-          if (text) sections.summary.push(text);
+        // summary/insights는 순수 텍스트 목록
+        if (current === 'summary' || current === 'insights') {
+          const text = trimmed
+            .replace(/^[-*]\s*/, '')
+            .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '$1')
+            .replace(/\*\*/g, '')
+            .replace(/https?:\/\/\S+/g, '')
+            .trim();
+          if (text) sections[current].push(text);
           continue;
         }
 
-        if (current === 'tools') {
-          const match = trimmed.match(/^- \[([^\]]+)\]\(([^)]+)\)(.*)$/);
-          if (match) {
-            sections.tools.push({
-              title: match[1],
-              link: match[2],
-              desc: (match[3] || '').trim().replace(/^[-\s]+/, '') || ''
-            });
-            continue;
-          }
-        }
+        if (!/^[-*]\s/.test(trimmed)) continue;
+        const urlMatch = trimmed.match(/https?:\/\/[^\s)]+/);
+        const url = urlMatch ? urlMatch[0] : '';
 
-        const linkMatch = trimmed.match(/\*\*(.+?)\*\*.*?[-–—]\s*(.+?)(?:\s*[-–—]\s*(.+))?$/);
-        if (linkMatch) {
-          const title = linkMatch[1].replace(/\[([^\]]+)\]\(([^)]+)\)/, '$1').trim();
-          const source = (linkMatch[2] || '').trim();
-          const extra = (linkMatch[3] || '').trim();
-          const urlMatch = trimmed.match(/https?:\/\/[^\s)]+/);
-          const url = urlMatch ? urlMatch[0] : '';
-          sections[current].push({
-            title,
-            source,
-            extra,
-            url,
-            desc: [source, extra].filter(Boolean).join(' · ')
-          });
+        // 형식 1: - **제목** — 설명 — URL
+        let title = '', desc = '';
+        const boldMatch = trimmed.match(/\*\*(.+?)\*\*\s*[-–—:]?\s*(.*)$/);
+        if (boldMatch) {
+          title = boldMatch[1];
+          desc = boldMatch[2] || '';
+        } else {
+          // 형식 2: - [제목](url) — 설명
+          const mdLink = trimmed.match(/^[-*]\s*\[([^\]]+)\]\(([^)]+)\)\s*[-–—:]?\s*(.*)$/);
+          if (!mdLink) continue;
+          title = mdLink[1];
+          desc = mdLink[3] || '';
         }
+        title = title.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '$1').trim();
+        desc = desc
+          .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '$1')
+          .replace(/https?:\/\/\S+/g, '')
+          .replace(/[\s\-–—·,]+$/g, '')
+          .trim();
+        if (title) sections[current].push({ title, url, desc });
       }
 
       return sections;
@@ -407,27 +408,37 @@
       }
     }
 
+    function fmtDate(d) {
+      return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+    }
+
     async function loadToday() {
-      const today = new Date();
-      const yyyy = today.getFullYear();
-      const mm = String(today.getMonth() + 1).padStart(2, '0');
-      const dd = String(today.getDate()).padStart(2, '0');
-      const dateStr = `${yyyy}-${mm}-${dd}`;
-      dateLabel.textContent = `${yyyy}-${mm}-${dd} 기준`;
-      detailLink.href = `daily/${dateStr}.md`;
+      // 오늘 파일이 아직 없으면(수집 전·하루 스킵) 최근 7일 내 가장 최신 파일로 폴백
+      const todayStr = fmtDate(new Date());
+      let md = null;
+      let usedDate = null;
+      for (let i = 0; i < 7; i++) {
+        const dateStr = fmtDate(new Date(Date.now() - i * 86400000));
+        try {
+          const res = await fetch(`daily/${dateStr}.md?cache=${Date.now()}`);
+          if (res.ok) {
+            md = await res.text();
+            usedDate = dateStr;
+            break;
+          }
+        } catch (err) { /* 다음 날짜 시도 */ }
+      }
 
-      const fallbackMd = `# AI News Curation - ${dateStr}\n\n- Generated at: ${today.toISOString()}\n- Sources: Firecrawl + OpenRouter (free tier)\n\n## 오늘의 핵심\n\n- 큐레이션 데이터를 아직 불러오지 못했습니다.\n- 잠시 후 다시 열어보세요.\n`;
-      let md = fallbackMd;
-
-      try {
-        const res = await fetch(`daily/${dateStr}.md?cache=${Date.now()}`);
-        if (res.ok) {
-          md = await res.text();
-        } else {
-          statusEl.textContent = '금일 큐레이션을 아직 불러오지 못했습니다.';
+      if (md === null) {
+        dateLabel.textContent = '데이터 없음';
+        statusEl.textContent = '최근 7일치 큐레이션을 찾지 못했습니다.';
+        md = `## 오늘의 핵심\n- 큐레이션 데이터를 아직 불러오지 못했습니다.\n- 잠시 후 다시 열어보세요.\n`;
+      } else {
+        dateLabel.textContent = `${usedDate} 기준`;
+        detailLink.href = `daily/${usedDate}.md`;
+        if (usedDate !== todayStr) {
+          statusEl.textContent = `오늘 자 큐레이션이 아직 없어 ${usedDate} 자를 표시합니다.`;
         }
-      } catch (err) {
-        statusEl.textContent = '큐레이션을 불러오는 중 문제가 발생했습니다.';
       }
 
       const parsed = parseMarkdown(md);
