@@ -1,0 +1,160 @@
+{
+  "date": "2026-06-13",
+  "generated_at": "2026-06-13T03:59:08",
+  "topics": [
+    "AI agents",
+    "LLM reasoning",
+    "multimodal models",
+    "open source AI",
+    "AI safety"
+  ],
+  "counts": {
+    "trending": 5,
+    "papers": 5,
+    "tools": 6
+  },
+  "trending": [
+    {
+      "title": "AI 알고리즘이 '혼돈의 대리인'이 될 수 있다",
+      "url": "https://www.science.org/content/article/ai-algorithms-can-become-agents-chaos",
+      "source": "HackerNews",
+      "desc": "Science · 자율 AI 시스템의 예측 불가능성과 연쇄 실패 위험을 다룬 기사.",
+      "points": 0,
+      "comments": 0,
+      "author": ""
+    },
+    {
+      "title": "Teams of AI agents boost speed of research",
+      "url": "https://www.nature.com/articles/d41586-026-01596-4",
+      "source": "HackerNews",
+      "desc": "Nature · 다중 AI 에이전트 협업이 연구 발견 속도를 높이는 사례.",
+      "points": 0,
+      "comments": 0,
+      "author": ""
+    },
+    {
+      "title": "How AI agents will change research: a scientist's guide",
+      "url": "https://www.nature.com/articles/d41586-025-03246-7",
+      "source": "HackerNews",
+      "desc": "Nature · 연구자 대상 AI 에이전트 도입 실용 가이드.",
+      "points": 0,
+      "comments": 0,
+      "author": ""
+    },
+    {
+      "title": "Agentic AI and the next intelligence explosion",
+      "url": "https://www.science.org/doi/10.1126/science.aeg1895",
+      "source": "HackerNews",
+      "desc": "Science · 자율 목표 추구형 에이전틱 AI의 전망.",
+      "points": 0,
+      "comments": 0,
+      "author": ""
+    },
+    {
+      "title": "AI agents News & Articles",
+      "url": "https://spectrum.ieee.org/tag/ai-agents",
+      "source": "HackerNews",
+      "desc": "IEEE Spectrum · AI 에이전트 기술·산업 동향 모음.",
+      "points": 0,
+      "comments": 0,
+      "author": ""
+    }
+  ],
+  "papers": [
+    {
+      "title": "Reinforce LLM Reasoning through Multi-Agent Reflection",
+      "url": "https://arxiv.org/abs/2506.08379",
+      "source": "HackerNews",
+      "desc": "다중 에이전트 반성 메커니즘으로 추론 품질을 개선하는 연구.",
+      "points": 0,
+      "comments": 0,
+      "author": ""
+    },
+    {
+      "title": "A Survey of Reinforced Reasoning with Large Language Models",
+      "url": "https://arxiv.org/abs/2501.09686",
+      "source": "HackerNews",
+      "desc": "RLHF, RLAIF, 자기 개선 등 추론 강화 기법 정리.",
+      "points": 0,
+      "comments": 0,
+      "author": ""
+    },
+    {
+      "title": "STILL: Slow Thinking with LLMs",
+      "url": "https://github.com/RUCAIBox/Slow_Thinking_with_LLMs",
+      "source": "HackerNews",
+      "desc": "시스템 2 사고를 LLM에 적용하는 프레임워크.",
+      "points": 0,
+      "comments": 0,
+      "author": ""
+    },
+    {
+      "title": "[ICLR 2025] SuperCorrect",
+      "url": "https://github.com/YangLing0818/SuperCorrect-llm",
+      "source": "HackerNews",
+      "desc": "소형 LLM의 추론 능력을 대형 모델 지식으로 보정.",
+      "points": 0,
+      "comments": 0,
+      "author": ""
+    },
+    {
+      "title": "Quantifying the reasoning abilities of LLMs on clinical cases",
+      "url": "https://www.nature.com/articles/s41467-025-64769-1",
+      "source": "HackerNews",
+      "desc": "실제 임상 기반 LLM 추론 정량 평가.",
+      "points": 0,
+      "comments": 0,
+      "author": ""
+    }
+  ],
+  "tools": [
+    {
+      "title": "e2b-dev/awesome-ai-agents",
+      "url": "https://github.com/e2b-dev/awesome-ai-agents",
+      "source": "GitHub",
+      "desc": "",
+      "stars": 0,
+      "language": ""
+    },
+    {
+      "title": "500+ AI Agent Projects & Use Cases",
+      "url": "https://github.com/ashishpatel26/500-AI-Agents-Projects",
+      "source": "GitHub",
+      "desc": "",
+      "stars": 0,
+      "language": ""
+    },
+    {
+      "title": "TyrelM10/ai-news-agent",
+      "url": "https://github.com/TyrelM10/ai-news-agent",
+      "source": "GitHub",
+      "desc": "",
+      "stars": 0,
+      "language": ""
+    },
+    {
+      "title": "langfuse/langfuse",
+      "url": "https://github.com/langfuse/langfuse",
+      "source": "GitHub",
+      "desc": "",
+      "stars": 0,
+      "language": ""
+    },
+    {
+      "title": "bentoml/OpenLLM",
+      "url": "https://github.com/bentoml/OpenLLM",
+      "source": "GitHub",
+      "desc": "",
+      "stars": 0,
+      "language": ""
+    },
+    {
+      "title": "eugeneyan/open-llms",
+      "url": "https://github.com/eugeneyan/open-llms",
+      "source": "GitHub",
+      "desc": "",
+      "stars": 0,
+      "language": ""
+    }
+  ]
+}

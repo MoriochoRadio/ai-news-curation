@@ -12,3 +12,8 @@ Thumbs.db
 *secret*.txt
 *.key
 *.pem
+
+# Local logs / runtime artifacts
+logs_*/
+logs/
+__pycache__/
