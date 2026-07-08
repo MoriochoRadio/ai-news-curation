@@ -1,6 +1,6 @@
 {
   "date": "2026-07-08",
-  "generated_at": "2026-07-08T10:20:02",
+  "generated_at": "2026-07-08T10:42:58",
   "topics": [
     "AI agents",
     "LLM reasoning",
@@ -16,11 +16,21 @@
   },
   "trending": [
     {
+      "title": "Show HN: FactIQ – a realtime econ+finance database for AI agents",
+      "url": "https://github.com/defog-ai/factiq-plugin",
+      "source": "HackerNews",
+      "points": 1,
+      "comments": 0,
+      "author": "rishsriv",
+      "date": "2026-07-08",
+      "desc": ""
+    },
+    {
       "title": "SmolMail: An AI agent for Gmail that answers in visuals, not walls of text",
       "url": "https://smolmail.com/",
       "source": "HackerNews",
       "points": 2,
-      "comments": 0,
+      "comments": 1,
       "author": "narinluangrath",
       "date": "2026-07-08",
       "desc": ""
@@ -82,16 +92,6 @@
       "points": 1,
       "comments": 0,
       "author": "syumei",
-      "date": "2026-07-07",
-      "desc": ""
-    },
-    {
-      "title": "Show HN: CLRK, an open-source agent runtime with gVisor and MitM guardrails",
-      "url": "https://github.com/apoxy-dev/clrk",
-      "source": "HackerNews",
-      "points": 3,
-      "comments": 0,
-      "author": "dilyevsky",
       "date": "2026-07-07",
       "desc": ""
     }
@@ -167,7 +167,7 @@
       "title": "obra/superpowers",
       "url": "https://github.com/obra/superpowers",
       "source": "GitHub",
-      "stars": 248709,
+      "stars": 248731,
       "language": "Shell",
       "desc": "An agentic skills framework & software development methodology that works."
     },
@@ -175,7 +175,7 @@
       "title": "NousResearch/hermes-agent",
       "url": "https://github.com/NousResearch/hermes-agent",
       "source": "GitHub",
-      "stars": 210989,
+      "stars": 211002,
       "language": "Python",
       "desc": "The agent that grows with you"
     },
@@ -183,7 +183,7 @@
       "title": "Significant-Gravitas/AutoGPT",
       "url": "https://github.com/Significant-Gravitas/AutoGPT",
       "source": "GitHub",
-      "stars": 185427,
+      "stars": 185428,
       "language": "Python",
       "desc": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters."
     },
@@ -191,7 +191,7 @@
       "title": "langflow-ai/langflow",
       "url": "https://github.com/langflow-ai/langflow",
       "source": "GitHub",
-      "stars": 151318,
+      "stars": 151320,
       "language": "Python",
       "desc": "Langflow is a powerful tool for building and deploying AI-powered agents and workflows."
     },
@@ -199,7 +199,7 @@
       "title": "langgenius/dify",
       "url": "https://github.com/langgenius/dify",
       "source": "GitHub",
-      "stars": 148087,
+      "stars": 148091,
       "language": "TypeScript",
       "desc": "Production-ready platform for agentic workflow development."
     },
@@ -215,7 +215,7 @@
       "title": "langchain-ai/langchain",
       "url": "https://github.com/langchain-ai/langchain",
       "source": "GitHub",
-      "stars": 141224,
+      "stars": 141228,
       "language": "Python",
       "desc": "The agent engineering platform."
     },
@@ -223,7 +223,7 @@
       "title": "msitarzewski/agency-agents",
       "url": "https://github.com/msitarzewski/agency-agents",
       "source": "GitHub",
-      "stars": 128791,
+      "stars": 128803,
       "language": "Shell",
       "desc": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables."
     }
