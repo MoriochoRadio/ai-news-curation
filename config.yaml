@@ -1,3 +1,11 @@
+# The AI Brief — 설정 파일
+# ---------------------------------------------------------------------------
+# 수집 주제(topics)는 영어 그대로 API 쿼리에 사용된다.
+# topic_labels 는 웹 '핵심정리'에 표시할 한국어 라벨이다.
+# 실제 수집 소스는 scripts/curate.py 에 하드코딩된 키리스 3종
+# (HackerNews Algolia · ArXiv · GitHub Search) 이며, 모두 무료·키 불필요.
+
+# --- 수집 주제 (영어 = API 쿼리어) ---
 topics:
   - "AI agents"
   - "LLM reasoning"
@@ -6,14 +14,23 @@ topics:
   - "Rust in AI tooling"
   - "AI safety"
 
-sources:
-  - "Google News"
-  - "HackerNews"
-  - "Reddit r/MachineLearning"
-  - "GitHub Trending"
-  - "ArXiv recent papers"
+# --- 주제 한국어 라벨 (웹 '핵심정리' 표시용) ---
+topic_labels:
+  "AI agents": "AI 에이전트"
+  "LLM reasoning": "LLM 추론"
+  "multimodal models": "멀티모달 모델"
+  "open source AI": "오픈소스 AI"
+  "Rust in AI tooling": "AI 도구의 Rust"
+  "AI safety": "AI 안전성"
 
+# --- 실제 사용 소스 (키 불필요, 영구 무료) ---
+sources:
+  - "HackerNews"
+  - "ArXiv"
+  - "GitHub"
+
+# --- 출력 ---
 output:
-  format: "markdown"
-  path: "daily"
-  index: "README.md"
+  format: "json"          # data/YYYY-MM-DD.json
+  path: "data"
+  site: "index.html"

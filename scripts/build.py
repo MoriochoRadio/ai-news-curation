@@ -21,6 +21,31 @@ ISSUES_DIR = os.path.join(ROOT, "issues")
 SITE_TITLE = "The AI Brief"
 SITE_TAGLINE = "매일 아침, AI 업계의 흐름을 한눈에"
 
+# 섹션 한국어 라벨
+SECTION_KO = {
+    "trending": ("트렌딩", "지금 주목받는 AI 이야기"),
+    "papers": ("논문", "새로 나온 연구"),
+    "tools": ("오픈소스", "움직이는 프로젝트"),
+}
+
+
+def load_config():
+    """config.yaml 의 topic_labels 를 읽는다."""
+    try:
+        import yaml
+        with open(os.path.join(ROOT, "config.yaml"), "r", encoding="utf-8") as f:
+            return yaml.safe_load(f) or {}
+    except Exception:
+        return {}
+
+
+CONFIG = load_config()
+TOPIC_LABELS = CONFIG.get("topic_labels", {}) or {}
+
+
+def ko_topic(t):
+    return TOPIC_LABELS.get(t, t)
+
 
 def load_all_data():
     files = sorted(glob.glob(os.path.join(DATA_DIR, "*.json")), reverse=True)
@@ -92,15 +117,48 @@ def tool_item(it):
     </article>'''
 
 
-def section(title, subtitle, inner, empty_msg):
+def section(section_key, inner, empty_msg):
+    title, subtitle = SECTION_KO.get(section_key, (section_key, ""))
     body = inner if inner.strip() else f'<p class="empty">{esc(empty_msg)}</p>'
     return f'''
-    <section class="block">
+    <section class="block" data-section="{esc(section_key)}">
       <header class="block-head">
         <h2>{esc(title)}</h2>
         <span class="block-sub">{esc(subtitle)}</span>
       </header>
       <div class="block-body">{body}</div>
+    </section>'''
+
+
+def render_tldr(d):
+    """호 한 편을 요약하는 '핵심정리' 블록 (빌드 시점 생성, 키 불필요)."""
+    c = d.get("counts", {})
+    labels = [ko_topic(t) for t in d.get("topics", [])]
+    topics_html = " · ".join(esc(x) for x in labels)
+    top_t = d.get("trending", [])
+    top_p = d.get("papers", [])
+    top_g = d.get("tools", [])
+    picks = []
+    if top_t:
+        picks.append(("오늘의 관심", top_t[0].get("title", "")))
+    if top_p:
+        picks.append(("논문 픽", top_p[0].get("title", "")))
+    if top_g:
+        picks.append(("프로젝트 픽", top_g[0].get("title", "")))
+    picks_html = "".join(
+        f'<li><span class="tldr-tag">{esc(k)}</span> {esc(v)}</li>' for k, v in picks
+    )
+    return f'''
+    <section class="block tldr">
+      <header class="block-head">
+        <h2>한눈에 요약</h2>
+        <span class="block-sub">TL;DR</span>
+      </header>
+      <div class="block-body">
+        <p class="tldr-count">트렌딩 <b>{c.get('trending',0)}</b> · 논문 <b>{c.get('papers',0)}</b> · 프로젝트 <b>{c.get('tools',0)}</b> 건 수집</p>
+        <p class="tldr-topics">오늘 살펴본 주제 — {topics_html}</p>
+        <ul class="tldr-picks">{picks_html}</ul>
+      </div>
     </section>'''
 
 
@@ -120,8 +178,10 @@ def render_issue(d):
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>{esc(SITE_TITLE)} — {pretty}</title>
 <link rel="stylesheet" href="../assets/style.css" />
+{TOOLBAR_CSS}
 </head>
 <body>
+{TOOLBAR_HTML}
 <div class="wrap">
   <header class="masthead">
     <div class="brand">{esc(SITE_TITLE)}</div>
@@ -130,15 +190,17 @@ def render_issue(d):
     <p class="topics">오늘의 주제 — {topics}</p>
   </header>
 
-  {section("Trending", "지금 주목받는 AI 이야기", f'<div class="grid">{trending}</div>', "오늘 수집된 트렌딩 기사가 없습니다.")}
-  {section("Papers", "새로 나온 연구", f'<div class="rows">{papers}</div>', "오늘 수집된 논문이 없습니다.")}
-  {section("Open Source", "움직이는 프로젝트", f'<div class="grid">{tools}</div>', "오늘 수집된 프로젝트가 없습니다.")}
+  {render_tldr(d)}
+  {section("trending", f'<div class="grid">{trending}</div>', "오늘 수집된 트렌딩 기사가 없습니다.")}
+  {section("papers", f'<div class="rows">{papers}</div>', "오늘 수집된 논문이 없습니다.")}
+  {section("tools", f'<div class="grid">{tools}</div>', "오늘 수집된 프로젝트가 없습니다.")}
 
   <footer class="site-foot">
     <a href="../index.html">← 최신 호로</a> · <a href="../archive.html">전체 아카이브</a>
     <p>자동 수집 · HackerNews · ArXiv · GitHub</p>
   </footer>
 </div>
+{TOOLBAR_JS}
 </body>
 </html>'''
 
@@ -166,9 +228,10 @@ def render_index(issues):
           <p class="tagline">{esc(SITE_TAGLINE)}</p>
           <p class="topics">오늘의 주제 — {topics}</p>
         </header>
-        {section("Trending", "지금 주목받는 AI 이야기", f'<div class="grid">{trending}</div>', "")}
-        {section("Papers", "새로 나온 연구", f'<div class="rows">{papers}</div>', "")}
-        {section("Open Source", "움직이는 프로젝트", f'<div class="grid">{tools}</div>', "")}'''
+        {render_tldr(latest)}
+        {section("trending", f'<div class="grid">{trending}</div>', "")}
+        {section("papers", f'<div class="rows">{papers}</div>', "")}
+        {section("tools", f'<div class="grid">{tools}</div>', "")}'''
     else:
         lead = '<header class="masthead"><div class="brand">The AI Brief</div><p class="tagline">아직 발행된 호가 없습니다.</p></header>'
 
@@ -179,8 +242,10 @@ def render_index(issues):
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>{esc(SITE_TITLE)} — 매일 아침 AI 브리프</title>
 <link rel="stylesheet" href="assets/style.css" />
+{TOOLBAR_CSS}
 </head>
 <body>
+{TOOLBAR_HTML}
 <div class="wrap">
   {lead}
   <section class="block archive-preview">
@@ -191,6 +256,7 @@ def render_index(issues):
     <p>자동 수집 · HackerNews · ArXiv · GitHub</p>
   </footer>
 </div>
+{TOOLBAR_JS}
 </body>
 </html>'''
 
@@ -208,8 +274,10 @@ def render_archive(issues):
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>{esc(SITE_TITLE)} — 아카이브</title>
 <link rel="stylesheet" href="assets/style.css" />
+{TOOLBAR_CSS}
 </head>
 <body>
+{TOOLBAR_HTML}
 <div class="wrap">
   <header class="masthead">
     <div class="brand">{esc(SITE_TITLE)}</div>
@@ -220,8 +288,85 @@ def render_archive(issues):
     <ul class="archive-list">{rows}</ul>
   </section>
 </div>
+{TOOLBAR_JS}
 </body>
 </html>'''
+
+
+# --------------------------------------------------------------------------
+# 공통 툴바: 검색 · 다크모드 · 한국어 번역
+# (전부 키 없이 클라이언트에서 동작)
+# --------------------------------------------------------------------------
+TOOLBAR_CSS = """
+<style>
+.tb-fixed{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;gap:8px;align-items:center;
+  padding:8px 14px;background:var(--paper,#fffdf8);border-bottom:1px solid var(--line,#e3ddd0);
+  box-shadow:0 1px 6px rgba(0,0,0,.05);font-family:var(--sans);}
+.tb-fixed input{flex:1;max-width:340px;padding:7px 12px;border:1px solid var(--line,#e3ddd0);
+  border-radius:20px;font-size:13px;background:var(--bg,#f4f1ea);color:var(--ink,#1c1a17);outline:none;}
+.tb-fixed .tb-btn{border:1px solid var(--line,#e3ddd0);background:transparent;color:var(--ink,#1c1a17);
+  border-radius:20px;padding:6px 12px;font-size:13px;cursor:pointer;line-height:1;}
+.tb-fixed .tb-btn:hover{border-color:var(--accent,#b4451f);color:var(--accent,#b4451f);}
+body.has-tb{padding-top:52px;}
+mark.hl{background:var(--accent-soft,#f3e7df);color:var(--accent,#b4451f);border-radius:3px;padding:0 2px;}
+#goog-gt-tt,#goog-te-banner{display:none!important;}
+.goog-te-gadget{font-size:0!important;}
+.goog-te-gadget .goog-te-combo{font-size:12px!important;padding:5px 6px;border-radius:14px;
+  border:1px solid var(--line,#e3ddd0);background:var(--bg,#f4f1ea);color:var(--ink,#1c1a17);}
+</style>
+"""
+
+TOOLBAR_HTML = """
+<div class="tb-fixed">
+  <input id="siteSearch" type="search" placeholder="호 내 검색 (제목·설명)…" aria-label="검색" />
+  <button class="tb-btn" id="darkToggle" type="button">🌙 다크</button>
+  <div id="gt-mount"></div>
+</div>
+"""
+
+TOOLBAR_JS = """
+<script>
+(function(){
+  var b=document.body; b.classList.add('has-tb');
+  // 다크모드
+  var dt=document.getElementById('darkToggle');
+  var saved=localStorage.getItem('aibrief-theme');
+  if(saved==='dark'){document.documentElement.setAttribute('data-theme','dark');dt.textContent='☀️ 라이트';}
+  dt.addEventListener('click',function(){
+    var dark=dt.textContent.indexOf('라이트')===-1;
+    if(dark){localStorage.setItem('aibrief-theme','dark');document.documentElement.setAttribute('data-theme','dark');dt.textContent='☀️ 라이트';}
+    else{localStorage.setItem('aibrief-theme','light');document.documentElement.removeAttribute('data-theme');dt.textContent='🌙 다크';}
+  });
+  // 검색 (호 내 하이라이팅 + 필터)
+  var s=document.getElementById('siteSearch');
+  s.addEventListener('input',function(){
+    var q=s.value.trim().toLowerCase();
+    var cards=document.querySelectorAll('.card,.row');
+    cards.forEach(function(c){
+      var t=c.textContent.toLowerCase();
+      var hit=!q||t.indexOf(q)>-1;
+      c.style.display=hit?'':'none';
+      c.querySelectorAll('mark.hl').forEach(function(m){c.replaceChild(document.createTextNode(m.textContent),m);c.normalize();});
+      if(q&&hit){var tt=c.innerHTML;
+        try{c.innerHTML=tt.replace(new RegExp('('+q.replace(/[.*+?^${}()|[\\]\\\\]/g,'\\\\$&')+')','ig'),'<mark class=\"hl\">$1</mark>');}catch(e){}}
+    });
+    document.querySelectorAll('.block').forEach(function(bl){
+      var any=[].slice.call(bl.querySelectorAll('.card,.row')).some(function(c){return c.style.display!=='none';});
+      bl.style.display=(q&&!any)?'none':'';
+    });
+  });
+  // Google 번역 위젯 (키 불필요)
+  var g=document.createElement('script');
+  g.src='https://translate.google.com/translate_a/element.js?cb=__aibT';
+  window.__aibT=function(){
+    new google.translate.TranslateElement({pageLanguage:'en',includedLanguages:'ko,en',layout:google.translate.TranslateElement.InlineLayout.SIMPLE,autoDisplay:false},'gt-mount');
+    var sel=document.querySelector('#gt-mount .goog-te-combo');
+    if(sel){var o=document.createElement('option');o.value='ko';o.text='한국어';sel.add(o,sel.options[0]);}
+  };
+  document.body.appendChild(g);
+})();
+</script>
+"""
 
 
 def main():

@@ -40,13 +40,16 @@ def load_config():
     defaults = {
         "topics": ["AI agents", "LLM reasoning", "open source AI", "multimodal models", "AI safety"],
         "sources": ["hackernews", "arxiv", "github"],
+        "topic_labels": {},
         "max_per_section": 8,
     }
     try:
         import yaml
         with open(CONFIG_PATH, "r", encoding="utf-8") as f:
             cfg = yaml.safe_load(f) or {}
-        defaults.update({k: cfg[k] for k in defaults if k in cfg})
+        for k in ("topics", "sources", "topic_labels", "max_per_section"):
+            if k in cfg:
+                defaults[k] = cfg[k]
     except Exception as e:
         log(f"config.yaml 미사용(폴백): {e}")
     return defaults
@@ -240,6 +243,7 @@ def main():
         "date": today,
         "generated_at": datetime.datetime.now().isoformat(timespec="seconds"),
         "topics": topics,
+        "topic_labels": cfg.get("topic_labels", {}),
         "counts": {"trending": len(trending), "papers": len(papers), "tools": len(tools)},
         "trending": trending,
         "papers": papers,

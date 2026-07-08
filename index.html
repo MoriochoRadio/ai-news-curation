@@ -1,461 +1,209 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Daily AI News Curation</title>
-  <style>
-    :root {
-      color-scheme: light;
-      --bg: #f6f8fb;
-      --panel: #ffffff;
-      --text: #1f2328;
-      --text-secondary: #4a5568;
-      --border: #d0d7de;
-      --accent: #0969da;
-      --accent-strong: #0550ae;
-      --marker-top: #d73a49;
-      --marker-paper: #8250df;
-      --marker-tool: #3fb950;
-      --marker-insight: #9a6700;
-      --shadow: 0 2px 6px rgba(17, 22, 26, 0.04);
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The AI Brief — 매일 아침 AI 브리프</title>
+<link rel="stylesheet" href="assets/style.css" />
 
-    * {
-      box-sizing: border-box;
-    }
+<style>
+.tb-fixed{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;gap:8px;align-items:center;
+  padding:8px 14px;background:var(--paper,#fffdf8);border-bottom:1px solid var(--line,#e3ddd0);
+  box-shadow:0 1px 6px rgba(0,0,0,.05);font-family:var(--sans);}
+.tb-fixed input{flex:1;max-width:340px;padding:7px 12px;border:1px solid var(--line,#e3ddd0);
+  border-radius:20px;font-size:13px;background:var(--bg,#f4f1ea);color:var(--ink,#1c1a17);outline:none;}
+.tb-fixed .tb-btn{border:1px solid var(--line,#e3ddd0);background:transparent;color:var(--ink,#1c1a17);
+  border-radius:20px;padding:6px 12px;font-size:13px;cursor:pointer;line-height:1;}
+.tb-fixed .tb-btn:hover{border-color:var(--accent,#b4451f);color:var(--accent,#b4451f);}
+body.has-tb{padding-top:52px;}
+mark.hl{background:var(--accent-soft,#f3e7df);color:var(--accent,#b4451f);border-radius:3px;padding:0 2px;}
+#goog-gt-tt,#goog-te-banner{display:none!important;}
+.goog-te-gadget{font-size:0!important;}
+.goog-te-gadget .goog-te-combo{font-size:12px!important;padding:5px 6px;border-radius:14px;
+  border:1px solid var(--line,#e3ddd0);background:var(--bg,#f4f1ea);color:var(--ink,#1c1a17);}
+</style>
 
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
-      line-height: 1.55;
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .page {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 36px 20px 72px;
-    }
-
-    .header {
-      margin-bottom: 28px;
-    }
-    .header h1 {
-      margin: 0 0 6px;
-      font-size: 26px;
-    }
-    .header p {
-      margin: 0;
-      color: var(--text-secondary);
-      font-size: 14px;
-    }
-    .header .meta {
-      margin-top: 6px;
-      font-size: 12px;
-      color: var(--text-secondary);
-    }
-
-    .summary {
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 16px 18px 14px;
-      margin-bottom: 24px;
-      box-shadow: var(--shadow);
-    }
-    .summary-title {
-      margin: 0 0 8px;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.15px;
-      text-transform: uppercase;
-      color: var(--text-secondary);
-    }
-    .summary-list {
-      margin: 0;
-      padding-left: 18px;
-    }
-    .summary-list li {
-      margin: 5px 0;
-    }
-    .summary-link {
-      margin-top: 10px;
-      font-size: 13px;
-      color: var(--text-secondary);
-    }
-
-    .section {
-      margin: 20px 0 26px;
-    }
-    .section-title {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin: 0 0 12px;
-      font-size: 15px;
-    }
-    .dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      display: inline-block;
-    }
-    .dot-top {
-      background: var(--marker-top);
-    }
-    .dot-paper {
-      background: var(--marker-paper);
-    }
-    .dot-tool {
-      background: var(--marker-tool);
-    }
-    .dot-insight {
-      background: var(--marker-insight);
-    }
-
-    .card-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 12px;
-    }
-    .card {
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 14px 16px;
-      transition: box-shadow 120ms ease;
-    }
-    .card:hover {
-      box-shadow: 0 6px 14px rgba(17, 22, 26, 0.06);
-    }
-    .card-title {
-      margin: 0 0 6px;
-      font-size: 15px;
-      line-height: 1.35;
-    }
-    .card-title a {
-      font-weight: 600;
-      color: var(--text);
-    }
-    .card-title a:hover {
-      color: var(--accent-strong);
-    }
-    .card-meta {
-      margin: 0;
-      font-size: 12px;
-      color: var(--text-secondary);
-    }
-
-    .item-list {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .item {
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 12px 14px;
-    }
-    .item-title {
-      margin: 0 0 4px;
-      font-size: 14px;
-    }
-    .item-title a {
-      font-weight: 600;
-      color: var(--text);
-    }
-    .item-desc {
-      margin: 0;
-      font-size: 13px;
-      color: var(--text-secondary);
-    }
-
-    .insight-block {
-      background: var(--panel);
-      border-left: 3px solid var(--marker-insight);
-      border-radius: 0 10px 10px 0;
-      padding: 14px 16px;
-      margin: 10px 0;
-    }
-    .insight-block p {
-      margin: 0;
-      font-size: 14px;
-    }
-
-    .footer {
-      margin-top: 28px;
-      font-size: 12px;
-      color: var(--text-secondary);
-    }
-
-    .status {
-      margin-top: 8px;
-      font-size: 12px;
-      color: var(--text-secondary);
-    }
-  </style>
 </head>
 <body>
-  <main class="page">
-    <header class="header">
-      <h1>Daily AI News Curation</h1>
-      <p>AI 뉴스, 논문, 도구, 인사이트를 매일 자동으로 정리합니다.</p>
-      <p class="meta">
-        <span id="date-label"></span>
-        <span class="status" id="status"></span>
-      </p>
-    </header>
 
-    <section class="summary" id="today">
-      <h2 class="summary-title">오늘의 핵심</h2>
-      <ul class="summary-list" id="summary-list">
-        <li>오늘의 큐레이션을 불러오는 중입니다...</li>
-      </ul>
-      <p class="summary-link">
-        상세 보기: <a id="detail-link" href="#" target="_blank">daily/YYYY-MM-DD.md</a>
-      </p>
-    </section>
+<div class="tb-fixed">
+  <input id="siteSearch" type="search" placeholder="호 내 검색 (제목·설명)…" aria-label="검색" />
+  <button class="tb-btn" id="darkToggle" type="button">🌙 다크</button>
+  <div id="gt-mount"></div>
+</div>
 
-    <section class="section" id="trending">
-      <h2 class="section-title">
-        <span class="dot dot-top" aria-hidden="true"></span>
-        Trending
-      </h2>
-      <div class="card-list" id="trending-list">
-        <div class="card">
-          <p>아직 표시할 내용이 없습니다.</p>
-        </div>
+<div class="wrap">
+  
+        <header class="masthead">
+          <div class="brand">The AI Brief</div>
+          <div class="issue-date">2026년 07월 08일 · 최신 호</div>
+          <p class="tagline">매일 아침, AI 업계의 흐름을 한눈에</p>
+          <p class="topics">오늘의 주제 — AI agents · LLM reasoning · multimodal models · open source AI · Rust in AI tooling · AI safety</p>
+        </header>
+        
+    <section class="block tldr">
+      <header class="block-head">
+        <h2>한눈에 요약</h2>
+        <span class="block-sub">TL;DR</span>
+      </header>
+      <div class="block-body">
+        <p class="tldr-count">트렌딩 <b>8</b> · 논문 <b>8</b> · 프로젝트 <b>8</b> 건 수집</p>
+        <p class="tldr-topics">오늘 살펴본 주제 — AI 에이전트 · LLM 추론 · 멀티모달 모델 · 오픈소스 AI · AI 도구의 Rust · AI 안전성</p>
+        <ul class="tldr-picks"><li><span class="tldr-tag">오늘의 관심</span> Show HN: FactIQ – a realtime econ+finance database for AI agents</li><li><span class="tldr-tag">논문 픽</span> An Experimental Design Approach to Evaluating Agentic AI&#x27;s Autonomous Model Discovery</li><li><span class="tldr-tag">프로젝트 픽</span> obra/superpowers</li></ul>
       </div>
     </section>
-
-    <section class="section" id="papers">
-      <h2 class="section-title">
-        <span class="dot dot-paper" aria-hidden="true"></span>
-        Papers
-      </h2>
-      <div class="item-list" id="papers-list">
-        <div class="item">
-          <p>아직 표시할 내용이 없습니다.</p>
-        </div>
-      </div>
+        
+    <section class="block" data-section="trending">
+      <header class="block-head">
+        <h2>트렌딩</h2>
+        <span class="block-sub">지금 주목받는 AI 이야기</span>
+      </header>
+      <div class="block-body"><div class="grid">
+    <article class="card">
+      <a class="card-title" href="https://github.com/defog-ai/factiq-plugin" target="_blank" rel="noopener">Show HN: FactIQ – a realtime econ+finance database for AI agents</a>
+      
+      <div class="card-foot"><span class="meta-line">▲ 1</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://smolmail.com/" target="_blank" rel="noopener">SmolMail: An AI agent for Gmail that answers in visuals, not walls of text</a>
+      
+      <div class="card-foot"><span class="meta-line">▲ 2 · 💬 1</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/nossa-y/activity-frames" target="_blank" rel="noopener">Activity-frames – give your AI agent eyes on your day</a>
+      
+      <div class="card-foot"><span class="meta-line">▲ 1</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/mazen160/backlog" target="_blank" rel="noopener">Show HN: Backlog – tasks and contexts manager for AI coding agents</a>
+      
+      <div class="card-foot"><span class="meta-line">▲ 3</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://opensourcewatch.beehiiv.com/p/agent-name-service-the-universal-ai-agents-identity-system" target="_blank" rel="noopener">Agent Name Service: The universal AI Agents identity system</a>
+      
+      <div class="card-foot"><span class="meta-line">▲ 3</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://mkrrm.com/" target="_blank" rel="noopener">Show HN: Mkrrm – a waitlist only AI can use</a>
+      
+      <div class="card-foot"><span class="meta-line">▲ 1</span><span class="src">HackerNews</span></div>
+    </article></div></div>
     </section>
-
-    <section class="section" id="tools">
-      <h2 class="section-title">
-        <span class="dot dot-tool" aria-hidden="true"></span>
-        Tools & Projects
-      </h2>
-      <div class="item-list" id="tools-list">
-        <div class="item">
-          <p>아직 표시할 내용이 없습니다.</p>
-        </div>
+        
+    <section class="block" data-section="papers">
+      <header class="block-head">
+        <h2>논문</h2>
+        <span class="block-sub">새로 나온 연구</span>
+      </header>
+      <div class="block-body"><div class="rows">
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2607.06413v1" target="_blank" rel="noopener">An Experimental Design Approach to Evaluating Agentic AI&#x27;s Autonomous Model Discovery</a>
+        <p class="item-desc">Large language model coding agents increasingly perform open-ended data modeling and analysis. These agents are stochastic and adaptive, and therefore their autonomous model discovery behavior cannot be adequately characterized by a single benchmark run. In this work, we propose </p>
+        <div class="card-foot"><span class="byline">Hao He, Xueying Liu, Chris J. Kuhlman</span><span class="date">2026-07-07</span><span class="src">ArXiv</span></div>
       </div>
-    </section>
-
-    <section class="section" id="insights">
-      <h2 class="section-title">
-        <span class="dot dot-insight" aria-hidden="true"></span>
-        Insights
-      </h2>
-      <div class="item-list" id="insights-list">
-        <div class="item">
-          <p>아직 표시할 내용이 없습니다.</p>
-        </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2607.06229v1" target="_blank" rel="noopener">Spider 2.0-AIFunc: Extending Real-World Text-to-SQL to AI-Native SQL Workflows</a>
+        <p class="item-desc">Major cloud data platforms now expose large language model capabilities as native SQL functions, enabling analysts to perform classification, filtering, sentiment analysis, extraction, similarity search, and aggregation within ordinary SQL queries. Yet existing text-to-SQL benchm</p>
+        <div class="card-foot"><span class="byline">Tianyang Liu, Canwen Xu, Fangyu Lei</span><span class="date">2026-07-07</span><span class="src">ArXiv</span></div>
       </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2607.06214v1" target="_blank" rel="noopener">A toy framework for single and multi-agent human-AI curiosity ecosystems</a>
+        <p class="item-desc">This paper offers a toy framework for considering curiosity as an ecosystem. First, it suggests that a single agent&#x27;s inquiry policy (how, when, and why an agent asks a question) depends on how the agent values immediate uncertainty reduction, costs, delayed return, and the value</p>
+        <div class="card-foot"><span class="byline">Ilya E. Monosov</span><span class="date">2026-07-07</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2607.06195v1" target="_blank" rel="noopener">LogicHunter: Testing LLM Agent Frameworks with an Agentic Oracle</a>
+        <p class="item-desc">Large Language Model (LLM) agent frameworks such as LangChain, LlamaIndex, and CrewAI have become critical infrastructure powering production AI systems, yet they remain severely under-tested due to fundamental challenges in automated testing. Unlike traditional software, where c</p>
+        <div class="card-foot"><span class="byline">Minghui Long, Yanjie Zhao, Haoyu Wang</span><span class="date">2026-07-07</span><span class="src">ArXiv</span></div>
+      </div>
+    </article></div></div>
     </section>
+        
+    <section class="block" data-section="tools">
+      <header class="block-head">
+        <h2>오픈소스</h2>
+        <span class="block-sub">움직이는 프로젝트</span>
+      </header>
+      <div class="block-body"><div class="grid">
+    <article class="card">
+      <a class="card-title" href="https://github.com/obra/superpowers" target="_blank" rel="noopener">obra/superpowers</a>
+      <p class="item-desc">An agentic skills framework &amp; software development methodology that works.</p>
+      <div class="card-foot"><span class="badges">★ 248.7k · Shell</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/NousResearch/hermes-agent" target="_blank" rel="noopener">NousResearch/hermes-agent</a>
+      <p class="item-desc">The agent that grows with you</p>
+      <div class="card-foot"><span class="badges">★ 211.0k · Python</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/Significant-Gravitas/AutoGPT" target="_blank" rel="noopener">Significant-Gravitas/AutoGPT</a>
+      <p class="item-desc">AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.</p>
+      <div class="card-foot"><span class="badges">★ 185.4k · Python</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/langflow-ai/langflow" target="_blank" rel="noopener">langflow-ai/langflow</a>
+      <p class="item-desc">Langflow is a powerful tool for building and deploying AI-powered agents and workflows.</p>
+      <div class="card-foot"><span class="badges">★ 151.3k · Python</span><span class="src">GitHub</span></div>
+    </article></div></div>
+    </section>
+  <section class="block archive-preview">
+    <header class="block-head"><h2>최근 호</h2><a class="more" href="archive.html">전체 보기 →</a></header>
+    <ul class="issue-list"><li><a href="issues/2026-07-08.html">07.08</a><span class="r-title">2026년 07월 08일</span><span class="r-count">T8 · P8 · G8</span></li><li><a href="issues/2026-06-13.html">06.13</a><span class="r-title">2026년 06월 13일</span><span class="r-count">T5 · P5 · G6</span></li></ul>
+  </section>
+  <footer class="site-foot">
+    <p>자동 수집 · HackerNews · ArXiv · GitHub</p>
+  </footer>
+</div>
 
-    <footer class="footer">
-      Built by Hermes Agent · Powered by Firecrawl + OpenRouter
-    </footer>
-  </main>
+<script>
+(function(){
+  var b=document.body; b.classList.add('has-tb');
+  // 다크모드
+  var dt=document.getElementById('darkToggle');
+  var saved=localStorage.getItem('aibrief-theme');
+  if(saved==='dark'){document.documentElement.setAttribute('data-theme','dark');dt.textContent='☀️ 라이트';}
+  dt.addEventListener('click',function(){
+    var dark=dt.textContent.indexOf('라이트')===-1;
+    if(dark){localStorage.setItem('aibrief-theme','dark');document.documentElement.setAttribute('data-theme','dark');dt.textContent='☀️ 라이트';}
+    else{localStorage.setItem('aibrief-theme','light');document.documentElement.removeAttribute('data-theme');dt.textContent='🌙 다크';}
+  });
+  // 검색 (호 내 하이라이팅 + 필터)
+  var s=document.getElementById('siteSearch');
+  s.addEventListener('input',function(){
+    var q=s.value.trim().toLowerCase();
+    var cards=document.querySelectorAll('.card,.row');
+    cards.forEach(function(c){
+      var t=c.textContent.toLowerCase();
+      var hit=!q||t.indexOf(q)>-1;
+      c.style.display=hit?'':'none';
+      c.querySelectorAll('mark.hl').forEach(function(m){c.replaceChild(document.createTextNode(m.textContent),m);c.normalize();});
+      if(q&&hit){var tt=c.innerHTML;
+        try{c.innerHTML=tt.replace(new RegExp('('+q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','ig'),'<mark class="hl">$1</mark>');}catch(e){}}
+    });
+    document.querySelectorAll('.block').forEach(function(bl){
+      var any=[].slice.call(bl.querySelectorAll('.card,.row')).some(function(c){return c.style.display!=='none';});
+      bl.style.display=(q&&!any)?'none':'';
+    });
+  });
+  // Google 번역 위젯 (키 불필요)
+  var g=document.createElement('script');
+  g.src='https://translate.google.com/translate_a/element.js?cb=__aibT';
+  window.__aibT=function(){
+    new google.translate.TranslateElement({pageLanguage:'en',includedLanguages:'ko,en',layout:google.translate.TranslateElement.InlineLayout.SIMPLE,autoDisplay:false},'gt-mount');
+    var sel=document.querySelector('#gt-mount .goog-te-combo');
+    if(sel){var o=document.createElement('option');o.value='ko';o.text='한국어';sel.add(o,sel.options[0]);}
+  };
+  document.body.appendChild(g);
+})();
+</script>
 
-  <script>
-    const repoBase = window.location.origin;
-    const dateLabel = document.getElementById('date-label');
-    const detailLink = document.getElementById('detail-link');
-    const summaryList = document.getElementById('summary-list');
-    const trendingList = document.getElementById('trending-list');
-    const papersList = document.getElementById('papers-list');
-    const toolsList = document.getElementById('tools-list');
-    const insightsList = document.getElementById('insights-list');
-    const statusEl = document.getElementById('status');
-
-    function parseMarkdown(md) {
-      const lines = md.split(/\r?\n/);
-      const sections = {
-        trending: [],
-        papers: [],
-        tools: [],
-        insights: [],
-        summary: []
-      };
-      let current = null;
-
-      for (const line of lines) {
-        const trimmed = line.trim();
-        if (!trimmed) continue;
-        if (trimmed === '---') continue;
-
-        // H2/H3 모두 허용 — LLM 출력 변형에 관대하게
-        const heading = trimmed.match(/^#{2,3}\s+(.+)$/);
-        if (heading) {
-          const text = heading[1].toLowerCase();
-          if (text.includes('핵심')) current = 'summary';
-          else if (text.includes('trending') || text.includes('동향')) current = 'trending';
-          else if (text.includes('paper') || text.includes('논문')) current = 'papers';
-          else if (text.includes('tool') || text.includes('프로젝트')) current = 'tools';
-          else if (text.includes('insight') || text.includes('인사이트')) current = 'insights';
-          else if (text.includes('raw results') && !sections.trending.length) current = 'trending'; // 요약 실패 날엔 raw 링크라도 표시
-          else current = null;
-          continue;
-        }
-
-        if (!current) continue;
-
-        // summary/insights는 순수 텍스트 목록
-        if (current === 'summary' || current === 'insights') {
-          const text = trimmed
-            .replace(/^[-*]\s*/, '')
-            .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '$1')
-            .replace(/\*\*/g, '')
-            .replace(/https?:\/\/\S+/g, '')
-            .trim();
-          if (text) sections[current].push(text);
-          continue;
-        }
-
-        if (!/^[-*]\s/.test(trimmed)) continue;
-        const urlMatch = trimmed.match(/https?:\/\/[^\s)]+/);
-        const url = urlMatch ? urlMatch[0] : '';
-
-        // 형식 1: - **제목** — 설명 — URL
-        let title = '', desc = '';
-        const boldMatch = trimmed.match(/\*\*(.+?)\*\*\s*[-–—:]?\s*(.*)$/);
-        if (boldMatch) {
-          title = boldMatch[1];
-          desc = boldMatch[2] || '';
-        } else {
-          // 형식 2: - [제목](url) — 설명
-          const mdLink = trimmed.match(/^[-*]\s*\[([^\]]+)\]\(([^)]+)\)\s*[-–—:]?\s*(.*)$/);
-          if (!mdLink) continue;
-          title = mdLink[1];
-          desc = mdLink[3] || '';
-        }
-        title = title.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '$1').trim();
-        desc = desc
-          .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '$1')
-          .replace(/https?:\/\/\S+/g, '')
-          .replace(/[\s\-–—·,]+$/g, '')
-          .trim();
-        if (title) sections[current].push({ title, url, desc });
-      }
-
-      return sections;
-    }
-
-    function renderItems(container, items, max = 5) {
-      container.innerHTML = '';
-      if (!items.length) {
-        container.innerHTML = '<div class="item"><p>표시할 항목이 없습니다.</p></div>';
-        return;
-      }
-      const list = items.slice(0, max);
-      list.forEach((item) => {
-        const el = document.createElement('article');
-        el.className = 'item';
-        const title = document.createElement('h3');
-        title.className = 'item-title';
-        const a = document.createElement('a');
-        a.href = item.url || '#';
-        a.target = '_blank';
-        a.rel = 'noopener';
-        a.textContent = item.title;
-        title.appendChild(a);
-        const desc = document.createElement('p');
-        desc.className = 'item-desc';
-        desc.textContent = item.desc || '';
-        el.appendChild(title);
-        el.appendChild(desc);
-        container.appendChild(el);
-      });
-    }
-
-    function renderInsights(container, items) {
-      container.innerHTML = '';
-      (items || []).slice(0, 3).forEach((text) => {
-        const el = document.createElement('div');
-        el.className = 'insight-block';
-        const p = document.createElement('p');
-        p.textContent = text;
-        el.appendChild(p);
-        container.appendChild(el);
-      });
-      if (!items.length) {
-        container.innerHTML = '<div class="item"><p>표시할 인사이트가 없습니다.</p></div>';
-      }
-    }
-
-    function fmtDate(d) {
-      return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
-    }
-
-    async function loadToday() {
-      // 오늘 파일이 아직 없으면(수집 전·하루 스킵) 최근 7일 내 가장 최신 파일로 폴백
-      const todayStr = fmtDate(new Date());
-      let md = null;
-      let usedDate = null;
-      for (let i = 0; i < 7; i++) {
-        const dateStr = fmtDate(new Date(Date.now() - i * 86400000));
-        try {
-          const res = await fetch(`daily/${dateStr}.md?cache=${Date.now()}`);
-          if (res.ok) {
-            md = await res.text();
-            usedDate = dateStr;
-            break;
-          }
-        } catch (err) { /* 다음 날짜 시도 */ }
-      }
-
-      if (md === null) {
-        dateLabel.textContent = '데이터 없음';
-        statusEl.textContent = '최근 7일치 큐레이션을 찾지 못했습니다.';
-        md = `## 오늘의 핵심\n- 큐레이션 데이터를 아직 불러오지 못했습니다.\n- 잠시 후 다시 열어보세요.\n`;
-      } else {
-        dateLabel.textContent = `${usedDate} 기준`;
-        detailLink.href = `daily/${usedDate}.md`;
-        if (usedDate !== todayStr) {
-          statusEl.textContent = `오늘 자 큐레이션이 아직 없어 ${usedDate} 자를 표시합니다.`;
-        }
-      }
-
-      const parsed = parseMarkdown(md);
-      summaryList.innerHTML = '';
-      (parsed.summary.length ? parsed.summary : ['오늘의 큐레이션을 불러오는 중입니다.']).forEach((text) => {
-        const li = document.createElement('li');
-        li.textContent = text;
-        summaryList.appendChild(li);
-      });
-
-      renderItems(trendingList, parsed.trending);
-      renderItems(papersList, parsed.papers);
-      renderItems(toolsList, parsed.tools);
-      renderInsights(insightsList, parsed.insights);
-    }
-
-    loadToday();
-  </script>
 </body>
 </html>

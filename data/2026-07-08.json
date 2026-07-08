@@ -1,6 +1,6 @@
 {
   "date": "2026-07-08",
-  "generated_at": "2026-07-08T10:42:58",
+  "generated_at": "2026-07-08T10:57:08",
   "topics": [
     "AI agents",
     "LLM reasoning",
@@ -9,6 +9,14 @@
     "Rust in AI tooling",
     "AI safety"
   ],
+  "topic_labels": {
+    "AI agents": "AI 에이전트",
+    "LLM reasoning": "LLM 추론",
+    "multimodal models": "멀티모달 모델",
+    "open source AI": "오픈소스 AI",
+    "Rust in AI tooling": "AI 도구의 Rust",
+    "AI safety": "AI 안전성"
+  },
   "counts": {
     "trending": 8,
     "papers": 8,
@@ -167,7 +175,7 @@
       "title": "obra/superpowers",
       "url": "https://github.com/obra/superpowers",
       "source": "GitHub",
-      "stars": 248731,
+      "stars": 248747,
       "language": "Shell",
       "desc": "An agentic skills framework & software development methodology that works."
     },
@@ -175,7 +183,7 @@
       "title": "NousResearch/hermes-agent",
       "url": "https://github.com/NousResearch/hermes-agent",
       "source": "GitHub",
-      "stars": 211002,
+      "stars": 211009,
       "language": "Python",
       "desc": "The agent that grows with you"
     },
@@ -183,7 +191,7 @@
       "title": "Significant-Gravitas/AutoGPT",
       "url": "https://github.com/Significant-Gravitas/AutoGPT",
       "source": "GitHub",
-      "stars": 185428,
+      "stars": 185427,
       "language": "Python",
       "desc": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters."
     },
@@ -191,7 +199,7 @@
       "title": "langflow-ai/langflow",
       "url": "https://github.com/langflow-ai/langflow",
       "source": "GitHub",
-      "stars": 151320,
+      "stars": 151322,
       "language": "Python",
       "desc": "Langflow is a powerful tool for building and deploying AI-powered agents and workflows."
     },
@@ -199,7 +207,7 @@
       "title": "langgenius/dify",
       "url": "https://github.com/langgenius/dify",
       "source": "GitHub",
-      "stars": 148091,
+      "stars": 148093,
       "language": "TypeScript",
       "desc": "Production-ready platform for agentic workflow development."
     },
@@ -215,7 +223,7 @@
       "title": "langchain-ai/langchain",
       "url": "https://github.com/langchain-ai/langchain",
       "source": "GitHub",
-      "stars": 141228,
+      "stars": 141230,
       "language": "Python",
       "desc": "The agent engineering platform."
     },
@@ -223,7 +231,7 @@
       "title": "msitarzewski/agency-agents",
       "url": "https://github.com/msitarzewski/agency-agents",
       "source": "GitHub",
-      "stars": 128803,
+      "stars": 128808,
       "language": "Shell",
       "desc": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables."
     }
