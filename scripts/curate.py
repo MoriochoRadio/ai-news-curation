@@ -1,237 +1,263 @@
-import os, json, sys, time, datetime, urllib.request, urllib.error
+#!/usr/bin/env python3
+"""
+AI News Curation — collector
+
+키 없이 동작하는 무료 소스 3종에서 AI 관련 콘텐츠를 수집한다.
+  - HackerNews Algolia API  (뉴스/토론)
+  - ArXiv API               (논문)
+  - GitHub Search API       (오픈소스 프로젝트)
+
+수집 결과는 data/YYYY-MM-DD.json 으로 구조화해 저장한다.
+선택적으로 OPENROUTER_API_KEY 가 있으면 한국어 요약을 덧붙인다
+(키가 없으면 원문 제목/설명을 그대로 사용한다 — 파이프라인은 항상 동작).
+
+Firecrawl 등 유료/크레딧 소스는 더 이상 사용하지 않는다.
+"""
+import os
+import json
+import datetime
+import urllib.request
+import urllib.error
+import urllib.parse
+import time
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DAILY_DIR = os.path.join(ROOT, "daily")
+DATA_DIR = os.path.join(ROOT, "data")
+CONFIG_PATH = os.path.join(ROOT, "config.yaml")
 
-def env_key(*names):
-    for name in names:
-        v = os.environ.get(name, "").strip()
-        if v:
-            return v
+UA = {"User-Agent": "ai-news-curation/2.0 (+https://github.com/MoriochoRadio/ai-news-curation)"}
+
+
+def log(msg):
+    print(f"[curate] {msg}", flush=True)
+
+
+# --------------------------------------------------------------------------
+# config
+# --------------------------------------------------------------------------
+def load_config():
+    """config.yaml 에서 topics/sources 를 읽는다 (yaml 미설치 시 폴백 내장)."""
+    defaults = {
+        "topics": ["AI agents", "LLM reasoning", "open source AI", "multimodal models", "AI safety"],
+        "sources": ["hackernews", "arxiv", "github"],
+        "max_per_section": 8,
+    }
+    try:
+        import yaml
+        with open(CONFIG_PATH, "r", encoding="utf-8") as f:
+            cfg = yaml.safe_load(f) or {}
+        defaults.update({k: cfg[k] for k in defaults if k in cfg})
+    except Exception as e:
+        log(f"config.yaml 미사용(폴백): {e}")
+    return defaults
+
+
+# --------------------------------------------------------------------------
+# http helpers
+# --------------------------------------------------------------------------
+def http_get(url, timeout=30, headers=None):
+    req = urllib.request.Request(url, headers=headers or UA)
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            return r.status, r.read().decode("utf-8", errors="ignore")
+    except urllib.error.HTTPError as e:
+        return e.code, e.read().decode("utf-8", errors="ignore")[:300]
+    except Exception as e:
+        return 0, str(e)[:200]
+
+
+def http_post_json(url, api_key, payload, timeout=120):
+    data = json.dumps(payload).encode("utf-8")
+    headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
+    req = urllib.request.Request(url, data=data, headers=headers, method="POST")
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            return json.loads(r.read().decode("utf-8", errors="ignore"))
+    except Exception as e:
+        return {"_error": str(e)[:300]}
+
+
+# --------------------------------------------------------------------------
+# source collectors
+# --------------------------------------------------------------------------
+def collect_hackernews(topics, limit):
+    items = []
+    seen = set()
+    for topic in topics[:3]:
+        q = urllib.parse.quote(topic)
+        url = f"https://hn.algolia.com/api/v1/search_by_date?query={q}&tags=story&hitsPerPage={limit}"
+        status, body = http_get(url, timeout=30)
+        if status != 200:
+            log(f"HN 실패({topic}): {status}")
+            continue
+        try:
+            hits = json.loads(body).get("hits", [])
+        except Exception:
+            continue
+        for h in hits:
+            title = (h.get("title") or "").strip()
+            if not title:
+                continue
+            link = h.get("url") or f"https://news.ycombinator.com/item?id={h.get('objectID')}"
+            key = link
+            if key in seen:
+                continue
+            seen.add(key)
+            items.append({
+                "title": title,
+                "url": link,
+                "source": "HackerNews",
+                "points": h.get("points") or 0,
+                "comments": h.get("num_comments") or 0,
+                "author": h.get("author") or "",
+                "date": h.get("created_at", "")[:10],
+                "desc": "",
+            })
+        time.sleep(0.5)
+    return items[:limit]
+
+
+def collect_arxiv(topics, limit):
+    items = []
+    seen = set()
+    for topic in topics[:3]:
+        q = urllib.parse.quote(f"all:{topic.replace(' ', '+')}")
+        url = f"http://export.arxiv.org/api/query?search_query={q}&sortBy=submittedDate&sortOrder=descending&max_results={limit}"
+        status, body = http_get(url, timeout=30)
+        if status != 200:
+            log(f"ArXiv 실패({topic}): {status}")
+            continue
+        entries = body.split("<entry>")[1:]
+        for e in entries:
+            def tag(name):
+                start = e.find(f"<{name}>")
+                end = e.find(f"</{name}>")
+                if start == -1 or end == -1:
+                    return ""
+                return e[start + len(f"<{name}>"):end].strip()
+            title = " ".join(tag("title").split())
+            link = ""
+            for part in e.split("<link")[1:]:
+                if 'title="pdf"' in part:
+                    link = part.split('href="', 1)[1].split('"', 1)[0]
+                    break
+            if not link:
+                link = tag("id")
+            if not title or link in seen:
+                continue
+            seen.add(link)
+            items.append({
+                "title": title,
+                "url": link,
+                "source": "ArXiv",
+                "authors": ", ".join([a.split("<name>")[1].split("</name>")[0] for a in e.split("<author>")[1:] if "<name>" in a][:3]),
+                "date": tag("published")[:10],
+                "desc": " ".join(tag("summary").split())[:280],
+            })
+        time.sleep(0.5)
+    return items[:limit]
+
+
+def collect_github(topics, limit):
+    items = []
+    seen = set()
+    for topic in topics[:3]:
+        q = urllib.parse.quote(topic)
+        url = f"https://api.github.com/search/repositories?q={q}&sort=stars&order=desc&per_page={limit}"
+        status, body = http_get(url, timeout=30, headers={**UA, "Accept": "application/vnd.github+json"})
+        if status != 200:
+            log(f"GitHub 실패({topic}): {status}")
+            continue
+        try:
+            repos = json.loads(body).get("items", [])
+        except Exception:
+            continue
+        for r in repos:
+            name = r.get("full_name", "")
+            if name in seen:
+                continue
+            seen.add(name)
+            items.append({
+                "title": name,
+                "url": r.get("html_url", ""),
+                "source": "GitHub",
+                "stars": r.get("stargazers_count") or 0,
+                "language": r.get("language") or "",
+                "desc": (r.get("description") or "").strip(),
+            })
+        time.sleep(1.0)
+    return items[:limit]
+
+
+# --------------------------------------------------------------------------
+# optional summarizer (Korean) — keyless safe
+# --------------------------------------------------------------------------
+def summarize(text, api_key):
+    if not api_key:
+        return ""
+    url = "https://openrouter.ai/api/v1/chat/completions"
+    payload = {
+        "model": os.environ.get("SUMMARY_MODEL", "nousresearch/hermes-3-llama-3.1-405b:free"),
+        "messages": [
+            {"role": "system", "content": "You are a concise tech editor. Summarize the given AI news item in one natural Korean sentence. No markdown, no preamble."},
+            {"role": "user", "content": text[:600]},
+        ],
+        "max_completion_tokens": 120,
+    }
+    for attempt in range(2):
+        res = http_post_json(url, api_key, payload, timeout=60)
+        if "_error" not in res and res.get("choices"):
+            return res["choices"][0]["message"]["content"].strip().strip('*"')
+        time.sleep(3)
     return ""
 
-def post(url, headers, payload, timeout=120, retries=3):
-    """POST + JSON 응답. 429/5xx/네트워크 오류는 백오프 재시도, 그 외 4xx(402 등)는 즉시 실패."""
-    data = json.dumps(payload).encode("utf-8")
-    last_err = None
-    for attempt in range(retries):
-        req = urllib.request.Request(url, data=data, headers=headers, method="POST")
-        try:
-            with urllib.request.urlopen(req, timeout=timeout) as resp:
-                body = resp.read().decode("utf-8", errors="ignore")
-            try:
-                return json.loads(body)
-            except Exception:
-                return {"_raw": body}
-        except urllib.error.HTTPError as e:
-            body = e.read().decode("utf-8", errors="ignore")
-            last_err = RuntimeError(f"HTTP {e.code}: {body[:500]}")
-            if e.code != 429 and e.code < 500:
-                raise last_err  # 402(크레딧 소진) 등은 재시도해도 소용없음
-        except (urllib.error.URLError, TimeoutError) as e:
-            last_err = RuntimeError(f"network error: {e}")
-        if attempt < retries - 1:
-            time.sleep(10 * (attempt + 1))
-    raise last_err
 
-def search_firecrawl(query, api_key):
-    url = "https://api.firecrawl.dev/v2/search"
-    headers = {
-        "Authorization": f"Bearer {api_key}",
-        "Content-Type": "application/json",
-    }
-    # scrapeOptions(본문 전체 스크랩)는 크레딧을 대량 소모하는데 결과에서 title/url만
-    # 쓰므로 검색만 수행한다. categories도 같은 이유로 제거(결과를 읽지 않았음).
-    payload = {
-        "query": query,
-        "limit": 8,
-        "sources": ["web", "news"],
-        "timeout": 60000,
-    }
-    return post(url, headers, payload)
-
-def extract_results(data):
-    """Firecrawl 응답의 data가 dict(소스별 그룹)든 list든 안전하게 항목 리스트로 평탄화."""
-    d = data.get("data")
-    out = []
-    if isinstance(d, dict):
-        for group in d.values():
-            if isinstance(group, list):
-                out.extend(r for r in group if isinstance(r, dict))
-    elif isinstance(d, list):
-        out.extend(r for r in d if isinstance(r, dict))
-    return out
-
-def summarize_openrouter(items, api_key):
-    if not items:
-        return ""
-
-    url = "https://openrouter.ai/api/v1/chat/completions"
-    headers = {
-        "Authorization": f"Bearer {api_key}",
-        "Content-Type": "application/json",
-    }
-
-    # index.html 파서가 이 형식을 그대로 읽으므로 템플릿을 바꾸면 파서도 같이 바꿀 것.
-    prompt_lines = [
-        "You are a helpful AI news curator. Summarize the search results below",
-        "as Korean markdown, following EXACTLY this template (keep the H2 headers verbatim,",
-        "one line per item, no nested bullets, no extra sections before Raw data):",
-        "",
-        "## 오늘의 핵심",
-        "- (오늘 가장 중요한 흐름 요약, 한 문장)",
-        "- (두 번째, 한 문장)",
-        "- (세 번째, 한 문장)",
-        "",
-        "## Trending",
-        "- **한국어 제목** — 한 문장 설명 — https://원본URL",
-        "",
-        "## Papers",
-        "- **한국어 제목** — 한 문장 설명 — https://원본URL",
-        "",
-        "## Tools & Projects",
-        "- **한국어 제목** — 한 문장 설명 — https://원본URL",
-        "",
-        "## Insights",
-        "- (시사점 한 문장)",
-        "",
-        "Rules: 각 항목은 반드시 한 줄로. URL은 아래 입력에 있는 것만 사용. 섹션당 3~6개.",
-        "",
-        "Search results:",
-    ]
-    for idx, item in enumerate(items[:20], 1):
-        title = item.get("title") or item.get("name") or "(untitled)"
-        link = item.get("url") or item.get("link") or item.get("html_url") or ""
-        prompt_lines.append(f"{idx}. {title}")
-        prompt_lines.append(f"   {link}")
-
-    messages = [
-        {"role": "user", "content": "\n".join(prompt_lines)}
-    ]
-    payload = {
-        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
-        "messages": messages,
-        "max_completion_tokens": 4000,
-    }
-    result = post(url, headers, payload)
-    return result.get("choices", [{}])[0].get("message", {}).get("content", "")
-
-def build_daily_markdown(date_str, summary, raw_results, errors=None):
-    os.makedirs(DAILY_DIR, exist_ok=True)
-    md_path = os.path.join(DAILY_DIR, f"{date_str}.md")
-    header = f"# AI News Curation - {date_str}\n\n"
-    header += f"- Generated at: {datetime.datetime.now().isoformat()}\n"
-    header += "- Sources: Firecrawl + OpenRouter (free tier)\n"
-
-    if errors:
-        header += "- Errors:\n"
-        for e in errors:
-            header += f"  - {e}\n"
-    header += "\n"
-
-    body = summary.strip() if summary else "_No summary generated._"
-    if raw_results:
-        body += "\n\n## Raw Results\n\n"
-        for item in raw_results[:30]:
-            title = item.get("title") or item.get("name") or "(untitled)"
-            link = item.get("url") or item.get("link") or item.get("html_url") or ""
-            if link:
-                body += f"- [{title}]({link})\n"
-
-    with open(md_path, "w", encoding="utf-8") as f:
-        f.write(header + body + "\n")
-    return md_path
-
-def update_readme(date_str):
-    readme_path = os.path.join(ROOT, "README.md")
-    entry = f"- [{date_str}](daily/{date_str}.md)\n"
-    if not os.path.exists(readme_path):
-        text = "# Daily AI News Curation\n\n## 최신 큐레이션\n"
-    else:
-        text = open(readme_path, "r", encoding="utf-8").read()
-    marker = "## 최신 큐레이션\n"
-    if marker in text:
-        prefix, rest = text.split(marker, 1)
-        lines = [ln for ln in rest.splitlines() if ln.strip()]
-        keep = [entry]
-        for ln in lines:
-            if ln.strip() == keep[0].strip():
-                continue
-            keep.append(ln)
-        new_text = prefix + marker + "\n" + "\n".join(keep[:20]) + "\n"
-    else:
-        new_text = text.rstrip() + "\n\n## 최신 큐레이션\n\n" + entry
-    with open(readme_path, "w", encoding="utf-8") as f:
-        f.write(new_text)
-
+# --------------------------------------------------------------------------
+# main
+# --------------------------------------------------------------------------
 def main():
     today = datetime.date.today().isoformat()
-    firecrawl_key = env_key("FIRECRAWL_API_KEY")
-    openrouter_key = env_key("OPENROUTER_API_KEY")
+    cfg = load_config()
+    topics = cfg["topics"]
+    max_n = cfg.get("max_per_section", 8)
 
-    errors = []
-    if not firecrawl_key:
-        errors.append("Missing FIRECRAWL_API_KEY")
-    if not openrouter_key:
-        errors.append("Missing OPENROUTER_API_KEY")
+    log(f"수집 시작 — topics={topics}")
 
-    # 쿼리 수 = Firecrawl 크레딧 소모량. 커버리지가 겹치는 것은 정리해 4개로 유지.
-    queries = [
-        "AI LLM latest news",
-        "open source LLM release",
-        "AI research paper highlights",
-        "GitHub trending AI projects",
-    ]
+    trending = collect_hackernews(topics, max_n)
+    papers = collect_arxiv(topics, max_n)
+    tools = collect_github(topics, max_n)
 
-    collected = []
-    if firecrawl_key:
-        for q in queries:
-            print(f"[search] {q}")
-            try:
-                data = search_firecrawl(q, firecrawl_key)
-            except Exception as e:
-                msg = f"{q}: {e}"
-                print(f"[search error] {msg}")
-                errors.append(msg)
-                continue
-            collected.extend(extract_results(data))
-    else:
-        errors.append("Skipped Firecrawl search because FIRECRAWL_API_KEY is missing")
+    or_key = os.environ.get("OPENROUTER_API_KEY", "").strip()
+    if or_key and trending:
+        log("한국어 요약 생성 중(옵션)...")
+        for it in trending[:5]:
+            s = summarize(f"{it['title']}. {it['desc']}", or_key)
+            if s:
+                it["summary_ko"] = s
+            time.sleep(1)
 
-    # deduplicate by URL
-    seen = set()
-    unique = []
-    for item in collected:
-        link = item.get("url") or item.get("link") or item.get("html_url") or ""
-        if not link or link in seen:
-            continue
-        seen.add(link)
-        unique.append(item)
+    payload = {
+        "date": today,
+        "generated_at": datetime.datetime.now().isoformat(timespec="seconds"),
+        "topics": topics,
+        "counts": {"trending": len(trending), "papers": len(papers), "tools": len(tools)},
+        "trending": trending,
+        "papers": papers,
+        "tools": tools,
+    }
 
-    summary = ""
-    if openrouter_key and unique:
-        print(f"[summarize] items={len(unique)}")
-        try:
-            summary = summarize_openrouter(unique, openrouter_key) or ""
-        except Exception as e:
-            msg = f"summarize failed: {e}"
-            print(f"[summarize error] {msg}")
-            errors.append(msg)
-    else:
-        if not unique:
-            errors.append("No search results available to summarize")
-        else:
-            errors.append("Skipped OpenRouter summary because OPENROUTER_API_KEY is missing")
+    os.makedirs(DATA_DIR, exist_ok=True)
+    out_path = os.path.join(DATA_DIR, f"{today}.json")
+    with open(out_path, "w", encoding="utf-8") as f:
+        json.dump(payload, f, ensure_ascii=False, indent=2)
 
-    md_path = build_daily_markdown(today, summary, unique, errors=errors)
-    update_readme(today)
-    print(f"[done] {md_path}")
+    if len(trending) + len(papers) + len(tools) == 0:
+        log("수집 결과 0건 — 런을 실패 처리합니다 (원인은 위 Errors 참조)")
+        raise SystemExit(1)
 
-    # 검색 결과가 하나도 없으면(키 누락·크레딧 소진·전 쿼리 실패) 빈 페이지를 "성공"으로
-    # 게시하지 않고 런을 실패시켜 알림이 오게 한다. 부분 실패는 md에 기록만 하고 통과.
-    if not unique:
-        print("[fatal] 수집 결과 0건 — 런을 실패 처리합니다 (원인은 위 Errors 참조)")
-        sys.exit(1)
+    log(f"저장 완료: {out_path} (trending={len(trending)}, papers={len(papers)}, tools={len(tools)})")
+    return out_path
+
 
 if __name__ == "__main__":
     main()
