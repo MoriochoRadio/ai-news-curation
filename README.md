@@ -1,5 +1,7 @@
 # The AI Brief
 
+🇰🇷 한국어 · 🇬🇧 [English](README.en.md)
+
 > 매일 아침, AI 업계의 흐름을 한눈에 정리하는 뉴스레터형 큐레이션.
 
 [🌐 라이브 사이트](https://MoriochoRadio.github.io/ai-news-curation/)
