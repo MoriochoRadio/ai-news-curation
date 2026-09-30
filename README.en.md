@@ -41,12 +41,13 @@ publishes them as a static newsletter. It runs free forever, with no API keys or
 | Sources | HackerNews Algolia API · ArXiv API · GitHub Search API |
 | Outputs | `data/YYYY-MM-DD.json` → `index.html` / `archive.html` / `issues/*.html` |
 | Deployment | GitHub Pages (automatic) |
-| Execution | GitHub Actions (daily at 08:00 KST — Korea Standard Time) |
+| Execution | GitHub Actions (scheduled daily at 07:23 KST — Korea Standard Time, allowing for schedule delays) |
 
 ## Automation
 
-- GitHub Actions runs daily at **08:00 KST** (23:00 UTC).
-- The entire pipeline — collect → build (static HTML) → commit → GitHub Pages deploy — is automatic.
+- GitHub Actions is scheduled daily at **07:23 KST** (22:23 UTC), off the top of the hour and early enough to absorb GitHub's typical multi-hour schedule delays.
+- The entire pipeline — collect → build (static HTML) → commit & push → GitHub Pages deploy — is automatic.
+- **It only fails when a human needs to act.** A final `health` job turns red (and GitHub emails the owner) only for a rejected key, several days in a row without summaries, a week of zero items from a source, or a failed push. Transient outages heal themselves on retry or the next day and are not reported.
 - Manual runs are also possible via `workflow_dispatch` (Actions tab → Run workflow).
 
 ## Why It's Built This Way — Technical Choices Q&A
@@ -61,10 +62,10 @@ A. All three are public APIs callable without API keys or credits, and they comp
 A. The only external dependency is `pyyaml`, and HTTP calls are made directly with `urllib`. Fewer dependencies mean faster installs on the GitHub Actions runner that fires daily, and less that can break years from now. Even without `pyyaml`, it falls back to built-in default settings and keeps working.
 
 **Q. Why are LLM Korean summaries designed as "optional"?**
-A. If `OPENROUTER_API_KEY` is present, a one-line summary is added using a free model; if it's absent or the call fails, the issue is published with the original text as-is. This prevents an external paid service from becoming a single point of failure that breaks the "free forever, no downtime" principle.
+A. If `OPENROUTER_API_KEY` is present, a one-line summary is added using a free model; if it's absent or the call fails, the issue is published with the original text as-is. This prevents an external paid service from becoming a single point of failure that breaks the "free forever, no downtime" principle. Free models come and go within months, so the model name is not hard-coded: each run picks a live free model from OpenRouter's public model list (falling back to the free router `openrouter/free` if the list is unavailable).
 
 **Q. Why collect on a GitHub Actions schedule?**
-A. It runs on a daily 08:00 KST cron with no separate server, and since results are committed to the repository, every issue's data history lives in git. If a collection run yields zero items, the run is deliberately failed, so a source outage surfaces via Actions notifications instead of passing silently.
+A. It runs on a daily cron with no separate server, and since results are committed to the repository, every issue's data history lives in git. If a collection run yields zero items, the run is deliberately failed, so a source outage surfaces via Actions notifications instead of passing silently.
 
 **Q. Why save collection results as JSON first and build HTML separately?**
 A. To separate collection (`curate.py`) from presentation (`build.py`). `data/*.json` serves as the archive of record, so even after a redesign, every past issue can be rebuilt with the new template.
