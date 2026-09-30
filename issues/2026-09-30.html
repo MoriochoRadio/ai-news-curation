@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>The AI Brief — 매일 아침 AI 브리프</title>
-<link rel="stylesheet" href="assets/style.css" />
+<title>The AI Brief — 2026년 09월 30일</title>
+<link rel="stylesheet" href="../assets/style.css" />
 
 <style>
 .tb-fixed{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;gap:8px;align-items:center;
@@ -33,14 +33,14 @@ mark.hl{background:var(--accent-soft,#f3e7df);color:var(--accent,#b4451f);border
 </div>
 
 <div class="wrap">
+  <header class="masthead">
+    <div class="brand">The AI Brief</div>
+    <div class="issue-date">2026년 09월 30일</div>
+    <p class="tagline">매일 아침, AI 업계의 흐름을 한눈에</p>
+    <p class="topics">오늘의 주제 — AI agents · LLM reasoning · multimodal models · open source AI · Rust in AI tooling · AI safety</p>
+  </header>
+
   
-        <header class="masthead">
-          <div class="brand">The AI Brief</div>
-          <div class="issue-date">2026년 09월 30일 · 최신 호</div>
-          <p class="tagline">매일 아침, AI 업계의 흐름을 한눈에</p>
-          <p class="topics">오늘의 주제 — AI agents · LLM reasoning · multimodal models · open source AI · Rust in AI tooling · AI safety</p>
-        </header>
-        
     <section class="block tldr">
       <header class="block-head">
         <h2>한눈에 요약</h2>
@@ -52,7 +52,7 @@ mark.hl{background:var(--accent-soft,#f3e7df);color:var(--accent,#b4451f);border
         <ul class="tldr-picks"><li><span class="tldr-tag">오늘의 관심</span> Ask HN: How do you handle hitting AI coding agent usage limits?</li><li><span class="tldr-tag">논문 픽</span> Learning Meta-Skills for Agent Harness Design in Test-Time AI4AI</li><li><span class="tldr-tag">프로젝트 픽</span> obra/superpowers</li></ul>
       </div>
     </section>
-        
+  
     <section class="block" data-section="trending">
       <header class="block-head">
         <h2>트렌딩</h2>
@@ -88,9 +88,19 @@ mark.hl{background:var(--accent-soft,#f3e7df);color:var(--accent,#b4451f);border
       <a class="card-title" href="https://github.com/idk-arsh/data-agent-rules" target="_blank" rel="noopener">Show HN: Rules that stop AI agents from wrecking your warehouse, with an eval</a>
       
       <div class="card-foot"><span class="meta-line">▲ 1</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://news.ycombinator.com/item?id=49901420" target="_blank" rel="noopener">Ask HN: How do you maintain depth of understanding and velocity when using AI?</a>
+      
+      <div class="card-foot"><span class="meta-line">▲ 2 · 💬 8</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://news.ycombinator.com/item?id=49900500" target="_blank" rel="noopener">Beyond the Prompt Loop: Architecting AI Agent State Machines: Architecture, Late</a>
+      
+      <div class="card-foot"><span class="meta-line">▲ 1</span><span class="src">HackerNews</span></div>
     </article></div></div>
     </section>
-        
+  
     <section class="block" data-section="papers">
       <header class="block-head">
         <h2>논문</h2>
@@ -124,9 +134,37 @@ mark.hl{background:var(--accent-soft,#f3e7df);color:var(--accent,#b4451f);border
         <p class="item-desc">On a single task, deep networks can learn many solutions, depending on their optimizer, training data, architecture, and hyperparameters. Many of these solutions are mode-connected: rather than isolated points in weight space, they are connected by low-loss regions. Yet how their</p>
         <div class="card-foot"><span class="byline">Ann Huang, Mitchell Ostrow, Zhouyang Lu</span><span class="date">2026-09-29</span><span class="src">ArXiv</span></div>
       </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2609.37819v1" target="_blank" rel="noopener">Making Duplicate Reimbursement Unrepresentable: A Verified Ethereum E-Invoice System for Humans and AI Agents</a>
+        <p class="item-desc">Electronic invoices are replacing paper invoices worldwide, but today&#x27;s centralized architectures leave three problems unsolved on the consumption side: an invoice can be submitted for reimbursement repeatedly, authenticity is difficult for recipients to verify, and data is siloe</p>
+        <div class="card-foot"><span class="byline">Jia Cai</span><span class="date">2026-09-29</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2609.37655v1" target="_blank" rel="noopener">Exemplar2VQA: A Scalable Exemplar-Driven Visual Question Answering Generation Framework via Multi-Agent Coding</a>
+        <p class="item-desc">Advancing spatial intelligence in Multimodal Large Language Models (MLLMs) is bottlenecked by the scarcity of complex, scalable 3D question-answer (QA) data. While manual annotation is labor-intensive, directly utilizing LLMs to synthesize these QA pairs often fails due to their </p>
+        <div class="card-foot"><span class="byline">Jiayu Ying, Qijian Tian, Ruijie Xu</span><span class="date">2026-09-29</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2609.37369v1" target="_blank" rel="noopener">Shaping Opinion: Quantifying the Psychological Impact of Autonomous Multi-Agent LLM Interactions</a>
+        <p class="item-desc">Natural-sounding multi-agent conversational AI is increasingly deployed, fundamentally altering human-machine interaction and human information processing. While prior work largely focuses on algorithmic failure, this study investigates the cognitive ergonomics and socio-cognitiv</p>
+        <div class="card-foot"><span class="byline">Marcos Rodriguez-Vega, Afonso Ferreira, Iru Exposito-Luis</span><span class="date">2026-09-29</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2609.37025v1" target="_blank" rel="noopener">AnyAct: Universal Action for Self-Evolving Agents</a>
+        <p class="item-desc">As large language models (LLMs) advance, AI agents are increasingly deployed in open-world environments to tackle complex sequential tasks (e.g., document processing, cross-application collaboration), relying heavily on actions ranging from GUI operations to semantic APIs. Howeve</p>
+        <div class="card-foot"><span class="byline">Lingrui Xu, Yangqin Jiang, Jiachang Zhang</span><span class="date">2026-09-29</span><span class="src">ArXiv</span></div>
+      </div>
     </article></div></div>
     </section>
-        
+  
     <section class="block" data-section="tools">
       <header class="block-head">
         <h2>오픈소스</h2>
@@ -152,13 +190,31 @@ mark.hl{background:var(--accent-soft,#f3e7df);color:var(--accent,#b4451f);border
       <a class="card-title" href="https://github.com/firecrawl/firecrawl" target="_blank" rel="noopener">firecrawl/firecrawl</a>
       <p class="item-desc">🔥 Supercharge your AI agents with data from the web and beyond. A web data API to search, scrape, and access more sources.</p>
       <div class="card-foot"><span class="badges">★ 186.7k · TypeScript</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/langgenius/dify" target="_blank" rel="noopener">langgenius/dify</a>
+      <p class="item-desc">Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without rebuilding the stack.</p>
+      <div class="card-foot"><span class="badges">★ 157.5k · TypeScript</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/langflow-ai/langflow" target="_blank" rel="noopener">langflow-ai/langflow</a>
+      <p class="item-desc">Langflow is a powerful tool for building and deploying AI-powered agents and workflows.</p>
+      <div class="card-foot"><span class="badges">★ 155.4k · Python</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/msitarzewski/agency-agents" target="_blank" rel="noopener">msitarzewski/agency-agents</a>
+      <p class="item-desc">A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.</p>
+      <div class="card-foot"><span class="badges">★ 155.4k · Shell</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/DietrichGebert/ponytail" target="_blank" rel="noopener">DietrichGebert/ponytail</a>
+      <p class="item-desc">Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.</p>
+      <div class="card-foot"><span class="badges">★ 148.3k · JavaScript</span><span class="src">GitHub</span></div>
     </article></div></div>
     </section>
-  <section class="block archive-preview">
-    <header class="block-head"><h2>최근 호</h2><a class="more" href="archive.html">전체 보기 →</a></header>
-    <ul class="issue-list"><li><a href="issues/2026-09-30.html">09.30</a><span class="r-title">2026년 09월 30일</span><span class="r-count">T8 · P8 · G8</span></li><li><a href="issues/2026-07-08.html">07.08</a><span class="r-title">2026년 07월 08일</span><span class="r-count">T8 · P8 · G8</span></li><li><a href="issues/2026-06-13.html">06.13</a><span class="r-title">2026년 06월 13일</span><span class="r-count">T5 · P5 · G6</span></li></ul>
-  </section>
+
   <footer class="site-foot">
+    <a href="../index.html">← 최신 호로</a> · <a href="../archive.html">전체 아카이브</a>
     <p>자동 수집 · HackerNews · ArXiv · GitHub</p>
   </footer>
 </div>
