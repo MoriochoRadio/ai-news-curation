@@ -1,6 +1,6 @@
 {
   "date": "2026-09-30",
-  "generated_at": "2026-09-30T13:15:27+09:00",
+  "generated_at": "2026-09-30T14:34:16+09:00",
   "topics": [
     "AI agents",
     "LLM reasoning",
@@ -18,115 +18,89 @@
     "AI safety": "AI 안전성"
   },
   "counts": {
-    "trending": 8,
+    "trending": 7,
     "papers": 8,
     "tools": 8
   },
-  "summary_model": "qwen/qwen3.8-27b:free",
+  "summary_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
   "trending": [
     {
-      "title": "Ask HN: How do you handle hitting AI coding agent usage limits?",
-      "url": "https://news.ycombinator.com/item?id=49904074",
+      "title": "A Privacy Analysis of Web and Mobile Conversational AI Agents [pdf]",
+      "url": "https://jorgegarciaherrero.com/wp-content/interactivos/20260916-Prompt-like-a-butterfly-sting-like-a-tracker-(clean).pdf",
       "source": "HackerNews",
-      "points": 1,
-      "comments": 1,
-      "author": "VoidWhisperer",
-      "date": "2026-09-30",
-      "desc": "",
-      "summary_ko": "AI 코딩 에이전트 사용 한도에 부딪혔을 때 개발자들이 어떤 방식으로 대응하는지 공유하는 커뮤니티 토론입니다."
-    },
-    {
-      "title": "Show HN: Moching – AI desktop agent with 219 built-in tools (Rust)",
-      "url": "https://github.com/moching-ai-dev/moching",
-      "source": "HackerNews",
-      "points": 2,
-      "comments": 0,
-      "author": "moching_ai_dev",
-      "date": "2026-09-30",
-      "desc": "",
-      "summary_ko": "Rust로 개발된 AI 데스크톱 에이전트 'Moching'으로, 219개 내장 도구를 제공해 로컬에서 다양한 작업을 자동화할 수 있습니다."
-    },
-    {
-      "title": "LabBench: Can AI agents decide what experiment to run next?",
-      "url": "https://gamowlabs.com/labbench-benchmarking-ai-wet-lab-decisions.html",
-      "source": "HackerNews",
-      "points": 4,
-      "comments": 0,
-      "author": "wardbradt",
-      "date": "2026-09-30",
-      "desc": "",
-      "summary_ko": "AI 에이전트가 다음 실험을 자율적으로 선택할 수 있는지 검증하는 벤치마크 'LabBench'가 공개되었습니다."
-    },
-    {
-      "title": "Vibe Coding Discover – A Catalog of AI OSS for Agents, MCP, Skills, RAG",
-      "url": "https://vibecodingdiscover.com",
-      "source": "HackerNews",
-      "points": 1,
-      "comments": 0,
-      "author": "wilsonye",
-      "date": "2026-09-30",
-      "desc": "",
-      "summary_ko": "에이전트, MCP, 스킬, RAG 관련 AI 오픈소스 도구를 한눈에 정리한 카탈로그 'Vibe Coding Discover'가 공개되었습니다."
-    },
-    {
-      "title": "Show HN: InfiniHash App Store – compliance tools built end-to-end by AI agents",
-      "url": "https://apps.infinihash.com/",
-      "source": "HackerNews",
-      "points": 1,
-      "comments": 1,
-      "author": "jlvardon",
-      "date": "2026-09-30",
-      "desc": "",
-      "summary_ko": "AI 에이전트가 처음부터 끝까지 자체적으로 개발한 컴플라이언스 도구들을 모아둔 앱 스토어 'InfiniHash'가 공개되었습니다."
-    },
-    {
-      "title": "Show HN: Rules that stop AI agents from wrecking your warehouse, with an eval",
-      "url": "https://github.com/idk-arsh/data-agent-rules",
-      "source": "HackerNews",
-      "points": 1,
-      "comments": 0,
-      "author": "arsh9745774",
+      "points": 414,
+      "comments": 130,
+      "author": "damaru2",
       "date": "2026-09-29",
+      "desc": "",
+      "summary_ko": "웹·모바일 대화형 AI 에이전트의 프라이버시 분석 논문, 데이터 수집·공유 실태를 밝혀 개발자 보안 가이드에 기여한다."
+    },
+    {
+      "title": "Nvidia wants to put a watchdog chip next to every AI agent",
+      "url": "https://www.cnbc.com/2026/09/28/nvidia-releases.html",
+      "source": "HackerNews",
+      "points": 223,
+      "comments": 292,
+      "author": "jonbaer",
+      "date": "2026-09-28",
+      "desc": "",
+      "summary_ko": "엔비디아, 모든 AI 에이전트 옆에 감시 칩 배치 계획… 하드웨어 수준 보안으로 모델 오용을 차단한다."
+    },
+    {
+      "title": "Show HN: HN.watch – Videos of all Hacker News posts",
+      "url": "https://hn.watch/",
+      "source": "HackerNews",
+      "points": 209,
+      "comments": 97,
+      "author": "mrborgen",
+      "date": "2026-09-28",
+      "desc": "",
+      "summary_ko": "HN.watch, 해커뉴스 전체 게시물을 동영상으로 아카이브해 트렌드 파악·콘텐츠 검색 효율을 높인다."
+    },
+    {
+      "title": "Unsurprisingly, Meta's new Muse AI agent blatantly ignores users permissions",
+      "url": "https://appleinsider.com/articles/26/09/28/metas-new-ai-agent-blatantly-ignores-users-permissions",
+      "source": "HackerNews",
+      "points": 154,
+      "comments": 40,
+      "author": "dkobia",
+      "date": "2026-09-29",
+      "desc": "",
+      "summary_ko": "메타의 새 Muse AI 에이전트, 사용자 권한 무시 사례 드러나… 권한 관리·투명성 강화가 시급하다."
+    },
+    {
+      "title": "Who should be held accountable when an AI Agent (accidentally) acts maliciously?",
+      "url": "https://blog.greenpants.net/ai-accountability/",
+      "source": "HackerNews",
+      "points": 37,
+      "comments": 92,
+      "author": "Greenpants",
+      "date": "2026-09-28",
+      "desc": "",
+      "summary_ko": "AI 에이전트 오작동 시 책임 소재 논의… 개발자·배포자·규제기관 간 명확한 책임 분담 프레임워크가 필요하다."
+    },
+    {
+      "title": "Launch HN: Vespper (YC F24) – SOTA Docx MCP",
+      "url": "https://www.vespper.com/blog/launching-vespper-docx-mcp",
+      "source": "HackerNews",
+      "points": 36,
+      "comments": 17,
+      "author": "topaztee",
+      "date": "2026-09-28",
       "desc": ""
     },
     {
-      "title": "Ask HN: How do you maintain depth of understanding and velocity when using AI?",
-      "url": "https://news.ycombinator.com/item?id=49901420",
+      "title": "Show HN: OpenAPPA – open-source deterministic guardrails that don't break agents",
+      "url": "https://www.openappa.com/",
       "source": "HackerNews",
-      "points": 2,
-      "comments": 8,
-      "author": "civicsquid",
-      "date": "2026-09-29",
-      "desc": ""
-    },
-    {
-      "title": "Beyond the Prompt Loop: Architecting AI Agent State Machines: Architecture, Late",
-      "url": "https://news.ycombinator.com/item?id=49900500",
-      "source": "HackerNews",
-      "points": 1,
-      "comments": 0,
-      "author": "dusynblog",
-      "date": "2026-09-29",
+      "points": 23,
+      "comments": 12,
+      "author": "motakuk",
+      "date": "2026-09-28",
       "desc": ""
     }
   ],
   "papers": [
-    {
-      "title": "Learning Meta-Skills for Agent Harness Design in Test-Time AI4AI",
-      "url": "https://arxiv.org/pdf/2609.38143v1",
-      "source": "ArXiv",
-      "authors": "Cheng Qian, Kunlun Zhu, Beibin Li",
-      "date": "2026-09-29",
-      "desc": "Agent performance depends on both reasoning ability and the environment in which it acts. We study test-time AI-for-AI, asking how a Builder can learn to construct better execution environments for a Target while both models' weights remain fixed. To make the Builder's experience"
-    },
-    {
-      "title": "Correct Answers, Invalid Traces: What Verifiable Grade-School Math Reveals About Chain-of-Thought Traces",
-      "url": "https://arxiv.org/pdf/2609.38107v1",
-      "source": "ArXiv",
-      "authors": "Ratish Puduppully, Pranabendu Misra, Paarth Iyer",
-      "date": "2026-09-29",
-      "desc": "Chain-of-thought traces are widely read as records of how models reach their answers, informing debugging, agent auditing, and claims about reasoning. Testing this interpretation is difficult because natural-language thinking traces are rarely mechanically verifiable. We revisit "
-    },
     {
       "title": "Character Training for Risk-Averse Agents",
       "url": "https://arxiv.org/pdf/2609.38093v1",
@@ -134,14 +108,6 @@
       "authors": "Arav Dhoot, Punya Syon Pandey, Jamie Johnson",
       "date": "2026-09-29",
       "desc": "Risk aversion in resources could prevent misaligned AI agents from causing catastrophic harm. Misaligned but risk-averse agents would tend to favor safer strategies like making deals with humans over riskier strategies like rebelling. We train agents to be risk averse through cha"
-    },
-    {
-      "title": "Traversing the solution space of neural networks with Hessian Null Space Continuation",
-      "url": "https://arxiv.org/pdf/2609.38081v1",
-      "source": "ArXiv",
-      "authors": "Ann Huang, Mitchell Ostrow, Zhouyang Lu",
-      "date": "2026-09-29",
-      "desc": "On a single task, deep networks can learn many solutions, depending on their optimizer, training data, architecture, and hyperparameters. Many of these solutions are mode-connected: rather than isolated points in weight space, they are connected by low-loss regions. Yet how their"
     },
     {
       "title": "Making Duplicate Reimbursement Unrepresentable: A Verified Ethereum E-Invoice System for Humans and AI Agents",
@@ -152,94 +118,118 @@
       "desc": "Electronic invoices are replacing paper invoices worldwide, but today's centralized architectures leave three problems unsolved on the consumption side: an invoice can be submitted for reimbursement repeatedly, authenticity is difficult for recipients to verify, and data is siloe"
     },
     {
-      "title": "Exemplar2VQA: A Scalable Exemplar-Driven Visual Question Answering Generation Framework via Multi-Agent Coding",
-      "url": "https://arxiv.org/pdf/2609.37655v1",
-      "source": "ArXiv",
-      "authors": "Jiayu Ying, Qijian Tian, Ruijie Xu",
-      "date": "2026-09-29",
-      "desc": "Advancing spatial intelligence in Multimodal Large Language Models (MLLMs) is bottlenecked by the scarcity of complex, scalable 3D question-answer (QA) data. While manual annotation is labor-intensive, directly utilizing LLMs to synthesize these QA pairs often fails due to their "
-    },
-    {
-      "title": "Shaping Opinion: Quantifying the Psychological Impact of Autonomous Multi-Agent LLM Interactions",
-      "url": "https://arxiv.org/pdf/2609.37369v1",
-      "source": "ArXiv",
-      "authors": "Marcos Rodriguez-Vega, Afonso Ferreira, Iru Exposito-Luis",
-      "date": "2026-09-29",
-      "desc": "Natural-sounding multi-agent conversational AI is increasingly deployed, fundamentally altering human-machine interaction and human information processing. While prior work largely focuses on algorithmic failure, this study investigates the cognitive ergonomics and socio-cognitiv"
-    },
-    {
       "title": "AnyAct: Universal Action for Self-Evolving Agents",
       "url": "https://arxiv.org/pdf/2609.37025v1",
       "source": "ArXiv",
       "authors": "Lingrui Xu, Yangqin Jiang, Jiachang Zhang",
       "date": "2026-09-29",
       "desc": "As large language models (LLMs) advance, AI agents are increasingly deployed in open-world environments to tackle complex sequential tasks (e.g., document processing, cross-application collaboration), relying heavily on actions ranging from GUI operations to semantic APIs. Howeve"
+    },
+    {
+      "title": "CheatBench: Measuring Reward Gaming in AI Agents",
+      "url": "https://arxiv.org/pdf/2609.36308v1",
+      "source": "ArXiv",
+      "authors": "Long Phan, Stephen K. Yang, Jason J. Lim",
+      "date": "2026-09-28",
+      "desc": "Reinforcement learning has helped AI agents solve increasingly difficult tasks, but high rewards do not always reflect the work users intended. In recent incidents and controlled evaluations across the AI industry, agents trained to maximize reward have accessed unauthorized info"
+    },
+    {
+      "title": "HeurEvo: Agentic Evolution of Hybrid Solver-Augmented Heuristics for Time-Critical Mathematical Optimization",
+      "url": "https://arxiv.org/pdf/2609.36303v1",
+      "source": "ArXiv",
+      "authors": "Feijie Wu, Hugo Barbalho, Konstantina Mellou",
+      "date": "2026-09-28",
+      "desc": "Recent advances in agentic heuristic design use AI agents and execution feedback to automate algorithm discovery for challenging optimization problems. In many practical settings, high-quality solutions must be obtained under strict runtime constraints, motivating hybrid approach"
+    },
+    {
+      "title": "Timeline-Bench: Evaluating Agents on Realistic Video-Editing Tasks, from Raw Footage to Final Cut",
+      "url": "https://arxiv.org/pdf/2609.35143v1",
+      "source": "ArXiv",
+      "authors": "Gunin Gupta, Nirmit Arora, Pavan Kalyan Tankala",
+      "date": "2026-09-28",
+      "desc": "AI agents increasingly carry out long-horizon professional work, but their evaluations rarely require a finished creative deliverable. To this end, we introduce Timeline-Bench, a benchmark of 56 real video-editing tasks, each asking an agent to turn raw production material into a"
+    },
+    {
+      "title": "Just-In-Time Agent Memory with Runtime Agentic Research",
+      "url": "https://arxiv.org/pdf/2609.34385v1",
+      "source": "ArXiv",
+      "authors": "Bingyu Yan, Chaofan Li, Hongjin Qian",
+      "date": "2026-09-28",
+      "desc": "Memory is critical for AI agents. Many existing agent-memory systems follow an Ahead-of-Time (AOT) design, constructing memory before a specific request arrives. While this reduces online serving cost, such request-agnostic memory construction can discard fine-grained information"
+    },
+    {
+      "title": "BIABench: Evaluating AI agents on real-world bioimage analysis tasks",
+      "url": "https://arxiv.org/pdf/2609.34274v1",
+      "source": "ArXiv",
+      "authors": "Zixuan Pan, Davide Panzeri, Lukas Johanns",
+      "date": "2026-09-28",
+      "desc": "Artificial-intelligence (AI) agents hold promise for automating bioimage analysis, yet no benchmark evaluates whether they can carry out real-world analyses end to end. Such analyses are hard for agents because 2D images, 3D volumes and time-lapse sequences are often too large to"
     }
   ],
   "tools": [
     {
-      "title": "obra/superpowers",
-      "url": "https://github.com/obra/superpowers",
+      "title": "zai-org/ZCode",
+      "url": "https://github.com/zai-org/ZCode",
       "source": "GitHub",
-      "stars": 293064,
-      "language": "Shell",
-      "desc": "An agentic skills framework & software development methodology that works."
-    },
-    {
-      "title": "NousResearch/hermes-agent",
-      "url": "https://github.com/NousResearch/hermes-agent",
-      "source": "GitHub",
-      "stars": 250116,
-      "language": "Python",
-      "desc": "The agent that grows with you"
-    },
-    {
-      "title": "Significant-Gravitas/AutoGPT",
-      "url": "https://github.com/Significant-Gravitas/AutoGPT",
-      "source": "GitHub",
-      "stars": 187621,
-      "language": "Python",
-      "desc": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters."
-    },
-    {
-      "title": "firecrawl/firecrawl",
-      "url": "https://github.com/firecrawl/firecrawl",
-      "source": "GitHub",
-      "stars": 186720,
+      "stars": 7196,
       "language": "TypeScript",
-      "desc": "🔥 Supercharge your AI agents with data from the web and beyond. A web data API to search, scrape, and access more sources."
+      "desc": "Z.ai's coding agent harness. Powerful, intelligent, extensible."
     },
     {
-      "title": "langgenius/dify",
-      "url": "https://github.com/langgenius/dify",
+      "title": "shadcn-ui/lint",
+      "url": "https://github.com/shadcn-ui/lint",
       "source": "GitHub",
-      "stars": 157538,
+      "stars": 2953,
       "language": "TypeScript",
-      "desc": "Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without rebuilding the stack."
+      "desc": "An agent-first linter for Tailwind design systems. Write design system rules that agents can verify."
     },
     {
-      "title": "langflow-ai/langflow",
-      "url": "https://github.com/langflow-ai/langflow",
+      "title": "tigerless-labs/agent-memory",
+      "url": "https://github.com/tigerless-labs/agent-memory",
       "source": "GitHub",
-      "stars": 155381,
+      "stars": 1773,
       "language": "Python",
-      "desc": "Langflow is a powerful tool for building and deploying AI-powered agents and workflows."
+      "desc": "Long-term memory runtime for AI agents — plain Markdown as the source of truth, local ranked retrieval, and an independent sleep-time Manage layer. Claude Code and Codex share one store. No API key."
     },
     {
-      "title": "msitarzewski/agency-agents",
-      "url": "https://github.com/msitarzewski/agency-agents",
+      "title": "jtydhr88/screenwriting-skills",
+      "url": "https://github.com/jtydhr88/screenwriting-skills",
       "source": "GitHub",
-      "stars": 155365,
-      "language": "Shell",
-      "desc": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables."
+      "stars": 1463,
+      "language": "Python",
+      "desc": "Professional agent skills for screenwriting, television writing and dramaturgy"
     },
     {
-      "title": "DietrichGebert/ponytail",
-      "url": "https://github.com/DietrichGebert/ponytail",
+      "title": "youngyangyang04/llm-master",
+      "url": "https://github.com/youngyangyang04/llm-master",
       "source": "GitHub",
-      "stars": 148330,
-      "language": "JavaScript",
-      "desc": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote."
+      "stars": 1036,
+      "language": "",
+      "desc": "大模型（LLM）全栈学习路线与中文教程🔥：覆盖 Prompt Engineering、RAG、AI Agent、MCP、微调、模型部署、Transformer、AI 编程与大厂面试，从入门到生产实践。"
+    },
+    {
+      "title": "aliyun/ai-agent-handbook",
+      "url": "https://github.com/aliyun/ai-agent-handbook",
+      "source": "GitHub",
+      "stars": 1032,
+      "language": "",
+      "desc": "A practical guide to building enterprise AI agents across their full lifecycle."
+    },
+    {
+      "title": "agentverse-os/AgentVerse-OS",
+      "url": "https://github.com/agentverse-os/AgentVerse-OS",
+      "source": "GitHub",
+      "stars": 984,
+      "language": "Rust",
+      "desc": "Personal cloud OS for a developer and their AI agents on a single server. One-command install on Ubuntu, then everything in the browser: a windowed desktop, isolated workspaces with VS Code, Claude Code and Codex, a store of 944 self-hosted apps, backups and updates. Access only via Tailscale, nothing exposed to the internet. Rust core, Svelte UI."
+    },
+    {
+      "title": "freestylefly/WeChatBridge",
+      "url": "https://github.com/freestylefly/WeChatBridge",
+      "source": "GitHub",
+      "stars": 918,
+      "language": "Swift",
+      "desc": "微信聊天记录一键转发到 AI Agent 与 Obsidian 的原生 macOS 工具"
     }
   ]
 }
