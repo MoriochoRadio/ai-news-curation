@@ -39,6 +39,8 @@ jobs:
         id: curate
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          # GitHub 검색 API 한도(비인증 분당 10회)를 넉넉히 — 스크립트는 공개 검색 조회에만 쓴다
+          GITHUB_TOKEN: ${{ github.token }}
         run: python scripts/curate.py
 
       - name: Build static site

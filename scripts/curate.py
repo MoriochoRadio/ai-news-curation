@@ -113,20 +113,42 @@ def http_post_json(url, api_key, payload, timeout=120):
 # --------------------------------------------------------------------------
 # source collectors
 # --------------------------------------------------------------------------
+# '트렌딩'은 최근 이틀 안에 반응(▲)이 붙은 글만 — 최신순 검색은 ▲1짜리 글로 채워졌다
+HN_WINDOW_HOURS = 48
+HN_MIN_POINTS = 15
+
+
+def _hn_hits(topic, limit, popular):
+    q = urllib.parse.quote(topic)
+    if popular:
+        since = int(time.time()) - HN_WINDOW_HOURS * 3600
+        nf = urllib.parse.quote(f"created_at_i>{since},points>={HN_MIN_POINTS}")
+        url = f"https://hn.algolia.com/api/v1/search?query={q}&tags=story&numericFilters={nf}&hitsPerPage={limit}"
+    else:
+        url = f"https://hn.algolia.com/api/v1/search_by_date?query={q}&tags=story&hitsPerPage={limit}"
+    status, body = http_get(url, timeout=30)
+    if status != 200:
+        log(f"HN 실패({topic}): {status}")
+        return []
+    try:
+        return json.loads(body).get("hits", [])
+    except Exception:
+        return []
+
+
 def collect_hackernews(topics, limit):
+    items = collect_hackernews_once(topics, limit, popular=True)
+    if not items:  # 조용한 날엔 예전처럼 최신순으로라도 채워 빈 섹션을 피한다
+        log("HN: 최근 반응 있는 글 없음 — 최신순으로 대체")
+        items = collect_hackernews_once(topics, limit, popular=False)
+    return items
+
+
+def collect_hackernews_once(topics, limit, popular):
     items = []
     seen = set()
     for topic in topics[:3]:
-        q = urllib.parse.quote(topic)
-        url = f"https://hn.algolia.com/api/v1/search_by_date?query={q}&tags=story&hitsPerPage={limit}"
-        status, body = http_get(url, timeout=30)
-        if status != 200:
-            log(f"HN 실패({topic}): {status}")
-            continue
-        try:
-            hits = json.loads(body).get("hits", [])
-        except Exception:
-            continue
+        hits = _hn_hits(topic, limit, popular)
         for h in hits:
             title = (h.get("title") or "").strip()
             if not title:
@@ -147,14 +169,20 @@ def collect_hackernews(topics, limit):
                 "desc": "",
             })
         time.sleep(0.5)
+    if popular:  # 주제 순서가 아니라 반응 큰 순으로
+        items.sort(key=lambda it: -it["points"])
     return items[:limit]
+
+
+# "agents" 같은 검색어가 경제학·게임이론 논문까지 잡지 않도록 컴퓨터과학 AI 계열로 한정한다
+ARXIV_CATS = "cat:cs.AI OR cat:cs.CL OR cat:cs.LG OR cat:cs.MA OR cat:cs.CV OR cat:cs.RO"
 
 
 def collect_arxiv(topics, limit):
     items = []
     seen = set()
     for topic in topics[:3]:
-        q = urllib.parse.quote(f"all:{topic.replace(' ', '+')}")
+        q = urllib.parse.quote(f'({ARXIV_CATS}) AND all:"{topic}"')
         url = f"https://export.arxiv.org/api/query?search_query={q}&sortBy=submittedDate&sortOrder=descending&max_results={limit}"
         status, body = http_get_retry(url, timeout=30)
         if status != 200:
@@ -191,13 +219,22 @@ def collect_arxiv(topics, limit):
     return items[:limit]
 
 
+# '움직이는 프로젝트'는 최근 생긴 저장소 중 별이 빠르게 붙은 것 — 누적 별 순은 매일 같은 대형 저장소만 나왔다
+GH_WINDOW_DAYS = 30
+
+
 def collect_github(topics, limit):
     items = []
     seen = set()
+    since = (datetime.datetime.now(KST).date() - datetime.timedelta(days=GH_WINDOW_DAYS)).isoformat()
+    headers = {**UA, "Accept": "application/vnd.github+json"}
+    token = os.environ.get("GITHUB_TOKEN", "").strip()
+    if token:  # 비인증 검색은 분당 10회라 가끔 403 — Actions 기본 토큰으로 한도를 넉넉히
+        headers["Authorization"] = f"Bearer {token}"
     for topic in topics[:3]:
-        q = urllib.parse.quote(topic)
+        q = urllib.parse.quote(f"{topic} created:>{since}")
         url = f"https://api.github.com/search/repositories?q={q}&sort=stars&order=desc&per_page={limit}"
-        status, body = http_get(url, timeout=30, headers={**UA, "Accept": "application/vnd.github+json"})
+        status, body = http_get(url, timeout=30, headers=headers)
         if status != 200:
             log(f"GitHub 실패({topic}): {status}")
             continue
@@ -219,6 +256,7 @@ def collect_github(topics, limit):
                 "desc": (r.get("description") or "").strip(),
             })
         time.sleep(1.0)
+    items.sort(key=lambda it: -it["stars"])
     return items[:limit]
 
 
