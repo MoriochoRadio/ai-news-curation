@@ -1,0 +1,182 @@
+{
+  "date": "2026-10-02",
+  "generated_at": "2026-10-02T10:42:38+09:00",
+  "topics": [
+    "AI agents",
+    "LLM reasoning",
+    "multimodal models",
+    "open source AI",
+    "Rust in AI tooling",
+    "AI safety"
+  ],
+  "topic_labels": {
+    "AI agents": "AI 에이전트",
+    "LLM reasoning": "LLM 추론",
+    "multimodal models": "멀티모달 모델",
+    "open source AI": "오픈소스 AI",
+    "Rust in AI tooling": "AI 도구의 Rust",
+    "AI safety": "AI 안전성"
+  },
+  "counts": {
+    "trending": 2,
+    "papers": 8,
+    "tools": 8
+  },
+  "summary_model": "qwen/qwen3.8-27b:free",
+  "trending": [
+    {
+      "title": "Identity Management for Agentic AI [pdf] (2025)",
+      "url": "https://openid.net/wp-content/uploads/2025/10/Identity-Management-for-Agentic-AI.pdf",
+      "source": "HackerNews",
+      "points": 70,
+      "comments": 23,
+      "author": "cgeier",
+      "date": "2026-10-01",
+      "desc": "",
+      "summary_ko": "에이전틱 AI의 신원 관리를 다루는 논문으로, AI 에이전트 확산에 따른 보안·인증 체계의 필요성을 보여준다."
+    },
+    {
+      "title": "Aweb – Communication for AI Agents",
+      "url": "https://aweb.ai",
+      "source": "HackerNews",
+      "points": 20,
+      "comments": 14,
+      "author": "gurjeet",
+      "date": "2026-10-01",
+      "desc": "",
+      "summary_ko": "AI 에이전트 간 통신을 위한 프로토콜로, 다수 에이전트 협업 시 상호작용 표준화가 가능해진다."
+    }
+  ],
+  "papers": [
+    {
+      "title": "Beyond Leaderboards: Tokenomics of Agentic Small Language Model Ensembles",
+      "url": "https://arxiv.org/pdf/2610.00954v1",
+      "source": "ArXiv",
+      "authors": "Alexei N. Skurikhin, Emily M. Taylor, Nathan A. DeBardeleben",
+      "date": "2026-10-01",
+      "desc": "As large language models (LLMs) move from standalone assistants into agentic workflows, evaluation must extend beyond scalar leaderboard accuracy to account for operational reliability, cost, latency, and token efficiency. We use an agentic ensemble of small language models (SLMs"
+    },
+    {
+      "title": "Sapien: A Stateful Policy Engine for Autonomous AI Agents",
+      "url": "https://arxiv.org/pdf/2610.00797v1",
+      "source": "ArXiv",
+      "authors": "Corinn Tiffany, Wen Zhang, Eugene Bagdasarian",
+      "date": "2026-09-30",
+      "desc": "Contextual security defenses prevent AI agents from taking rogue actions by synthesizing a task-specific policy and enforcing it on the agent's tool calls. In multi-step tasks, however, which actions are valid often depends on what the agent has already done and learned. We prese"
+    },
+    {
+      "title": "CompMat-Bench: Benchmarking AI Agents for Computational Materials Science",
+      "url": "https://arxiv.org/pdf/2610.00636v1",
+      "source": "ArXiv",
+      "authors": "Chenmu Zhang, Levi Felix, Jun-Jie Zhang",
+      "date": "2026-09-30",
+      "desc": "Evaluating AI agents on scientific research tasks is constrained by the time and resources required for the underlying experiments or calculations. In computational materials research, repeating the same expensive simulations across agents and trials can make evaluation impractic"
+    },
+    {
+      "title": "Worse Together: How Performance Breaks Down in Multi-User Multi-Agent Teams",
+      "url": "https://arxiv.org/pdf/2610.00583v1",
+      "source": "ArXiv",
+      "authors": "Sahan Paliskara, Nattaput Namchittai, Andrew Lampinen",
+      "date": "2026-09-30",
+      "desc": "People are increasingly delegating tasks to AI agents, and those agents are increasingly encountering other people's agents over shared resources such as a codebase, a calendar, or a budget. When each agent acts for a different user with different goals, coordination often fails,"
+    },
+    {
+      "title": "EurekaBench: Measuring Agentic Ability to Discover New Scientific Insights",
+      "url": "https://arxiv.org/pdf/2610.00492v1",
+      "source": "ArXiv",
+      "authors": "Jiayi Geng, Zhengxuan Wu, Kevin S. Chen",
+      "date": "2026-09-30",
+      "desc": "When Isaac Newton discovered the law of gravitation, he did so through an iterative process of analyzing observed data such as planetary patterns, finding the underlying mechanisms by describing patterns in mathematical equations, and refining his theory against the Moon's orbit,"
+    },
+    {
+      "title": "How AI Agents Discover Scientific Equations: From Hydrotope Rediscovery to New Water-Wave Amplitudes",
+      "url": "https://arxiv.org/pdf/2610.00435v1",
+      "source": "ArXiv",
+      "authors": "Zihan Zhou, Digvijay Wadekar, Matias Zaldarriaga",
+      "date": "2026-09-30",
+      "desc": "We study how AI agents discover and validate scientific formulas using a controlled case study of the hydrotope, a recently discovered geometric formula that combines the different polynomial pieces of nonlinear surface-wave scattering into one global expression. This problem is "
+    },
+    {
+      "title": "Trust Is Not a Score: Runtime Assurance Contracts for High-Risk AI Agents",
+      "url": "https://arxiv.org/pdf/2609.39717v1",
+      "source": "ArXiv",
+      "authors": "Serhii Zabolotnii",
+      "date": "2026-09-30",
+      "desc": "Benchmarks, audits, and agent protocols describe performance, permissions, and repair, but not how observed evidence should change an agent's authority during a consequential task. We call this the assurance-transition gap. We propose a Runtime Assurance Contract (RAC), a policy-"
+    },
+    {
+      "title": "Pretext: Defeating Malicious Skill Detection Frameworks for AI Agents",
+      "url": "https://arxiv.org/pdf/2609.39607v1",
+      "source": "ArXiv",
+      "authors": "Tobias Kaisar, Aritra Dhar",
+      "date": "2026-09-30",
+      "desc": "Skills extend an agent's capabilities by injecting instructions and information into the context, and are widely used by agents such as OpenClaw and Claude Code. Prior work shows third-party marketplaces host malicious skills that give attackers direct influence over the victim's"
+    }
+  ],
+  "tools": [
+    {
+      "title": "zai-org/ZCode",
+      "url": "https://github.com/zai-org/ZCode",
+      "source": "GitHub",
+      "stars": 7300,
+      "language": "TypeScript",
+      "desc": "Z.ai's coding agent harness. Powerful, intelligent, extensible."
+    },
+    {
+      "title": "feder-cr/dots",
+      "url": "https://github.com/feder-cr/dots",
+      "source": "GitHub",
+      "stars": 2385,
+      "language": "Python",
+      "desc": "Open-source dots for the web: an AI agent with its own browser, one that does not get blocked."
+    },
+    {
+      "title": "jtydhr88/screenwriting-skills",
+      "url": "https://github.com/jtydhr88/screenwriting-skills",
+      "source": "GitHub",
+      "stars": 1516,
+      "language": "Python",
+      "desc": "Professional agent skills for screenwriting, television writing and dramaturgy"
+    },
+    {
+      "title": "kaankiziltug/logo-design-skill",
+      "url": "https://github.com/kaankiziltug/logo-design-skill",
+      "source": "GitHub",
+      "stars": 1348,
+      "language": "HTML",
+      "desc": "A comprehensive logo-design skill for Claude, Gemini CLI, Codex and other AI agents: principles, process, SVG craft, testing tools and a 1,400+ logo reference library."
+    },
+    {
+      "title": "aliyun/ai-agent-handbook",
+      "url": "https://github.com/aliyun/ai-agent-handbook",
+      "source": "GitHub",
+      "stars": 1073,
+      "language": "",
+      "desc": "A practical guide to building enterprise AI agents across their full lifecycle."
+    },
+    {
+      "title": "youngyangyang04/llm-master",
+      "url": "https://github.com/youngyangyang04/llm-master",
+      "source": "GitHub",
+      "stars": 1056,
+      "language": "",
+      "desc": "大模型（LLM）全栈学习路线与中文教程🔥：覆盖 Prompt Engineering、RAG、AI Agent、MCP、微调、模型部署、Transformer、AI 编程与大厂面试，从入门到生产实践。"
+    },
+    {
+      "title": "nanaism/yomiyasu",
+      "url": "https://github.com/nanaism/yomiyasu",
+      "source": "GitHub",
+      "stars": 980,
+      "language": "Python",
+      "desc": "AI生成の日本語を自然な日本語へ推敲するAgent Skill / Agent Skill for Refining AI-Generated Japanese into Natural Japanese"
+    },
+    {
+      "title": "agentverse-os/AgentVerse-OS",
+      "url": "https://github.com/agentverse-os/AgentVerse-OS",
+      "source": "GitHub",
+      "stars": 971,
+      "language": "Rust",
+      "desc": "Personal cloud OS for a developer and their AI agents on a single server. One-command install on Ubuntu, then everything in the browser: a windowed desktop, isolated workspaces with VS Code, Claude Code and Codex, a store of 944 self-hosted apps, backups and updates. Access only via Tailscale, nothing exposed to the internet. Rust core, Svelte UI."
+    }
+  ]
+}
