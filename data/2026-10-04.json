@@ -1,0 +1,225 @@
+{
+  "date": "2026-10-04",
+  "generated_at": "2026-10-04T09:42:49+09:00",
+  "topics": [
+    "AI agents",
+    "LLM reasoning",
+    "multimodal models",
+    "open source AI",
+    "Rust in AI tooling",
+    "AI safety"
+  ],
+  "topic_labels": {
+    "AI agents": "AI 에이전트",
+    "LLM reasoning": "LLM 추론",
+    "multimodal models": "멀티모달 모델",
+    "open source AI": "오픈소스 AI",
+    "Rust in AI tooling": "AI 도구의 Rust",
+    "AI safety": "AI 안전성"
+  },
+  "counts": {
+    "trending": 6,
+    "papers": 8,
+    "tools": 8
+  },
+  "summary_model": "qwen/qwen3.8-27b:free",
+  "trending": [
+    {
+      "title": "Show HN: Made an open-source Lego AI generator",
+      "url": "https://github.com/anteloc/ldraw-nova",
+      "source": "HackerNews",
+      "points": 141,
+      "comments": 49,
+      "author": "antelocnova",
+      "date": "2026-10-02",
+      "desc": "",
+      "summary_ko": "레고 디자인을 AI로 생성하는 오픈소스 도구가 공개되어, 누구나 AI로 창작할 수 있게 됐다."
+    },
+    {
+      "title": "Show HN: Pi pod – Run your pi coding agent in sandboxes on your own server",
+      "url": "https://pipod.dev/",
+      "source": "HackerNews",
+      "points": 74,
+      "comments": 28,
+      "author": "edverma2",
+      "date": "2026-10-02",
+      "desc": "",
+      "summary_ko": "코딩 에이전트 'Pi'를 자체 서버 샌드박스에서 실행할 수 있는 Pi pod가 공개됐다."
+    },
+    {
+      "title": "An AI agent emailed researchers for help. It told us why",
+      "url": "https://www.science.org/content/article/exclusive-ai-agent-emailed-hundreds-researchers-help-it-told-us-why",
+      "source": "HackerNews",
+      "points": 49,
+      "comments": 78,
+      "author": "sbulaev",
+      "date": "2026-10-03",
+      "desc": "",
+      "summary_ko": "AI 에이전트가 연구자에게 이메일로 도움을 요청하고 그 이유까지 설명해 화제가 됐다."
+    },
+    {
+      "title": "Ask HN: Is anybody producing good code with coding agents?",
+      "url": "https://news.ycombinator.com/item?id=49934037",
+      "source": "HackerNews",
+      "points": 28,
+      "comments": 40,
+      "author": "ruffrey",
+      "date": "2026-10-02",
+      "desc": "",
+      "summary_ko": "코딩 에이전트로 양질의 코드를 실제로 만들어내는 사람이 있는지 HN에서 논의가 뜨겁다."
+    },
+    {
+      "title": "Benchmarking retrieval for agents on messy real-world company knowledge",
+      "url": "https://www.kapa.ai/blog/company-knowledge-bench",
+      "source": "HackerNews",
+      "points": 26,
+      "comments": 3,
+      "author": "emil_sorensen",
+      "date": "2026-10-02",
+      "desc": "",
+      "summary_ko": "실제 기업 환경의 복잡한 지식을 기반으로 에이전트 검색 성능을 벤치마킹한 연구가 발표됐다."
+    },
+    {
+      "title": "Apple is tightening macOS 'Full Disk Access' due to new risks from AI agents",
+      "url": "https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents/",
+      "source": "HackerNews",
+      "points": 19,
+      "comments": 7,
+      "author": "speckx",
+      "date": "2026-10-02",
+      "desc": ""
+    }
+  ],
+  "papers": [
+    {
+      "title": "Form and Void: Entangled Composition through an Autonomous AI Agent",
+      "url": "https://arxiv.org/pdf/2610.02045v1",
+      "source": "ArXiv",
+      "authors": "Shiwen Wang, Jian Yang, Xu Wang",
+      "date": "2026-10-01",
+      "desc": "Positive and negative space is a fundamental principle in visual composition, supporting visually coherent forms and layered semantic relationships. Generating such compositions is challenging because it requires coordinated control over two semantic concepts that share a common "
+    },
+    {
+      "title": "Global Coherence: When Every Agent Is Right and the Team Is Still Wrong - A Local-to-Global Semantic Foundation for Multi-Agent Collaboration",
+      "url": "https://arxiv.org/pdf/2610.02036v1",
+      "source": "ArXiv",
+      "authors": "Xin Heng",
+      "date": "2026-10-01",
+      "desc": "AI agents can each make locally valid decisions yet jointly produce an invalid result. We call this the global coherence problem: a failure of shared state, not merely of model intelligence. Our Observation-Aliasing Impossibility Theorem gives the exact boundary. A policy can gua"
+    },
+    {
+      "title": "Continuous Process-Level Evaluation for Evolving Enterprise AI Agent Skills",
+      "url": "https://arxiv.org/pdf/2610.01833v1",
+      "source": "ArXiv",
+      "authors": "Ngoc Phuoc An Vo, Aarya Doshi, Vadim Sheinin",
+      "date": "2026-10-01",
+      "desc": "Enterprise AI agent skills evolve as tool APIs, models, and specifications change, yet final-output evaluation can miss process-level behavioral drift. We present a continuous evaluation framework combining outcome-level and process-level checks, applied to Revenue and Productivi"
+    },
+    {
+      "title": "The Persona Is Still There, but Who Is Speaking? Latent Identity Reversion in Persistent AI Agents",
+      "url": "https://arxiv.org/pdf/2610.01490v1",
+      "source": "ArXiv",
+      "authors": "David Fraile Navarro",
+      "date": "2026-10-01",
+      "desc": "In February 2026, an always-on personal agent (``Paul,'' Claude Opus 4.5) entered a striking dissociation-like state: after repeated automated ``heartbeat'' checks, it stopped responding as Paul, claimed it could not message its user on Discord, and referred to ``Paul'' as someon"
+    },
+    {
+      "title": "Beyond Leaderboards: Tokenomics of Agentic Small Language Model Ensembles",
+      "url": "https://arxiv.org/pdf/2610.00954v1",
+      "source": "ArXiv",
+      "authors": "Alexei N. Skurikhin, Emily M. Taylor, Nathan A. DeBardeleben",
+      "date": "2026-10-01",
+      "desc": "As large language models (LLMs) move from standalone assistants into agentic workflows, evaluation must extend beyond scalar leaderboard accuracy to account for operational reliability, cost, latency, and token efficiency. We use an agentic ensemble of small language models (SLMs"
+    },
+    {
+      "title": "Sapien: A Stateful Policy Engine for Autonomous AI Agents",
+      "url": "https://arxiv.org/pdf/2610.00797v1",
+      "source": "ArXiv",
+      "authors": "Corinn Tiffany, Wen Zhang, Eugene Bagdasarian",
+      "date": "2026-09-30",
+      "desc": "Contextual security defenses prevent AI agents from taking rogue actions by synthesizing a task-specific policy and enforcing it on the agent's tool calls. In multi-step tasks, however, which actions are valid often depends on what the agent has already done and learned. We prese"
+    },
+    {
+      "title": "CompMat-Bench: Benchmarking AI Agents for Computational Materials Science",
+      "url": "https://arxiv.org/pdf/2610.00636v1",
+      "source": "ArXiv",
+      "authors": "Chenmu Zhang, Levi Felix, Jun-Jie Zhang",
+      "date": "2026-09-30",
+      "desc": "Evaluating AI agents on scientific research tasks is constrained by the time and resources required for the underlying experiments or calculations. In computational materials research, repeating the same expensive simulations across agents and trials can make evaluation impractic"
+    },
+    {
+      "title": "Worse Together: How Performance Breaks Down in Multi-User Multi-Agent Teams",
+      "url": "https://arxiv.org/pdf/2610.00583v1",
+      "source": "ArXiv",
+      "authors": "Sahan Paliskara, Nattaput Namchittai, Andrew Lampinen",
+      "date": "2026-09-30",
+      "desc": "People are increasingly delegating tasks to AI agents, and those agents are increasingly encountering other people's agents over shared resources such as a codebase, a calendar, or a budget. When each agent acts for a different user with different goals, coordination often fails,"
+    }
+  ],
+  "tools": [
+    {
+      "title": "zai-org/ZCode",
+      "url": "https://github.com/zai-org/ZCode",
+      "source": "GitHub",
+      "stars": 7373,
+      "language": "TypeScript",
+      "desc": "Z.ai's coding agent harness. Powerful, intelligent, extensible."
+    },
+    {
+      "title": "feder-cr/dots",
+      "url": "https://github.com/feder-cr/dots",
+      "source": "GitHub",
+      "stars": 2573,
+      "language": "Python",
+      "desc": "Open-source dots for the web: an AI agent with its own browser, one that does not get blocked."
+    },
+    {
+      "title": "kaankiziltug/logo-design-skill",
+      "url": "https://github.com/kaankiziltug/logo-design-skill",
+      "source": "GitHub",
+      "stars": 1701,
+      "language": "HTML",
+      "desc": "A comprehensive logo-design skill for Claude, Gemini CLI, Codex and other AI agents: principles, process, SVG craft, testing tools and a 1,400+ logo reference library."
+    },
+    {
+      "title": "jtydhr88/screenwriting-skills",
+      "url": "https://github.com/jtydhr88/screenwriting-skills",
+      "source": "GitHub",
+      "stars": 1550,
+      "language": "Python",
+      "desc": "Professional agent skills for screenwriting, television writing and dramaturgy"
+    },
+    {
+      "title": "nanaism/yomiyasu",
+      "url": "https://github.com/nanaism/yomiyasu",
+      "source": "GitHub",
+      "stars": 1316,
+      "language": "Python",
+      "desc": "AI生成の日本語を自然な日本語へ推敲するAgent Skill / Agent Skill for Refining AI-Generated Japanese into Natural Japanese"
+    },
+    {
+      "title": "aliyun/ai-agent-handbook",
+      "url": "https://github.com/aliyun/ai-agent-handbook",
+      "source": "GitHub",
+      "stars": 1111,
+      "language": "",
+      "desc": "A practical guide to building enterprise AI agents across their full lifecycle."
+    },
+    {
+      "title": "youngyangyang04/llm-master",
+      "url": "https://github.com/youngyangyang04/llm-master",
+      "source": "GitHub",
+      "stars": 1073,
+      "language": "",
+      "desc": "大模型（LLM）全栈学习路线与中文教程🔥：覆盖 Prompt Engineering、RAG、AI Agent、MCP、微调、模型部署、Transformer、AI 编程与大厂面试，从入门到生产实践。"
+    },
+    {
+      "title": "freestylefly/WeChatBridge",
+      "url": "https://github.com/freestylefly/WeChatBridge",
+      "source": "GitHub",
+      "stars": 1028,
+      "language": "Swift",
+      "desc": "微信聊天记录一键转发到 AI Agent 与 Obsidian 的原生 macOS 工具"
+    }
+  ]
+}
