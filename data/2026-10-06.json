@@ -1,0 +1,171 @@
+{
+  "date": "2026-10-06",
+  "generated_at": "2026-10-06T11:20:19+09:00",
+  "topics": [
+    "AI agents",
+    "LLM reasoning",
+    "multimodal models",
+    "open source AI",
+    "Rust in AI tooling",
+    "AI safety"
+  ],
+  "topic_labels": {
+    "AI agents": "AI 에이전트",
+    "LLM reasoning": "LLM 추론",
+    "multimodal models": "멀티모달 모델",
+    "open source AI": "오픈소스 AI",
+    "Rust in AI tooling": "AI 도구의 Rust",
+    "AI safety": "AI 안전성"
+  },
+  "counts": {
+    "trending": 1,
+    "papers": 8,
+    "tools": 8
+  },
+  "summary_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "trending": [
+    {
+      "title": "Opus 5.5 agents discover two room-temperature magnetic semiconductor candidates",
+      "url": "https://www.vals.ai/blogs/room-temperature-magnetic-semiconductors",
+      "source": "HackerNews",
+      "points": 219,
+      "comments": 163,
+      "author": "outlier99",
+      "date": "2026-10-05",
+      "desc": "",
+      "summary_ko": "Opus 5.5 에이전트가 상온 자기 반도체 후보 두 종을 발견해 차세대 스핀트로닉스 소재 개발에 청신호를 켰다."
+    }
+  ],
+  "papers": [
+    {
+      "title": "Agentic-ZTA: A Multi-Agent Architecture for Autonomous Zero Trust Enforcement",
+      "url": "https://arxiv.org/pdf/2610.05782v1",
+      "source": "ArXiv",
+      "authors": "Shovan Roy, Lopamudra Praharaj, Maanak Gupta",
+      "date": "2026-10-05",
+      "desc": "Agentic AI is emerging as a promising paradigm for automating complex cybersecurity decisions, yet its use in enforcing zero trust introduces significant challenges in safety, reliability, and policy compliance. This paper presents Agentic AI based zero trust architecture (Agenti"
+    },
+    {
+      "title": "Nexus: An Execution Fabric for AI Agents Across Cloud, Edge, and Devices",
+      "url": "https://arxiv.org/pdf/2610.05709v1",
+      "source": "ArXiv",
+      "authors": "Cary Chang, Jialin Zhou",
+      "date": "2026-10-05",
+      "desc": "Language-model agents are evolving into long-running services that interact with models, tools, computers, mobile devices, and distributed environments. Existing agent frameworks simplify reasoning and tool invocation. However, cloud-centric designs face three limitations: centra"
+    },
+    {
+      "title": "UndoBench: Separating Task Competence from Recovery Capability in Tool-Using AI Agents",
+      "url": "https://arxiv.org/pdf/2610.05622v1",
+      "source": "ArXiv",
+      "authors": "Dolly Sah, Tanmay Sah, Harshul Jain",
+      "date": "2026-10-04",
+      "desc": "Tool-using AI agents are increasingly deployed across enterprise software systems, yet widely used benchmarks primarily evaluate nominal task completion, conflating baseline planning competence with operational fault recovery. We introduce UndoBench, a benchmark spanning 36 base "
+    },
+    {
+      "title": "When the Cross-Silo Federation Goes Offline: Continual Learning for Site Onboarding with Limited Unlabeled Data",
+      "url": "https://arxiv.org/pdf/2610.05598v1",
+      "source": "ArXiv",
+      "authors": "Ahmadreza Eslaminia, Klara Nahrstedt, Chenhui Shao",
+      "date": "2026-10-04",
+      "desc": "An organization often holds too little labeled data to train a model that generalizes, and the records that would supply the rest sit with organizations that cannot release them. Cross-silo federated learning offers a way through, since participants exchange model parameters rath"
+    },
+    {
+      "title": "DelegationBench: Measuring When AI Agents Should Ask Before Acting",
+      "url": "https://arxiv.org/pdf/2610.05532v1",
+      "source": "ArXiv",
+      "authors": "Shiva Pochampally",
+      "date": "2026-10-04",
+      "desc": "AI agents that send emails, edit files, and make purchases must decide when to act on their own and when to check with the user first. This decision is usually evaluated by showing a model a proposed action, asking whether it should proceed, and scoring agreement with human label"
+    },
+    {
+      "title": "From Scientific Observations to Mechanisms: Benchmarking Hypothesis Generation by AI Scientists",
+      "url": "https://arxiv.org/pdf/2610.05197v1",
+      "source": "ArXiv",
+      "authors": "Xiaxun Xie, Qingqing Long, Meng Xiao",
+      "date": "2026-10-04",
+      "desc": "Data-driven mechanistic hypotheses are essential to scientific discovery because they explain how underlying processes produce observed phenomena. AI agents and AI scientists increasingly support scientific data analysis. However, their ability to turn empirical findings into mec"
+    },
+    {
+      "title": "Runtime Authorization of Self-Generated Subgoals in Long-Horizon Tool-Using AI Agents",
+      "url": "https://arxiv.org/pdf/2610.04975v1",
+      "source": "ArXiv",
+      "authors": "Genliang Zhu, Chu Wang",
+      "date": "2026-10-04",
+      "desc": "Long-horizon tool-using AI agents create subgoals, replan, delegate work, and compose sibling results. Per-tool permission checks cannot establish that a changing goal graph remains within the principal-approved task. We address this authorization gap in a finite structured domai"
+    },
+    {
+      "title": "Are We Measuring Scientific Intelligence? Rethinking the Evaluation of AI Scientists",
+      "url": "https://arxiv.org/pdf/2610.04915v1",
+      "source": "ArXiv",
+      "authors": "Kate Zhang, Yuante Li",
+      "date": "2026-10-04",
+      "desc": "AI agents can now carry out data-driven scientific analyses end to end, and benchmarks assess them by giving an agent a question and a dataset and scoring its final answer against a fixed key. These benchmarks assume that a correct answer was derived from the supplied data, a pro"
+    }
+  ],
+  "tools": [
+    {
+      "title": "zai-org/ZCode",
+      "url": "https://github.com/zai-org/ZCode",
+      "source": "GitHub",
+      "stars": 7440,
+      "language": "TypeScript",
+      "desc": "Z.ai's coding agent harness. Powerful, intelligent, extensible."
+    },
+    {
+      "title": "Louis-CFM/coucou",
+      "url": "https://github.com/Louis-CFM/coucou",
+      "source": "GitHub",
+      "stars": 3699,
+      "language": "Swift",
+      "desc": "A tiny friend in your Mac's notch and on your iPhone that keeps an eye on your AI coding agents: Claude Code, Codex, Cursor, Gemini CLI, Antigravity and more. Approve from the notch or your Lock Screen."
+    },
+    {
+      "title": "feder-cr/dots",
+      "url": "https://github.com/feder-cr/dots",
+      "source": "GitHub",
+      "stars": 2619,
+      "language": "Python",
+      "desc": "Open-source dots for the web: an AI agent with its own browser, one that does not get blocked."
+    },
+    {
+      "title": "kaankiziltug/logo-design-skill",
+      "url": "https://github.com/kaankiziltug/logo-design-skill",
+      "source": "GitHub",
+      "stars": 2025,
+      "language": "HTML",
+      "desc": "A comprehensive logo-design skill for Claude, Gemini CLI, Codex and other AI agents: principles, process, SVG craft, testing tools and a 1,400+ logo reference library."
+    },
+    {
+      "title": "nanaism/yomiyasu",
+      "url": "https://github.com/nanaism/yomiyasu",
+      "source": "GitHub",
+      "stars": 1520,
+      "language": "Python",
+      "desc": "AI生成の日本語を自然な日本語へ推敲するAgent Skill / Agent Skill for Refining AI-Generated Japanese into Natural Japanese"
+    },
+    {
+      "title": "QingYunA/answer-me-with-html",
+      "url": "https://github.com/QingYunA/answer-me-with-html",
+      "source": "GitHub",
+      "stars": 1495,
+      "language": "JavaScript",
+      "desc": "Answer me with HTML — an agent skill that answers hard questions with a one-page HTML you can actually read. 让 AI Agent 用一页 HTML 回答复杂问题。"
+    },
+    {
+      "title": "aliyun/ai-agent-handbook",
+      "url": "https://github.com/aliyun/ai-agent-handbook",
+      "source": "GitHub",
+      "stars": 1146,
+      "language": "",
+      "desc": "A practical guide to building enterprise AI agents across their full lifecycle."
+    },
+    {
+      "title": "youngyangyang04/llm-master",
+      "url": "https://github.com/youngyangyang04/llm-master",
+      "source": "GitHub",
+      "stars": 1086,
+      "language": "",
+      "desc": "大模型（LLM）全栈学习路线与中文教程🔥：覆盖 Prompt Engineering、RAG、AI Agent、MCP、微调、模型部署、Transformer、AI 编程与大厂面试，从入门到生产实践。"
+    }
+  ]
+}
