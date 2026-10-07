@@ -1,0 +1,230 @@
+{
+  "date": "2026-10-07",
+  "generated_at": "2026-10-07T10:36:38+09:00",
+  "topics": [
+    "AI agents",
+    "LLM reasoning",
+    "multimodal models",
+    "open source AI",
+    "Rust in AI tooling",
+    "AI safety"
+  ],
+  "topic_labels": {
+    "AI agents": "AI 에이전트",
+    "LLM reasoning": "LLM 추론",
+    "multimodal models": "멀티모달 모델",
+    "open source AI": "오픈소스 AI",
+    "Rust in AI tooling": "AI 도구의 Rust",
+    "AI safety": "AI 안전성"
+  },
+  "counts": {
+    "trending": 7,
+    "papers": 8,
+    "tools": 8
+  },
+  "summary_model": null,
+  "trending": [
+    {
+      "title": "Opus 5.5 agents discover two room-temperature magnetic semiconductor candidates",
+      "url": "https://www.vals.ai/blogs/room-temperature-magnetic-semiconductors",
+      "source": "HackerNews",
+      "points": 482,
+      "comments": 325,
+      "author": "outlier99",
+      "date": "2026-10-05",
+      "desc": ""
+    },
+    {
+      "title": "EmbeddingGemma 2: An open, lightweight multimodal embedding model",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/",
+      "source": "HackerNews",
+      "points": 216,
+      "comments": 29,
+      "author": "ilreb",
+      "date": "2026-10-06",
+      "desc": ""
+    },
+    {
+      "title": "Show HN: OpenChart – OSS TradingView alternative with your own AI agent",
+      "url": "https://github.com/longsurf-ai/openchart",
+      "source": "HackerNews",
+      "points": 36,
+      "comments": 14,
+      "author": "Warren93",
+      "date": "2026-10-06",
+      "desc": ""
+    },
+    {
+      "title": "Autolith: A self-modifiable general purpose Lisp AI agent",
+      "url": "https://github.com/lambda-symbolics/autolith",
+      "source": "HackerNews",
+      "points": 28,
+      "comments": 0,
+      "author": "long____cat",
+      "date": "2026-10-06",
+      "desc": ""
+    },
+    {
+      "title": "South Korea says AI agents appear to have been used to hack the country's banks",
+      "url": "https://www.reuters.com/world/south-koreas-lee-says-ai-appears-have-been-used-bank-hacks-2026-10-06/",
+      "source": "HackerNews",
+      "points": 26,
+      "comments": 3,
+      "author": "thoughtpeddler",
+      "date": "2026-10-06",
+      "desc": ""
+    },
+    {
+      "title": "Ask HN: Are there AI models for generating sounds based on a text and reference?",
+      "url": "https://news.ycombinator.com/item?id=49972125",
+      "source": "HackerNews",
+      "points": 20,
+      "comments": 10,
+      "author": "onemiketwelve",
+      "date": "2026-10-05",
+      "desc": ""
+    },
+    {
+      "title": "Meta's Muse AI agent is building a dossier on you",
+      "url": "https://time.com/article/2026/10/06/meta-muse-ai-agent-privacy/",
+      "source": "HackerNews",
+      "points": 17,
+      "comments": 13,
+      "author": "penskymaterial",
+      "date": "2026-10-06",
+      "desc": ""
+    }
+  ],
+  "papers": [
+    {
+      "title": "Surviving the Router: Optimizing Skill Injections for Retrieval and Execution",
+      "url": "https://arxiv.org/pdf/2610.08098v1",
+      "source": "ArXiv",
+      "authors": "Haneen Najjar, Luca Scionis, Haritz Puerto",
+      "date": "2026-10-06",
+      "desc": "AI agents increasingly rely on modular third-party \"skills\" that are dynamically selected by skill routers to execute complex tasks. While recent studies highlight the threat of prompt injections embedded in these skills, existing evaluations often assume settings where the malic"
+    },
+    {
+      "title": "Same Feedback, Different Answer: Measuring Run-to-Run Instability in Frontier-Model Customer Feedback Analysis",
+      "url": "https://arxiv.org/pdf/2610.08036v1",
+      "source": "ArXiv",
+      "authors": "Viraj Bagal, Raviraja Ganta, Prabhath Chellingi",
+      "date": "2026-10-06",
+      "desc": "AI agents are increasingly being programmed to automate knowledge work over large collections of unstructured data. Such automation requires repeatability: when the underlying evidence is unchanged, the agent's categories, priorities, and counts should not shift materially betwee"
+    },
+    {
+      "title": "EIO-Agents: The Missing Semantic Layer for AI Agent Evaluation",
+      "url": "https://arxiv.org/pdf/2610.07675v1",
+      "source": "ArXiv",
+      "authors": "Fouad Bousetouane",
+      "date": "2026-10-06",
+      "desc": "AI agents are entering production in increasingly consequential environments without a shared semantic standard for what their evaluations actually mean. Scores, traces, judge outputs, and multi juror findings are increasingly used to justify readiness and release decisions, yet "
+    },
+    {
+      "title": "BioStudyBench: Evaluating Agents on Post-Cutoff Biomedical Studies",
+      "url": "https://arxiv.org/pdf/2610.07614v1",
+      "source": "ArXiv",
+      "authors": "David Li, Shaamil Karim, Christian Gensbigler",
+      "date": "2026-10-06",
+      "desc": "We evaluate whether AI agents can match the reported findings of published biomedical studies using public data. Existing evaluations do not consistently separate analysis from prior knowledge or retrieval of the published answer. We introduce BioStudyBench, a benchmark of 25 lon"
+    },
+    {
+      "title": "Auditable Claims about AI Agents",
+      "url": "https://arxiv.org/pdf/2610.07459v1",
+      "source": "ArXiv",
+      "authors": "Yue Zhao, Jiate Li, Li Li",
+      "date": "2026-10-05",
+      "desc": "Organizations make claims about their AI agents: a person approves every external email, every action is logged, an evaluation shows the agent is safe to deploy. Article 12 of the EU AI Act requires high-risk systems to allow the automatic recording of events but does not say whi"
+    },
+    {
+      "title": "Catching Developers in the Flow: Low-Latency Agentic Program Repair at Google Scale",
+      "url": "https://arxiv.org/pdf/2610.07289v1",
+      "source": "ArXiv",
+      "authors": "Celal Ziftci, Spencer Greene, Ray Liu",
+      "date": "2026-10-05",
+      "desc": "Manual repair of program failures is time-consuming and disruptive for software developers, particularly during the pre-submit phase where test failures occur within continuous integration systems. While Automated Program Repair has seen significant advancement through Large Lang"
+    },
+    {
+      "title": "Lineage-Aware Memory Governance: A Derivation-Gated Framework for Privacy-Preserving Column-Level Access Control in Enterprise AI Agents",
+      "url": "https://arxiv.org/pdf/2610.07258v1",
+      "source": "ArXiv",
+      "authors": "Venkata M Sangaraju, Sudhir Vissa",
+      "date": "2026-10-05",
+      "desc": "Enterprise AI agents that share a memory store face two unaddressed risks: sensitive data can leak through legitimately computed results the requester could not derive, and departments can silently compute a same-named key performance indicator (KPI) through conflicting logic. Ex"
+    },
+    {
+      "title": "Can Semantic Geometry Teach an AI Judgement?",
+      "url": "https://arxiv.org/pdf/2610.07249v1",
+      "source": "ArXiv",
+      "authors": "Thomson D. Nguy",
+      "date": "2026-10-05",
+      "desc": "How can an AI agent determine what rules to follow? One rule permits an action. Another imposes a condition, exception, or conflicting obligation. Deterministic systems can resolve those relationships when they have been specified. When they remain implicit in language, an agent "
+    }
+  ],
+  "tools": [
+    {
+      "title": "zai-org/ZCode",
+      "url": "https://github.com/zai-org/ZCode",
+      "source": "GitHub",
+      "stars": 7482,
+      "language": "TypeScript",
+      "desc": "Z.ai's coding agent harness. Powerful, intelligent, extensible."
+    },
+    {
+      "title": "Louis-CFM/coucou",
+      "url": "https://github.com/Louis-CFM/coucou",
+      "source": "GitHub",
+      "stars": 3847,
+      "language": "Swift",
+      "desc": "A tiny friend in your Mac's notch and on your iPhone that keeps an eye on your AI coding agents: Claude Code, Codex, Cursor, Gemini CLI, Antigravity and more. Approve from the notch or your Lock Screen."
+    },
+    {
+      "title": "feder-cr/dots",
+      "url": "https://github.com/feder-cr/dots",
+      "source": "GitHub",
+      "stars": 2635,
+      "language": "Python",
+      "desc": "Open-source dots for the web: an AI agent with its own browser, one that does not get blocked."
+    },
+    {
+      "title": "kaankiziltug/logo-design-skill",
+      "url": "https://github.com/kaankiziltug/logo-design-skill",
+      "source": "GitHub",
+      "stars": 2167,
+      "language": "HTML",
+      "desc": "A comprehensive logo-design skill for Claude, Gemini CLI, Codex and other AI agents: principles, process, SVG craft, testing tools and a 1,400+ logo reference library."
+    },
+    {
+      "title": "QingYunA/answer-me-with-html",
+      "url": "https://github.com/QingYunA/answer-me-with-html",
+      "source": "GitHub",
+      "stars": 1790,
+      "language": "JavaScript",
+      "desc": "Answer me with HTML — an agent skill that answers hard questions with a one-page HTML you can actually read. 让 AI Agent 用一页 HTML 回答复杂问题。"
+    },
+    {
+      "title": "nanaism/yomiyasu",
+      "url": "https://github.com/nanaism/yomiyasu",
+      "source": "GitHub",
+      "stars": 1619,
+      "language": "Python",
+      "desc": "AI生成の日本語を自然な日本語へ推敲するAgent Skill / Agent Skill for Refining AI-Generated Japanese into Natural Japanese"
+    },
+    {
+      "title": "freestylefly/WeChatBridge",
+      "url": "https://github.com/freestylefly/WeChatBridge",
+      "source": "GitHub",
+      "stars": 1172,
+      "language": "Swift",
+      "desc": "微信聊天记录一键转发到 AI Agent 与 Obsidian 的原生 macOS 工具"
+    },
+    {
+      "title": "aliyun/ai-agent-handbook",
+      "url": "https://github.com/aliyun/ai-agent-handbook",
+      "source": "GitHub",
+      "stars": 1152,
+      "language": "",
+      "desc": "A practical guide to building enterprise AI agents across their full lifecycle."
+    }
+  ]
+}
