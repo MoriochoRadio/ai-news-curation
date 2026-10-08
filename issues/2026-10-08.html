@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>The AI Brief — 매일 아침 AI 브리프</title>
-<link rel="stylesheet" href="assets/style.css" />
+<title>The AI Brief — 2026년 10월 08일</title>
+<link rel="stylesheet" href="../assets/style.css" />
 
 <style>
 .tb-fixed{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;gap:8px;align-items:center;
@@ -33,14 +33,14 @@ mark.hl{background:var(--accent-soft,#f3e7df);color:var(--accent,#b4451f);border
 </div>
 
 <div class="wrap">
+  <header class="masthead">
+    <div class="brand">The AI Brief</div>
+    <div class="issue-date">2026년 10월 08일</div>
+    <p class="tagline">매일 아침, AI 업계의 흐름을 한눈에</p>
+    <p class="topics">오늘의 주제 — AI agents · LLM reasoning · multimodal models · open source AI · Rust in AI tooling · AI safety</p>
+  </header>
+
   
-        <header class="masthead">
-          <div class="brand">The AI Brief</div>
-          <div class="issue-date">2026년 10월 08일 · 최신 호</div>
-          <p class="tagline">매일 아침, AI 업계의 흐름을 한눈에</p>
-          <p class="topics">오늘의 주제 — AI agents · LLM reasoning · multimodal models · open source AI · Rust in AI tooling · AI safety</p>
-        </header>
-        
     <section class="block tldr">
       <header class="block-head">
         <h2>한눈에 요약</h2>
@@ -52,7 +52,7 @@ mark.hl{background:var(--accent-soft,#f3e7df);color:var(--accent,#b4451f);border
         <ul class="tldr-picks"><li><span class="tldr-tag">오늘의 관심</span> EmbeddingGemma 2: An open, lightweight multimodal embedding model</li><li><span class="tldr-tag">논문 픽</span> SciExam for ENSO: Can AI Agents Build Climate Models?</li><li><span class="tldr-tag">프로젝트 픽</span> zai-org/ZCode</li></ul>
       </div>
     </section>
-        
+  
     <section class="block" data-section="trending">
       <header class="block-head">
         <h2>트렌딩</h2>
@@ -88,9 +88,19 @@ mark.hl{background:var(--accent-soft,#f3e7df);color:var(--accent,#b4451f);border
       <a class="card-title" href="https://github.com/TerseAI/durable-actors" target="_blank" rel="noopener">Show HN: Durable Actors – OSS Durable Objects with configurable compute</a>
       
       <div class="card-foot"><span class="meta-line">▲ 33 · 💬 24</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/lambda-symbolics/autolith" target="_blank" rel="noopener">Autolith: A self-modifiable general purpose Lisp AI agent</a>
+      
+      <div class="card-foot"><span class="meta-line">▲ 28</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://time.com/article/2026/10/06/meta-muse-ai-agent-privacy/" target="_blank" rel="noopener">Meta&#x27;s Muse AI agent is building a dossier on you</a>
+      
+      <div class="card-foot"><span class="meta-line">▲ 18 · 💬 13</span><span class="src">HackerNews</span></div>
     </article></div></div>
     </section>
-        
+  
     <section class="block" data-section="papers">
       <header class="block-head">
         <h2>논문</h2>
@@ -124,9 +134,37 @@ mark.hl{background:var(--accent-soft,#f3e7df);color:var(--accent,#b4451f);border
         <p class="item-desc">Turning a CAD design into an assembly plan is still largely done by hand, requiring engineers to reason about geometric feasibility, tool access, stability, and the ergonomics of human assembly. In this work, we encode long-established design for assembly (DfA) principles into a </p>
         <div class="card-foot"><span class="byline">Faustin Arion von Arx, Millicent Schlafly, Mark D. Fuge</span><span class="date">2026-10-07</span><span class="src">ArXiv</span></div>
       </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2610.09777v1" target="_blank" rel="noopener">On-Demand Robotic Assembly via Differentiable Geometric Part Repair</a>
+        <p class="item-desc">Transitioning from a digital design to a robotic assembly process currently requires months of expert manual tuning to reconcile part geometries with robotic constraints. This paper presents an end-to-end, autonomous pipeline for the design and physical construction of bespoke wo</p>
+        <div class="card-foot"><span class="byline">Millicent Schlafly, Fabio Schaub, Diogo Costa Pais</span><span class="date">2026-10-07</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2610.09667v1" target="_blank" rel="noopener">Shared and structured inputs undermine collective random choice by reasoning AI agents</a>
+        <p class="item-desc">Random selection is widely used in resource allocation and auditing, making reliable implementation essential for AI-agent systems. Behavioural tests across six reasoning models uncovered threshold and divisibility rules used in identifier-based choices. For threshold-following G</p>
+        <div class="card-foot"><span class="byline">Takahiro Ezaki, Naoto Imura, Katsuhiro Nishinari</span><span class="date">2026-10-07</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2610.09558v1" target="_blank" rel="noopener">DrugTargetWorld: A Synthetic Biobank for Training and Benchmarking AI Scientists</a>
+        <p class="item-desc">Drug target discovery requires distinguishing molecules that causally drive disease from those that are merely associated with it. Training and evaluating AI agents to perform this workflow end-to-end is difficult because real world biobanks lack known causal ground truth and par</p>
+        <div class="card-foot"><span class="byline">Samuel Margolis, Paul Schmiedmayer, Alan Huang</span><span class="date">2026-10-07</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2610.09497v1" target="_blank" rel="noopener">Ream: Unfolding Mutual Awareness in Human-Agent Workspaces</a>
+        <p class="item-desc">As AI agents work alongside humans in shared workspaces, a mutual awareness challenge arises: agents act at speeds that outpace human monitoring, and users&#x27; evolving interests are not always expressed in chat. This challenge is especially pressing in literature review, where both</p>
+        <div class="card-foot"><span class="byline">Peiling Jiang, Sangho Suh, Varsha Kishore</span><span class="date">2026-10-07</span><span class="src">ArXiv</span></div>
+      </div>
     </article></div></div>
     </section>
-        
+  
     <section class="block" data-section="tools">
       <header class="block-head">
         <h2>오픈소스</h2>
@@ -152,13 +190,31 @@ mark.hl{background:var(--accent-soft,#f3e7df);color:var(--accent,#b4451f);border
       <a class="card-title" href="https://github.com/kaankiziltug/logo-design-skill" target="_blank" rel="noopener">kaankiziltug/logo-design-skill</a>
       <p class="item-desc">A comprehensive logo-design skill for Claude, Gemini CLI, Codex and other AI agents: principles, process, SVG craft, testing tools and a 1,400+ logo reference library.</p>
       <div class="card-foot"><span class="badges">★ 2.3k · HTML</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/QingYunA/answer-me-with-html" target="_blank" rel="noopener">QingYunA/answer-me-with-html</a>
+      <p class="item-desc">Answer me with HTML — an agent skill that answers hard questions with a one-page HTML you can actually read. 让 AI Agent 用一页 HTML 回答复杂问题。</p>
+      <div class="card-foot"><span class="badges">★ 2.1k · JavaScript</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/nanaism/yomiyasu" target="_blank" rel="noopener">nanaism/yomiyasu</a>
+      <p class="item-desc">AI生成の日本語を自然な日本語へ推敲するAgent Skill / Agent Skill for Refining AI-Generated Japanese into Natural Japanese</p>
+      <div class="card-foot"><span class="badges">★ 1.7k · Python</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/freestylefly/WeChatBridge" target="_blank" rel="noopener">freestylefly/WeChatBridge</a>
+      <p class="item-desc">微信聊天记录一键转发到 AI Agent 与 Obsidian 的原生 macOS 工具</p>
+      <div class="card-foot"><span class="badges">★ 1.2k · Swift</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/aliyun/ai-agent-handbook" target="_blank" rel="noopener">aliyun/ai-agent-handbook</a>
+      <p class="item-desc">A practical guide to building enterprise AI agents across their full lifecycle.</p>
+      <div class="card-foot"><span class="badges">★ 1.2k</span><span class="src">GitHub</span></div>
     </article></div></div>
     </section>
-  <section class="block archive-preview">
-    <header class="block-head"><h2>최근 호</h2><a class="more" href="archive.html">전체 보기 →</a></header>
-    <ul class="issue-list"><li><a href="issues/2026-10-08.html">10.08</a><span class="r-title">2026년 10월 08일</span><span class="r-count">T8 · P8 · G8</span></li><li><a href="issues/2026-10-07.html">10.07</a><span class="r-title">2026년 10월 07일</span><span class="r-count">T7 · P8 · G8</span></li><li><a href="issues/2026-10-06.html">10.06</a><span class="r-title">2026년 10월 06일</span><span class="r-count">T1 · P8 · G8</span></li><li><a href="issues/2026-10-05.html">10.05</a><span class="r-title">2026년 10월 05일</span><span class="r-count">T1 · P0 · G8</span></li><li><a href="issues/2026-10-04.html">10.04</a><span class="r-title">2026년 10월 04일</span><span class="r-count">T6 · P8 · G8</span></li><li><a href="issues/2026-10-03.html">10.03</a><span class="r-title">2026년 10월 03일</span><span class="r-count">T6 · P8 · G8</span></li><li><a href="issues/2026-10-02.html">10.02</a><span class="r-title">2026년 10월 02일</span><span class="r-count">T2 · P8 · G8</span></li><li><a href="issues/2026-10-01.html">10.01</a><span class="r-title">2026년 10월 01일</span><span class="r-count">T3 · P8 · G8</span></li><li><a href="issues/2026-09-30.html">09.30</a><span class="r-title">2026년 09월 30일</span><span class="r-count">T7 · P8 · G8</span></li><li><a href="issues/2026-07-08.html">07.08</a><span class="r-title">2026년 07월 08일</span><span class="r-count">T8 · P8 · G8</span></li><li><a href="issues/2026-06-13.html">06.13</a><span class="r-title">2026년 06월 13일</span><span class="r-count">T5 · P5 · G6</span></li></ul>
-  </section>
+
   <footer class="site-foot">
+    <a href="../index.html">← 최신 호로</a> · <a href="../archive.html">전체 아카이브</a>
     <p>자동 수집 · HackerNews · ArXiv · GitHub</p>
   </footer>
 </div>
