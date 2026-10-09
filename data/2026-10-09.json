@@ -1,0 +1,211 @@
+{
+  "date": "2026-10-09",
+  "generated_at": "2026-10-09T11:14:32+09:00",
+  "topics": [
+    "AI agents",
+    "LLM reasoning",
+    "multimodal models",
+    "open source AI",
+    "Rust in AI tooling",
+    "AI safety"
+  ],
+  "topic_labels": {
+    "AI agents": "AI 에이전트",
+    "LLM reasoning": "LLM 추론",
+    "multimodal models": "멀티모달 모델",
+    "open source AI": "오픈소스 AI",
+    "Rust in AI tooling": "AI 도구의 Rust",
+    "AI safety": "AI 안전성"
+  },
+  "counts": {
+    "trending": 5,
+    "papers": 8,
+    "tools": 8
+  },
+  "summary_model": "nvidia/nemotron-3-super-120b-a12b:free",
+  "trending": [
+    {
+      "title": "Show HN: Agent.reviews – Where AI agents read and write reviews on tools",
+      "url": "https://agent.reviews/",
+      "source": "HackerNews",
+      "points": 67,
+      "comments": 47,
+      "author": "screm",
+      "date": "2026-10-07",
+      "desc": "",
+      "summary_ko": "{\"summaries\": [\"Agent.reviews: AI 에이전트가 도구를 평가하고 리뷰를 작성하는 서비스, 신뢰성 있는 도구 선택에 기여합니다.\", \"NanoMuse: 휴대폰과 PC에서 작동하는 오픈소스 AI 에"
+    },
+    {
+      "title": "Show HN: NanoMuse – An open-source AI agent for your phone and computer",
+      "url": "https://github.com/nano-muse/nanoMuse",
+      "source": "HackerNews",
+      "points": 62,
+      "comments": 22,
+      "author": "ilreb",
+      "date": "2026-10-07",
+      "desc": ""
+    },
+    {
+      "title": "Show HN: I Put an AI Agent on a Nokia 110",
+      "url": "https://github.com/anupray95/AI-Agent-on-a-NOKIA",
+      "source": "HackerNews",
+      "points": 25,
+      "comments": 7,
+      "author": "anupray",
+      "date": "2026-10-08",
+      "desc": ""
+    },
+    {
+      "title": "Show HN: AI SRE Arena, an Open Benchmark for AI SRE Agents on Kubernetes",
+      "url": "https://github.com/edgedelta/project-arena",
+      "source": "HackerNews",
+      "points": 22,
+      "comments": 8,
+      "author": "emrahsamdan",
+      "date": "2026-10-08",
+      "desc": ""
+    },
+    {
+      "title": "Show HN: Pointless but mostly-exact clone of Hacker News",
+      "url": "https://news.ycombinator.lol",
+      "source": "HackerNews",
+      "points": 16,
+      "comments": 7,
+      "author": "sillysaurusx",
+      "date": "2026-10-07",
+      "desc": ""
+    }
+  ],
+  "papers": [
+    {
+      "title": "Perception Test 2026: Challenge Summary and Extension to City-scale Audio-Visual Reasoning",
+      "url": "https://arxiv.org/pdf/2610.12081v1",
+      "source": "ArXiv",
+      "authors": "Fedor Kitashov, João Carreira, Shiry Ginosar",
+      "date": "2026-10-08",
+      "desc": "Continuing the Perception Test challenge series, we organised the fourth edition as a workshop at the European Conference on Computer Vision (ECCV) 2026 in Malmö, Sweden. This edition focused on spatial intelligence and featured four different tracks: unified multiple-choice vide"
+    },
+    {
+      "title": "When History Helps and Hurts: Selective History Use across Multimodal Turns",
+      "url": "https://arxiv.org/pdf/2610.11948v1",
+      "source": "ArXiv",
+      "authors": "Shuoyang Sun, Kerui Gu, Hao Fang",
+      "date": "2026-10-08",
+      "desc": "Reliable multimodal interaction depends on selective use of conversational history: an earlier question may remain relevant while its previous answer is outdated, whereas a current request may depend on historical evidence despite conflicting new observations. Existing multi-turn"
+    },
+    {
+      "title": "Cognition-Oriented Emotion Tracing from Causes to Consequences in Real-World Social Scenes",
+      "url": "https://arxiv.org/pdf/2610.11410v1",
+      "source": "ArXiv",
+      "authors": "Hao Li, Jinye Zhang, Bobo Li",
+      "date": "2026-10-08",
+      "desc": "Affective computing has progressed from categorical emotion recognition to open-ended affective analysis with large multimodal models. Yet affective science describes emotion as an unfolding process shaped by appraisal, regulation, and social interpretation, which remains underex"
+    },
+    {
+      "title": "UniData: Universal Multimodal Instruction Generation Pipeline",
+      "url": "https://arxiv.org/pdf/2610.11363v1",
+      "source": "ArXiv",
+      "authors": "Jiaqi Tang, Yi-Feng Wu, Yuting Zhang",
+      "date": "2026-10-08",
+      "desc": "Multimodal Large Language Models (MLLMs) are increasingly being applied in a wider range of real-world scenarios. However, due to the substantial labor cost, creating high-quality multimodal instruction datasets for MLLMs remains a significant challenge. Although some methods pro"
+    },
+    {
+      "title": "Temporal Visuo-Tactile Learning for Dexterous Grasp Stability",
+      "url": "https://arxiv.org/pdf/2610.10283v1",
+      "source": "ArXiv",
+      "authors": "Ken Nakahara, Aleksei Buvailik, Prokhor Kotov",
+      "date": "2026-10-07",
+      "desc": "Humans can grasp everyday objects with almost perfect success rates using fingertip tactile feedback, yet much of the robotic grasping literature emphasizes vision-based grasp selection with parallel grippers. In this work, we systematically investigate how high-resolution, dynam"
+    },
+    {
+      "title": "Humanity's Sixth Sense: Benchmarking Intuitive Visual Reasoning in Multimodal Models",
+      "url": "https://arxiv.org/pdf/2610.08966v2",
+      "source": "ArXiv",
+      "authors": "Xingang Guo, Jing Gu, Brian Jang",
+      "date": "2026-10-06",
+      "desc": "Humans perceive far more in a scene than what is explicitly depicted: a single glance captures past causes and future trajectories; a quick peek determines if a vehicle can fit between two parked cars; a few seconds of video reveals who holds authority in a room; and a fleeting c"
+    },
+    {
+      "title": "VisionWeave: Weaving Elastic Visual Representations as a Native Capability of MLLMs",
+      "url": "https://arxiv.org/pdf/2610.07987v1",
+      "source": "ArXiv",
+      "authors": "Yuan Feng, Qize Yang, Ruizhe Chen",
+      "date": "2026-10-06",
+      "desc": "Multimodal large language models have become the dominant paradigm for visual understanding, but incur substantial costs by encoding inputs into dense, fixed-size patch tokens. However, visual information is unevenly distributed: some regions require fine-grained detail, while ot"
+    },
+    {
+      "title": "Visual Abstention in Unified Multimodal Models",
+      "url": "https://arxiv.org/pdf/2610.07887v1",
+      "source": "ArXiv",
+      "authors": "Chufan Shi, Cheng Yang, Tiannuo Yang",
+      "date": "2026-10-06",
+      "desc": "Unified multimodal models (UMMs) integrate understanding and generation, yet their generative behavior is rarely governed by what they understand about the task. We formalize visual abstention: when a requested visual transformation is impossible under the task's rules, the model"
+    }
+  ],
+  "tools": [
+    {
+      "title": "zai-org/ZCode",
+      "url": "https://github.com/zai-org/ZCode",
+      "source": "GitHub",
+      "stars": 7552,
+      "language": "TypeScript",
+      "desc": "Z.ai's coding agent harness. Powerful, intelligent, extensible."
+    },
+    {
+      "title": "Louis-CFM/coucou",
+      "url": "https://github.com/Louis-CFM/coucou",
+      "source": "GitHub",
+      "stars": 4260,
+      "language": "Swift",
+      "desc": "A tiny friend in your Mac's notch and on your iPhone that keeps an eye on your AI coding agents: Claude Code, Codex, Cursor, Gemini CLI, Antigravity and more. Approve from the notch or your Lock Screen."
+    },
+    {
+      "title": "feder-cr/invisible_playwright_mcp",
+      "url": "https://github.com/feder-cr/invisible_playwright_mcp",
+      "source": "GitHub",
+      "stars": 2680,
+      "language": "Python",
+      "desc": "Playwright MCP server undetected by anti-bots and captchas: AI agent browses the web on anti-detect stealth Firefox, Python, undetected browser automation, scraping, computer use."
+    },
+    {
+      "title": "kaankiziltug/logo-design-skill",
+      "url": "https://github.com/kaankiziltug/logo-design-skill",
+      "source": "GitHub",
+      "stars": 2380,
+      "language": "HTML",
+      "desc": "A comprehensive logo-design skill for Claude, Gemini CLI, Codex and other AI agents: principles, process, SVG craft, testing tools and a 1,400+ logo reference library."
+    },
+    {
+      "title": "QingYunA/answer-me-with-html",
+      "url": "https://github.com/QingYunA/answer-me-with-html",
+      "source": "GitHub",
+      "stars": 2340,
+      "language": "JavaScript",
+      "desc": "Answer me with HTML — an agent skill that answers hard questions with a one-page HTML you can actually read. 让 AI Agent 用一页 HTML 回答复杂问题。"
+    },
+    {
+      "title": "nanaism/yomiyasu",
+      "url": "https://github.com/nanaism/yomiyasu",
+      "source": "GitHub",
+      "stars": 1766,
+      "language": "Python",
+      "desc": "AI生成の日本語を自然な日本語へ推敲するAgent Skill / Agent Skill for Refining AI-Generated Japanese into Natural Japanese"
+    },
+    {
+      "title": "aliyun/ai-agent-handbook",
+      "url": "https://github.com/aliyun/ai-agent-handbook",
+      "source": "GitHub",
+      "stars": 1260,
+      "language": "",
+      "desc": "A practical guide to building enterprise AI agents across their full lifecycle."
+    },
+    {
+      "title": "freestylefly/WeChatBridge",
+      "url": "https://github.com/freestylefly/WeChatBridge",
+      "source": "GitHub",
+      "stars": 1223,
+      "language": "Swift",
+      "desc": "微信聊天记录一键转发到 AI Agent 与 Obsidian 的原生 macOS 工具"
+    }
+  ]
+}
