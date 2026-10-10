@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>The AI Brief — 매일 아침 AI 브리프</title>
-<link rel="stylesheet" href="assets/style.css" />
+<title>The AI Brief — 2026년 10월 10일</title>
+<link rel="stylesheet" href="../assets/style.css" />
 
 <style>
 .tb-fixed{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;gap:8px;align-items:center;
@@ -33,14 +33,14 @@ mark.hl{background:var(--accent-soft,#f3e7df);color:var(--accent,#b4451f);border
 </div>
 
 <div class="wrap">
+  <header class="masthead">
+    <div class="brand">The AI Brief</div>
+    <div class="issue-date">2026년 10월 10일</div>
+    <p class="tagline">매일 아침, AI 업계의 흐름을 한눈에</p>
+    <p class="topics">오늘의 주제 — AI agents · LLM reasoning · multimodal models · open source AI · Rust in AI tooling · AI safety</p>
+  </header>
+
   
-        <header class="masthead">
-          <div class="brand">The AI Brief</div>
-          <div class="issue-date">2026년 10월 10일 · 최신 호</div>
-          <p class="tagline">매일 아침, AI 업계의 흐름을 한눈에</p>
-          <p class="topics">오늘의 주제 — AI agents · LLM reasoning · multimodal models · open source AI · Rust in AI tooling · AI safety</p>
-        </header>
-        
     <section class="block tldr">
       <header class="block-head">
         <h2>한눈에 요약</h2>
@@ -52,7 +52,7 @@ mark.hl{background:var(--accent-soft,#f3e7df);color:var(--accent,#b4451f);border
         <ul class="tldr-picks"><li><span class="tldr-tag">오늘의 관심</span> Show HN: Let your AI agents paint big arrows, boxes and text on your screen</li><li><span class="tldr-tag">논문 픽</span> From Reactive Containment to Proactive Assurance: Lessons from OpenAI, Anthropic, and Google Agent Security Incidents</li><li><span class="tldr-tag">프로젝트 픽</span> zai-org/ZCode</li></ul>
       </div>
     </section>
-        
+  
     <section class="block" data-section="trending">
       <header class="block-head">
         <h2>트렌딩</h2>
@@ -85,7 +85,7 @@ mark.hl{background:var(--accent-soft,#f3e7df);color:var(--accent,#b4451f);border
       <div class="card-foot"><span class="meta-line">▲ 18 · 💬 2</span><span class="src">HackerNews</span></div>
     </article></div></div>
     </section>
-        
+  
     <section class="block" data-section="papers">
       <header class="block-head">
         <h2>논문</h2>
@@ -119,9 +119,37 @@ mark.hl{background:var(--accent-soft,#f3e7df);color:var(--accent,#b4451f);border
         <p class="item-desc">As claims about recursive self-improvement (RSI) and artificial general intelligence (AGI) proliferate, we ask a simple question: do frontier AI models have a sense of data, i.e., can they reliably select the right data for training? We introduce DataSense-Bench to study this cap</p>
         <div class="card-foot"><span class="byline">Yudi Zhang, Mingyu Cao, Lu Yin</span><span class="date">2026-10-08</span><span class="src">ArXiv</span></div>
       </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2610.11899v1" target="_blank" rel="noopener">Forms of LLM-Integrated Applications from LLM-Chats to Autonomous AI Agent System</a>
+        <p class="item-desc">Large language models (LLMs) are increasingly embedded as components in software systems, marketed under labels such as chatbot, copilot, retrieval-augmented generation, workflow, coding agent and AI agent. Whether these labels denote genuine architectural forms or serve as brand</p>
+        <div class="card-foot"><span class="byline">Irene Weber</span><span class="date">2026-10-08</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2610.10858v1" target="_blank" rel="noopener">RFChipAgent: Multi-Agentic AI Flow for Analog/RF Chip Design</a>
+        <p class="item-desc">Analog/RF circuits remain the critical interface between digital computation and the physical world, and emerging standards from Wi-Fi 7 to 6G place stringent demands on them, yet analog/RF design remains one of the most labor-intensive steps in chip development. We present RFChi</p>
+        <div class="card-foot"><span class="byline">Awani Khodkumbhe, Yunfei Feng, Raj Rangarajan</span><span class="date">2026-10-07</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2610.10833v1" target="_blank" rel="noopener">On the Clock: Towards Punctual and Productive Time-Budgeted AI Agents</a>
+        <p class="item-desc">We study whether small LLM agents can operate effectively under explicit wall-clock time budgets by both respecting the allocated runtime and using available time productively. We evaluate Qwen3.6-27B on five competitions from MLE-Bench Lite and Qwen3-4B on Zork I (Jericho), two </p>
+        <div class="card-foot"><span class="byline">Aaron Wang, Neelabh Madan, Vlad Sobal</span><span class="date">2026-10-07</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2610.10513v1" target="_blank" rel="noopener">SciExam for ENSO: Can AI Agents Build Climate Models?</a>
+        <p class="item-desc">Language-model agents are increasingly asked to carry out open-ended scientific research, yet their results are usually graded against a known answer, a rubric, or a language-model reviewer, none of which can tell whether a new scientific model is valid. The AI Science Exam for E</p>
+        <div class="card-foot"><span class="byline">Yinling Zhang, Langchen Liu, Dongbin Xiu</span><span class="date">2026-10-07</span><span class="src">ArXiv</span></div>
+      </div>
     </article></div></div>
     </section>
-        
+  
     <section class="block" data-section="tools">
       <header class="block-head">
         <h2>오픈소스</h2>
@@ -147,13 +175,31 @@ mark.hl{background:var(--accent-soft,#f3e7df);color:var(--accent,#b4451f);border
       <a class="card-title" href="https://github.com/QingYunA/answer-me-with-html" target="_blank" rel="noopener">QingYunA/answer-me-with-html</a>
       <p class="item-desc">Answer me with HTML — an agent skill that answers hard questions with a one-page HTML you can actually read. 让 AI Agent 用一页 HTML 回答复杂问题。</p>
       <div class="card-foot"><span class="badges">★ 2.5k · JavaScript</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/kaankiziltug/logo-design-skill" target="_blank" rel="noopener">kaankiziltug/logo-design-skill</a>
+      <p class="item-desc">A comprehensive logo-design skill for Claude, Gemini CLI, Codex and other AI agents: principles, process, SVG craft, testing tools and a 1,400+ logo reference library.</p>
+      <div class="card-foot"><span class="badges">★ 2.4k · HTML</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/mhtsec/ARTEX" target="_blank" rel="noopener">mhtsec/ARTEX</a>
+      <p class="item-desc">AI 自主渗透测试系统 | 百度“agent+”攻防挑战赛冠军项目</p>
+      <div class="card-foot"><span class="badges">★ 2.2k · Go</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/nanaism/yomiyasu" target="_blank" rel="noopener">nanaism/yomiyasu</a>
+      <p class="item-desc">AI生成の日本語を自然な日本語へ推敲するAgent Skill / Agent Skill for Refining AI-Generated Japanese into Natural Japanese</p>
+      <div class="card-foot"><span class="badges">★ 1.8k · Python</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/aliyun/ai-agent-handbook" target="_blank" rel="noopener">aliyun/ai-agent-handbook</a>
+      <p class="item-desc">A practical guide to building enterprise AI agents across their full lifecycle.</p>
+      <div class="card-foot"><span class="badges">★ 1.3k</span><span class="src">GitHub</span></div>
     </article></div></div>
     </section>
-  <section class="block archive-preview">
-    <header class="block-head"><h2>최근 호</h2><a class="more" href="archive.html">전체 보기 →</a></header>
-    <ul class="issue-list"><li><a href="issues/2026-10-10.html">10.10</a><span class="r-title">2026년 10월 10일</span><span class="r-count">T5 · P8 · G8</span></li><li><a href="issues/2026-10-09.html">10.09</a><span class="r-title">2026년 10월 09일</span><span class="r-count">T5 · P8 · G8</span></li><li><a href="issues/2026-10-08.html">10.08</a><span class="r-title">2026년 10월 08일</span><span class="r-count">T8 · P8 · G8</span></li><li><a href="issues/2026-10-07.html">10.07</a><span class="r-title">2026년 10월 07일</span><span class="r-count">T7 · P8 · G8</span></li><li><a href="issues/2026-10-06.html">10.06</a><span class="r-title">2026년 10월 06일</span><span class="r-count">T1 · P8 · G8</span></li><li><a href="issues/2026-10-05.html">10.05</a><span class="r-title">2026년 10월 05일</span><span class="r-count">T1 · P0 · G8</span></li><li><a href="issues/2026-10-04.html">10.04</a><span class="r-title">2026년 10월 04일</span><span class="r-count">T6 · P8 · G8</span></li><li><a href="issues/2026-10-03.html">10.03</a><span class="r-title">2026년 10월 03일</span><span class="r-count">T6 · P8 · G8</span></li><li><a href="issues/2026-10-02.html">10.02</a><span class="r-title">2026년 10월 02일</span><span class="r-count">T2 · P8 · G8</span></li><li><a href="issues/2026-10-01.html">10.01</a><span class="r-title">2026년 10월 01일</span><span class="r-count">T3 · P8 · G8</span></li><li><a href="issues/2026-09-30.html">09.30</a><span class="r-title">2026년 09월 30일</span><span class="r-count">T7 · P8 · G8</span></li><li><a href="issues/2026-07-08.html">07.08</a><span class="r-title">2026년 07월 08일</span><span class="r-count">T8 · P8 · G8</span></li></ul>
-  </section>
+
   <footer class="site-foot">
+    <a href="../index.html">← 최신 호로</a> · <a href="../archive.html">전체 아카이브</a>
     <p>자동 수집 · HackerNews · ArXiv · GitHub</p>
   </footer>
 </div>

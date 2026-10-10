@@ -1,0 +1,215 @@
+{
+  "date": "2026-10-10",
+  "generated_at": "2026-10-10T10:46:55+09:00",
+  "topics": [
+    "AI agents",
+    "LLM reasoning",
+    "multimodal models",
+    "open source AI",
+    "Rust in AI tooling",
+    "AI safety"
+  ],
+  "topic_labels": {
+    "AI agents": "AI 에이전트",
+    "LLM reasoning": "LLM 추론",
+    "multimodal models": "멀티모달 모델",
+    "open source AI": "오픈소스 AI",
+    "Rust in AI tooling": "AI 도구의 Rust",
+    "AI safety": "AI 안전성"
+  },
+  "counts": {
+    "trending": 5,
+    "papers": 8,
+    "tools": 8
+  },
+  "summary_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "trending": [
+    {
+      "title": "Show HN: Let your AI agents paint big arrows, boxes and text on your screen",
+      "url": "https://github.com/franzenzenhofer/big-arrow-on-the-screen",
+      "source": "HackerNews",
+      "points": 378,
+      "comments": 165,
+      "author": "franze",
+      "date": "2026-10-09",
+      "desc": "",
+      "summary_ko": "AI 에이전트가 화면에 화살표·박스·텍스트를 그려 시각적 디버깅과 협업을 돕는 도구입니다."
+    },
+    {
+      "title": "Show HN: I Put an AI Agent on a Nokia 110",
+      "url": "https://github.com/anupray95/AI-Agent-on-a-NOKIA",
+      "source": "HackerNews",
+      "points": 31,
+      "comments": 14,
+      "author": "anupray",
+      "date": "2026-10-08",
+      "desc": "",
+      "summary_ko": "노키아 110 같은 초저사양 피처폰에서도 AI 에이전트를 구동해 엣지 AI 가능성을 입증했습니다."
+    },
+    {
+      "title": "Show HN: AI SRE Arena, an Open Benchmark for AI SRE Agents on Kubernetes",
+      "url": "https://github.com/edgedelta/project-arena",
+      "source": "HackerNews",
+      "points": 24,
+      "comments": 9,
+      "author": "emrahsamdan",
+      "date": "2026-10-08",
+      "desc": "",
+      "summary_ko": "쿠버네티스 환경에서 AI SRE 에이전트를 평가하는 오픈 벤치마크로 운영 자동화 경쟁을 촉진합니다."
+    },
+    {
+      "title": "Rewriting Prime Agent in Rust",
+      "url": "https://www.primeintellect.ai/blog/prime-agent-rust",
+      "source": "HackerNews",
+      "points": 20,
+      "comments": 5,
+      "author": "piotrgrabowski",
+      "date": "2026-10-09",
+      "desc": "",
+      "summary_ko": "프라임 에이전트를 러스트로 재작성해 메모리 안전성과 고성능 동시 처리를 확보했습니다."
+    },
+    {
+      "title": "The Gemini Agent",
+      "url": "https://cloud.google.com/blog/products/ai-machine-learning/welcome-to-gemini-at-work-2026",
+      "source": "HackerNews",
+      "points": 18,
+      "comments": 2,
+      "author": "isnotchicago",
+      "date": "2026-10-08",
+      "desc": "",
+      "summary_ko": "구글의 제미나이 기반 에이전트로 멀티모달 추론과 도구 사용을 결합한 범용 AI 비서를 선보입니다."
+    }
+  ],
+  "papers": [
+    {
+      "title": "From Reactive Containment to Proactive Assurance: Lessons from OpenAI, Anthropic, and Google Agent Security Incidents",
+      "url": "https://arxiv.org/pdf/2610.12463v1",
+      "source": "ArXiv",
+      "authors": "Abbas Raftari",
+      "date": "2026-10-08",
+      "desc": "In 2026, cybersecurity evaluations involving OpenAI, Anthropic, and Google agents reached real systems outside their authorized test scope. The paths were different. OpenAI agents exploited research infrastructure, coordinated across runs, and compromised parts of Hugging Face's "
+    },
+    {
+      "title": "Ecology of AI Agents: Collaboration Creates a Population Threshold for Takeoff",
+      "url": "https://arxiv.org/pdf/2610.12436v1",
+      "source": "ArXiv",
+      "authors": "Erin Crawley, Hidenori Tanaka",
+      "date": "2026-10-08",
+      "desc": "AI agents can now conduct real-world cyberattacks, scale up capabilities with the number of agents, and collectively pursue misaligned goals to obtain rewards. Together, these factors raise the risk of a population explosion of misaligned agents: agents could compromise computers"
+    },
+    {
+      "title": "Can AI Agents Learn Their Way to the Top? Evaluating Heuristic Learning in a Long-Running Game Agent Competition",
+      "url": "https://arxiv.org/pdf/2610.12341v1",
+      "source": "ArXiv",
+      "authors": "Kaisen Yang, Qingle Liu, Kejin Wang",
+      "date": "2026-10-08",
+      "desc": "Adversarial games have driven advances from heuristic search to reinforcement learning, yet learning and adapting strategies from limited samples remain challenging. AI agents offer an alternative by turning game experience into revisions of executable policies. Building on heuri"
+    },
+    {
+      "title": "DataSense-Bench: The First Step Toward an AI Scientist",
+      "url": "https://arxiv.org/pdf/2610.12190v1",
+      "source": "ArXiv",
+      "authors": "Yudi Zhang, Mingyu Cao, Lu Yin",
+      "date": "2026-10-08",
+      "desc": "As claims about recursive self-improvement (RSI) and artificial general intelligence (AGI) proliferate, we ask a simple question: do frontier AI models have a sense of data, i.e., can they reliably select the right data for training? We introduce DataSense-Bench to study this cap"
+    },
+    {
+      "title": "Forms of LLM-Integrated Applications from LLM-Chats to Autonomous AI Agent System",
+      "url": "https://arxiv.org/pdf/2610.11899v1",
+      "source": "ArXiv",
+      "authors": "Irene Weber",
+      "date": "2026-10-08",
+      "desc": "Large language models (LLMs) are increasingly embedded as components in software systems, marketed under labels such as chatbot, copilot, retrieval-augmented generation, workflow, coding agent and AI agent. Whether these labels denote genuine architectural forms or serve as brand"
+    },
+    {
+      "title": "RFChipAgent: Multi-Agentic AI Flow for Analog/RF Chip Design",
+      "url": "https://arxiv.org/pdf/2610.10858v1",
+      "source": "ArXiv",
+      "authors": "Awani Khodkumbhe, Yunfei Feng, Raj Rangarajan",
+      "date": "2026-10-07",
+      "desc": "Analog/RF circuits remain the critical interface between digital computation and the physical world, and emerging standards from Wi-Fi 7 to 6G place stringent demands on them, yet analog/RF design remains one of the most labor-intensive steps in chip development. We present RFChi"
+    },
+    {
+      "title": "On the Clock: Towards Punctual and Productive Time-Budgeted AI Agents",
+      "url": "https://arxiv.org/pdf/2610.10833v1",
+      "source": "ArXiv",
+      "authors": "Aaron Wang, Neelabh Madan, Vlad Sobal",
+      "date": "2026-10-07",
+      "desc": "We study whether small LLM agents can operate effectively under explicit wall-clock time budgets by both respecting the allocated runtime and using available time productively. We evaluate Qwen3.6-27B on five competitions from MLE-Bench Lite and Qwen3-4B on Zork I (Jericho), two "
+    },
+    {
+      "title": "SciExam for ENSO: Can AI Agents Build Climate Models?",
+      "url": "https://arxiv.org/pdf/2610.10513v1",
+      "source": "ArXiv",
+      "authors": "Yinling Zhang, Langchen Liu, Dongbin Xiu",
+      "date": "2026-10-07",
+      "desc": "Language-model agents are increasingly asked to carry out open-ended scientific research, yet their results are usually graded against a known answer, a rubric, or a language-model reviewer, none of which can tell whether a new scientific model is valid. The AI Science Exam for E"
+    }
+  ],
+  "tools": [
+    {
+      "title": "zai-org/ZCode",
+      "url": "https://github.com/zai-org/ZCode",
+      "source": "GitHub",
+      "stars": 7602,
+      "language": "TypeScript",
+      "desc": "Z.ai's coding agent harness. Powerful, intelligent, extensible."
+    },
+    {
+      "title": "Louis-CFM/coucou",
+      "url": "https://github.com/Louis-CFM/coucou",
+      "source": "GitHub",
+      "stars": 4532,
+      "language": "Swift",
+      "desc": "A tiny friend in your Mac's notch and on your iPhone that keeps an eye on your AI coding agents: Claude Code, Codex, Cursor, Gemini CLI, Antigravity and more. Approve from the notch or your Lock Screen."
+    },
+    {
+      "title": "feder-cr/invisible_playwright_mcp",
+      "url": "https://github.com/feder-cr/invisible_playwright_mcp",
+      "source": "GitHub",
+      "stars": 2700,
+      "language": "Python",
+      "desc": "Playwright MCP server undetected by anti-bots and captchas: AI agent browses the web on anti-detect stealth Firefox, Python, undetected browser automation, scraping, computer use."
+    },
+    {
+      "title": "QingYunA/answer-me-with-html",
+      "url": "https://github.com/QingYunA/answer-me-with-html",
+      "source": "GitHub",
+      "stars": 2524,
+      "language": "JavaScript",
+      "desc": "Answer me with HTML — an agent skill that answers hard questions with a one-page HTML you can actually read. 让 AI Agent 用一页 HTML 回答复杂问题。"
+    },
+    {
+      "title": "kaankiziltug/logo-design-skill",
+      "url": "https://github.com/kaankiziltug/logo-design-skill",
+      "source": "GitHub",
+      "stars": 2449,
+      "language": "HTML",
+      "desc": "A comprehensive logo-design skill for Claude, Gemini CLI, Codex and other AI agents: principles, process, SVG craft, testing tools and a 1,400+ logo reference library."
+    },
+    {
+      "title": "mhtsec/ARTEX",
+      "url": "https://github.com/mhtsec/ARTEX",
+      "source": "GitHub",
+      "stars": 2228,
+      "language": "Go",
+      "desc": "AI 自主渗透测试系统 | 百度“agent+”攻防挑战赛冠军项目"
+    },
+    {
+      "title": "nanaism/yomiyasu",
+      "url": "https://github.com/nanaism/yomiyasu",
+      "source": "GitHub",
+      "stars": 1806,
+      "language": "Python",
+      "desc": "AI生成の日本語を自然な日本語へ推敲するAgent Skill / Agent Skill for Refining AI-Generated Japanese into Natural Japanese"
+    },
+    {
+      "title": "aliyun/ai-agent-handbook",
+      "url": "https://github.com/aliyun/ai-agent-handbook",
+      "source": "GitHub",
+      "stars": 1311,
+      "language": "",
+      "desc": "A practical guide to building enterprise AI agents across their full lifecycle."
+    }
+  ]
+}
