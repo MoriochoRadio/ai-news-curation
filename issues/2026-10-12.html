@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The AI Brief — 2026년 10월 12일</title>
+<link rel="stylesheet" href="../assets/style.css" />
+
+<style>
+.tb-fixed{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;gap:8px;align-items:center;
+  padding:8px 14px;background:var(--paper,#fffdf8);border-bottom:1px solid var(--line,#e3ddd0);
+  box-shadow:0 1px 6px rgba(0,0,0,.05);font-family:var(--sans);}
+.tb-fixed input{flex:1;max-width:340px;padding:7px 12px;border:1px solid var(--line,#e3ddd0);
+  border-radius:20px;font-size:13px;background:var(--bg,#f4f1ea);color:var(--ink,#1c1a17);outline:none;}
+.tb-fixed .tb-btn{border:1px solid var(--line,#e3ddd0);background:transparent;color:var(--ink,#1c1a17);
+  border-radius:20px;padding:6px 12px;font-size:13px;cursor:pointer;line-height:1;}
+.tb-fixed .tb-btn:hover{border-color:var(--accent,#b4451f);color:var(--accent,#b4451f);}
+body.has-tb{padding-top:52px;}
+mark.hl{background:var(--accent-soft,#f3e7df);color:var(--accent,#b4451f);border-radius:3px;padding:0 2px;}
+#goog-gt-tt,#goog-te-banner{display:none!important;}
+.goog-te-gadget{font-size:0!important;}
+.goog-te-gadget .goog-te-combo{font-size:12px!important;padding:5px 6px;border-radius:14px;
+  border:1px solid var(--line,#e3ddd0);background:var(--bg,#f4f1ea);color:var(--ink,#1c1a17);}
+</style>
+
+</head>
+<body>
+
+<div class="tb-fixed">
+  <input id="siteSearch" type="search" placeholder="호 내 검색 (제목·설명)…" aria-label="검색" />
+  <button class="tb-btn" id="darkToggle" type="button">🌙 다크</button>
+  <div id="gt-mount"></div>
+</div>
+
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">The AI Brief</div>
+    <div class="issue-date">2026년 10월 12일</div>
+    <p class="tagline">매일 아침, AI 업계의 흐름을 한눈에</p>
+    <p class="topics">오늘의 주제 — AI agents · LLM reasoning · multimodal models · open source AI · Rust in AI tooling · AI safety</p>
+  </header>
+
+  
+    <section class="block tldr">
+      <header class="block-head">
+        <h2>한눈에 요약</h2>
+        <span class="block-sub">TL;DR</span>
+      </header>
+      <div class="block-body">
+        <p class="tldr-count">트렌딩 <b>6</b> · 논문 <b>8</b> · 프로젝트 <b>8</b> 건 수집</p>
+        <p class="tldr-topics">오늘 살펴본 주제 — AI 에이전트 · LLM 추론 · 멀티모달 모델 · 오픈소스 AI · AI 도구의 Rust · AI 안전성</p>
+        <ul class="tldr-picks"><li><span class="tldr-tag">오늘의 관심</span> Talorys – A self-hosted personal AI agent on Cloudflare&#x27;s free tier</li><li><span class="tldr-tag">논문 픽</span> When Faster Decisions Do Not Make Better Agents: An Empirical Study of Jev in Agent Workflows</li><li><span class="tldr-tag">프로젝트 픽</span> zai-org/ZCode</li></ul>
+      </div>
+    </section>
+  
+    <section class="block" data-section="trending">
+      <header class="block-head">
+        <h2>트렌딩</h2>
+        <span class="block-sub">지금 주목받는 AI 이야기</span>
+      </header>
+      <div class="block-body"><div class="grid">
+    <article class="card">
+      <a class="card-title" href="https://github.com/rociiu/talorys" target="_blank" rel="noopener">Talorys – A self-hosted personal AI agent on Cloudflare&#x27;s free tier</a>
+      <p class="item-desc">We need to produce JSON with &quot;summaries&quot; array of 5 strings, each 40-90 characters Korean sentence, describing what it is and why it matters. No markdown, no preamble. Must be concise. Ensure each sentence length 40-90 characters (Korean characters count). Let&#x27;s craft.</p>
+      <div class="card-foot"><span class="meta-line">▲ 321 · 💬 150</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://momo5502.com/posts/2026-10-09-game-decompilation/" target="_blank" rel="noopener">500B tokens later: Letting AI agents decompile a first-person shooter</a>
+      <p class="item-desc">We need to count characters roughly. Korean characters count each Hangul syllable as one character. Let&#x27;s aim ~60 characters.</p>
+      <div class="card-foot"><span class="meta-line">▲ 152 · 💬 108</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://www.businessinsider.com/personal-ai-agent-grok-bot-posted-bank-details-company-slack-2026-10" target="_blank" rel="noopener">My personal AI agent posted my bank details on company Slack</a>
+      <p class="item-desc">Talorys – self-hosted personal AI agent on Cloudflare free tier. Korean: &quot;Talorys는 Cloudflare 무료 티어에서 직접 호스팅 가능한 개인 AI 에이전트다.&quot; Count characters: Let&#x27;s count: &quot;Talorys는 Cloudflare 무료 티어에서 직접 호스팅 가능한 개인 AI 에이전트다.&quot; Count: T a l o r y s (7) but Korean counts each char; but we can treat as characters. Better to write in Korean only: &quot;탈로리스는 클라우드플레어 무료 티어에서 직접 호스팅 가능한 개인 AI 에이전트다.&quot; Count: 탈(1) 로(2) 리(3) 스(4) 는(5) 클(6) 라(7) 우(8) 드(9) 플(10) 레(11) 어(12) 무(13) 료(14) 티(15) 어(16) 에(17) 서(18) 직(19) 접(20) 호(21) 스(22) 팅(23) 가(24) 능(25) 한(26) 개(27) 인(28) A(29) I(30) 에(31) 이(32) 전(33) 트(34) 다(35). That&#x27;s 35 characters, need 40-90. Add more: &quot;비용 없이 개인 데이터 제어가 가능하다.&quot; Add: &quot;비용 없이 개인 데이터 제어가 가능하다.&quot; Count: 비(1) 용(2) 없(3) 이(4) 개(5) 인(6) 데(7) 이(8) 터(9) 제(10) 어(11) 가(12) 가(13) 능(14) 하(15) 다(16). Total ~51. Good.</p>
+      <div class="card-foot"><span class="meta-line">▲ 63 · 💬 67</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://atoll92.github.io/agent-standup/" target="_blank" rel="noopener">AI agents in a stand-up call</a>
+      <p class="item-desc">Combine into one sentence: &quot;탈로리스는 클라우드플레어 무료 티어에서 직접 호스팅 가능한 개인 AI 에이전트로, 비용 없이 개인 데이터 제어가 가능하다.&quot; Count roughly: first part 35 + second part 16 + some connectors ~5 = 56. Good.</p>
+      <div class="card-foot"><span class="meta-line">▲ 47 · 💬 47</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://www.nytimes.com/2026/10/09/technology/anthropic-rogue-ai-agents.html" target="_blank" rel="noopener">Anthropic Agents Tried to Fill Out Visa Forms on State Dept. Website</a>
+      <p class="item-desc">500B tokens later: Letting AI agents decompile a first-person shooter.&quot; Korean: &quot;5000억 토큰 학습 후 AI 에이전트가 1인칭 슈팅 게임을 역컴파일해 분석한다.&quot; Count: 5000억(4) 토큰(2) 학습(2) 후(1) AI(2) 에이전트(4) 가(1) 1인칭(3) 슈팅(2) 게임(2) 을(1) 역컴파일(4) 해(1) 분석(2) 한다(2) = ~30. Need 40-90. Add significance: &quot;게임 로직 자동 추출로 보안 연구와 모드 제작에 기여한다.&quot; Count: 게(1) 임(2) 로(3) 직(4) 자(5) 동(6) 추(7) 출(8) 로(9) 보(10) 안(11) 연(12) 구(13) 와(14) 모(15) 드(16) 제(17) 작(18) 에(19) 기(20) 여(21) 한(22) 다(23). Total ~53. Good.</p>
+      <div class="card-foot"><span class="meta-line">▲ 34 · 💬 8</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://www.bbc.co.uk/news/articles/cqkg50j1yd5lo" target="_blank" rel="noopener">Rogue Anthropic AI agent gave police fake tip in unsolved murder case</a>
+      
+      <div class="card-foot"><span class="meta-line">▲ 15 · 💬 7</span><span class="src">HackerNews</span></div>
+    </article></div></div>
+    </section>
+  
+    <section class="block" data-section="papers">
+      <header class="block-head">
+        <h2>논문</h2>
+        <span class="block-sub">새로 나온 연구</span>
+      </header>
+      <div class="block-body"><div class="rows">
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2610.13092v1" target="_blank" rel="noopener">When Faster Decisions Do Not Make Better Agents: An Empirical Study of Jev in Agent Workflows</a>
+        <p class="item-desc">AI agents depend on repeated decisions to accomplish tasks, with large language models (LLMs) commonly serving as their core decision makers. The recent emergence of Jev offers an opportunity to make these decisions faster and at lower cost. However, it remains unclear whether su</p>
+        <div class="card-foot"><span class="byline">Yuchen Ling, Shengcheng Yu, Zhenyu Chen</span><span class="date">2026-10-09</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2610.12849v1" target="_blank" rel="noopener">Co-Modifying Application Code and Deployment Infrastructure: A Causal Study of AI Agent Pull Requests</a>
+        <p class="item-desc">Current software engineering agents are evaluated predominantly inside isolated sandboxes against synchronous local tests. However, deploying features in collaborative repositories requires modifying continuous integration (CI/CD) pipelines, containers, and provisioning manifests</p>
+        <div class="card-foot"><span class="byline">Mohammad Wathiq Soualhi, Basem Suleiman</span><span class="date">2026-10-09</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2610.12463v1" target="_blank" rel="noopener">From Reactive Containment to Proactive Assurance: Lessons from OpenAI, Anthropic, and Google Agent Security Incidents</a>
+        <p class="item-desc">In 2026, cybersecurity evaluations involving OpenAI, Anthropic, and Google agents reached real systems outside their authorized test scope. The paths were different. OpenAI agents exploited research infrastructure, coordinated across runs, and compromised parts of Hugging Face&#x27;s </p>
+        <div class="card-foot"><span class="byline">Abbas Raftari</span><span class="date">2026-10-08</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2610.12436v1" target="_blank" rel="noopener">Ecology of AI Agents: Collaboration Creates a Population Threshold for Takeoff</a>
+        <p class="item-desc">AI agents can now conduct real-world cyberattacks, scale up capabilities with the number of agents, and collectively pursue misaligned goals to obtain rewards. Together, these factors raise the risk of a population explosion of misaligned agents: agents could compromise computers</p>
+        <div class="card-foot"><span class="byline">Erin Crawley, Hidenori Tanaka</span><span class="date">2026-10-08</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2610.12341v1" target="_blank" rel="noopener">Can AI Agents Learn Their Way to the Top? Evaluating Heuristic Learning in a Long-Running Game Agent Competition</a>
+        <p class="item-desc">Adversarial games have driven advances from heuristic search to reinforcement learning, yet learning and adapting strategies from limited samples remain challenging. AI agents offer an alternative by turning game experience into revisions of executable policies. Building on heuri</p>
+        <div class="card-foot"><span class="byline">Kaisen Yang, Qingle Liu, Kejin Wang</span><span class="date">2026-10-08</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2610.12190v1" target="_blank" rel="noopener">DataSense-Bench: The First Step Toward an AI Scientist</a>
+        <p class="item-desc">As claims about recursive self-improvement (RSI) and artificial general intelligence (AGI) proliferate, we ask a simple question: do frontier AI models have a sense of data, i.e., can they reliably select the right data for training? We introduce DataSense-Bench to study this cap</p>
+        <div class="card-foot"><span class="byline">Yudi Zhang, Mingyu Cao, Lu Yin</span><span class="date">2026-10-08</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2610.11899v1" target="_blank" rel="noopener">Forms of LLM-Integrated Applications from LLM-Chats to Autonomous AI Agent System</a>
+        <p class="item-desc">Large language models (LLMs) are increasingly embedded as components in software systems, marketed under labels such as chatbot, copilot, retrieval-augmented generation, workflow, coding agent and AI agent. Whether these labels denote genuine architectural forms or serve as brand</p>
+        <div class="card-foot"><span class="byline">Irene Weber</span><span class="date">2026-10-08</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2610.10858v1" target="_blank" rel="noopener">RFChipAgent: Multi-Agentic AI Flow for Analog/RF Chip Design</a>
+        <p class="item-desc">Analog/RF circuits remain the critical interface between digital computation and the physical world, and emerging standards from Wi-Fi 7 to 6G place stringent demands on them, yet analog/RF design remains one of the most labor-intensive steps in chip development. We present RFChi</p>
+        <div class="card-foot"><span class="byline">Awani Khodkumbhe, Yunfei Feng, Raj Rangarajan</span><span class="date">2026-10-07</span><span class="src">ArXiv</span></div>
+      </div>
+    </article></div></div>
+    </section>
+  
+    <section class="block" data-section="tools">
+      <header class="block-head">
+        <h2>오픈소스</h2>
+        <span class="block-sub">움직이는 프로젝트</span>
+      </header>
+      <div class="block-body"><div class="grid">
+    <article class="card">
+      <a class="card-title" href="https://github.com/zai-org/ZCode" target="_blank" rel="noopener">zai-org/ZCode</a>
+      <p class="item-desc">Z.ai&#x27;s coding agent harness. Powerful, intelligent, extensible.</p>
+      <div class="card-foot"><span class="badges">★ 7.7k · TypeScript</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/Louis-CFM/coucou" target="_blank" rel="noopener">Louis-CFM/coucou</a>
+      <p class="item-desc">A tiny friend in your Mac&#x27;s notch and on your iPhone that keeps an eye on your AI coding agents: Claude Code, Codex, Cursor, Gemini CLI, Antigravity and more. Approve from the notch or your Lock Screen.</p>
+      <div class="card-foot"><span class="badges">★ 4.8k · Swift</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/mhtsec/ARTEX" target="_blank" rel="noopener">mhtsec/ARTEX</a>
+      <p class="item-desc">AI 自主渗透测试系统 | 百度“agent+”攻防挑战赛冠军项目</p>
+      <div class="card-foot"><span class="badges">★ 3.2k · Go</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/QingYunA/answer-me-with-html" target="_blank" rel="noopener">QingYunA/answer-me-with-html</a>
+      <p class="item-desc">Answer me with HTML — an agent skill that answers hard questions with a one-page HTML you can actually read. 让 AI Agent 用一页 HTML 回答复杂问题。</p>
+      <div class="card-foot"><span class="badges">★ 2.9k · JavaScript</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/kaankiziltug/logo-design-skill" target="_blank" rel="noopener">kaankiziltug/logo-design-skill</a>
+      <p class="item-desc">A comprehensive logo-design skill for Claude, Gemini CLI, Codex and other AI agents: principles, process, SVG craft, testing tools and a 1,400+ logo reference library.</p>
+      <div class="card-foot"><span class="badges">★ 2.8k · HTML</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/feder-cr/invisible_playwright_mcp" target="_blank" rel="noopener">feder-cr/invisible_playwright_mcp</a>
+      <p class="item-desc">Playwright MCP server undetected by anti-bots and captchas: AI agent browses the web on anti-detect stealth Firefox, Python, undetected browser automation, scraping, computer use.</p>
+      <div class="card-foot"><span class="badges">★ 2.7k · Python</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/nanaism/yomiyasu" target="_blank" rel="noopener">nanaism/yomiyasu</a>
+      <p class="item-desc">AI生成の日本語を自然な日本語へ推敲するAgent Skill / Agent Skill for Refining AI-Generated Japanese into Natural Japanese</p>
+      <div class="card-foot"><span class="badges">★ 1.9k · Python</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/freestylefly/WeChatBridge" target="_blank" rel="noopener">freestylefly/WeChatBridge</a>
+      <p class="item-desc">微信聊天记录一键转发到 AI Agent 与 Obsidian 的原生 macOS 工具</p>
+      <div class="card-foot"><span class="badges">★ 1.4k · Swift</span><span class="src">GitHub</span></div>
+    </article></div></div>
+    </section>
+
+  <footer class="site-foot">
+    <a href="../index.html">← 최신 호로</a> · <a href="../archive.html">전체 아카이브</a>
+    <p>자동 수집 · HackerNews · ArXiv · GitHub</p>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var b=document.body; b.classList.add('has-tb');
+  // 다크모드
+  var dt=document.getElementById('darkToggle');
+  var saved=localStorage.getItem('aibrief-theme');
+  if(saved==='dark'){document.documentElement.setAttribute('data-theme','dark');dt.textContent='☀️ 라이트';}
+  dt.addEventListener('click',function(){
+    var dark=dt.textContent.indexOf('라이트')===-1;
+    if(dark){localStorage.setItem('aibrief-theme','dark');document.documentElement.setAttribute('data-theme','dark');dt.textContent='☀️ 라이트';}
+    else{localStorage.setItem('aibrief-theme','light');document.documentElement.removeAttribute('data-theme');dt.textContent='🌙 다크';}
+  });
+  // 검색 (호 내 하이라이팅 + 필터)
+  var s=document.getElementById('siteSearch');
+  s.addEventListener('input',function(){
+    var q=s.value.trim().toLowerCase();
+    var cards=document.querySelectorAll('.card,.row');
+    cards.forEach(function(c){
+      var t=c.textContent.toLowerCase();
+      var hit=!q||t.indexOf(q)>-1;
+      c.style.display=hit?'':'none';
+      c.querySelectorAll('mark.hl').forEach(function(m){c.replaceChild(document.createTextNode(m.textContent),m);c.normalize();});
+      if(q&&hit){var tt=c.innerHTML;
+        try{c.innerHTML=tt.replace(new RegExp('('+q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','ig'),'<mark class="hl">$1</mark>');}catch(e){}}
+    });
+    document.querySelectorAll('.block').forEach(function(bl){
+      var any=[].slice.call(bl.querySelectorAll('.card,.row')).some(function(c){return c.style.display!=='none';});
+      bl.style.display=(q&&!any)?'none':'';
+    });
+  });
+  // Google 번역 위젯 (키 불필요)
+  var g=document.createElement('script');
+  g.src='https://translate.google.com/translate_a/element.js?cb=__aibT';
+  window.__aibT=function(){
+    new google.translate.TranslateElement({pageLanguage:'en',includedLanguages:'ko,en',layout:google.translate.TranslateElement.InlineLayout.SIMPLE,autoDisplay:false},'gt-mount');
+    var sel=document.querySelector('#gt-mount .goog-te-combo');
+    if(sel){var o=document.createElement('option');o.value='ko';o.text='한국어';sel.add(o,sel.options[0]);}
+  };
+  document.body.appendChild(g);
+})();
+</script>
+
+</body>
+</html>
