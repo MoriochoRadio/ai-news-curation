@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The AI Brief — 2026년 10월 14일</title>
+<link rel="stylesheet" href="../assets/style.css" />
+
+<style>
+.tb-fixed{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;gap:8px;align-items:center;
+  padding:8px 14px;background:var(--paper,#fffdf8);border-bottom:1px solid var(--line,#e3ddd0);
+  box-shadow:0 1px 6px rgba(0,0,0,.05);font-family:var(--sans);}
+.tb-fixed input{flex:1;max-width:340px;padding:7px 12px;border:1px solid var(--line,#e3ddd0);
+  border-radius:20px;font-size:13px;background:var(--bg,#f4f1ea);color:var(--ink,#1c1a17);outline:none;}
+.tb-fixed .tb-btn{border:1px solid var(--line,#e3ddd0);background:transparent;color:var(--ink,#1c1a17);
+  border-radius:20px;padding:6px 12px;font-size:13px;cursor:pointer;line-height:1;}
+.tb-fixed .tb-btn:hover{border-color:var(--accent,#b4451f);color:var(--accent,#b4451f);}
+body.has-tb{padding-top:52px;}
+mark.hl{background:var(--accent-soft,#f3e7df);color:var(--accent,#b4451f);border-radius:3px;padding:0 2px;}
+#goog-gt-tt,#goog-te-banner{display:none!important;}
+.goog-te-gadget{font-size:0!important;}
+.goog-te-gadget .goog-te-combo{font-size:12px!important;padding:5px 6px;border-radius:14px;
+  border:1px solid var(--line,#e3ddd0);background:var(--bg,#f4f1ea);color:var(--ink,#1c1a17);}
+</style>
+
+</head>
+<body>
+
+<div class="tb-fixed">
+  <input id="siteSearch" type="search" placeholder="호 내 검색 (제목·설명)…" aria-label="검색" />
+  <button class="tb-btn" id="darkToggle" type="button">🌙 다크</button>
+  <div id="gt-mount"></div>
+</div>
+
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">The AI Brief</div>
+    <div class="issue-date">2026년 10월 14일</div>
+    <p class="tagline">매일 아침, AI 업계의 흐름을 한눈에</p>
+    <p class="topics">오늘의 주제 — AI agents · LLM reasoning · multimodal models · open source AI · Rust in AI tooling · AI safety</p>
+  </header>
+
+  
+    <section class="block tldr">
+      <header class="block-head">
+        <h2>한눈에 요약</h2>
+        <span class="block-sub">TL;DR</span>
+      </header>
+      <div class="block-body">
+        <p class="tldr-count">트렌딩 <b>5</b> · 논문 <b>8</b> · 프로젝트 <b>8</b> 건 수집</p>
+        <p class="tldr-topics">오늘 살펴본 주제 — AI 에이전트 · LLM 추론 · 멀티모달 모델 · 오픈소스 AI · AI 도구의 Rust · AI 안전성</p>
+        <ul class="tldr-picks"><li><span class="tldr-tag">오늘의 관심</span> AI coding agents generate more code, but not more software</li><li><span class="tldr-tag">논문 픽</span> Have You Been Convinced? A Neuro-symbolic Argumentation Reasoning Approach to Detecting Persuasiveness in ChangeMyView Discussions</li><li><span class="tldr-tag">프로젝트 픽</span> zai-org/ZCode</li></ul>
+      </div>
+    </section>
+  
+    <section class="block" data-section="trending">
+      <header class="block-head">
+        <h2>트렌딩</h2>
+        <span class="block-sub">지금 주목받는 AI 이야기</span>
+      </header>
+      <div class="block-body"><div class="grid">
+    <article class="card">
+      <a class="card-title" href="https://arstechnica.com/ai/2026/10/ai-coding-agents-generate-more-code-but-not-more-software/" target="_blank" rel="noopener">AI coding agents generate more code, but not more software</a>
+      <p class="item-desc">AI 코딩 에이전트가 코드 생산량만 늘릴 뿐 실제 소프트웨어 품질과 가치는 개선하지 못한다는 분석입니다.</p>
+      <div class="card-foot"><span class="meta-line">▲ 359 · 💬 299</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://news.ycombinator.com/item?id=50059096" target="_blank" rel="noopener">Launch HN: Agent37 (YC F26) – Low-cost agent sandboxes for running agents</a>
+      <p class="item-desc">Agent37(YC F26)은 저비용 에이전트 샌드박스를 제공해 대규모 에이전트 실험을 쉽게 만듭니다.</p>
+      <div class="card-foot"><span class="meta-line">▲ 157 · 💬 115</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/LargeModGames/spotatui" target="_blank" rel="noopener">Show HN: Spotatui, a Spotify TUI/GUI without web API rate limits</a>
+      <p class="item-desc">Spotatui는 웹 API 제한 없이 Spotify를 터미널·GUI로 제어하는 오픈소스 클라이언트입니다.</p>
+      <div class="card-foot"><span class="meta-line">▲ 46 · 💬 8</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://news.ycombinator.com/item?id=50073471" target="_blank" rel="noopener">Launch HN: Consus (YC F24) – LLM gateway for companies handling sensitive data</a>
+      <p class="item-desc">Consus(YC F24)는 민감 데이터를 다루는 기업을 위한 LLM 게이트웨이로 보안·컴플라이언스를 강화합니다.</p>
+      <div class="card-foot"><span class="meta-line">▲ 33 · 💬 16</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://memorysync.io/try" target="_blank" rel="noopener">Show HN: MemorySync – Memory for AI Agents</a>
+      <p class="item-desc">MemorySync는 AI 에이전트 간 장기 기억을 동기화해 연속적인 작업 수행을 가능하게 합니다.</p>
+      <div class="card-foot"><span class="meta-line">▲ 22 · 💬 1</span><span class="src">HackerNews</span></div>
+    </article></div></div>
+    </section>
+  
+    <section class="block" data-section="papers">
+      <header class="block-head">
+        <h2>논문</h2>
+        <span class="block-sub">새로 나온 연구</span>
+      </header>
+      <div class="block-body"><div class="rows">
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2610.15091v1" target="_blank" rel="noopener">Have You Been Convinced? A Neuro-symbolic Argumentation Reasoning Approach to Detecting Persuasiveness in ChangeMyView Discussions</a>
+        <p class="item-desc">Argument structures represent how individual arguments interact within a discourse. However, leveraging these structures to infer meaningful knowledge remains challenging, as it requires a formal representation of how argumentative influence propagates across the structure. We pr</p>
+        <div class="card-foot"><span class="byline">Siddharth Bhargava, Sara Tonelli, Patricia Martín-Rodilla</span><span class="date">2026-10-10</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2610.14626v1" target="_blank" rel="noopener">TagBO: LLM-Driven Task-Aware Graph Bayesian Optimization for Scientific Discovery</a>
+        <p class="item-desc">Mixed-variable optimization in scientific discovery often requires exploring large combinatorial spaces under costly experimental evaluations, making sample?efficient Bayesian optimization (BO) essential. However, existing BO methods typ?ically rely on structural descriptors to d</p>
+        <div class="card-foot"><span class="byline">Xinzhe Yuan, Zimu Zeng, Zhuo Chen</span><span class="date">2026-10-10</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2610.13672v1" target="_blank" rel="noopener">Inject a Turn, Not a Token: Learning Where to Redirect LLM Reasoning for Self-Correction</a>
+        <p class="item-desc">Large language models struggle to reliably identify and correct errors in their own reasoning. Unlike prior training-based approaches that fine-tune an LLM to generate revisions or feedback, we learn where to intervene in failed rollouts and determine how to redirect them. To cho</p>
+        <div class="card-foot"><span class="byline">Jiwon Jeon, Myungsik Cho, Jeonghye Kim</span><span class="date">2026-10-09</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2610.13653v1" target="_blank" rel="noopener">A Critical Look at Power Sampling when Test Time Sharpening LLMs</a>
+        <p class="item-desc">Reinforcement learning with verifiable rewards (RLVR) has substantially improved LLM reasoning, yet growing evidence suggests it mainly performs distribution sharpening: concentrating probability mass on reasoning paths the base model already produces. Recent work therefore seeks</p>
+        <div class="card-foot"><span class="byline">Abiel Malkani Talwar, Christopher Nemeth, Henry Moss</span><span class="date">2026-10-09</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2610.13171v1" target="_blank" rel="noopener">PreSTO: Predictive Subtree Prefetching for Fast LLM Power Sampling</a>
+        <p class="item-desc">Power sampling improves large language model (LLM) reasoning at test time by sampling from a sharpened version of the base model&#x27;s distribution. Its sampler, PowerMH, is slow because its Metropolis--Hastings (MH) updates are sequential: each accept/reject decision sets the state </p>
+        <div class="card-foot"><span class="byline">Nan Jiang, Panagiotis Theodoropoulos, Wei Deng</span><span class="date">2026-10-09</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2610.13020v1" target="_blank" rel="noopener">Trajectory-Aware Policy Optimization: Closing the State Distribution Gap in Long-Horizon LLM RL</a>
+        <p class="item-desc">Reinforcement learning (RL) has become a dominant paradigm for enhancing LLMs&#x27; reasoning capabilities. Yet long-horizon autoregressive rollouts introduce a fundamental limitation: local policy mismatch can compound into severe state distribution shift over trajectories. Existing </p>
+        <div class="card-foot"><span class="byline">Zhicheng Cai, Weinan Dai, Yuyan Zhou</span><span class="date">2026-10-09</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2610.12644v1" target="_blank" rel="noopener">Cancerous Backdoor Attack: Gradual Activation via Invisible Tokens and A Stage Controller</a>
+        <p class="item-desc">Backdoor Attacks on Large Language Models (LLMs) typically follow a trigger-response pattern, where satisfying a trigger condition activates a single terminal behavior. However, this single-point backdoor activation does not explore attacks in which malicious behavior develops gr</p>
+        <div class="card-foot"><span class="byline">Tahmid Imtiaz Imu, Emama Nahid, Prodipta Sen Amartya</span><span class="date">2026-10-08</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2610.12304v1" target="_blank" rel="noopener">Looking Inside LLMs: Small-World Connectivity as a Signature of Reasoning Performance</a>
+        <p class="item-desc">Understanding large language model (LLM) reasoning requires looking beyond behavioral performance to examine how reasoning ability is reflected in internal organization. Inspired by neuroscience findings linking higher intelligence to stronger small-world organization in function</p>
+        <div class="card-foot"><span class="byline">Zheng Huang, Sansheng Cao, Enpei Zhang</span><span class="date">2026-10-08</span><span class="src">ArXiv</span></div>
+      </div>
+    </article></div></div>
+    </section>
+  
+    <section class="block" data-section="tools">
+      <header class="block-head">
+        <h2>오픈소스</h2>
+        <span class="block-sub">움직이는 프로젝트</span>
+      </header>
+      <div class="block-body"><div class="grid">
+    <article class="card">
+      <a class="card-title" href="https://github.com/zai-org/ZCode" target="_blank" rel="noopener">zai-org/ZCode</a>
+      <p class="item-desc">Z.ai&#x27;s coding agent harness. Powerful, intelligent, extensible.</p>
+      <div class="card-foot"><span class="badges">★ 7.8k · TypeScript</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/Louis-CFM/coucou" target="_blank" rel="noopener">Louis-CFM/coucou</a>
+      <p class="item-desc">A tiny friend in your Mac&#x27;s notch and on your iPhone that keeps an eye on your AI coding agents: Claude Code, Codex, Cursor, Gemini CLI, Antigravity and more. Approve from the notch or your Lock Screen.</p>
+      <div class="card-foot"><span class="badges">★ 5.1k · Swift</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/mhtsec/ARTEX" target="_blank" rel="noopener">mhtsec/ARTEX</a>
+      <p class="item-desc">AI 自主渗透测试系统 | 百度“agent+”攻防挑战赛冠军项目</p>
+      <div class="card-foot"><span class="badges">★ 3.9k · Go</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/QingYunA/answer-me-with-html" target="_blank" rel="noopener">QingYunA/answer-me-with-html</a>
+      <p class="item-desc">Answer me with HTML — an agent skill that answers hard questions with a one-page HTML you can actually read. 让 AI Agent 用一页 HTML 回答复杂问题。</p>
+      <div class="card-foot"><span class="badges">★ 3.3k · JavaScript</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/kaankiziltug/logo-design-skill" target="_blank" rel="noopener">kaankiziltug/logo-design-skill</a>
+      <p class="item-desc">A comprehensive logo-design skill for Claude, Gemini CLI, Codex and other AI agents: principles, process, SVG craft, testing tools and a 1,400+ logo reference library.</p>
+      <div class="card-foot"><span class="badges">★ 3.2k · HTML</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/feder-cr/invisible_playwright_mcp" target="_blank" rel="noopener">feder-cr/invisible_playwright_mcp</a>
+      <p class="item-desc">Playwright MCP server undetected by anti-bots and captchas: AI agent browses the web on anti-detect stealth Firefox, Python, undetected browser automation, scraping, computer use.</p>
+      <div class="card-foot"><span class="badges">★ 2.8k · Python</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/nanaism/yomiyasu" target="_blank" rel="noopener">nanaism/yomiyasu</a>
+      <p class="item-desc">AI生成の日本語を自然な日本語へ推敲するAgent Skill / Agent Skill for Refining AI-Generated Japanese into Natural Japanese</p>
+      <div class="card-foot"><span class="badges">★ 1.9k · Python</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/bilibili/Index-Translate" target="_blank" rel="noopener">bilibili/Index-Translate</a>
+      <p class="item-desc">A Multilingual, Multimodal Translation Model Family</p>
+      <div class="card-foot"><span class="badges">★ 1.5k · Python</span><span class="src">GitHub</span></div>
+    </article></div></div>
+    </section>
+
+  <footer class="site-foot">
+    <a href="../index.html">← 최신 호로</a> · <a href="../archive.html">전체 아카이브</a>
+    <p>자동 수집 · HackerNews · ArXiv · GitHub</p>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var b=document.body; b.classList.add('has-tb');
+  // 다크모드
+  var dt=document.getElementById('darkToggle');
+  var saved=localStorage.getItem('aibrief-theme');
+  if(saved==='dark'){document.documentElement.setAttribute('data-theme','dark');dt.textContent='☀️ 라이트';}
+  dt.addEventListener('click',function(){
+    var dark=dt.textContent.indexOf('라이트')===-1;
+    if(dark){localStorage.setItem('aibrief-theme','dark');document.documentElement.setAttribute('data-theme','dark');dt.textContent='☀️ 라이트';}
+    else{localStorage.setItem('aibrief-theme','light');document.documentElement.removeAttribute('data-theme');dt.textContent='🌙 다크';}
+  });
+  // 검색 (호 내 하이라이팅 + 필터)
+  var s=document.getElementById('siteSearch');
+  s.addEventListener('input',function(){
+    var q=s.value.trim().toLowerCase();
+    var cards=document.querySelectorAll('.card,.row');
+    cards.forEach(function(c){
+      var t=c.textContent.toLowerCase();
+      var hit=!q||t.indexOf(q)>-1;
+      c.style.display=hit?'':'none';
+      c.querySelectorAll('mark.hl').forEach(function(m){c.replaceChild(document.createTextNode(m.textContent),m);c.normalize();});
+      if(q&&hit){var tt=c.innerHTML;
+        try{c.innerHTML=tt.replace(new RegExp('('+q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','ig'),'<mark class="hl">$1</mark>');}catch(e){}}
+    });
+    document.querySelectorAll('.block').forEach(function(bl){
+      var any=[].slice.call(bl.querySelectorAll('.card,.row')).some(function(c){return c.style.display!=='none';});
+      bl.style.display=(q&&!any)?'none':'';
+    });
+  });
+  // Google 번역 위젯 (키 불필요)
+  var g=document.createElement('script');
+  g.src='https://translate.google.com/translate_a/element.js?cb=__aibT';
+  window.__aibT=function(){
+    new google.translate.TranslateElement({pageLanguage:'en',includedLanguages:'ko,en',layout:google.translate.TranslateElement.InlineLayout.SIMPLE,autoDisplay:false},'gt-mount');
+    var sel=document.querySelector('#gt-mount .goog-te-combo');
+    if(sel){var o=document.createElement('option');o.value='ko';o.text='한국어';sel.add(o,sel.options[0]);}
+  };
+  document.body.appendChild(g);
+})();
+</script>
+
+</body>
+</html>
