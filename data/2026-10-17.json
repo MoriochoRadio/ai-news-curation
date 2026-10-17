@@ -1,0 +1,204 @@
+{
+  "date": "2026-10-17",
+  "generated_at": "2026-10-17T09:32:17+09:00",
+  "topics": [
+    "AI agents",
+    "LLM reasoning",
+    "multimodal models",
+    "open source AI",
+    "Rust in AI tooling",
+    "AI safety"
+  ],
+  "topic_labels": {
+    "AI agents": "AI 에이전트",
+    "LLM reasoning": "LLM 추론",
+    "multimodal models": "멀티모달 모델",
+    "open source AI": "오픈소스 AI",
+    "Rust in AI tooling": "AI 도구의 Rust",
+    "AI safety": "AI 안전성"
+  },
+  "counts": {
+    "trending": 4,
+    "papers": 8,
+    "tools": 8
+  },
+  "summary_model": "nvidia/nemotron-3-super-120b-a12b:free",
+  "trending": [
+    {
+      "title": "Show HN: rStation – A shared research lab for your AI agents",
+      "url": "https://rstation.ai/",
+      "source": "HackerNews",
+      "points": 50,
+      "comments": 19,
+      "author": "stephenchung",
+      "date": "2026-10-16",
+      "desc": "",
+      "summary_ko": "rStation은 AI 에이전트가 함께 연구할 수 있는 공유 실험실로, 혁신 속도를 높인다."
+    },
+    {
+      "title": "Aidlc: Adaptive workflow steering rules for AI coding agents",
+      "url": "https://github.com/awslabs/aidlc-workflows",
+      "source": "HackerNews",
+      "points": 27,
+      "comments": 22,
+      "author": "pramodbiligiri",
+      "date": "2026-10-15",
+      "desc": "",
+      "summary_ko": "Aidlc는 AI 코딩 에이전트의 워크플로를 상황에 맞게 조정하는 규칙 집합으로, 코드 품질을 일정하게 유지한다."
+    },
+    {
+      "title": "Companies rushed in on AI. Now some are pulling back",
+      "url": "https://www.theguardian.com/technology/2026/oct/13/ai-companies-rushed-workers-fallout",
+      "source": "HackerNews",
+      "points": 26,
+      "comments": 3,
+      "author": "agent_turtle",
+      "date": "2026-10-15",
+      "desc": "",
+      "summary_ko": "많은 기업이 AI에 앞다투어 투자했으나, 최근 일부는 성과 불확실성 때문에 투자를 축소하고 있다."
+    },
+    {
+      "title": "Show HN: Stoke Money – Personal finance app built around a cash flow forecast",
+      "url": "https://stoke.money",
+      "source": "HackerNews",
+      "points": 21,
+      "comments": 17,
+      "author": "_wesley",
+      "date": "2026-10-16",
+      "desc": "",
+      "summary_ko": "Stoke Money는 현금 흐름 예측을 핵심으로 하는 개인 재무 앱으로, 사용자가 지출 계획을 세우기 쉽게 돕는다."
+    }
+  ],
+  "papers": [
+    {
+      "title": "A team of Gemini 4 Argon agents beats Minecraft",
+      "url": "https://arxiv.org/pdf/2610.22319v1",
+      "source": "ArXiv",
+      "authors": "Maxence Faldor, Satinder Singh, Roberta Raileanu",
+      "date": "2026-10-15",
+      "desc": "We placed four Gemini 4 Argon agents in a sandboxed Minecraft survival world and gave them one goal: defeat the Ender Dragon. Each agent controlled a player via an open-source library called Mineflayer and coordinated with its teammates through in-game chat and shared memory. No "
+    },
+    {
+      "title": "Shortcut Sensitivity in Agent-Safety Evaluations",
+      "url": "https://arxiv.org/pdf/2610.22243v1",
+      "source": "ArXiv",
+      "authors": "Hasan Demirkiran, Jens Ernstberger",
+      "date": "2026-10-15",
+      "desc": "AI agents take actions through tools. Some actions are sensitive, so guards that supervise them must themselves be evaluated reliably. Yet the data used to evaluate a guard can include cues that make labels predictable without measuring the intended safety construct, and those cu"
+    },
+    {
+      "title": "FAOPs: Normal Forms and an Algebra for AI Agent Workflows",
+      "url": "https://arxiv.org/pdf/2610.22061v1",
+      "source": "ArXiv",
+      "authors": "Ali Mohammadi Shanghooshabad",
+      "date": "2026-10-15",
+      "desc": "Organizations increasingly encode operational procedures as multi-step agent skills, here called Agent Operating Procedures (AOPs), that must be traceable, auditable, reproducible, access-controlled, and bounded in time and cost, requirements that regulated sectors make mandatory"
+    },
+    {
+      "title": "From Research Goals to Scientific Closure: Evaluating Agents Through Evidence-Supported Physics Research",
+      "url": "https://arxiv.org/pdf/2610.21767v1",
+      "source": "ArXiv",
+      "authors": "Yijia Mao, Song Dai, Tao Chen",
+      "date": "2026-10-15",
+      "desc": "Can AI agents organize scientific investigations that lead to well-supported conclusions? To evaluate this capability, we introduce PhysClosureBench, a benchmark of 50 expert-verified, goal-specified research tasks spanning strong-field, attosecond, and neighboring physics areas."
+    },
+    {
+      "title": "Agent Status Protocol (ASP): A Lightweight Specification for State Reporting in Multi-Agent Systems",
+      "url": "https://arxiv.org/pdf/2610.21538v1",
+      "source": "ArXiv",
+      "authors": "Diego Gosmar, Deborah A. Dahl, Emmett Coin",
+      "date": "2026-10-15",
+      "desc": "The Agent Status Protocol (ASP) defines a lightweight way for heterogeneous AI agents to report their operational state to a status server, and for observers such as dashboards to receive that state as soon as it changes. Agents push small JSON events over HTTP POST; the server e"
+    },
+    {
+      "title": "Kolab: Benchmarking Human-Agent Collaboration in Long-Horizon Workflows",
+      "url": "https://arxiv.org/pdf/2610.21109v1",
+      "source": "ArXiv",
+      "authors": "Shirley Anugrah Hayati, Patricia Anugrah Setiani, Ruizi Wang",
+      "date": "2026-10-15",
+      "desc": "When humans collaborate with AI agents on long-horizon tasks, what happens to the agents' contributions? For solving long-horizon tasks, humans place greater importance on ongoing interaction with AI agents (e.g., revising plans) than on an agent's ability to complete the task in"
+    },
+    {
+      "title": "OmicsBench: a long-horizon multi-turn benchmark of AI agents on research-study-scale bioinformatics",
+      "url": "https://arxiv.org/pdf/2610.21074v1",
+      "source": "ArXiv",
+      "authors": "Gideon Shaked, Siddharth Nagisetty",
+      "date": "2026-10-15",
+      "desc": "Computational biologists increasingly delegate substantial analyses to AI agents in long-horizon, multi-turn sessions, yet most benchmarks of agents' bioinformatics capabilities pose a single short task with a single-shot prompt. We present OmicsBench, a long-horizon, multi-turn "
+    },
+    {
+      "title": "Approve What, Exactly? Effect Binding and Trusted Rendering for Agent Step-Up Authorization",
+      "url": "https://arxiv.org/pdf/2610.21063v1",
+      "source": "ArXiv",
+      "authors": "Sai Varun Kodathala, Prashanth Pollishetty, Jaylen Cargill",
+      "date": "2026-10-15",
+      "desc": "AI agents now pause for approval before they send money, delete files or email outsiders, and that approval is usually treated as a second factor. We argue it is one only when compromising the agent cannot produce it and when it names exactly what it approves, and we test both co"
+    }
+  ],
+  "tools": [
+    {
+      "title": "zai-org/ZCode",
+      "url": "https://github.com/zai-org/ZCode",
+      "source": "GitHub",
+      "stars": 7890,
+      "language": "TypeScript",
+      "desc": "Z.ai's coding agent harness. Powerful, intelligent, extensible."
+    },
+    {
+      "title": "Louis-CFM/coucou",
+      "url": "https://github.com/Louis-CFM/coucou",
+      "source": "GitHub",
+      "stars": 5375,
+      "language": "Swift",
+      "desc": "A tiny friend in your Mac's notch and on your iPhone that keeps an eye on your AI coding agents: Claude Code, Codex, Cursor, Gemini CLI, Antigravity and more. Approve from the notch or your Lock Screen."
+    },
+    {
+      "title": "kaankiziltug/logo-design-skill",
+      "url": "https://github.com/kaankiziltug/logo-design-skill",
+      "source": "GitHub",
+      "stars": 3530,
+      "language": "HTML",
+      "desc": "A comprehensive logo-design skill for Claude, Gemini CLI, Codex and other AI agents: principles, process, SVG craft, testing tools and a 1,400+ logo reference library."
+    },
+    {
+      "title": "QingYunA/answer-me-with-html",
+      "url": "https://github.com/QingYunA/answer-me-with-html",
+      "source": "GitHub",
+      "stars": 3517,
+      "language": "JavaScript",
+      "desc": "Answer me with HTML — an agent skill that answers hard questions with a one-page HTML you can actually read. 让 AI Agent 用一页 HTML 回答复杂问题。"
+    },
+    {
+      "title": "feder-cr/invisible_playwright_mcp",
+      "url": "https://github.com/feder-cr/invisible_playwright_mcp",
+      "source": "GitHub",
+      "stars": 2761,
+      "language": "Python",
+      "desc": "Playwright MCP server undetected by anti-bots and captchas: AI agent browses the web on anti-detect stealth Firefox, Python, undetected browser automation, scraping, computer use."
+    },
+    {
+      "title": "nanaism/yomiyasu",
+      "url": "https://github.com/nanaism/yomiyasu",
+      "source": "GitHub",
+      "stars": 2061,
+      "language": "Python",
+      "desc": "AI生成の日本語を自然な日本語へ推敲するAgent Skill / Agent Skill for Refining AI-Generated Japanese into Natural Japanese"
+    },
+    {
+      "title": "oil-oil/oil-ui",
+      "url": "https://github.com/oil-oil/oil-ui",
+      "source": "GitHub",
+      "stars": 1623,
+      "language": "Python",
+      "desc": "UI design skill for Claude Code, Codex and other AI agents: explore distinct directions, compare them side by side, refine against real screenshots. 给 AI Agent 用的 UI 设计 Skill。"
+    },
+    {
+      "title": "freestylefly/WeChatBridge",
+      "url": "https://github.com/freestylefly/WeChatBridge",
+      "source": "GitHub",
+      "stars": 1490,
+      "language": "Swift",
+      "desc": "微信聊天记录一键转发到 AI Agent 与 Obsidian 的原生 macOS 工具"
+    }
+  ]
+}
