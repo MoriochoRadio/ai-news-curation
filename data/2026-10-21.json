@@ -1,0 +1,225 @@
+{
+  "date": "2026-10-21",
+  "generated_at": "2026-10-21T09:39:46+09:00",
+  "topics": [
+    "AI agents",
+    "LLM reasoning",
+    "multimodal models",
+    "open source AI",
+    "Rust in AI tooling",
+    "AI safety"
+  ],
+  "topic_labels": {
+    "AI agents": "AI 에이전트",
+    "LLM reasoning": "LLM 추론",
+    "multimodal models": "멀티모달 모델",
+    "open source AI": "오픈소스 AI",
+    "Rust in AI tooling": "AI 도구의 Rust",
+    "AI safety": "AI 안전성"
+  },
+  "counts": {
+    "trending": 6,
+    "papers": 8,
+    "tools": 8
+  },
+  "summary_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "trending": [
+    {
+      "title": "Tmux and Claude Code: Sessions, Send-Keys, and the Ceiling",
+      "url": "https://crystl.dev/guides/tmux-for-ai-agents/",
+      "source": "HackerNews",
+      "points": 168,
+      "comments": 126,
+      "author": "ankitg12",
+      "date": "2026-10-19",
+      "desc": "",
+      "summary_ko": "Tmux 세션과 Claude Code의 send-keys로 긴 작업을 자동화해 개발 생산성을 높인다."
+    },
+    {
+      "title": "A hacker broke into John Deere and SharkNinja with an army of AI agents",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1013643/ai-agents-hack-john-deere-shark-ninja-cummins",
+      "source": "HackerNews",
+      "points": 59,
+      "comments": 3,
+      "author": "dkobia",
+      "date": "2026-10-19",
+      "desc": "",
+      "summary_ko": "AI 에이전트 군단을 이용해 존디어와 샤크닌자를 해킹한 사례가 보안 경각심을 일깨운다."
+    },
+    {
+      "title": "Launch HN: Laminar (YC S24) – RL-trained model that finds errors in agent traces",
+      "url": "https://news.ycombinator.com/item?id=50154029",
+      "source": "HackerNews",
+      "points": 58,
+      "comments": 27,
+      "author": "skull8888888",
+      "date": "2026-10-19",
+      "desc": "",
+      "summary_ko": "YC S24 라미나르는 강화학습 모델로 에이전트 트레이스 오류를 자동 탐지해 디버깅을 가속화한다."
+    },
+    {
+      "title": "Launch HN: Respan (YC W24) – Open-source Rust AI gateway built around plugins",
+      "url": "https://news.ycombinator.com/item?id=50167583",
+      "source": "HackerNews",
+      "points": 42,
+      "comments": 16,
+      "author": "Andydy25",
+      "date": "2026-10-20",
+      "desc": "",
+      "summary_ko": "YC W24 레스판은 플러그인 중심의 오픈소스 러스트 AI 게이트웨이로 유연한 모델 서빙을 지원한다."
+    },
+    {
+      "title": "Vite+ an excellent toolchain for AI agent development",
+      "url": "https://janmichalek.com/blog/vite-plus-agentni-vyvoj?lang=en",
+      "source": "HackerNews",
+      "points": 23,
+      "comments": 20,
+      "author": "kanbaruu",
+      "date": "2026-10-20",
+      "desc": "",
+      "summary_ko": "Vite+는 빠른 번들링과 핫 리로드로 AI 에이전트 개발 워크플로를 크게 개선한다."
+    },
+    {
+      "title": "Benchmarking Bot Detection Systems Against Modern AI Agents in 2026",
+      "url": "https://research.poh.org/bot-benchmarking-2026/",
+      "source": "HackerNews",
+      "points": 17,
+      "comments": 0,
+      "author": "mdahardy",
+      "date": "2026-10-20",
+      "desc": ""
+    }
+  ],
+  "papers": [
+    {
+      "title": "RefCraft: Benchmarking Visual-Reference-Conditioned Agentic Generation through Web Development",
+      "url": "https://arxiv.org/pdf/2610.26826v1",
+      "source": "ArXiv",
+      "authors": "Yuchi Wang, Rongyao Fang, Weihao Yu",
+      "date": "2026-10-19",
+      "desc": "Beyond basic tool use and coding skills, effectively incorporating visual references into agentic generation is equally essential for applying AI agents to real-world productivity tasks. We study this crucial capability through webpage development, a practical and readily evaluab"
+    },
+    {
+      "title": "HarnessPro: Recursive Harness Self-Improvement with Pareto Optimization for Performance-Cost Trade-offs",
+      "url": "https://arxiv.org/pdf/2610.26770v1",
+      "source": "ArXiv",
+      "authors": "Zhuoshi Pan, ZhiYuan Feng, Yukuo Cen",
+      "date": "2026-10-19",
+      "desc": "Harness development plays a crucial role in building capable AI agents. Recent approaches improve harnesses through recursive self-improvement (RSI), but their performance gains often come with higher execution costs. We introduce HarnessPro, a label-free method for evolving harn"
+    },
+    {
+      "title": "StepBench: Diagnosing Real-World Procedural Understanding in AI Agents",
+      "url": "https://arxiv.org/pdf/2610.26679v1",
+      "source": "ArXiv",
+      "authors": "Hossein A. Rahmani, Bin Wu, Chaeeun Lee",
+      "date": "2026-10-19",
+      "desc": "Evaluating an agent's planning ability remains challenging for open-domain tasks, where verifying procedures through execution is often impractical. Existing evaluations typically assess only the final plan and do not distinguish procedural errors such as missing, incorrect, or m"
+    },
+    {
+      "title": "Honeypots for AI Agent Insider Threats",
+      "url": "https://arxiv.org/pdf/2610.26664v1",
+      "source": "ArXiv",
+      "authors": "Jan Wehner, Jam Kraprayoon",
+      "date": "2026-10-19",
+      "desc": "AI agents deployed inside organizations can pose an insider threat if they make mistakes, are compromised by an attacker, or pursue misaligned objectives. We propose honeypots as an AI control method to improve the security of internal agent deployments. Rather than only using ho"
+    },
+    {
+      "title": "When Should AI Chime In? Benchmarking Timely Contribution of Proactive Agents in Multi-Party Chat",
+      "url": "https://arxiv.org/pdf/2610.25896v1",
+      "source": "ArXiv",
+      "authors": "Ruotong Wang, Brian S. Yu, Xinyi Zhou",
+      "date": "2026-10-19",
+      "desc": "Proactive agents can support group collaboration by surfacing useful information without waiting to be asked, but even relevant contributions can be disruptive if poorly timed. In this work, we isolate the timing question: given a fixed candidate contribution such as a clarificat"
+    },
+    {
+      "title": "Explore or Confirm? LLM Agents Misallocate Measurements Under Noise",
+      "url": "https://arxiv.org/pdf/2610.25111v1",
+      "source": "ArXiv",
+      "authors": "Abdul Karim, Matt Keon",
+      "date": "2026-10-18",
+      "desc": "As model reasoning gets cheaper, the physical experiment becomes the slow and costly step in discovery. Each experiment returns a noisy reading: a high value can mean a good candidate or a lucky draw. With a fixed budget, an AI agent must keep choosing between exploring a new can"
+    },
+    {
+      "title": "Measuring Consensus in AI Agent Networks",
+      "url": "https://arxiv.org/pdf/2610.24833v1",
+      "source": "ArXiv",
+      "authors": "Jin Gao",
+      "date": "2026-10-17",
+      "desc": "As AI agents become increasingly connected through networks and take on tasks that require negotiation and joint decision-making, a systematic approach is needed to assess how their views converge and what information supports their decisions. We present an evaluation framework t"
+    },
+    {
+      "title": "Do Conversational Agents Need Explicit Memory? A Controlled Comparison with Raw-History Retrieval",
+      "url": "https://arxiv.org/pdf/2610.24671v1",
+      "source": "ArXiv",
+      "authors": "Yongjie Zhou, Shuai Wang, Bevan Koopman",
+      "date": "2026-10-17",
+      "desc": "Explicit memory systems transform conversation history into persistent representations intended to improve future access, often at substantial construction cost. Yet it remains unclear whether this added complexity yields better answer accuracy than retrieving directly from raw h"
+    }
+  ],
+  "tools": [
+    {
+      "title": "Louis-CFM/coucou",
+      "url": "https://github.com/Louis-CFM/coucou",
+      "source": "GitHub",
+      "stars": 5646,
+      "language": "Swift",
+      "desc": "A tiny friend in your Mac's notch and on your iPhone that keeps an eye on your AI coding agents: Claude Code, Codex, Cursor, Gemini CLI, Antigravity and more. Approve from the notch or your Lock Screen."
+    },
+    {
+      "title": "QingYunA/answer-me-with-html",
+      "url": "https://github.com/QingYunA/answer-me-with-html",
+      "source": "GitHub",
+      "stars": 4103,
+      "language": "JavaScript",
+      "desc": "Answer me with HTML — an agent skill that answers hard questions with a one-page HTML you can actually read. 让 AI Agent 用一页 HTML 回答复杂问题。"
+    },
+    {
+      "title": "kaankiziltug/logo-design-skill",
+      "url": "https://github.com/kaankiziltug/logo-design-skill",
+      "source": "GitHub",
+      "stars": 3853,
+      "language": "HTML",
+      "desc": "A comprehensive logo-design skill for Claude, Gemini CLI, Codex and other AI agents: principles, process, SVG craft, testing tools and a 1,400+ logo reference library."
+    },
+    {
+      "title": "nanaism/yomiyasu",
+      "url": "https://github.com/nanaism/yomiyasu",
+      "source": "GitHub",
+      "stars": 2348,
+      "language": "Python",
+      "desc": "AI生成の日本語を自然な日本語へ推敲するAgent Skill / Agent Skill for Refining AI-Generated Japanese into Natural Japanese"
+    },
+    {
+      "title": "Leonxlnx/earshot",
+      "url": "https://github.com/Leonxlnx/earshot",
+      "source": "GitHub",
+      "stars": 1949,
+      "language": "Python",
+      "desc": "Ears for coding agents: let AI hear, review and make sound. CPU-only, open source."
+    },
+    {
+      "title": "oil-oil/oil-ui",
+      "url": "https://github.com/oil-oil/oil-ui",
+      "source": "GitHub",
+      "stars": 1926,
+      "language": "Python",
+      "desc": "UI design skill for Claude Code, Codex and other AI agents: explore distinct directions, compare them side by side, refine against real screenshots. 给 AI Agent 用的 UI 设计 Skill。"
+    },
+    {
+      "title": "glanderness/BeefTV",
+      "url": "https://github.com/glanderness/BeefTV",
+      "source": "GitHub",
+      "stars": 1611,
+      "language": "TypeScript",
+      "desc": "High-performance · Lightweight · AI Native Video workspace. 面向 AI 时代的视频创作工作台。 在画布中，和Agent一起自由连接创意、模型与素材。"
+    },
+    {
+      "title": "openfilm/openfilm",
+      "url": "https://github.com/openfilm/openfilm",
+      "source": "GitHub",
+      "stars": 1600,
+      "language": "TypeScript",
+      "desc": "The open source AI video agent: turns any coding agent into a video agent, with an editor to change anything it makes."
+    }
+  ]
+}
