@@ -1,0 +1,245 @@
+{
+  "date": "2026-10-22",
+  "generated_at": "2026-10-22T09:42:37+09:00",
+  "topics": [
+    "AI agents",
+    "LLM reasoning",
+    "multimodal models",
+    "open source AI",
+    "Rust in AI tooling",
+    "AI safety"
+  ],
+  "topic_labels": {
+    "AI agents": "AI 에이전트",
+    "LLM reasoning": "LLM 추론",
+    "multimodal models": "멀티모달 모델",
+    "open source AI": "오픈소스 AI",
+    "Rust in AI tooling": "AI 도구의 Rust",
+    "AI safety": "AI 안전성"
+  },
+  "counts": {
+    "trending": 8,
+    "papers": 8,
+    "tools": 8
+  },
+  "summary_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "trending": [
+    {
+      "title": "Using thousands of AI agents to uncover new leads in biological data",
+      "url": "https://openai.com/index/scaling-ai-research-for-complex-biological-data/",
+      "source": "HackerNews",
+      "points": 129,
+      "comments": 81,
+      "author": "raahelb",
+      "date": "2026-10-21",
+      "desc": "",
+      "summary_ko": "수천 개의 AI 에이전트가 생물학 데이터에서 새로운 단서를 발굴해 연구 속도를 획기적으로 높인다."
+    },
+    {
+      "title": "LayerFS: The filesystem for AI coding agents",
+      "url": "https://layerfs.ai/",
+      "source": "HackerNews",
+      "points": 69,
+      "comments": 42,
+      "author": "l2dy",
+      "date": "2026-10-21",
+      "desc": "",
+      "summary_ko": "LayerFS는 AI 코딩 에이전트 전용 파일시스템으로, 버전 관리와 협업을 실시간으로 지원해 생산성을 높인다."
+    },
+    {
+      "title": "Launch HN: Respan (YC W24) – Open-source Rust AI gateway built around plugins",
+      "url": "https://news.ycombinator.com/item?id=50167583",
+      "source": "HackerNews",
+      "points": 52,
+      "comments": 21,
+      "author": "Andydy25",
+      "date": "2026-10-20",
+      "desc": "",
+      "summary_ko": "Respan(YC W24)은 플러그인 중심의 오픈소스 Rust AI 게이트웨이로, 확장성과 보안을 동시에 잡는다."
+    },
+    {
+      "title": "Benchmarking Bot Detection Systems Against Modern AI Agents in 2026",
+      "url": "https://research.poh.org/bot-benchmarking-2026/",
+      "source": "HackerNews",
+      "points": 48,
+      "comments": 8,
+      "author": "mdahardy",
+      "date": "2026-10-20",
+      "desc": "",
+      "summary_ko": "2026년 최신 AI 에이전트 대비 봇 탐지 시스템을 벤치마크해 방어 전략의 허점을 드러낸다."
+    },
+    {
+      "title": "AI agent fixed the bug, but what else did it change?",
+      "url": "https://blog.trailofbits.com/2026/10/21/your-ai-agent-fixed-the-bug-but-what-else-did-it-change/",
+      "source": "HackerNews",
+      "points": 45,
+      "comments": 6,
+      "author": "tob_scott_a",
+      "date": "2026-10-21",
+      "desc": "",
+      "summary_ko": "AI 에이전트가 버그를 수정했지만, 의도치 않은 코드 변경을 초래해 리스크 관리가 필수적이다."
+    },
+    {
+      "title": "Vite+ an excellent toolchain for AI agent development",
+      "url": "https://janmichalek.com/blog/vite-plus-agentni-vyvoj?lang=en",
+      "source": "HackerNews",
+      "points": 23,
+      "comments": 20,
+      "author": "kanbaruu",
+      "date": "2026-10-20",
+      "desc": ""
+    },
+    {
+      "title": "Show HN: Omnara – Open-Source Alternative to Claude Managed Agents",
+      "url": "https://github.com/omnara-ai/omnara",
+      "source": "HackerNews",
+      "points": 19,
+      "comments": 6,
+      "author": "kmansm27",
+      "date": "2026-10-21",
+      "desc": ""
+    },
+    {
+      "title": "Open-source, cross-harness memory for AI agents",
+      "url": "https://news.ycombinator.com/item?id=50182883",
+      "source": "HackerNews",
+      "points": 15,
+      "comments": 11,
+      "author": "shakshukan",
+      "date": "2026-10-21",
+      "desc": ""
+    }
+  ],
+  "papers": [
+    {
+      "title": "Evolving Agent Interfaces",
+      "url": "https://arxiv.org/pdf/2610.28601v1",
+      "source": "ArXiv",
+      "authors": "Saaket Agashe, Yuzhe Yang, Gonzalo Gonzalez-Pumariega",
+      "date": "2026-10-20",
+      "desc": "Computer-use agents are limited by the interfaces humans give them. An agent may type a spreadsheet cell by cell when a single line of code would do, or print all two thousand lines of a file through a shell to find one function. Both the interfaces and the knowledge of when to u"
+    },
+    {
+      "title": "Proof-Carrying Contracts: Commitments AI Agents Cannot Break",
+      "url": "https://arxiv.org/pdf/2610.28484v1",
+      "source": "ArXiv",
+      "authors": "Carlo Ciliberto, Alessandro Rudi, Enrico Tassi",
+      "date": "2026-10-20",
+      "desc": "AI agents increasingly act on behalf of people or other agents, purchasing services, exchanging information and delegating work. What an agent must respect is written in instructions, policies or agreements, but text alone cannot make it comply. It may make mistakes, be redirecte"
+    },
+    {
+      "title": "Local Work, Global Progress: A Convergence Theory of AI Agent Collaboration",
+      "url": "https://arxiv.org/pdf/2610.28286v1",
+      "source": "ArXiv",
+      "authors": "Ivan Ilin, Peter Richtárik",
+      "date": "2026-10-20",
+      "desc": "Teams of large language model (LLM) agents are increasingly applied to complex tasks, but their collaboration protocols are mostly designed empirically, without convergence guarantees. We formalize collaborative problem solving as block optimization: each agent improves one part "
+    },
+    {
+      "title": "ClawMMU: Protection-Coherent Virtual Memory for Stateful LLM Agents",
+      "url": "https://arxiv.org/pdf/2610.28093v1",
+      "source": "ArXiv",
+      "authors": "Jinhao Hu, Bardia Mohammadi, Mofasshara Binte Rafique",
+      "date": "2026-10-20",
+      "desc": "AI agents keep long-term memory, much of which comes from web pages and tool results. Agent harnesses, the software that runs the model, do not record who may act on this memory, so an instruction hidden in a fetched page can be treated as the user's own instruction. We propose C"
+    },
+    {
+      "title": "Securing Agentic Commerce Through Behavior-Aware Fraud Detection and Cybersecurity for Trusted AI-Agent Payment Authorization",
+      "url": "https://arxiv.org/pdf/2610.27483v1",
+      "source": "ArXiv",
+      "authors": "Kayode L. Ogunsusi",
+      "date": "2026-10-20",
+      "desc": "The growing use of autonomous artificial intelligence agents in digital commerce creates new security concerns involving agent impersonation, unauthorized payments, compromised agents, and misuse of delegated authority. This research introduces the Autonomous Commerce Agent Guard"
+    },
+    {
+      "title": "Runtime Control for AI Agents: Closing the Evaluation--Execution Gap in Operational Workflows",
+      "url": "https://arxiv.org/pdf/2610.27480v1",
+      "source": "ArXiv",
+      "authors": "Jayesh Bhadane, Ramachandra Yerramsetti, Rajesh Gupta",
+      "date": "2026-10-20",
+      "desc": "Language-model agents increasingly participate in operational workflows where approvals, binds, and payments create commitments. An approval valid when issued may no longer authorize execution after relevant facts, evidence, policy, or authority change. We call this the evaluatio"
+    },
+    {
+      "title": "REM: What to Store, When to Recall, What to Forget in Experience Memory for Coding Agents",
+      "url": "https://arxiv.org/pdf/2610.27377v1",
+      "source": "ArXiv",
+      "authors": "Xinyi Lisa Chen, Pedro Herrero-Vidal, Xiaohan Chen",
+      "date": "2026-10-19",
+      "desc": "Large language model (LLM) agents now autonomously complete long-horizon tasks, such as repository-level coding, through hundreds of think-act steps, yet the experience each run produces is rarely reused on the next. Prior memory systems concentrate on retrieval, finding the most"
+    },
+    {
+      "title": "RefCraft: Benchmarking Visual-Reference-Conditioned Agentic Generation through Web Development",
+      "url": "https://arxiv.org/pdf/2610.26826v1",
+      "source": "ArXiv",
+      "authors": "Yuchi Wang, Rongyao Fang, Weihao Yu",
+      "date": "2026-10-19",
+      "desc": "Beyond basic tool use and coding skills, effectively incorporating visual references into agentic generation is equally essential for applying AI agents to real-world productivity tasks. We study this crucial capability through webpage development, a practical and readily evaluab"
+    }
+  ],
+  "tools": [
+    {
+      "title": "Louis-CFM/coucou",
+      "url": "https://github.com/Louis-CFM/coucou",
+      "source": "GitHub",
+      "stars": 5924,
+      "language": "Swift",
+      "desc": "A tiny friend in your Mac's notch and on your iPhone that keeps an eye on your AI coding agents: Claude Code, Codex, Cursor, Gemini CLI, Antigravity and more. Approve from the notch or your Lock Screen."
+    },
+    {
+      "title": "QingYunA/answer-me-with-html",
+      "url": "https://github.com/QingYunA/answer-me-with-html",
+      "source": "GitHub",
+      "stars": 4178,
+      "language": "JavaScript",
+      "desc": "Answer me with HTML — an agent skill that answers hard questions with a one-page HTML you can actually read. 让 AI Agent 用一页 HTML 回答复杂问题。"
+    },
+    {
+      "title": "kaankiziltug/logo-design-skill",
+      "url": "https://github.com/kaankiziltug/logo-design-skill",
+      "source": "GitHub",
+      "stars": 4028,
+      "language": "HTML",
+      "desc": "A comprehensive logo-design skill for Claude, Gemini CLI, Codex and other AI agents: principles, process, SVG craft, testing tools and a 1,400+ logo reference library."
+    },
+    {
+      "title": "nanaism/yomiyasu",
+      "url": "https://github.com/nanaism/yomiyasu",
+      "source": "GitHub",
+      "stars": 2382,
+      "language": "Python",
+      "desc": "AI生成の日本語を自然な日本語へ推敲するAgent Skill / Agent Skill for Refining AI-Generated Japanese into Natural Japanese"
+    },
+    {
+      "title": "Leonxlnx/earshot",
+      "url": "https://github.com/Leonxlnx/earshot",
+      "source": "GitHub",
+      "stars": 2051,
+      "language": "Python",
+      "desc": "Ears for coding agents: let AI hear, review and make sound. CPU-only, open source."
+    },
+    {
+      "title": "oil-oil/oil-ui",
+      "url": "https://github.com/oil-oil/oil-ui",
+      "source": "GitHub",
+      "stars": 1980,
+      "language": "Python",
+      "desc": "UI design skill for Claude Code, Codex and other AI agents: explore distinct directions, compare them side by side, refine against real screenshots. 给 AI Agent 用的 UI 设计 Skill。"
+    },
+    {
+      "title": "openfilm/openfilm",
+      "url": "https://github.com/openfilm/openfilm",
+      "source": "GitHub",
+      "stars": 1844,
+      "language": "TypeScript",
+      "desc": "The open source AI video agent: turns any coding agent into a video agent, with an editor to change anything it makes."
+    },
+    {
+      "title": "glanderness/BeefTV",
+      "url": "https://github.com/glanderness/BeefTV",
+      "source": "GitHub",
+      "stars": 1678,
+      "language": "TypeScript",
+      "desc": "High-performance · Lightweight · AI Native Video workspace. 面向 AI 时代的视频创作工作台。 在画布中，和Agent一起自由连接创意、模型与素材。"
+    }
+  ]
+}
