@@ -1,0 +1,193 @@
+{
+  "date": "2026-10-26",
+  "generated_at": "2026-10-26T09:26:04+09:00",
+  "topics": [
+    "AI agents",
+    "LLM reasoning",
+    "multimodal models",
+    "open source AI",
+    "Rust in AI tooling",
+    "AI safety"
+  ],
+  "topic_labels": {
+    "AI agents": "AI 에이전트",
+    "LLM reasoning": "LLM 추론",
+    "multimodal models": "멀티모달 모델",
+    "open source AI": "오픈소스 AI",
+    "Rust in AI tooling": "AI 도구의 Rust",
+    "AI safety": "AI 안전성"
+  },
+  "counts": {
+    "trending": 3,
+    "papers": 8,
+    "tools": 8
+  },
+  "summary_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "trending": [
+    {
+      "title": "Making My Blog Readable by AI Agents",
+      "url": "https://deallocatedobjects.com/posts/making-my-blog-readable-by-ai-agents",
+      "source": "HackerNews",
+      "points": 34,
+      "comments": 9,
+      "author": "ingve",
+      "date": "2026-10-24",
+      "desc": "",
+      "summary_ko": "블로그를 AI 에이전트가 읽기 쉽게 구조화하면 검색·추천 노출이 늘고 자동화 워크플로에 바로 활용돼 콘텐츠 가치가 상승합니다."
+    },
+    {
+      "title": "US-Israeli browser startup valued at $6.4B",
+      "url": "https://www.timesofisrael.com/us-israeli-browser-startup-valued-at-6-4-billion-as-ai-agents-reshape-workplace-risk/",
+      "source": "HackerNews",
+      "points": 17,
+      "comments": 29,
+      "author": "wow_Something",
+      "date": "2026-10-24",
+      "desc": "",
+      "summary_ko": "미·이스라엘 브라우저 스타트업이 64억 달러 가치로 평가받아 AI 내장·엔터프라이즈 중심 차세대 브라우저 시장의 성장 기대감을 키웠습니다."
+    },
+    {
+      "title": "Show HN: Open-Source Cybersecurity Platform Uses AI Agents to Protect Businesses",
+      "url": "https://medium.com/@thomasunise/this-open-source-cybersecurity-platform-uses-ai-agents-to-detect-threats-and-protect-businesses-762e65392b42",
+      "source": "HackerNews",
+      "points": 15,
+      "comments": 4,
+      "author": "modern_cmo",
+      "date": "2026-10-25",
+      "desc": "",
+      "summary_ko": "오픈소스 사이버보안 플랫폼이 AI 에이전트로 기업을 방어해 고비용 솔루션 없이도 실시간 위협 탐지·대응이 가능해졌습니다."
+    }
+  ],
+  "papers": [
+    {
+      "title": "Muffin - A Shared Memory Buffer for Asynchronous AI Agents",
+      "url": "https://arxiv.org/pdf/2610.31355v1",
+      "source": "ArXiv",
+      "authors": "Ping-Lin Kuo, Suman Navaratnarajah, Christian Frey",
+      "date": "2026-10-22",
+      "desc": "The rise of Agentic AI systems has changed the landscape of artificial intelligence by enabling strong reasoning capabilities through specialized multi-agent interaction with structured self-reflection. However, in target-driven reasoning tasks, single- and multi-agent systems ar"
+    },
+    {
+      "title": "Can AI Co-Design Structures? An AI Agent for Early-Stage Structural Design",
+      "url": "https://arxiv.org/pdf/2610.31113v1",
+      "source": "ArXiv",
+      "authors": "Ricardo Maia Avelino, Mennatallah El-Assady, Tom Van Mele",
+      "date": "2026-10-22",
+      "desc": "Recent advances in large language models and agentic workflows offer a new paradigm to early-stage structural design translating design intent into structural models. Although text-to-3D approaches have demonstrated that natural language can be used to produce visual, mesh-based "
+    },
+    {
+      "title": "nnInteractive Agent: General-Purpose AI Agents as 3D Image Annotators",
+      "url": "https://arxiv.org/pdf/2610.31080v1",
+      "source": "ArXiv",
+      "authors": "Fabian Isensee, Constantin Ulrich Harsy, Maximilian Rokuss",
+      "date": "2026-10-22",
+      "desc": "Interactive 3D segmentation models such as nnInteractive turn a few spatial prompts (points, scribbles, boxes) into accurate volumetric masks, but a human still does the annotation work: finding each structure, placing prompts, checking the result and correcting it. General-purpo"
+    },
+    {
+      "title": "CANNBot-CAKE: Collaborative Agentic Kernel Evolution for Ascend NPU",
+      "url": "https://arxiv.org/pdf/2610.31034v1",
+      "source": "ArXiv",
+      "authors": "Deng Pan, Xue-Jian Gao, Junyi Fan",
+      "date": "2026-10-22",
+      "desc": "Efficient custom operators are essential for modern deep learning workloads, yet developing high-performance kernels for Ascend NPUs remains slow, expert-intensive, and difficult to automate. Although AI agents now approach expert performance on GPU kernel benchmarks, current mod"
+    },
+    {
+      "title": "The Delegation Divide: An Open Index of AI-Agent Delegability across Occupations and Countries",
+      "url": "https://arxiv.org/pdf/2610.30752v1",
+      "source": "ArXiv",
+      "authors": "Cristian Espinal Maya, Santiago Jiménez Londoño",
+      "date": "2026-10-22",
+      "desc": "35.2% of task time in world employment is at least partly delegable to AI agents in 2026, and only 2.5% can be handed over in full. Existing measures score exposure to generative AI, mostly for the United States. We build the Agent Delegability Index (ADI): two language models ra"
+    },
+    {
+      "title": "Lifetime-valid decisions by continually evolving AI analysts",
+      "url": "https://arxiv.org/pdf/2610.30562v1",
+      "source": "ArXiv",
+      "authors": "Xiaojing Sun, Yuhan Zeng, Xiao Wang",
+      "date": "2026-10-22",
+      "desc": "AI agents increasingly act as analysts whose decision can often be cast as hypothesis tests. Classical tests control the Type I error rate, the probability of rejecting a true null hypothesis, for fixed procedures. However, AI analysts introduce internal randomness and can evolve"
+    },
+    {
+      "title": "From Prose to Properties: Testing Research Claims with ARATest for Agent-Native Science",
+      "url": "https://arxiv.org/pdf/2610.30495v1",
+      "source": "ArXiv",
+      "authors": "Yifeng He, Jiachen Liu, Hao Chen",
+      "date": "2026-10-21",
+      "desc": "AI agents now run experiments and report findings, so research produces claims faster than researchers can check them. Each empirical claim implies a property that must hold over its cases, but it states that property only in prose. Without an explicit property, no test can decid"
+    },
+    {
+      "title": "A Three-Pillar Governance Framework for Safe and Trustworthy AI Agents",
+      "url": "https://arxiv.org/pdf/2610.30445v1",
+      "source": "ArXiv",
+      "authors": "Edward C. Cheng, Jeshua Cheng, Alice Siu",
+      "date": "2026-10-21",
+      "desc": "AI agents capable of autonomous decision-making introduce significant challenges related to safety, alignment, accountability, and human oversight. Existing Human-in-the-Loop (HITL) and responsible AI approaches provide important foundations, but many remain fragmented across sys"
+    }
+  ],
+  "tools": [
+    {
+      "title": "Louis-CFM/coucou",
+      "url": "https://github.com/Louis-CFM/coucou",
+      "source": "GitHub",
+      "stars": 6447,
+      "language": "Swift",
+      "desc": "A tiny friend in your Mac's notch and on your iPhone that keeps an eye on your AI coding agents: Claude Code, Codex, Cursor, Gemini CLI, Antigravity and more. Approve from the notch or your Lock Screen."
+    },
+    {
+      "title": "QingYunA/answer-me-with-html",
+      "url": "https://github.com/QingYunA/answer-me-with-html",
+      "source": "GitHub",
+      "stars": 4429,
+      "language": "JavaScript",
+      "desc": "Answer me with HTML — an agent skill that answers hard questions with a one-page HTML you can actually read. 让 AI Agent 用一页 HTML 回答复杂问题。"
+    },
+    {
+      "title": "openfilm/openfilm",
+      "url": "https://github.com/openfilm/openfilm",
+      "source": "GitHub",
+      "stars": 2825,
+      "language": "TypeScript",
+      "desc": "The open source AI video agent: turns any coding agent into a video agent, with an editor to change anything it makes."
+    },
+    {
+      "title": "Leonxlnx/earshot",
+      "url": "https://github.com/Leonxlnx/earshot",
+      "source": "GitHub",
+      "stars": 2788,
+      "language": "Python",
+      "desc": "Ears for coding agents: let AI hear, review and make sound. CPU-only, open source."
+    },
+    {
+      "title": "nanaism/yomiyasu",
+      "url": "https://github.com/nanaism/yomiyasu",
+      "source": "GitHub",
+      "stars": 2537,
+      "language": "Python",
+      "desc": "AI生成の日本語を自然な日本語へ推敲するAgent Skill / Agent Skill for Refining AI-Generated Japanese into Natural Japanese"
+    },
+    {
+      "title": "oil-oil/oil-ui",
+      "url": "https://github.com/oil-oil/oil-ui",
+      "source": "GitHub",
+      "stars": 2239,
+      "language": "Python",
+      "desc": "UI design skill for Claude Code, Codex and other AI agents: explore distinct directions, compare them side by side, refine against real screenshots. 给 AI Agent 用的 UI 设计 Skill。"
+    },
+    {
+      "title": "trhhubsd/ARTEX",
+      "url": "https://github.com/trhhubsd/ARTEX",
+      "source": "GitHub",
+      "stars": 1912,
+      "language": "Go",
+      "desc": "ARTEX · AI autonomous penetration testing system (multi-agent LLM, Go + Next.js) · AI 自主渗透测试系统 · 百度 agent+ 攻防挑战赛冠军"
+    },
+    {
+      "title": "StartLuxLabs/StartLux-Decision",
+      "url": "https://github.com/StartLuxLabs/StartLux-Decision",
+      "source": "GitHub",
+      "stars": 1558,
+      "language": "Python",
+      "desc": "Open decision models from 0.8B to 27B: a calibrated probability for every option in one pass, and a short thought only when unsure. Engine for vLLM, llama.cpp and MLX."
+    }
+  ]
+}
