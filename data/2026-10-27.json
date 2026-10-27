@@ -1,0 +1,193 @@
+{
+  "date": "2026-10-27",
+  "generated_at": "2026-10-27T10:30:29+09:00",
+  "topics": [
+    "AI agents",
+    "LLM reasoning",
+    "multimodal models",
+    "open source AI",
+    "Rust in AI tooling",
+    "AI safety"
+  ],
+  "topic_labels": {
+    "AI agents": "AI 에이전트",
+    "LLM reasoning": "LLM 추론",
+    "multimodal models": "멀티모달 모델",
+    "open source AI": "오픈소스 AI",
+    "Rust in AI tooling": "AI 도구의 Rust",
+    "AI safety": "AI 안전성"
+  },
+  "counts": {
+    "trending": 3,
+    "papers": 8,
+    "tools": 8
+  },
+  "summary_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "trending": [
+    {
+      "title": "Nvidia discusses $2k-per-GPU annual fee for software",
+      "url": "https://www.tomshardware.com/pc-components/gpus/nvidia-discusses-usd2-000-per-gpu-annual-software-fee-for-running-agents-on-ai-infrastructure-firm-already-charges-more-than-twice-that-amount-for-its-ai-enterprise-software-platform",
+      "source": "HackerNews",
+      "points": 35,
+      "comments": 18,
+      "author": "gscott",
+      "date": "2026-10-26",
+      "desc": "",
+      "summary_ko": "엔비디아가 GPU당 연 2,000달러 소프트웨어 구독료를 검토 중이며, 이는 AI 인프라 비용 구조를 크게 바꿀 수 있다."
+    },
+    {
+      "title": "OpenAI's agents talked to each other through the CPU Cache",
+      "url": "https://the-decoder.com/openais-isolated-ai-agents-found-ways-to-talk-to-each-other-through-cpu-cache/",
+      "source": "HackerNews",
+      "points": 17,
+      "comments": 1,
+      "author": "limbicsystem",
+      "date": "2026-10-26",
+      "desc": "",
+      "summary_ko": "오픈AI 에이전트들이 CPU 캐시를 통해 직접 통신하며, 메모리 병목 완화와 초저지연 협업 가능성을 보여준다."
+    },
+    {
+      "title": "Show HN: Open-Source Cybersecurity Platform Uses AI Agents to Protect Businesses",
+      "url": "https://medium.com/@thomasunise/this-open-source-cybersecurity-platform-uses-ai-agents-to-detect-threats-and-protect-businesses-762e65392b42",
+      "source": "HackerNews",
+      "points": 15,
+      "comments": 4,
+      "author": "modern_cmo",
+      "date": "2026-10-25",
+      "desc": "",
+      "summary_ko": "오픈소스 사이버보안 플랫폼이 AI 에이전트로 기업을 방어하며, 커뮤니티 주도의 자동화 보안 모델을 제시한다."
+    }
+  ],
+  "papers": [
+    {
+      "title": "Securing Edge &amp; Physical AI: Post-Quantum IoT Blockchain for Mission-Critical Cyber-Physical Agents",
+      "url": "https://arxiv.org/pdf/2610.33862v1",
+      "source": "ArXiv",
+      "authors": "Kürşat Çakal, Suat Özdemir",
+      "date": "2026-10-24",
+      "desc": "Distributed Cyber-Physical Systems (CPS) and Edge AI networks increasingly depend on public-key authentication and key-establishment mechanisms that are vulnerable to cryptographically relevant Quantum Computers (QC). Shor's algorithm threatens widely deployed asymmetric primitiv"
+    },
+    {
+      "title": "RSI Arena: Towards Recursive Self-Improvement with Human Feedback",
+      "url": "https://arxiv.org/pdf/2610.33624v1",
+      "source": "ArXiv",
+      "authors": "Yue Huang, Yanbo Wang, Lichi Li",
+      "date": "2026-10-24",
+      "desc": "Can AI agents autonomously train useful language models and improve them using feedback from users? We introduce RSI Arena, a two-stage study of autonomous post-training as a step toward recursive self-improvement. Ten frontier models act as training agents, each starting from NV"
+    },
+    {
+      "title": "Agent-to-Agent Synthetic Social Engineering on the Web",
+      "url": "https://arxiv.org/pdf/2610.33411v1",
+      "source": "ArXiv",
+      "authors": "Bryan C. Boots",
+      "date": "2026-10-24",
+      "desc": "An AI agent can prepare an accurate report and still request an action its user has not authorized. Cooperation across Web services therefore requires separate judgments about identity, evidentiary support, and permission. We define synthetic social engineering (SSE) as deliberat"
+    },
+    {
+      "title": "A Deterministic Security Runtime for LLM Agents on MPI and Batch-Scheduled HPC Systems: Consensus-Governed, Hardware-Rooted Supervision of Every Rank",
+      "url": "https://arxiv.org/pdf/2610.33318v1",
+      "source": "ArXiv",
+      "authors": "Alfredo Metere",
+      "date": "2026-10-23",
+      "desc": "Large language model agents launch simulations on high-performance computing (HPC) systems, where one sbatch or mpirun can commit thousands of node-hours and a forged result can cost lives. Of 23 surveyed systems, none supervises the running job, and none holds when the control h"
+    },
+    {
+      "title": "Semantic Representation for Agentic Self-Play in Automated Laboratories",
+      "url": "https://arxiv.org/pdf/2610.32755v1",
+      "source": "ArXiv",
+      "authors": "Yves Delley, John Coller, Zachary Cutts",
+      "date": "2026-10-23",
+      "desc": "Navigating complex, high-dimensional biological search spaces necessitates scalable physical and computational intelligence to explore beyond local optima through iterative self-play across ideation, experimentation, and automation. Translating experimental designs into reliable "
+    },
+    {
+      "title": "Agentic Hazard Mapper: Emulating Expert Map-Making with AI Agents for Risk Communication",
+      "url": "https://arxiv.org/pdf/2610.32738v1",
+      "source": "ArXiv",
+      "authors": "Sidi Wu, Lifeng Lin, Yizi Chen",
+      "date": "2026-10-23",
+      "desc": "Hazard maps are essential tools for public risk communication, preparedness, and evacuation planning, yet effective cartographic design is not always ensured due to limited access to cartographic expertise across local governments and communities. We present Agentic Hazard Mapper"
+    },
+    {
+      "title": "Can AI Agents Help Robotic Engineers? Lessons from Two Focus Days in Industry",
+      "url": "https://arxiv.org/pdf/2610.32636v1",
+      "source": "ArXiv",
+      "authors": "Salim Fares, Steffen Herbold",
+      "date": "2026-10-23",
+      "desc": "Software developers increasingly use AI agents that execute multi-step programming tasks on their own. However, it is unclear if and how this transfers to robotic engineering, where engineers program industrial robots in niche, vendor-specific languages and rely on visual feedbac"
+    },
+    {
+      "title": "Beyond Copying: Lifelong Smart Contract Security Task Construction via Protocol Mutation",
+      "url": "https://arxiv.org/pdf/2610.32453v1",
+      "source": "ArXiv",
+      "authors": "Zifan Peng, Peng Huang, Jingyi Zheng",
+      "date": "2026-10-23",
+      "desc": "AI agents can inspect code and run tests to support smart contract security. SlowMist reports about $38.6 billion in losses across the broader blockchain ecosystem. Existing evaluations can reward memorized or copied answers, including attack code recovered from public blockchain"
+    }
+  ],
+  "tools": [
+    {
+      "title": "QingYunA/answer-me-with-html",
+      "url": "https://github.com/QingYunA/answer-me-with-html",
+      "source": "GitHub",
+      "stars": 4503,
+      "language": "JavaScript",
+      "desc": "Answer me with HTML — an agent skill that answers hard questions with a one-page HTML you can actually read. 让 AI Agent 用一页 HTML 回答复杂问题。"
+    },
+    {
+      "title": "openfilm/openfilm",
+      "url": "https://github.com/openfilm/openfilm",
+      "source": "GitHub",
+      "stars": 3027,
+      "language": "TypeScript",
+      "desc": "The open source AI video agent: turns any coding agent into a video agent, with an editor to change anything it makes."
+    },
+    {
+      "title": "Leonxlnx/earshot",
+      "url": "https://github.com/Leonxlnx/earshot",
+      "source": "GitHub",
+      "stars": 2914,
+      "language": "Python",
+      "desc": "Ears for coding agents: let AI hear, review and make sound. CPU-only, open source."
+    },
+    {
+      "title": "nanaism/yomiyasu",
+      "url": "https://github.com/nanaism/yomiyasu",
+      "source": "GitHub",
+      "stars": 2578,
+      "language": "Python",
+      "desc": "AI生成の日本語を自然な日本語へ推敲するAgent Skill / Agent Skill for Refining AI-Generated Japanese into Natural Japanese"
+    },
+    {
+      "title": "oil-oil/oil-ui",
+      "url": "https://github.com/oil-oil/oil-ui",
+      "source": "GitHub",
+      "stars": 2369,
+      "language": "Python",
+      "desc": "UI design skill for Claude Code, Codex and other AI agents: explore distinct directions, compare them side by side, refine against real screenshots. 给 AI Agent 用的 UI 设计 Skill。"
+    },
+    {
+      "title": "trhhubsd/ARTEX",
+      "url": "https://github.com/trhhubsd/ARTEX",
+      "source": "GitHub",
+      "stars": 1996,
+      "language": "Go",
+      "desc": "ARTEX · AI autonomous penetration testing system (multi-agent LLM, Go + Next.js) · AI 自主渗透测试系统 · 百度 agent+ 攻防挑战赛冠军"
+    },
+    {
+      "title": "StartLuxLabs/StartLux-Decision",
+      "url": "https://github.com/StartLuxLabs/StartLux-Decision",
+      "source": "GitHub",
+      "stars": 1586,
+      "language": "Python",
+      "desc": "Open decision models from 0.8B to 27B: a calibrated probability for every option in one pass, and a short thought only when unsure. Engine for vLLM, llama.cpp and MLX."
+    },
+    {
+      "title": "cranebeaker/coop-anything",
+      "url": "https://github.com/cranebeaker/coop-anything",
+      "source": "GitHub",
+      "stars": 1446,
+      "language": "Python",
+      "desc": "Co-op Anything: point your AI agent at any single-player game and play it with friends (online and/or splitscreen!). MCP server and playbook to let you reverse engineer, fix, test, ship and share what it learns."
+    }
+  ]
+}
