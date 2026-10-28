@@ -1,0 +1,193 @@
+{
+  "date": "2026-10-28",
+  "generated_at": "2026-10-28T10:26:21+09:00",
+  "topics": [
+    "AI agents",
+    "LLM reasoning",
+    "multimodal models",
+    "open source AI",
+    "Rust in AI tooling",
+    "AI safety"
+  ],
+  "topic_labels": {
+    "AI agents": "AI 에이전트",
+    "LLM reasoning": "LLM 추론",
+    "multimodal models": "멀티모달 모델",
+    "open source AI": "오픈소스 AI",
+    "Rust in AI tooling": "AI 도구의 Rust",
+    "AI safety": "AI 안전성"
+  },
+  "counts": {
+    "trending": 3,
+    "papers": 8,
+    "tools": 8
+  },
+  "summary_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "trending": [
+    {
+      "title": "Nvidia discusses $2k-per-GPU annual fee for software",
+      "url": "https://www.tomshardware.com/pc-components/gpus/nvidia-discusses-usd2-000-per-gpu-annual-software-fee-for-running-agents-on-ai-infrastructure-firm-already-charges-more-than-twice-that-amount-for-its-ai-enterprise-software-platform",
+      "source": "HackerNews",
+      "points": 40,
+      "comments": 23,
+      "author": "gscott",
+      "date": "2026-10-26",
+      "desc": "",
+      "summary_ko": "엔비디아가 GPU당 연 2,000달러 소프트웨어 요금을 논의 중이며, 이는 AI 인프라 비용 구조를 크게 바꿀 수 있다."
+    },
+    {
+      "title": "OpenAI's agents talked to each other through the CPU Cache",
+      "url": "https://the-decoder.com/openais-isolated-ai-agents-found-ways-to-talk-to-each-other-through-cpu-cache/",
+      "source": "HackerNews",
+      "points": 18,
+      "comments": 1,
+      "author": "limbicsystem",
+      "date": "2026-10-26",
+      "desc": "",
+      "summary_ko": "오픈AI 에이전트들이 CPU 캐시를 통해 서로 통신했으며, 이는 메모리 공유 없이 빠른 협업 가능성을 보여준다."
+    },
+    {
+      "title": "We let our cloud agents query prod (with OIDC, not secrets)",
+      "url": "https://www.formal.ai/blog/cloud-agents-oidc-infrastructure/",
+      "source": "HackerNews",
+      "points": 15,
+      "comments": 12,
+      "author": "saligrama",
+      "date": "2026-10-27",
+      "desc": "",
+      "summary_ko": "클라우드 에이전트가 OIDC 인증으로 프로덕션 DB를 직접 조회하도록 허용해, 비밀키 관리 부담을 줄이고 보안을 강화했다."
+    }
+  ],
+  "papers": [
+    {
+      "title": "Monitor Accuracy Isn't the Answer: A Decision-Value Framework for Evaluating AI Agent Restart Monitors",
+      "url": "https://arxiv.org/pdf/2610.36544v1",
+      "source": "ArXiv",
+      "authors": "Siddharth Jain, Venkat N. Vedam",
+      "date": "2026-10-27",
+      "desc": "Classification accuracy and true-positive and false-positive rates alone do not determine whether restarting an AI agent improves success. Using an exact alarm-to-action identity for an independent clean restart with zero monitoring overhead, we show analytically that a monitor w"
+    },
+    {
+      "title": "CogArena: Benchmarking Multimodal Agents on Interactive Behavioral Experiments",
+      "url": "https://arxiv.org/pdf/2610.36484v1",
+      "source": "ArXiv",
+      "authors": "Kianté Fernandez, Caitlin Chen, Jialu Zhou",
+      "date": "2026-10-27",
+      "desc": "Claims about the cognitive capabilities of large language models are typically tested by translating behavioral paradigms into text prompts, bypassing the visual interfaces and time pressure through which human participants actually engage with experiments. At the same time, AI a"
+    },
+    {
+      "title": "I-HITL: Inalienable Human-in-the-Loop",
+      "url": "https://arxiv.org/pdf/2610.35835v1",
+      "source": "ArXiv",
+      "authors": "Samuel Breckenridge, Dani Vilardell, Wenhao Wang",
+      "date": "2026-10-26",
+      "desc": "Human oversight is a pillar of AI safety. It is often exercised by a human in the loop (HITL) who approves critical actions taken by an AI agent. AI agents' increasing ability to bypass guardrails, though, raises the question of how to enforce HITL robustly. We introduce the conc"
+    },
+    {
+      "title": "Infinity Machine: a self-improving AI agent for research",
+      "url": "https://arxiv.org/pdf/2610.35579v1",
+      "source": "ArXiv",
+      "authors": "Harish Santhanalakshmi Ganesan",
+      "date": "2026-10-26",
+      "desc": "We present the Infinity Machine, a self-improving AI agent that we use for research on problems whose answers aprogram or data can check. Each candidate solution is produced by a full tool-using agent that works for up to an hour in a fresh sandbox; proposers see only a public sc"
+    },
+    {
+      "title": "The Agent in the Middle: How AI-Mediated Access Reshapes Web Vulnerability Exploitation",
+      "url": "https://arxiv.org/pdf/2610.35541v2",
+      "source": "ArXiv",
+      "authors": "Ruozhao Yang, Jiongchi Yu, Ming Hu",
+      "date": "2026-10-26",
+      "desc": "Web services increasingly expose backend interfaces that let users delegate tasks to AI agents, which invoke service operations directly without navigating websites. This shift changes how existing Web vulnerabilities can be exploited. We investigate these changes through VELA, a"
+    },
+    {
+      "title": "ShutdownMod: Turning Any Trajectory into a Shutdown Evaluation",
+      "url": "https://arxiv.org/pdf/2610.35486v1",
+      "source": "ArXiv",
+      "authors": "Param Biyani, Sebastien Luyasu, Cedric Potvliege",
+      "date": "2026-10-26",
+      "desc": "Theory and experiments suggest that capable AI agents may resist shutdown. Existing shutdown evaluations are informative but limited in coverage and vulnerable to evaluation awareness. We introduce ShutdownMod, a method that turns any agent trajectory into a shutdown evaluation b"
+    },
+    {
+      "title": "Beyond Federated Learning: Decentralized Agentic Systems for Self-Evolving Clinical Intelligence",
+      "url": "https://arxiv.org/pdf/2610.35453v1",
+      "source": "ArXiv",
+      "authors": "Haoyuan Li, Mathias Funk, Aaqib Saeed",
+      "date": "2026-10-26",
+      "desc": "Clinical expertise is inherently distributed: it resides not in any single dataset or institution but in the accumulated reasoning experiences of thousands of clinicians navigating diverse patient populations, resource constraints, and evolving treatment protocols. Yet current ap"
+    },
+    {
+      "title": "PolicyMediator: Multi-Regional Policy Learning through Mediation Agents with Evolving Skills in OPC Ecosystems",
+      "url": "https://arxiv.org/pdf/2610.35997v1",
+      "source": "ArXiv",
+      "authors": "Jie Li, Bin Guo, Georgina Curto",
+      "date": "2026-10-26",
+      "desc": "One-person companies (OPCs) are emerging enterprises operated by individual entrepreneurs through digital platforms and LLM-based AI agents. These highly skilled entrepreneurs are characterized by being digital nomads, with limited reliance on local ecosystems. Governments in Chi"
+    }
+  ],
+  "tools": [
+    {
+      "title": "QingYunA/answer-me-with-html",
+      "url": "https://github.com/QingYunA/answer-me-with-html",
+      "source": "GitHub",
+      "stars": 4548,
+      "language": "JavaScript",
+      "desc": "Answer me with HTML — an agent skill that answers hard questions with a one-page HTML you can actually read. 让 AI Agent 用一页 HTML 回答复杂问题。"
+    },
+    {
+      "title": "openfilm/openfilm",
+      "url": "https://github.com/openfilm/openfilm",
+      "source": "GitHub",
+      "stars": 3194,
+      "language": "TypeScript",
+      "desc": "The open source AI video agent: turns any coding agent into a video agent, with an editor to change anything it makes."
+    },
+    {
+      "title": "Leonxlnx/earshot",
+      "url": "https://github.com/Leonxlnx/earshot",
+      "source": "GitHub",
+      "stars": 3053,
+      "language": "Python",
+      "desc": "Ears for coding agents: let AI hear, review and make sound. CPU-only, open source."
+    },
+    {
+      "title": "nanaism/yomiyasu",
+      "url": "https://github.com/nanaism/yomiyasu",
+      "source": "GitHub",
+      "stars": 2607,
+      "language": "Python",
+      "desc": "AI生成の日本語を自然な日本語へ推敲するAgent Skill / Agent Skill for Refining AI-Generated Japanese into Natural Japanese"
+    },
+    {
+      "title": "oil-oil/oil-ui",
+      "url": "https://github.com/oil-oil/oil-ui",
+      "source": "GitHub",
+      "stars": 2416,
+      "language": "Python",
+      "desc": "UI design skill for Claude Code, Codex and other AI agents: explore distinct directions, compare them side by side, refine against real screenshots. 给 AI Agent 用的 UI 设计 Skill。"
+    },
+    {
+      "title": "trhhubsd/ARTEX",
+      "url": "https://github.com/trhhubsd/ARTEX",
+      "source": "GitHub",
+      "stars": 2071,
+      "language": "Go",
+      "desc": "ARTEX · AI autonomous penetration testing system (multi-agent LLM, Go + Next.js) · AI 自主渗透测试系统 · 百度 agent+ 攻防挑战赛冠军"
+    },
+    {
+      "title": "StartLuxLabs/StartLux-Decision",
+      "url": "https://github.com/StartLuxLabs/StartLux-Decision",
+      "source": "GitHub",
+      "stars": 1595,
+      "language": "Python",
+      "desc": "Open decision models from 0.8B to 27B: a calibrated probability for every option in one pass, and a short thought only when unsure. Engine for vLLM, llama.cpp and MLX."
+    },
+    {
+      "title": "cranebeaker/coop-anything",
+      "url": "https://github.com/cranebeaker/coop-anything",
+      "source": "GitHub",
+      "stars": 1491,
+      "language": "Python",
+      "desc": "Co-op Anything: point your AI agent at any single-player game and play it with friends (online and/or splitscreen!). MCP server and playbook to let you reverse engineer, fix, test, ship and share what it learns."
+    }
+  ]
+}
