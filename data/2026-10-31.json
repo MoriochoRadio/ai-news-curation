@@ -1,0 +1,215 @@
+{
+  "date": "2026-10-31",
+  "generated_at": "2026-10-31T10:37:49+09:00",
+  "topics": [
+    "AI agents",
+    "LLM reasoning",
+    "multimodal models",
+    "open source AI",
+    "Rust in AI tooling",
+    "AI safety"
+  ],
+  "topic_labels": {
+    "AI agents": "AI 에이전트",
+    "LLM reasoning": "LLM 추론",
+    "multimodal models": "멀티모달 모델",
+    "open source AI": "오픈소스 AI",
+    "Rust in AI tooling": "AI 도구의 Rust",
+    "AI safety": "AI 안전성"
+  },
+  "counts": {
+    "trending": 5,
+    "papers": 8,
+    "tools": 8
+  },
+  "summary_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "trending": [
+    {
+      "title": "Claude Code regularly sends each background agent’s transcript to its model",
+      "url": "https://gist.github.com/flamerix-ai/c3905705cc4205e5de3011fa2e74efce",
+      "source": "HackerNews",
+      "points": 581,
+      "comments": 235,
+      "author": "NikZaal",
+      "date": "2026-10-29",
+      "desc": "",
+      "summary_ko": "Claude Code가 백그라운드 에이전트 대화 기록을 모델에 지속 전송해 컨텍스트 공유로 협업 품질을 높인다."
+    },
+    {
+      "title": "We ran AI agent swarms in Minecraft and Mindustry",
+      "url": "https://labs.ycombinator.com/projects/games/index.html",
+      "source": "HackerNews",
+      "points": 395,
+      "comments": 163,
+      "author": "sandslash",
+      "date": "2026-10-29",
+      "desc": "",
+      "summary_ko": "마인크래프트와 마인더스트리에서 AI 에이전트 군집을 실행해 복잡한 환경 내 다중 협업과 자율성을 검증했다."
+    },
+    {
+      "title": "Launch HN: Simantic (YC F26) – Firmware Simulation for AI Agents",
+      "url": "https://news.ycombinator.com/item?id=50291116",
+      "source": "HackerNews",
+      "points": 76,
+      "comments": 33,
+      "author": "shong0504",
+      "date": "2026-10-29",
+      "desc": "",
+      "summary_ko": "YC F26 심안틱이 AI 에이전트용 펌웨어 시뮬레이터를 출시해 하드웨어 없이 임베디드 개발과 테스트를 가속화한다."
+    },
+    {
+      "title": "Show HN: Sketch Stadium – watch your agent play Pictionary",
+      "url": "https://sketch.wakeshift.ai/games/q5ucru",
+      "source": "HackerNews",
+      "points": 24,
+      "comments": 8,
+      "author": "ericlevine",
+      "date": "2026-10-30",
+      "desc": "",
+      "summary_ko": "스케치 스타디움으로 에이전트가 그림 퀴즈를 푸는 과정을 관전하며 추론력과 창의성을 시각적으로 평가·비교한다."
+    },
+    {
+      "title": "A Defense Contractor Gave Their AI Agent Access to a Secure Pentagon System",
+      "url": "https://www.wired.com/story/a-defense-contractor-gave-their-personal-ai-agent-access-to-a-secure-pentagon-system/",
+      "source": "HackerNews",
+      "points": 21,
+      "comments": 6,
+      "author": "cdrnsf",
+      "date": "2026-10-29",
+      "desc": "",
+      "summary_ko": "방산업체가 AI 에이전트에 펜타곤 보안 시스템 접근을 허용해 군사 AI 자율 운용의 신뢰성과 보안 리스크 논쟁을 불렀다."
+    }
+  ],
+  "papers": [
+    {
+      "title": "Collaborative AI agents for autonomous experimental research with solid-state quantum spins",
+      "url": "https://arxiv.org/pdf/2610.40589v1",
+      "source": "ArXiv",
+      "authors": "El Mustapha Mansouri, Eikichi Kimura, Masato Koga",
+      "date": "2026-10-29",
+      "desc": "An autonomous research laboratory could conduct an entire study, from formulating questions to preparing manuscripts. Artificial intelligence (AI) offers one route towards this goal. Recent AI systems take on several research roles, but may draw conclusions that the evidence does"
+    },
+    {
+      "title": "Pre-Crime for Agents, at the Last Second: Probing When a Recruited Agent Gives In",
+      "url": "https://arxiv.org/pdf/2610.40588v1",
+      "source": "ArXiv",
+      "authors": "Leonidas Raghav",
+      "date": "2026-10-29",
+      "desc": "When AI agents share channels and credentials, one agent can press another to break its operator's rule, a first step towards collusion. Output filters check only what an agent has already written. Can an overseer tell beforehand that an agent is about to give in? We show that a "
+    },
+    {
+      "title": "Agentic process evidence",
+      "url": "https://arxiv.org/pdf/2610.40071v1",
+      "source": "ArXiv",
+      "authors": "Yuval Kainan, Carmit Hershman",
+      "date": "2026-10-29",
+      "desc": "The way software gets built is changing dramatically. AI agents now create pull requests, select dependencies, refactor codebases, interpret test failures, and execute infrastructure changes across the entire Software Development Life Cycle (SDLC). AI agents are autonomous team m"
+    },
+    {
+      "title": "MoLRSI: A Recursive Self-Improving AI agent for Molecular Discovery",
+      "url": "https://arxiv.org/pdf/2610.39714v1",
+      "source": "ArXiv",
+      "authors": "Yikun Zhang, Xiwei Cheng, Mingze Yuan",
+      "date": "2026-10-29",
+      "desc": "Molecular discovery requires navigating vast combinatorial search spaces while balancing competing biological objectives. AI agents can automate expert-defined molecular design protocols, but automation alone does not address how to optimize workflows for new tasks or improve the"
+    },
+    {
+      "title": "Can AI Agents Interface Clinicians and Complex Models?",
+      "url": "https://arxiv.org/pdf/2610.39681v1",
+      "source": "ArXiv",
+      "authors": "Giulio Colombini, Matteo Falcioni, Mario Massimo",
+      "date": "2026-10-29",
+      "desc": "Background: Contemporary healthcare institutions generate daily very large amounts of data, which contain highly useful information for the improvement of work organization, planning and overall efficiency. While models and techniques to extract these insights are well known and "
+    },
+    {
+      "title": "Sticky Collusion: Persistence of LLM Agent Collusion after Incentive Removal and Partner Replacement",
+      "url": "https://arxiv.org/pdf/2610.39660v1",
+      "source": "ArXiv",
+      "authors": "Joshua Adrian Cahyono",
+      "date": "2026-10-29",
+      "desc": "We ask whether collusion between AI agents survives once formed, when its incentive is removed or a colluder is replaced. Q-learning pricing agents stop colluding with a new rival; we test whether LLM agents do. We use the joint-task environment of Shi et al.\\ (2026), where two a"
+    },
+    {
+      "title": "Letting AI Formulate the Research Question: Autonomous Research Agents",
+      "url": "https://arxiv.org/pdf/2610.39620v1",
+      "source": "ArXiv",
+      "authors": "Ko Fujimura",
+      "date": "2026-10-29",
+      "desc": "Systems such as The AI Scientist have shown that AI agents can carry out and write up research, but in those demonstrations humans chose the research area and selected the outputs to show. We study letting the AI formulate the research question itself, and we report every run. Ou"
+    },
+    {
+      "title": "Compile Away Uncertainty: Self-Evolving Agent Skills via Programmatic Compilation",
+      "url": "https://arxiv.org/pdf/2610.39508v1",
+      "source": "ArXiv",
+      "authors": "Chengyu Yang, Yunxiang Zheng, Zongzheng Li",
+      "date": "2026-10-29",
+      "desc": "Self-evolving agent skills enable AI agents to accumulate and refine reusable procedural knowledge from interaction experience without updating model parameters. However, since such skills are typically represented as textual documents and executed through LLM reasoning, even pre"
+    }
+  ],
+  "tools": [
+    {
+      "title": "QingYunA/answer-me-with-html",
+      "url": "https://github.com/QingYunA/answer-me-with-html",
+      "source": "GitHub",
+      "stars": 4906,
+      "language": "JavaScript",
+      "desc": "Answer me with HTML — an agent skill that answers hard questions with a one-page HTML you can actually read. 让 AI Agent 用一页 HTML 回答复杂问题。"
+    },
+    {
+      "title": "openfilm/openfilm",
+      "url": "https://github.com/openfilm/openfilm",
+      "source": "GitHub",
+      "stars": 3772,
+      "language": "TypeScript",
+      "desc": "The open source AI video agent: turns any coding agent into a video agent, with an editor to change anything it makes."
+    },
+    {
+      "title": "Leonxlnx/earshot",
+      "url": "https://github.com/Leonxlnx/earshot",
+      "source": "GitHub",
+      "stars": 3322,
+      "language": "Python",
+      "desc": "Ears for coding agents: let AI hear, review and make sound. CPU-only, open source."
+    },
+    {
+      "title": "CopilotKit/OpenDuet",
+      "url": "https://github.com/CopilotKit/OpenDuet",
+      "source": "GitHub",
+      "stars": 1656,
+      "language": "TypeScript",
+      "desc": "An Open Source template for a proactive AI agent that gets your work done and keeps you in the loop."
+    },
+    {
+      "title": "cranebeaker/coop-anything",
+      "url": "https://github.com/cranebeaker/coop-anything",
+      "source": "GitHub",
+      "stars": 1652,
+      "language": "Python",
+      "desc": "Co-op Anything: point your AI agent at any single-player game and play it with friends (online and/or splitscreen!). MCP server and playbook to let you reverse engineer, fix, test, ship and share what it learns."
+    },
+    {
+      "title": "andyhuo520/digital-human-koubo",
+      "url": "https://github.com/andyhuo520/digital-human-koubo",
+      "source": "GitHub",
+      "stars": 1556,
+      "language": "TypeScript",
+      "desc": "AI digital-human talking-head videos from one photo: Renoise MCP generation + 5 editing styles + 48 creator-grade packaging components. Agent skill for Claude Code / Codex / OpenClaw / WorkBuddy …"
+    },
+    {
+      "title": "UnderleveledBuilder/awesome-short-drama-skills",
+      "url": "https://github.com/UnderleveledBuilder/awesome-short-drama-skills",
+      "source": "GitHub",
+      "stars": 1483,
+      "language": "HTML",
+      "desc": "AI 短剧 · 漫剧 Skill（技能包）精选：剧本、改编、分镜、Seedance / 可灵 / MiniMax 视频提示词，千问、豆包、龙虾 OpenClaw、WorkBuddy、Claude Code、Codex 等智能体可用 | Curated agent skills for AI short drama, micro drama / microdrama, vertical drama and manju (AI comic drama): screenwriting, storyboards, Seedance / Kling / MiniMax video prompts"
+    },
+    {
+      "title": "rociiu/talorys",
+      "url": "https://github.com/rociiu/talorys",
+      "source": "GitHub",
+      "stars": 1424,
+      "language": "TypeScript",
+      "desc": "Your personal AI agent in your own Cloudflare account. Chat, memory, tasks, notes and scheduled reminders, deployed with one command: npx create-talorys@latest. Free-tier friendly, single-user, no telemetry."
+    }
+  ]
+}
