@@ -1,0 +1,210 @@
+{
+  "date": "2026-11-03",
+  "generated_at": "2026-11-03T12:29:04+09:00",
+  "topics": [
+    "AI agents",
+    "LLM reasoning",
+    "multimodal models",
+    "open source AI",
+    "Rust in AI tooling",
+    "AI safety"
+  ],
+  "topic_labels": {
+    "AI agents": "AI 에이전트",
+    "LLM reasoning": "LLM 추론",
+    "multimodal models": "멀티모달 모델",
+    "open source AI": "오픈소스 AI",
+    "Rust in AI tooling": "AI 도구의 Rust",
+    "AI safety": "AI 안전성"
+  },
+  "counts": {
+    "trending": 5,
+    "papers": 8,
+    "tools": 8
+  },
+  "summary_model": null,
+  "trending": [
+    {
+      "title": "AI agent swarms in Minecraft fail to build civilization, drown in bureaucracy",
+      "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/ai-agent-swarms-unleashed-in-minecraft-to-build-a-thriving-civilization-50-agent-teams-fail-after-falling-into-paralyzing-bureaucracy",
+      "source": "HackerNews",
+      "points": 176,
+      "comments": 90,
+      "author": "entryleveljobsc",
+      "date": "2026-11-01",
+      "desc": ""
+    },
+    {
+      "title": "Launch HN: Momentic (YC W24) – Agents that catch bugs by using your app",
+      "url": "https://momentic.ai/",
+      "source": "HackerNews",
+      "points": 131,
+      "comments": 86,
+      "author": "wuweiweiwu",
+      "date": "2026-11-02",
+      "desc": ""
+    },
+    {
+      "title": "Last night an AI agent performed brain surgery on a mouse",
+      "url": "https://twitter.com/OcanaSantero/status/2115442964574908902",
+      "source": "HackerNews",
+      "points": 125,
+      "comments": 100,
+      "author": "FacZap",
+      "date": "2026-11-02",
+      "desc": ""
+    },
+    {
+      "title": "LongCat-2.5: Native Multimodality for Agentic Tasks",
+      "url": "https://longcat.ai/blog/longcat-2.5/",
+      "source": "HackerNews",
+      "points": 79,
+      "comments": 22,
+      "author": "pretext",
+      "date": "2026-11-02",
+      "desc": ""
+    },
+    {
+      "title": "Muse AI agent is a commercial surveillance network disguised as an AI assistant",
+      "url": "https://paulfwalsh.substack.com/p/metas-muse-ai-agent-is-a-commercial",
+      "source": "HackerNews",
+      "points": 60,
+      "comments": 6,
+      "author": "Anon84",
+      "date": "2026-11-01",
+      "desc": ""
+    }
+  ],
+  "papers": [
+    {
+      "title": "Autonomous Analysis of Thermoelectric Materials Big Data by Multi-Agentic AI and Construction of a Knowledge Base and Specialized AI",
+      "url": "https://arxiv.org/pdf/2611.00627v1",
+      "source": "ArXiv",
+      "authors": "Yusuke Hashimoto, Takaaki Tomai",
+      "date": "2026-10-31",
+      "desc": "Extracting knowledge from large databases of experimental materials data requires repeated analyses and reusable records of their choices and results. We developed Multi-Agentic AI (MAA), a multi-agent system in which AI agents with distinct roles analyze experimental thermoelect"
+    },
+    {
+      "title": "XLA from the Trenches: Correctness on TPU Workloads at Scale",
+      "url": "https://arxiv.org/pdf/2611.00624v1",
+      "source": "ArXiv",
+      "authors": "Ignacio Cano, Amir Saadat, Rishipal Singh Bhatia",
+      "date": "2026-10-31",
+      "desc": "Accelerating modern foundational models has pushed domain-specific compilers toward increasingly complex, multi-tiered optimization pipelines. However, this heavy optimization focus introduces delicate tradeoffs between peak execution performance and correctness. Subtle codegen d"
+    },
+    {
+      "title": "Dependence-Aware Risk Assessment and Optimal Design of AI-Agent Safeguard Systems",
+      "url": "https://arxiv.org/pdf/2611.00386v1",
+      "source": "ArXiv",
+      "authors": "Yijia Li, Maochao Xu, Peng Zhao",
+      "date": "2026-10-30",
+      "desc": "Large language model (LLM) agents increasingly rely on safeguards to prevent unauthorized actions while preserving legitimate service. However, existing risk assessments often focus on individual safeguard performance while overlooking dependence among safeguard decisions. This p"
+    },
+    {
+      "title": "When AI Agents Act on Our Behalf: A Taxonomy of Human-Agent Interaction Failure",
+      "url": "https://arxiv.org/pdf/2611.00291v1",
+      "source": "ArXiv",
+      "authors": "Canwen Wang, Qing Xiao, Haiyi Zhu",
+      "date": "2026-10-30",
+      "desc": "AI agents write and execute code, manipulate user interfaces, and transact on their users' behalf. We ask what forms failure takes in human-agent interaction, and how those forms change as agents act with greater autonomy. From 695 documented incidents in two public repositories,"
+    },
+    {
+      "title": "Quantifying Local and Global Fidelity of Nonlinear Embeddings",
+      "url": "https://arxiv.org/pdf/2611.00290v1",
+      "source": "ArXiv",
+      "authors": "Henry Han",
+      "date": "2026-10-30",
+      "desc": "Dimension reduction methods are chosen by a common claim: t-SNE and UMAP preserve local structure, and PCA preserves global structure. Checking it on given data takes local and global scores on one scale and a test that compares two maps. Both scores come from one curve. The loca"
+    },
+    {
+      "title": "AutoAnalysis: An automated, self-updating meta-analysis of human-AI collaboration",
+      "url": "https://arxiv.org/pdf/2610.42001v1",
+      "source": "ArXiv",
+      "authors": "Michelle Vaccaro, Abdullah Almaatouq, Thomas W. Malone",
+      "date": "2026-10-30",
+      "desc": "As generative artificial intelligence (AI) becomes more capable and widely used, understanding when and how humans should work with these systems is becoming increasingly important. However, the empirical evidence in this space offers conflicting recommendations, which leaves ind"
+    },
+    {
+      "title": "SecPO: Principled Adversarial Training for Prompt Injection Security",
+      "url": "https://arxiv.org/pdf/2610.41998v1",
+      "source": "ArXiv",
+      "authors": "Sizhe Chen, Yibo Peng, Jaewon Chang",
+      "date": "2026-10-30",
+      "desc": "Recognized as a top threat to AI agents, prompt injection allows instructions from untrusted data (email, documents, websites) to manipulate the agent's operation. The existing best-defended LLM, Meta-SecAlign, is trained with the DPO loss but still suffers from attack success ra"
+    },
+    {
+      "title": "Evidence-Guided Recovery for AI Agents with Ambiguous Tool Outcomes and Partial Execution",
+      "url": "https://arxiv.org/pdf/2610.41453v1",
+      "source": "ArXiv",
+      "authors": "Genliang Zhu, Xiaobo Chen, Ziyuan Wang",
+      "date": "2026-10-30",
+      "desc": "Tool timeouts can leave AI agents facing ambiguous tool outcomes and partial execution: an action may have failed, committed or remained in flight while other workflow steps have already completed. We formulate evidence-guided task recovery over approved obligations, provider cap"
+    }
+  ],
+  "tools": [
+    {
+      "title": "wangzan101/Mika",
+      "url": "https://github.com/wangzan101/Mika",
+      "source": "GitHub",
+      "stars": 5490,
+      "language": "Kotlin",
+      "desc": "An on-device AI agent for Android that operates apps and the web to get things done for you."
+    },
+    {
+      "title": "Leonxlnx/earshot",
+      "url": "https://github.com/Leonxlnx/earshot",
+      "source": "GitHub",
+      "stars": 3573,
+      "language": "Python",
+      "desc": "Ears for coding agents: let AI hear, review and make sound. CPU-only, open source."
+    },
+    {
+      "title": "qybaihe/bla",
+      "url": "https://github.com/qybaihe/bla",
+      "source": "GitHub",
+      "stars": 1996,
+      "language": "JavaScript",
+      "desc": "🛡️ BLA (Blind LLM Agents) — Adversarial defense shield that protects binaries, Electron apps, JS bundles, Python, and WebAssembly against AI reverse-engineering agents like REA. Poison -> Exhaust -> Hallucinate."
+    },
+    {
+      "title": "CopilotKit/OpenDuet",
+      "url": "https://github.com/CopilotKit/OpenDuet",
+      "source": "GitHub",
+      "stars": 1863,
+      "language": "TypeScript",
+      "desc": "An Open Source template for a proactive AI agent that gets your work done and keeps you in the loop."
+    },
+    {
+      "title": "cranebeaker/coop-anything",
+      "url": "https://github.com/cranebeaker/coop-anything",
+      "source": "GitHub",
+      "stars": 1825,
+      "language": "Python",
+      "desc": "Co-op Anything: point your AI agent at any single-player game and play it with friends (online and/or splitscreen!). MCP server and playbook to let you reverse engineer, fix, test, ship and share what it learns."
+    },
+    {
+      "title": "andyhuo520/digital-human-koubo",
+      "url": "https://github.com/andyhuo520/digital-human-koubo",
+      "source": "GitHub",
+      "stars": 1732,
+      "language": "TypeScript",
+      "desc": "AI digital-human talking-head videos from one photo: Renoise MCP generation + 5 editing styles + 48 creator-grade packaging components. Agent skill for Claude Code / Codex / OpenClaw / WorkBuddy …"
+    },
+    {
+      "title": "UnderleveledBuilder/awesome-short-drama-skills",
+      "url": "https://github.com/UnderleveledBuilder/awesome-short-drama-skills",
+      "source": "GitHub",
+      "stars": 1680,
+      "language": "HTML",
+      "desc": "AI 短剧 · 漫剧 Skill（技能包）精选：剧本、改编、分镜、Seedance / 可灵 / MiniMax 视频提示词，千问、豆包、龙虾 OpenClaw、WorkBuddy、Claude Code、Codex 等智能体可用 | Curated agent skills for AI short drama, micro drama / microdrama, vertical drama and manju (AI comic drama): screenwriting, storyboards, Seedance / Kling / MiniMax video prompts"
+    },
+    {
+      "title": "DenisSergeevitch/ex-ussr-kinship-research",
+      "url": "https://github.com/DenisSergeevitch/ex-ussr-kinship-research",
+      "source": "GitHub",
+      "stars": 1517,
+      "language": "Python",
+      "desc": "Evidence-first genealogy skill for AI agents (Codex, Claude Code): church books, civil, military, deportation and repression records across the former USSR. Replies in your language."
+    }
+  ]
+}
