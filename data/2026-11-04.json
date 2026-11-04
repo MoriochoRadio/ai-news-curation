@@ -1,0 +1,235 @@
+{
+  "date": "2026-11-04",
+  "generated_at": "2026-11-04T11:23:16+09:00",
+  "topics": [
+    "AI agents",
+    "LLM reasoning",
+    "multimodal models",
+    "open source AI",
+    "Rust in AI tooling",
+    "AI safety"
+  ],
+  "topic_labels": {
+    "AI agents": "AI 에이전트",
+    "LLM reasoning": "LLM 추론",
+    "multimodal models": "멀티모달 모델",
+    "open source AI": "오픈소스 AI",
+    "Rust in AI tooling": "AI 도구의 Rust",
+    "AI safety": "AI 안전성"
+  },
+  "counts": {
+    "trending": 7,
+    "papers": 8,
+    "tools": 8
+  },
+  "summary_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "trending": [
+    {
+      "title": "Launch HN: Momentic (YC W24) – Agents that catch bugs by using your app",
+      "url": "https://momentic.ai/",
+      "source": "HackerNews",
+      "points": 159,
+      "comments": 124,
+      "author": "wuweiweiwu",
+      "date": "2026-11-02",
+      "desc": "",
+      "summary_ko": "Momentic(YC W24)이 앱을 직접 사용하며 버그를 자동 탐지하는 에이전트를 출시해 개발 생산성을 높인다."
+    },
+    {
+      "title": "Gitbook Breached",
+      "url": "https://news.ycombinator.com/item?id=50354336",
+      "source": "HackerNews",
+      "points": 145,
+      "comments": 35,
+      "author": "punchmesan",
+      "date": "2026-11-03",
+      "desc": "",
+      "summary_ko": "깃북(GitBook) 해킹으로 사용자 데이터 유출 우려가 커져 보안 강화 필요성이 대두된다."
+    },
+    {
+      "title": "Last night an AI agent performed brain surgery on a mouse",
+      "url": "https://twitter.com/OcanaSantero/status/2115442964574908902",
+      "source": "HackerNews",
+      "points": 142,
+      "comments": 116,
+      "author": "FacZap",
+      "date": "2026-11-02",
+      "desc": "",
+      "summary_ko": "어제 AI 에이전트가 쥐 뇌수술을 성공적으로 수행해 의료 로봇 자율화 가능성을 입증했다."
+    },
+    {
+      "title": "LongCat-2.5: Native Multimodality for Agentic Tasks",
+      "url": "https://longcat.ai/blog/longcat-2.5/",
+      "source": "HackerNews",
+      "points": 85,
+      "comments": 26,
+      "author": "pretext",
+      "date": "2026-11-02",
+      "desc": "",
+      "summary_ko": "LongCat-2.5가 네이티브 멀티모달 기능을 탑재해 에이전트 작업 수행 능력을 크게 확장했다."
+    },
+    {
+      "title": "Show HN: Kairos – Open-source risk and fraud decisioning platform",
+      "url": "https://github.com/finic-ai/kairos",
+      "source": "HackerNews",
+      "points": 63,
+      "comments": 7,
+      "author": "ayanb9440",
+      "date": "2026-11-03",
+      "desc": "",
+      "summary_ko": "오픈소스 위험·부정 판단 플랫폼 Kairos가 공개돼 실시간 사기 탐지 및 의사결정 자동화를 지원한다."
+    },
+    {
+      "title": "Open models can do 90 percent of agentic work at a twentieth of the cost",
+      "url": "https://www.theregister.com/ai-and-ml/2026/11/03/open-models-can-do-90-percent-of-agentic-work-at-a-twentieth-of-the-cost-of-a-frontier-llm-gartner/5307132",
+      "source": "HackerNews",
+      "points": 27,
+      "comments": 4,
+      "author": "Betelbuddy",
+      "date": "2026-11-03",
+      "desc": ""
+    },
+    {
+      "title": "AI agents hallucinate prices: LLM grounding with live data",
+      "url": "https://blog.apify.com/llm-grounding-with-live-data/",
+      "source": "HackerNews",
+      "points": 15,
+      "comments": 0,
+      "author": "Dylan-Hayes",
+      "date": "2026-11-03",
+      "desc": ""
+    }
+  ],
+  "papers": [
+    {
+      "title": "Agentic Path Maps: Exposing an Agent's Traversal Through the Garden of Forking Paths",
+      "url": "https://arxiv.org/pdf/2611.04183v1",
+      "source": "ArXiv",
+      "authors": "Madeleine Grunde-McLaughlin, Hafsah Usman, Daniel Mitroshkov",
+      "date": "2026-11-03",
+      "desc": "When an AI agent executes an underspecified task, it embeds choices that may contradict unarticulated user context and preferences. However, interrupting the user for clarification on all such decisions is untenable. How might agents communicate impactful, but unexplored, paths t"
+    },
+    {
+      "title": "Interpretable Early Termination of Web Navigation Agents via Closed Sequential Pattern Mining",
+      "url": "https://arxiv.org/pdf/2611.04142v1",
+      "source": "ArXiv",
+      "authors": "Sergio Talavera, Magdalini Eirinaki",
+      "date": "2026-11-03",
+      "desc": "Web navigation agents built on open-weight language models fail often and fail late, with most of the tokens spent after the trajectory has become unrecoverable. Recent work has shown that early termination is a viable cost-reduction strategy, but existing approaches produce opaq"
+    },
+    {
+      "title": "When Music Needs Meaning: Semantic Communication as a Transformative Enabler for the Musical Metaverse",
+      "url": "https://arxiv.org/pdf/2611.03995v1",
+      "source": "ArXiv",
+      "authors": "Ali Al Housseini, Jaime Llorca, Cristina Rottondi",
+      "date": "2026-11-02",
+      "desc": "The Musical Metaverse (MM) enables geographically distributed musicians, audiences, sound engineers, and AI agents to interact through synchronized audio, visual, kinematic, and haptic streams, imposing latency, synchronization, bandwidth, and scalability requirements that are di"
+    },
+    {
+      "title": "ProofPaths: An AI Agent Framework for Assessing Student Reasoning",
+      "url": "https://arxiv.org/pdf/2611.03882v1",
+      "source": "ArXiv",
+      "authors": "Mohsen Hariri, Vipin Chaudhary",
+      "date": "2026-11-02",
+      "desc": "Students can use large language models to complete assignments, but a correct solution does not establish whether they understand the reasoning behind it. Individualized interviews can probe that understanding but require recurring staff effort. We introduce ProofPaths, an AI age"
+    },
+    {
+      "title": "Strategist: Evolving Reasoning with Agents",
+      "url": "https://arxiv.org/pdf/2611.03618v1",
+      "source": "ArXiv",
+      "authors": "Taiming Lu, Qi Xu, Zhigang Hua",
+      "date": "2026-11-02",
+      "desc": "A model is only half of an AI agent system. The other half is the inference strategy: the reasoning procedure that turns model calls into a response. Today that second half is written by hand, and the experience of building one strategy never carries to the next. We introduce Str"
+    },
+    {
+      "title": "Four Bridges: Measuring Deception Propensity in a Multi-Agent Game",
+      "url": "https://arxiv.org/pdf/2611.03600v1",
+      "source": "ArXiv",
+      "authors": "Raphael Casey, Michael Simeone, Alberto Tosato",
+      "date": "2026-11-02",
+      "desc": "AI agents are increasingly deployed in settings where they interact and coordinate with other agents, yet honesty is mostly measured in single-turn, single-agent benchmarks that pressure the model to deceive. We study deception that emerges in multi-agent interaction without any "
+    },
+    {
+      "title": "Harder Than the Task: From Technical to Organizational Difficulty in AI Benchmarking",
+      "url": "https://arxiv.org/pdf/2611.03494v1",
+      "source": "ArXiv",
+      "authors": "Victor Barres, Aden Barton, Nicolai J. Foss",
+      "date": "2026-11-02",
+      "desc": "AI benchmarks have made remarkable progress in measuring the ability of AI systems to perform increasingly demanding cognitive and technical tasks. Yet, many of these benchmarks treat technical tasks as the unit of analysis, while much economically valuable work takes place withi"
+    },
+    {
+      "title": "DeliverBench: Benchmarking AI Agents on Delivering Realistic Multi-Stage Professional Projects",
+      "url": "https://arxiv.org/pdf/2611.03412v1",
+      "source": "ArXiv",
+      "authors": "Yumou Liu, Mingju Chen, Zhoufutu Wen",
+      "date": "2026-11-02",
+      "desc": "LLM agents are judged by what they deliver, and in professional work what gets delivered is a project, not a task. A project pays off only if the whole package holds, and one weak part can limit the value of the rest. Yet existing benchmarks mostly test agents on one task at a ti"
+    }
+  ],
+  "tools": [
+    {
+      "title": "wangzan101/Mika",
+      "url": "https://github.com/wangzan101/Mika",
+      "source": "GitHub",
+      "stars": 6108,
+      "language": "Kotlin",
+      "desc": "An on-device AI agent for Android that operates apps and the web to get things done for you."
+    },
+    {
+      "title": "Leonxlnx/earshot",
+      "url": "https://github.com/Leonxlnx/earshot",
+      "source": "GitHub",
+      "stars": 3775,
+      "language": "Python",
+      "desc": "Ears for coding agents: let AI hear, review and make sound. CPU-only, open source."
+    },
+    {
+      "title": "qybaihe/bla",
+      "url": "https://github.com/qybaihe/bla",
+      "source": "GitHub",
+      "stars": 2073,
+      "language": "TypeScript",
+      "desc": "🛡️ BLA (Blind LLM Agents) — Adversarial defense shield that protects binaries, Electron apps, JS bundles, Python, and WebAssembly against AI reverse-engineering agents like REA. Poison -> Exhaust -> Hallucinate."
+    },
+    {
+      "title": "CopilotKit/OpenDuet",
+      "url": "https://github.com/CopilotKit/OpenDuet",
+      "source": "GitHub",
+      "stars": 1907,
+      "language": "TypeScript",
+      "desc": "An Open Source template for a proactive AI agent that gets your work done and keeps you in the loop."
+    },
+    {
+      "title": "cranebeaker/coop-anything",
+      "url": "https://github.com/cranebeaker/coop-anything",
+      "source": "GitHub",
+      "stars": 1863,
+      "language": "Python",
+      "desc": "Co-op Anything: point your AI agent at any single-player game and play it with friends (online and/or splitscreen!). MCP server and playbook to let you reverse engineer, fix, test, ship and share what it learns."
+    },
+    {
+      "title": "DenisSergeevitch/ex-ussr-kinship-research",
+      "url": "https://github.com/DenisSergeevitch/ex-ussr-kinship-research",
+      "source": "GitHub",
+      "stars": 1779,
+      "language": "Python",
+      "desc": "Evidence-first genealogy skill for AI agents (Codex, Claude Code): church books, civil, military, deportation and repression records across the former USSR. Replies in your language."
+    },
+    {
+      "title": "andyhuo520/digital-human-koubo",
+      "url": "https://github.com/andyhuo520/digital-human-koubo",
+      "source": "GitHub",
+      "stars": 1759,
+      "language": "TypeScript",
+      "desc": "AI digital-human talking-head videos from one photo: Renoise MCP generation + 5 editing styles + 48 creator-grade packaging components. Agent skill for Claude Code / Codex / OpenClaw / WorkBuddy …"
+    },
+    {
+      "title": "UnderleveledBuilder/awesome-short-drama-skills",
+      "url": "https://github.com/UnderleveledBuilder/awesome-short-drama-skills",
+      "source": "GitHub",
+      "stars": 1736,
+      "language": "HTML",
+      "desc": "AI 短剧 · 漫剧 Skill（技能包）精选：剧本、改编、分镜、Seedance / 可灵 / MiniMax 视频提示词，千问、豆包、龙虾 OpenClaw、WorkBuddy、Claude Code、Codex 等智能体可用 | Curated agent skills for AI short drama, micro drama / microdrama, vertical drama and manju (AI comic drama): screenwriting, storyboards, Seedance / Kling / MiniMax video prompts"
+    }
+  ]
+}
