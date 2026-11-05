@@ -1,0 +1,240 @@
+{
+  "date": "2026-11-05",
+  "generated_at": "2026-11-05T11:31:22+09:00",
+  "topics": [
+    "AI agents",
+    "LLM reasoning",
+    "multimodal models",
+    "open source AI",
+    "Rust in AI tooling",
+    "AI safety"
+  ],
+  "topic_labels": {
+    "AI agents": "AI 에이전트",
+    "LLM reasoning": "LLM 추론",
+    "multimodal models": "멀티모달 모델",
+    "open source AI": "오픈소스 AI",
+    "Rust in AI tooling": "AI 도구의 Rust",
+    "AI safety": "AI 안전성"
+  },
+  "counts": {
+    "trending": 8,
+    "papers": 8,
+    "tools": 8
+  },
+  "summary_model": null,
+  "trending": [
+    {
+      "title": "Gitbook Breached",
+      "url": "https://news.ycombinator.com/item?id=50354336",
+      "source": "HackerNews",
+      "points": 163,
+      "comments": 39,
+      "author": "punchmesan",
+      "date": "2026-11-03",
+      "desc": ""
+    },
+    {
+      "title": "Ask HN: What's your current AI agentic setup?",
+      "url": "https://news.ycombinator.com/item?id=50366117",
+      "source": "HackerNews",
+      "points": 131,
+      "comments": 155,
+      "author": "eggbrain",
+      "date": "2026-11-04",
+      "desc": ""
+    },
+    {
+      "title": "Show HN: Kairos – Open-source risk and fraud decisioning platform",
+      "url": "https://github.com/finic-ai/kairos",
+      "source": "HackerNews",
+      "points": 104,
+      "comments": 31,
+      "author": "ayanb9440",
+      "date": "2026-11-03",
+      "desc": ""
+    },
+    {
+      "title": "Launch HN: Kino AI (YC S23) – AI media manager and video editor",
+      "url": "https://news.ycombinator.com/item?id=50368804",
+      "source": "HackerNews",
+      "points": 71,
+      "comments": 26,
+      "author": "lukeigel",
+      "date": "2026-11-04",
+      "desc": ""
+    },
+    {
+      "title": "YC's Garry Tan uses AI agents so much, he spends up to $200K a year on tokens",
+      "url": "https://techcrunch.com/2026/11/02/y-combinators-garry-tan-uses-ai-agents-so-much-he-spends-up-to-200k-a-year-on-tokens/",
+      "source": "HackerNews",
+      "points": 67,
+      "comments": 76,
+      "author": "karakoram",
+      "date": "2026-11-04",
+      "desc": ""
+    },
+    {
+      "title": "You'll need nerves of steel to work with AI agents",
+      "url": "https://orchidfiles.com/youll-need-nerves-of-steel-to-work-with-ai-agents/",
+      "source": "HackerNews",
+      "points": 36,
+      "comments": 46,
+      "author": "theorchid",
+      "date": "2026-11-05",
+      "desc": ""
+    },
+    {
+      "title": "Show HN: Gauge – Open-Source CLI to recursively improve your docs",
+      "url": "https://github.com/gauge-sh/gauge-cli",
+      "source": "HackerNews",
+      "points": 17,
+      "comments": 3,
+      "author": "0x63_Problems",
+      "date": "2026-11-04",
+      "desc": ""
+    },
+    {
+      "title": "AI agents hallucinate prices: LLM grounding with live data",
+      "url": "https://blog.apify.com/llm-grounding-with-live-data/",
+      "source": "HackerNews",
+      "points": 15,
+      "comments": 0,
+      "author": "Dylan-Hayes",
+      "date": "2026-11-03",
+      "desc": ""
+    }
+  ],
+  "papers": [
+    {
+      "title": "PAYWORTHY: Can LLMs Predict Which Freelance Jobs an AI Agent Will Complete?",
+      "url": "https://arxiv.org/pdf/2611.05759v1",
+      "source": "ArXiv",
+      "authors": "Mohammad Reza Rezaei, Dingxian Wang, Brett Levert",
+      "date": "2026-11-03",
+      "desc": "Before an AI agent takes on a paid job, someone has to judge whether it is likely to succeed. We test whether frontier language models can make this call before any attempt. We propose PAYWORTHY which contains 1{,}494 real freelance job postings, sampled from 18.8M postings made "
+    },
+    {
+      "title": "Assurance-Conditioned Continuous Authorization for Autonomous AI Agents",
+      "url": "https://arxiv.org/pdf/2611.05632v1",
+      "source": "ArXiv",
+      "authors": "Mehdi Shajari",
+      "date": "2026-11-03",
+      "desc": "Autonomous software agents can act through tools, delegate work, and change their models or execution environments while earlier authorizations remain in flight. We present Assurance-Conditioned Continuous Authorization (ACCA), an approach designed to be harness-independent, for "
+    },
+    {
+      "title": "Anduin: A sybil-resistant agentic marketplace reputation system",
+      "url": "https://arxiv.org/pdf/2611.05586v1",
+      "source": "ArXiv",
+      "authors": "Reza Ramji, Preston Vander Vos, Ziming Zeng",
+      "date": "2026-11-03",
+      "desc": "As autonomous AI agents enter permissionless onchain markets, selecting new service providers remains a core challenge. Existing reputation systems depend on scarce resources like human curation, identity credentials, or voluntary reviews, while naive volume rankings are vulnerab"
+    },
+    {
+      "title": "SlackBench: Benchmarking Agents on Collaborative Projects Grounded in Real Code Repositories",
+      "url": "https://arxiv.org/pdf/2611.05512v1",
+      "source": "ArXiv",
+      "authors": "Mingxuan Li, Huanzhi Mao, Ruitao Zheng",
+      "date": "2026-11-03",
+      "desc": "AI Agents are becoming digital coworkers that can browse the web, write code, run experiments, and assist humans over extended horizons. Yet existing benchmarks fall short of real knowledge work: many rely on synthetic data or isolated tasks, missing the complex, multi-party dyna"
+    },
+    {
+      "title": "AgentAM: An AI Agent for Spatter- and Defect-Aware Process Optimization in Laser Powder Bed Fusion",
+      "url": "https://arxiv.org/pdf/2611.05171v1",
+      "source": "ArXiv",
+      "authors": "Olabode T. Ajenifujah, Amir Barati Farimani",
+      "date": "2026-11-03",
+      "desc": "Predictive models for laser powder bed fusion (LPBF) are rarely used on the shop floor because querying them requires programming and model-specific knowledge. We present AgentAM, a large language model (LLM) agent that gives process engineers natural-language access to CFD-train"
+    },
+    {
+      "title": "Where Is the Truth When AI Agents Disagree? Dependence-Aware Belief Propagation for Unsupervised Truth Discovery (Extended Version)",
+      "url": "https://arxiv.org/pdf/2611.04805v1",
+      "source": "ArXiv",
+      "authors": "Laure Berti-Equille",
+      "date": "2026-11-03",
+      "desc": "LLM agents often give conflicting answers to the same question, and many deployed agents are variants of one base model, so their errors are correlated. We study truth discovery among such agents: inferring the true answer and each agent's reliability without labels. Classical tr"
+    },
+    {
+      "title": "Inter-Agent Influence: Evaluating Persuasion, Deception, and Coercion in Multi-Agent Systems",
+      "url": "https://arxiv.org/pdf/2611.04556v1",
+      "source": "ArXiv",
+      "authors": "Chandler Smith, Qi Guo, Cecilia Elena Tilli",
+      "date": "2026-11-03",
+      "desc": "The deployment of AI agents in multi-agent settings enables inter-agent influence, whereby agents can strategically steer each other's behaviour towards an intended outcome. Such capabilities pose novel risks, as malicious agents could direct others towards harmful actions. In th"
+    },
+    {
+      "title": "Signals: Continuous Diagnostics of AI Agents",
+      "url": "https://arxiv.org/pdf/2611.04507v1",
+      "source": "ArXiv",
+      "authors": "Amey Rambatla, Vatsal Goel, Sagar Gaur",
+      "date": "2026-11-03",
+      "desc": "AI agents can make incorrect decisions or waste resources even when their tools and infrastructure work normally. Their nondeterministic behavior makes these problems difficult to reproduce and diagnose. We developed Signals to identify such problems from agentic traces and sugge"
+    }
+  ],
+  "tools": [
+    {
+      "title": "wangzan101/Mika",
+      "url": "https://github.com/wangzan101/Mika",
+      "source": "GitHub",
+      "stars": 6684,
+      "language": "Kotlin",
+      "desc": "An on-device AI agent for Android that operates apps and the web to get things done for you."
+    },
+    {
+      "title": "Leonxlnx/earshot",
+      "url": "https://github.com/Leonxlnx/earshot",
+      "source": "GitHub",
+      "stars": 3900,
+      "language": "Python",
+      "desc": "Ears for coding agents: let AI hear, review and make sound. CPU-only, open source."
+    },
+    {
+      "title": "qybaihe/bla",
+      "url": "https://github.com/qybaihe/bla",
+      "source": "GitHub",
+      "stars": 2306,
+      "language": "TypeScript",
+      "desc": "🛡️ BLA (Blind LLM Agents) — Adversarial defense shield that protects binaries, Electron apps, JS bundles, Python, and WebAssembly against AI reverse-engineering agents like REA. Poison -> Exhaust -> Hallucinate."
+    },
+    {
+      "title": "CopilotKit/OpenDuet",
+      "url": "https://github.com/CopilotKit/OpenDuet",
+      "source": "GitHub",
+      "stars": 1942,
+      "language": "TypeScript",
+      "desc": "An Open Source template for a proactive AI agent that gets your work done and keeps you in the loop."
+    },
+    {
+      "title": "benjitaylor/skills",
+      "url": "https://github.com/benjitaylor/skills",
+      "source": "GitHub",
+      "stars": 1936,
+      "language": "TypeScript",
+      "desc": "Skills for AI coding agents."
+    },
+    {
+      "title": "DenisSergeevitch/ex-ussr-kinship-research",
+      "url": "https://github.com/DenisSergeevitch/ex-ussr-kinship-research",
+      "source": "GitHub",
+      "stars": 1899,
+      "language": "Python",
+      "desc": "Evidence-first genealogy skill for AI agents (Codex, Claude Code): church books, civil, military, deportation and repression records across the former USSR. Replies in your language."
+    },
+    {
+      "title": "cranebeaker/coop-anything",
+      "url": "https://github.com/cranebeaker/coop-anything",
+      "source": "GitHub",
+      "stars": 1893,
+      "language": "Python",
+      "desc": "Co-op Anything: point your AI agent at any single-player game and play it with friends (online and/or splitscreen!). MCP server and playbook to let you reverse engineer, fix, test, ship and share what it learns."
+    },
+    {
+      "title": "UnderleveledBuilder/awesome-short-drama-skills",
+      "url": "https://github.com/UnderleveledBuilder/awesome-short-drama-skills",
+      "source": "GitHub",
+      "stars": 1794,
+      "language": "HTML",
+      "desc": "AI 短剧 · 漫剧 Skill（技能包）精选：剧本、改编、分镜、Seedance / 可灵 / MiniMax 视频提示词，千问、豆包、龙虾 OpenClaw、WorkBuddy、Claude Code、Codex 等智能体可用 | Curated agent skills for AI short drama, micro drama / microdrama, vertical drama and manju (AI comic drama): screenwriting, storyboards, Seedance / Kling / MiniMax video prompts"
+    }
+  ]
+}
