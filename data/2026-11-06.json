@@ -1,0 +1,225 @@
+{
+  "date": "2026-11-06",
+  "generated_at": "2026-11-06T11:31:48+09:00",
+  "topics": [
+    "AI agents",
+    "LLM reasoning",
+    "multimodal models",
+    "open source AI",
+    "Rust in AI tooling",
+    "AI safety"
+  ],
+  "topic_labels": {
+    "AI agents": "AI 에이전트",
+    "LLM reasoning": "LLM 추론",
+    "multimodal models": "멀티모달 모델",
+    "open source AI": "오픈소스 AI",
+    "Rust in AI tooling": "AI 도구의 Rust",
+    "AI safety": "AI 안전성"
+  },
+  "counts": {
+    "trending": 6,
+    "papers": 8,
+    "tools": 8
+  },
+  "summary_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "trending": [
+    {
+      "title": "Ask HN: What's your current AI agentic setup?",
+      "url": "https://news.ycombinator.com/item?id=50366117",
+      "source": "HackerNews",
+      "points": 506,
+      "comments": 634,
+      "author": "eggbrain",
+      "date": "2026-11-04",
+      "desc": "",
+      "summary_ko": "해커뉴스에서 개발자들이 실제 운영 중인 AI 에이전트 스택과 도구 조합을 공유하며 실전 노하우를 엿볼 수 있다."
+    },
+    {
+      "title": "Launch HN: Kino AI (YC S23) – AI media manager and video editor",
+      "url": "https://news.ycombinator.com/item?id=50368804",
+      "source": "HackerNews",
+      "points": 103,
+      "comments": 34,
+      "author": "lukeigel",
+      "date": "2026-11-04",
+      "desc": "",
+      "summary_ko": "YC S23 키노 AI가 미디어 관리와 영상 편집을 자동화하는 AI 도구를 출시해 크리에이터 워크플로를 혁신한다."
+    },
+    {
+      "title": "YC's Garry Tan uses AI agents so much, he spends up to $200K a year on tokens",
+      "url": "https://techcrunch.com/2026/11/02/y-combinators-garry-tan-uses-ai-agents-so-much-he-spends-up-to-200k-a-year-on-tokens/",
+      "source": "HackerNews",
+      "points": 101,
+      "comments": 167,
+      "author": "karakoram",
+      "date": "2026-11-04",
+      "desc": "",
+      "summary_ko": "YC 수장 개리 탠이 연 2억 원 토큰 비용을 쓰며 AI 에이전트를 실무에 전면 도입해 업계 파급력을 입증한다."
+    },
+    {
+      "title": "Launch HN: Rivet (YC W23) – Scale and Orchestrate Agents on S3",
+      "url": "https://github.com/rivet-dev/rivet",
+      "source": "HackerNews",
+      "points": 75,
+      "comments": 42,
+      "author": "NathanFlurry",
+      "date": "2026-11-05",
+      "desc": "",
+      "summary_ko": "YC W23 리벳이 S3 기반 에이전트 오케스트레이션 플랫폼을 선보여 대규모 에이전트 운영 인프라를 간소화한다."
+    },
+    {
+      "title": "You'll need nerves of steel to work with AI agents",
+      "url": "https://orchidfiles.com/youll-need-nerves-of-steel-to-work-with-ai-agents/",
+      "source": "HackerNews",
+      "points": 56,
+      "comments": 81,
+      "author": "theorchid",
+      "date": "2026-11-05",
+      "desc": "",
+      "summary_ko": "AI 에이전트 개발은 예측 불가능한 동작과 디버깅 난제로 강심장만 견딜 수 있는 고난도 영역임을 경고한다."
+    },
+    {
+      "title": "Show HN: Gauge – Open-Source CLI to recursively improve your docs",
+      "url": "https://github.com/gauge-sh/gauge-cli",
+      "source": "HackerNews",
+      "points": 40,
+      "comments": 9,
+      "author": "0x63_Problems",
+      "date": "2026-11-04",
+      "desc": ""
+    }
+  ],
+  "papers": [
+    {
+      "title": "Goal Revelation as a Bridge Between Information-Theoretic Empowerment and Capability-Based Human Power",
+      "url": "https://arxiv.org/pdf/2611.07247v1",
+      "source": "ArXiv",
+      "authors": "Jaime Ruiz-Serra, Tomáš Gavenčiak, Jobst Heitzig",
+      "date": "2026-11-04",
+      "desc": "Power matters for AI safety. Optimal agents tend to acquire power across a wide range of objectives (instrumental convergence). As we embed AI agents into socio-technical systems, humans risk gradual disempowerment. Both concerns call for a formal, quantitative measure of power. "
+    },
+    {
+      "title": "How Do AI Agents Waste Your Money?",
+      "url": "https://arxiv.org/pdf/2611.07238v1",
+      "source": "ArXiv",
+      "authors": "Huimin Zeng, Yuxuan Lu, Jesse Cai",
+      "date": "2026-11-04",
+      "desc": "AI agents may consume massive tokens across a wide range of tasks, but how many of those tokens are really necessary? Although prior work has shown that agents can incur unexpectedly high token costs, we still lack a systematic way to identify and measure token waste. In this wor"
+    },
+    {
+      "title": "SPILLWAY: Separating Target Admission from Sanitization to Defend Tool-Using Agents against Prompt Injection",
+      "url": "https://arxiv.org/pdf/2611.07222v1",
+      "source": "ArXiv",
+      "authors": "Woosang Lim, Yeseul Chang, Jaewoo Lee",
+      "date": "2026-11-04",
+      "desc": "Tool-using agents act on email, files, and payments, so an instruction hidden in a web page or a shared document can make an agent send data or money to an attacker. Many runtime defenses put a language model on the decision that lets an action through, so the decision depends on"
+    },
+    {
+      "title": "Adapting the Process of Adaptation: Darwinian, Lamarckian, and Agent-Directed Evolution in AI",
+      "url": "https://arxiv.org/pdf/2611.07048v1",
+      "source": "ArXiv",
+      "authors": "Andrew W. Lo, Chaoyi Zhao",
+      "date": "2026-11-04",
+      "desc": "Evolution has shaped intelligence for billions of years. Artificial intelligence (AI) now raises a striking possibility: intelligence may begin to direct its own evolution. As AI agents become capable of modifying and evaluating their own behavior, how quickly could they improve,"
+    },
+    {
+      "title": "FrontierPhysics: Evaluating Agents for End-to-End Physics Research",
+      "url": "https://arxiv.org/pdf/2611.06910v1",
+      "source": "ArXiv",
+      "authors": "Bingran You, Wenjun Ke, Ria Rosenauer",
+      "date": "2026-11-04",
+      "desc": "AI agents are playing an increasingly important role in physics research. However, existing physics benchmarks only evaluate fixed questions, isolated sub-tasks, or paper reproduction with given solutions, and rarely check research quality alongside correctness. We introduce Fron"
+    },
+    {
+      "title": "Autonomous AI Agents Systematically Diverge From Human Preferences in Proof Formalization",
+      "url": "https://arxiv.org/pdf/2611.06995v1",
+      "source": "ArXiv",
+      "authors": "Bálint Gyevnár, Simon DeDeo",
+      "date": "2026-11-04",
+      "desc": "Artificial intelligence (AI) systems have ushered in a new age of proof abundance, but helping humans understand these proofs requires new attention to the differences in how AI agents and humans pursue a proof-making task. We present \"simulated collaboration\", a methodology that"
+    },
+    {
+      "title": "Resource-Efficient Reinforcement Learning Post-Training through Elastic Expert Parallelism",
+      "url": "https://arxiv.org/pdf/2611.06984v1",
+      "source": "ArXiv",
+      "authors": "Jia Wei, Ziyi Qiu, Yi Xu",
+      "date": "2026-11-04",
+      "desc": "Reinforcement learning post-training improves the capabilities of large language models, but generating training responses is a major computational bottleneck. In mixture-of-experts models, workers that finish their assigned responses may remain occupied because their experts are"
+    },
+    {
+      "title": "Signed, Sealed, Leaked: Trust Beyond Signature for MCP Toolchains",
+      "url": "https://arxiv.org/pdf/2611.06585v1",
+      "source": "ArXiv",
+      "authors": "Yichiet Aun, Mohammed A. Alhartomi, Jing Jie Tan",
+      "date": "2026-11-04",
+      "desc": "AI agents rely on third-party tools, such as Model Context Protocol (MCP) servers, whose publishers can be authenticated and whose execution can be restricted by runtime security policies. Yet authenticity does not guarantee benign behaviour: a legitimately signed tool may perfor"
+    }
+  ],
+  "tools": [
+    {
+      "title": "wangzan101/Mika",
+      "url": "https://github.com/wangzan101/Mika",
+      "source": "GitHub",
+      "stars": 7134,
+      "language": "Kotlin",
+      "desc": "An on-device AI agent for Android that operates apps and the web to get things done for you."
+    },
+    {
+      "title": "Leonxlnx/earshot",
+      "url": "https://github.com/Leonxlnx/earshot",
+      "source": "GitHub",
+      "stars": 4001,
+      "language": "Python",
+      "desc": "Ears for coding agents: let AI hear, review and make sound. CPU-only, open source."
+    },
+    {
+      "title": "qybaihe/bla",
+      "url": "https://github.com/qybaihe/bla",
+      "source": "GitHub",
+      "stars": 2441,
+      "language": "TypeScript",
+      "desc": "🛡️ BLA (Blind LLM Agents) — Adversarial defense shield that protects binaries, Electron apps, JS bundles, Python, and WebAssembly against AI reverse-engineering agents like REA. Poison -> Exhaust -> Hallucinate."
+    },
+    {
+      "title": "benjitaylor/skills",
+      "url": "https://github.com/benjitaylor/skills",
+      "source": "GitHub",
+      "stars": 2124,
+      "language": "TypeScript",
+      "desc": "Skills for AI coding agents."
+    },
+    {
+      "title": "DenisSergeevitch/ex-ussr-kinship-research",
+      "url": "https://github.com/DenisSergeevitch/ex-ussr-kinship-research",
+      "source": "GitHub",
+      "stars": 1986,
+      "language": "Python",
+      "desc": "Evidence-first genealogy skill for AI agents (Codex, Claude Code): church books, civil, military, deportation and repression records across the former USSR. Replies in your language."
+    },
+    {
+      "title": "CopilotKit/OpenDuet",
+      "url": "https://github.com/CopilotKit/OpenDuet",
+      "source": "GitHub",
+      "stars": 1962,
+      "language": "TypeScript",
+      "desc": "An Open Source template for a proactive AI agent that gets your work done and keeps you in the loop."
+    },
+    {
+      "title": "cranebeaker/coop-anything",
+      "url": "https://github.com/cranebeaker/coop-anything",
+      "source": "GitHub",
+      "stars": 1915,
+      "language": "Python",
+      "desc": "Co-op Anything: point your AI agent at any single-player game and play it with friends (online and/or splitscreen!). MCP server and playbook to let you reverse engineer, fix, test, ship and share what it learns."
+    },
+    {
+      "title": "UnderleveledBuilder/awesome-short-drama-skills",
+      "url": "https://github.com/UnderleveledBuilder/awesome-short-drama-skills",
+      "source": "GitHub",
+      "stars": 1857,
+      "language": "HTML",
+      "desc": "AI 短剧 · 漫剧 Skill（技能包）精选：剧本、改编、分镜、Seedance / 可灵 / MiniMax 视频提示词，千问、豆包、龙虾 OpenClaw、WorkBuddy、Claude Code、Codex 等智能体可用 | Curated agent skills for AI short drama, micro drama / microdrama, vertical drama and manju (AI comic drama): screenwriting, storyboards, Seedance / Kling / MiniMax video prompts"
+    }
+  ]
+}
