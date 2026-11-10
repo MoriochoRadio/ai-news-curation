@@ -36,7 +36,7 @@ mark.hl{background:var(--accent-soft,#f3e7df);color:var(--accent,#b4451f);border
   
         <header class="masthead">
           <div class="brand">The AI Brief</div>
-          <div class="issue-date">2026년 11월 09일 · 최신 호</div>
+          <div class="issue-date">2026년 11월 10일 · 최신 호</div>
           <p class="tagline">매일 아침, AI 업계의 흐름을 한눈에</p>
           <p class="topics">오늘의 주제 — AI agents · LLM reasoning · multimodal models · open source AI · Rust in AI tooling · AI safety</p>
         </header>
@@ -47,9 +47,9 @@ mark.hl{background:var(--accent-soft,#f3e7df);color:var(--accent,#b4451f);border
         <span class="block-sub">TL;DR</span>
       </header>
       <div class="block-body">
-        <p class="tldr-count">트렌딩 <b>1</b> · 논문 <b>8</b> · 프로젝트 <b>8</b> 건 수집</p>
+        <p class="tldr-count">트렌딩 <b>3</b> · 논문 <b>8</b> · 프로젝트 <b>8</b> 건 수집</p>
         <p class="tldr-topics">오늘 살펴본 주제 — AI 에이전트 · LLM 추론 · 멀티모달 모델 · 오픈소스 AI · AI 도구의 Rust · AI 안전성</p>
-        <ul class="tldr-picks"><li><span class="tldr-tag">오늘의 관심</span> Apple CEO Presses Software Chief to Pursue More Ambitious AI Strategy</li><li><span class="tldr-tag">논문 픽</span> SwarmEvolve: Latent Agent Swarms for Evolutionary Discovery and Optimization</li><li><span class="tldr-tag">프로젝트 픽</span> wangzan101/Mika</li></ul>
+        <ul class="tldr-picks"><li><span class="tldr-tag">오늘의 관심</span> Apple CEO Presses Software Chief to Pursue More Ambitious AI Strategy</li><li><span class="tldr-tag">논문 픽</span> Agent Self-Improvement with Frozen Weights: The Added Value and Limits of Failure Traces</li><li><span class="tldr-tag">프로젝트 픽</span> wangzan101/Mika</li></ul>
       </div>
     </section>
         
@@ -61,8 +61,18 @@ mark.hl{background:var(--accent-soft,#f3e7df);color:var(--accent,#b4451f);border
       <div class="block-body"><div class="grid">
     <article class="card">
       <a class="card-title" href="https://www.bloomberg.com/news/newsletters/2026-11-08/apple-explores-turning-siri-ai-into-chatgpt-dots-like-agent-ios-28-shake-up" target="_blank" rel="noopener">Apple CEO Presses Software Chief to Pursue More Ambitious AI Strategy</a>
-      <p class="item-desc">애플 CEO가 소프트웨어 총괄에게 더 야심찬 AI 전략을 추진하라고 압박하며, 생성형 AI 경쟁력 강화가 시급함을 시사한다.</p>
-      <div class="card-foot"><span class="meta-line">▲ 34 · 💬 58</span><span class="src">HackerNews</span></div>
+      <p class="item-desc">애플 CEO가 소프트웨어 총괄에게 AI 전략 강화를 압박하며, 뒤처진 생성형 AI 경쟁력 회복과 생태계 내 AI 통합 가속화를 주문했다.</p>
+      <div class="card-foot"><span class="meta-line">▲ 37 · 💬 61</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/" target="_blank" rel="noopener">Our newest TPUs: 8tx and 8i Max, built for the agentic era</a>
+      <p class="item-desc">구글이 AI 에이전트 워크로드에 최적화된 차세대 TPU 8tx와 8i Max를 공개하며, 자율 에이전트 시대의 추론 성능과 전력 효율을 대폭 끌어올렸다.</p>
+      <div class="card-foot"><span class="meta-line">▲ 27 · 💬 4</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://news.ycombinator.com/item?id=50426070" target="_blank" rel="noopener">Ask HN: How do you evaluate the skills your AI agents use?</a>
+      <p class="item-desc">해커뉴스에서 AI 에이전트 스킬 평가 방안을 논의하며, 도구 호출 신뢰성과 재현 가능성을 검증할 체계적 벤치마크의 필요성이 부상했다.</p>
+      <div class="card-foot"><span class="meta-line">▲ 18 · 💬 3</span><span class="src">HackerNews</span></div>
     </article></div></div>
     </section>
         
@@ -74,30 +84,30 @@ mark.hl{background:var(--accent-soft,#f3e7df);color:var(--accent,#b4451f);border
       <div class="block-body"><div class="rows">
     <article class="row">
       <div class="row-main">
-        <a class="row-title" href="https://arxiv.org/pdf/2611.08483v1" target="_blank" rel="noopener">SwarmEvolve: Latent Agent Swarms for Evolutionary Discovery and Optimization</a>
-        <p class="item-desc">LLM-guided evolutionary search uses AI agents to improve programs for mathematical and computational problems by iteratively refining solutions and combining high-scoring methods. However, the process is often slow because the LLM generates a long textual chain of thought for eac</p>
-        <div class="card-foot"><span class="byline">Qile Jiang, George Em Karniadakis</span><span class="date">2026-11-05</span><span class="src">ArXiv</span></div>
+        <a class="row-title" href="https://arxiv.org/pdf/2611.11342v1" target="_blank" rel="noopener">Agent Self-Improvement with Frozen Weights: The Added Value and Limits of Failure Traces</a>
+        <p class="item-desc">We evaluate whether an AI agent&#x27;s harness, the notes around its model, can learn from the agent&#x27;s failure traces beyond a matched search that never sees them. It can, but less than it looks. We tested an open 9-billion-parameter model with fixed weights; a larger teacher model wr</p>
+        <div class="card-foot"><span class="byline">Arkid Mitra</span><span class="date">2026-11-08</span><span class="src">ArXiv</span></div>
       </div>
     </article>
     <article class="row">
       <div class="row-main">
-        <a class="row-title" href="https://arxiv.org/pdf/2611.08341v1" target="_blank" rel="noopener">Enhancing Local and Global Structure in Compressed AI Agent Memory</a>
-        <p class="item-desc">AI agents store text as embedding vectors and compress them at scale. A compression is accepted when each item&#x27;s nearest neighbors survive, but agents also consolidate, delete, and compare memories, tasks that depend on which items lie far apart. We evaluate both ends with two la</p>
-        <div class="card-foot"><span class="byline">Henry Han</span><span class="date">2026-11-05</span><span class="src">ArXiv</span></div>
+        <a class="row-title" href="https://arxiv.org/pdf/2611.11340v1" target="_blank" rel="noopener">Agentic Attribution of Cloud Resource Ownership</a>
+        <p class="item-desc">Security tools raise findings across cloud environments, and AI agents now investigate and prioritize them. A finding is still resolved by people: it has to reach the people responsible for fixing it and accountable for the resource it concerns. Ownership is the organizational co</p>
+        <div class="card-foot"><span class="byline">Tiltan Gilat, Gal Engelberg, Ariel Zadok</span><span class="date">2026-11-08</span><span class="src">ArXiv</span></div>
       </div>
     </article>
     <article class="row">
       <div class="row-main">
-        <a class="row-title" href="https://arxiv.org/pdf/2611.08312v1" target="_blank" rel="noopener">Trilemma: How Agents choose between Honesty, Confidentiality, and Task Completion</a>
-        <p class="item-desc">Personal AI agents often act on underspecified instructions and draw on context such as their user&#x27;s messages and calendar to decide how to proceed. This context can contain private preferences that interfere with the task, with other people&#x27;s interests, or with confidentiality n</p>
-        <div class="card-foot"><span class="byline">Johannes Taraz, Abhinav Kumar, Sahar Abdelnabi</span><span class="date">2026-11-05</span><span class="src">ArXiv</span></div>
+        <a class="row-title" href="https://arxiv.org/pdf/2611.11306v1" target="_blank" rel="noopener">ScrapeBench: Evaluating Legal Compliance of AI Agents in Website Scraping</a>
+        <p class="item-desc">AI agents deployed on the open web are becoming more capable of performing actions that may breach contractual provisions and violate computer security laws. In this paper, we introduce ScrapeBench, the first agentic benchmark for empirically evaluating the legal compliance of AI</p>
+        <div class="card-foot"><span class="byline">Joseph Marvin Imperial, Daniel Slate, Noam Kolt</span><span class="date">2026-11-08</span><span class="src">ArXiv</span></div>
       </div>
     </article>
     <article class="row">
       <div class="row-main">
-        <a class="row-title" href="https://arxiv.org/pdf/2611.08281v1" target="_blank" rel="noopener">Multimodal-SEA: Benchmarking AI Agent Security under Multimodal Social Engineering Attacks</a>
-        <p class="item-desc">Personal AI agents face social engineering attacks supported by forged multimodal content, but existing evaluations mainly focus on text-based dialogue, leaving their intrinsic security under such attacks insufficiently studied. We introduce Multimodal-SEA, an interactive benchma</p>
-        <div class="card-foot"><span class="byline">Zhitao He, Chi Him Zhang, Chengru Han</span><span class="date">2026-11-05</span><span class="src">ArXiv</span></div>
+        <a class="row-title" href="https://arxiv.org/pdf/2611.11279v1" target="_blank" rel="noopener">How Efficient Is Your Agent? Online Predictive Bounds under Budget Constraints</a>
+        <p class="item-desc">We evaluate AI agents in an online setting where tasks arrive sequentially and, before running each task, we construct an upper predictive bound on its \emph{time-to-success}---the number of interactions until the task is completed successfully. Under a limited budget, some runs </p>
+        <div class="card-foot"><span class="byline">Roy Maor Lotan, Shai Feldman, Yaniv Romano</span><span class="date">2026-11-08</span><span class="src">ArXiv</span></div>
       </div>
     </article></div></div>
     </section>
@@ -111,27 +121,27 @@ mark.hl{background:var(--accent-soft,#f3e7df);color:var(--accent,#b4451f);border
     <article class="card">
       <a class="card-title" href="https://github.com/wangzan101/Mika" target="_blank" rel="noopener">wangzan101/Mika</a>
       <p class="item-desc">An on-device AI agent for Android that operates apps and the web to get things done for you.</p>
-      <div class="card-foot"><span class="badges">★ 7.8k · Kotlin</span><span class="src">GitHub</span></div>
-    </article>
-    <article class="card">
-      <a class="card-title" href="https://github.com/Leonxlnx/earshot" target="_blank" rel="noopener">Leonxlnx/earshot</a>
-      <p class="item-desc">Ears for coding agents: let AI hear, review and make sound. CPU-only, open source.</p>
-      <div class="card-foot"><span class="badges">★ 4.3k · Python</span><span class="src">GitHub</span></div>
+      <div class="card-foot"><span class="badges">★ 7.9k · Kotlin</span><span class="src">GitHub</span></div>
     </article>
     <article class="card">
       <a class="card-title" href="https://github.com/qybaihe/bla" target="_blank" rel="noopener">qybaihe/bla</a>
       <p class="item-desc">🛡️ BLA (Blind LLM Agents) — Adversarial defense shield that protects binaries, Electron apps, JS bundles, Python, and WebAssembly against AI reverse-engineering agents like REA. Poison -&gt; Exhaust -&gt; Hallucinate.</p>
-      <div class="card-foot"><span class="badges">★ 3.8k · TypeScript</span><span class="src">GitHub</span></div>
+      <div class="card-foot"><span class="badges">★ 4.5k · TypeScript</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/Leonxlnx/earshot" target="_blank" rel="noopener">Leonxlnx/earshot</a>
+      <p class="item-desc">Ears for coding agents: let AI hear, review and make sound. CPU-only, open source.</p>
+      <div class="card-foot"><span class="badges">★ 4.4k · Python</span><span class="src">GitHub</span></div>
     </article>
     <article class="card">
       <a class="card-title" href="https://github.com/benjitaylor/skills" target="_blank" rel="noopener">benjitaylor/skills</a>
       <p class="item-desc">Skills for AI coding agents.</p>
-      <div class="card-foot"><span class="badges">★ 2.7k · TypeScript</span><span class="src">GitHub</span></div>
+      <div class="card-foot"><span class="badges">★ 2.9k · TypeScript</span><span class="src">GitHub</span></div>
     </article></div></div>
     </section>
   <section class="block archive-preview">
     <header class="block-head"><h2>최근 호</h2><a class="more" href="archive.html">전체 보기 →</a></header>
-    <ul class="issue-list"><li><a href="issues/2026-11-09.html">11.09</a><span class="r-title">2026년 11월 09일</span><span class="r-count">T1 · P8 · G8</span></li><li><a href="issues/2026-11-08.html">11.08</a><span class="r-title">2026년 11월 08일</span><span class="r-count">T6 · P8 · G8</span></li><li><a href="issues/2026-11-07.html">11.07</a><span class="r-title">2026년 11월 07일</span><span class="r-count">T7 · P8 · G8</span></li><li><a href="issues/2026-11-06.html">11.06</a><span class="r-title">2026년 11월 06일</span><span class="r-count">T6 · P8 · G8</span></li><li><a href="issues/2026-11-05.html">11.05</a><span class="r-title">2026년 11월 05일</span><span class="r-count">T8 · P8 · G8</span></li><li><a href="issues/2026-11-04.html">11.04</a><span class="r-title">2026년 11월 04일</span><span class="r-count">T7 · P8 · G8</span></li><li><a href="issues/2026-11-03.html">11.03</a><span class="r-title">2026년 11월 03일</span><span class="r-count">T5 · P8 · G8</span></li><li><a href="issues/2026-11-02.html">11.02</a><span class="r-title">2026년 11월 02일</span><span class="r-count">T2 · P8 · G8</span></li><li><a href="issues/2026-11-01.html">11.01</a><span class="r-title">2026년 11월 01일</span><span class="r-count">T2 · P8 · G8</span></li><li><a href="issues/2026-10-31.html">10.31</a><span class="r-title">2026년 10월 31일</span><span class="r-count">T5 · P8 · G8</span></li><li><a href="issues/2026-10-30.html">10.30</a><span class="r-title">2026년 10월 30일</span><span class="r-count">T5 · P8 · G8</span></li><li><a href="issues/2026-10-29.html">10.29</a><span class="r-title">2026년 10월 29일</span><span class="r-count">T2 · P8 · G8</span></li></ul>
+    <ul class="issue-list"><li><a href="issues/2026-11-10.html">11.10</a><span class="r-title">2026년 11월 10일</span><span class="r-count">T3 · P8 · G8</span></li><li><a href="issues/2026-11-09.html">11.09</a><span class="r-title">2026년 11월 09일</span><span class="r-count">T1 · P8 · G8</span></li><li><a href="issues/2026-11-08.html">11.08</a><span class="r-title">2026년 11월 08일</span><span class="r-count">T6 · P8 · G8</span></li><li><a href="issues/2026-11-07.html">11.07</a><span class="r-title">2026년 11월 07일</span><span class="r-count">T7 · P8 · G8</span></li><li><a href="issues/2026-11-06.html">11.06</a><span class="r-title">2026년 11월 06일</span><span class="r-count">T6 · P8 · G8</span></li><li><a href="issues/2026-11-05.html">11.05</a><span class="r-title">2026년 11월 05일</span><span class="r-count">T8 · P8 · G8</span></li><li><a href="issues/2026-11-04.html">11.04</a><span class="r-title">2026년 11월 04일</span><span class="r-count">T7 · P8 · G8</span></li><li><a href="issues/2026-11-03.html">11.03</a><span class="r-title">2026년 11월 03일</span><span class="r-count">T5 · P8 · G8</span></li><li><a href="issues/2026-11-02.html">11.02</a><span class="r-title">2026년 11월 02일</span><span class="r-count">T2 · P8 · G8</span></li><li><a href="issues/2026-11-01.html">11.01</a><span class="r-title">2026년 11월 01일</span><span class="r-count">T2 · P8 · G8</span></li><li><a href="issues/2026-10-31.html">10.31</a><span class="r-title">2026년 10월 31일</span><span class="r-count">T5 · P8 · G8</span></li><li><a href="issues/2026-10-30.html">10.30</a><span class="r-title">2026년 10월 30일</span><span class="r-count">T5 · P8 · G8</span></li></ul>
   </section>
   <footer class="site-foot">
     <p>자동 수집 · HackerNews · ArXiv · GitHub</p>

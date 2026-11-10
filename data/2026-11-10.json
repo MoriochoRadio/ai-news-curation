@@ -1,0 +1,193 @@
+{
+  "date": "2026-11-10",
+  "generated_at": "2026-11-10T13:09:45+09:00",
+  "topics": [
+    "AI agents",
+    "LLM reasoning",
+    "multimodal models",
+    "open source AI",
+    "Rust in AI tooling",
+    "AI safety"
+  ],
+  "topic_labels": {
+    "AI agents": "AI 에이전트",
+    "LLM reasoning": "LLM 추론",
+    "multimodal models": "멀티모달 모델",
+    "open source AI": "오픈소스 AI",
+    "Rust in AI tooling": "AI 도구의 Rust",
+    "AI safety": "AI 안전성"
+  },
+  "counts": {
+    "trending": 3,
+    "papers": 8,
+    "tools": 8
+  },
+  "summary_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "trending": [
+    {
+      "title": "Apple CEO Presses Software Chief to Pursue More Ambitious AI Strategy",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-11-08/apple-explores-turning-siri-ai-into-chatgpt-dots-like-agent-ios-28-shake-up",
+      "source": "HackerNews",
+      "points": 37,
+      "comments": 61,
+      "author": "mfiguiere",
+      "date": "2026-11-08",
+      "desc": "",
+      "summary_ko": "애플 CEO가 소프트웨어 총괄에게 AI 전략 강화를 압박하며, 뒤처진 생성형 AI 경쟁력 회복과 생태계 내 AI 통합 가속화를 주문했다."
+    },
+    {
+      "title": "Our newest TPUs: 8tx and 8i Max, built for the agentic era",
+      "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/",
+      "source": "HackerNews",
+      "points": 27,
+      "comments": 4,
+      "author": "meetpateltech",
+      "date": "2026-11-09",
+      "desc": "",
+      "summary_ko": "구글이 AI 에이전트 워크로드에 최적화된 차세대 TPU 8tx와 8i Max를 공개하며, 자율 에이전트 시대의 추론 성능과 전력 효율을 대폭 끌어올렸다."
+    },
+    {
+      "title": "Ask HN: How do you evaluate the skills your AI agents use?",
+      "url": "https://news.ycombinator.com/item?id=50426070",
+      "source": "HackerNews",
+      "points": 18,
+      "comments": 3,
+      "author": "enesalatas",
+      "date": "2026-11-09",
+      "desc": "",
+      "summary_ko": "해커뉴스에서 AI 에이전트 스킬 평가 방안을 논의하며, 도구 호출 신뢰성과 재현 가능성을 검증할 체계적 벤치마크의 필요성이 부상했다."
+    }
+  ],
+  "papers": [
+    {
+      "title": "Agent Self-Improvement with Frozen Weights: The Added Value and Limits of Failure Traces",
+      "url": "https://arxiv.org/pdf/2611.11342v1",
+      "source": "ArXiv",
+      "authors": "Arkid Mitra",
+      "date": "2026-11-08",
+      "desc": "We evaluate whether an AI agent's harness, the notes around its model, can learn from the agent's failure traces beyond a matched search that never sees them. It can, but less than it looks. We tested an open 9-billion-parameter model with fixed weights; a larger teacher model wr"
+    },
+    {
+      "title": "Agentic Attribution of Cloud Resource Ownership",
+      "url": "https://arxiv.org/pdf/2611.11340v1",
+      "source": "ArXiv",
+      "authors": "Tiltan Gilat, Gal Engelberg, Ariel Zadok",
+      "date": "2026-11-08",
+      "desc": "Security tools raise findings across cloud environments, and AI agents now investigate and prioritize them. A finding is still resolved by people: it has to reach the people responsible for fixing it and accountable for the resource it concerns. Ownership is the organizational co"
+    },
+    {
+      "title": "ScrapeBench: Evaluating Legal Compliance of AI Agents in Website Scraping",
+      "url": "https://arxiv.org/pdf/2611.11306v1",
+      "source": "ArXiv",
+      "authors": "Joseph Marvin Imperial, Daniel Slate, Noam Kolt",
+      "date": "2026-11-08",
+      "desc": "AI agents deployed on the open web are becoming more capable of performing actions that may breach contractual provisions and violate computer security laws. In this paper, we introduce ScrapeBench, the first agentic benchmark for empirically evaluating the legal compliance of AI"
+    },
+    {
+      "title": "How Efficient Is Your Agent? Online Predictive Bounds under Budget Constraints",
+      "url": "https://arxiv.org/pdf/2611.11279v1",
+      "source": "ArXiv",
+      "authors": "Roy Maor Lotan, Shai Feldman, Yaniv Romano",
+      "date": "2026-11-08",
+      "desc": "We evaluate AI agents in an online setting where tasks arrive sequentially and, before running each task, we construct an upper predictive bound on its \\emph{time-to-success}---the number of interactions until the task is completed successfully. Under a limited budget, some runs "
+    },
+    {
+      "title": "Advancements in Cloud-Native Systems: A Systematic Mapping Study of Reliability and Scalability across Cloud-Native, Edge-Native and AI-Enabled Systems",
+      "url": "https://arxiv.org/pdf/2611.11040v1",
+      "source": "ArXiv",
+      "authors": "Shrinivass Arunachalam Balasubramanian",
+      "date": "2026-11-08",
+      "desc": "Cloud-native systems now extend to the network edge and host artificial-intelligence (AI) workloads, including AI agents, but evidence on their reliability and scalability is scattered and uneven. We report a PRISMA 2020 systematic mapping study with an evidence-graded synthesis."
+    },
+    {
+      "title": "Improving Analytic Constants via Interpretable AI-Guided Lean Proof Refinement",
+      "url": "https://arxiv.org/pdf/2611.10961v1",
+      "source": "ArXiv",
+      "authors": "Rahul Saha, Alan Li, Anton Xue",
+      "date": "2026-11-07",
+      "desc": "AI agents are increasingly capable of discovering new mathematical results, yet their reasoning and generated proofs can be difficult to understand and verify. We introduce an interpretable framework for AI-guided mathematical discovery, focused on improving quantitative bounds o"
+    },
+    {
+      "title": "Firepool: Brokering Warm GPU Capacity for Agentic and RL Workloads at LinkedIn",
+      "url": "https://arxiv.org/pdf/2611.10832v1",
+      "source": "ArXiv",
+      "authors": "Ankit Goyal, Santosh Jha, Zhuo Zhi",
+      "date": "2026-11-07",
+      "desc": "AI agents and reinforcement-learning (RL) trainers run thousands of short, isolated GPU jobs: tool calls, verifiers, and rollouts. A job often finishes in seconds, but starting a GPU pod for it takes 20-35 s even when the container image is already on the node, and minutes when i"
+    },
+    {
+      "title": "Trustworthy Recursive Self-Improvement with Statistical Guarantees",
+      "url": "https://arxiv.org/pdf/2611.10787v1",
+      "source": "ArXiv",
+      "authors": "Zihe Gao, Zhengling Qi, Yifan Cui",
+      "date": "2026-11-07",
+      "desc": "Recursive self-improvement offers a promising path toward AI agents that improve through experience by refining their own harnesses without retraining their underlying large language models (LLMs). Making this self-improvement process reliable, however, requires more than generat"
+    }
+  ],
+  "tools": [
+    {
+      "title": "wangzan101/Mika",
+      "url": "https://github.com/wangzan101/Mika",
+      "source": "GitHub",
+      "stars": 7932,
+      "language": "Kotlin",
+      "desc": "An on-device AI agent for Android that operates apps and the web to get things done for you."
+    },
+    {
+      "title": "qybaihe/bla",
+      "url": "https://github.com/qybaihe/bla",
+      "source": "GitHub",
+      "stars": 4477,
+      "language": "TypeScript",
+      "desc": "🛡️ BLA (Blind LLM Agents) — Adversarial defense shield that protects binaries, Electron apps, JS bundles, Python, and WebAssembly against AI reverse-engineering agents like REA. Poison -> Exhaust -> Hallucinate."
+    },
+    {
+      "title": "Leonxlnx/earshot",
+      "url": "https://github.com/Leonxlnx/earshot",
+      "source": "GitHub",
+      "stars": 4380,
+      "language": "Python",
+      "desc": "Ears for coding agents: let AI hear, review and make sound. CPU-only, open source."
+    },
+    {
+      "title": "benjitaylor/skills",
+      "url": "https://github.com/benjitaylor/skills",
+      "source": "GitHub",
+      "stars": 2913,
+      "language": "TypeScript",
+      "desc": "Skills for AI coding agents."
+    },
+    {
+      "title": "DenisSergeevitch/ex-ussr-kinship-research",
+      "url": "https://github.com/DenisSergeevitch/ex-ussr-kinship-research",
+      "source": "GitHub",
+      "stars": 2278,
+      "language": "Python",
+      "desc": "Evidence-first genealogy skill for AI agents (Codex, Claude Code): church books, civil, military, deportation and repression records across the former USSR. Replies in your language."
+    },
+    {
+      "title": "UnderleveledBuilder/awesome-short-drama-skills",
+      "url": "https://github.com/UnderleveledBuilder/awesome-short-drama-skills",
+      "source": "GitHub",
+      "stars": 2110,
+      "language": "HTML",
+      "desc": "AI 短剧 · 漫剧 Skill（技能包）精选：剧本、改编、分镜、Seedance / 可灵 / MiniMax 视频提示词，千问、豆包、龙虾 OpenClaw、WorkBuddy、Claude Code、Codex 等智能体可用 | Curated agent skills for AI short drama, micro drama / microdrama, vertical drama and manju (AI comic drama): screenwriting, storyboards, Seedance / Kling / MiniMax video prompts"
+    },
+    {
+      "title": "cranebeaker/coop-anything",
+      "url": "https://github.com/cranebeaker/coop-anything",
+      "source": "GitHub",
+      "stars": 2024,
+      "language": "Python",
+      "desc": "Co-op Anything: point your AI agent at any single-player game and play it with friends (online and/or splitscreen!). MCP server and playbook to let you reverse engineer, fix, test, ship and share what it learns."
+    },
+    {
+      "title": "CopilotKit/OpenDuet",
+      "url": "https://github.com/CopilotKit/OpenDuet",
+      "source": "GitHub",
+      "stars": 2011,
+      "language": "TypeScript",
+      "desc": "An Open Source template for a proactive AI agent that gets your work done and keeps you in the loop."
+    }
+  ]
+}
