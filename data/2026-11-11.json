@@ -1,0 +1,210 @@
+{
+  "date": "2026-11-11",
+  "generated_at": "2026-11-11T10:57:46+09:00",
+  "topics": [
+    "AI agents",
+    "LLM reasoning",
+    "multimodal models",
+    "open source AI",
+    "Rust in AI tooling",
+    "AI safety"
+  ],
+  "topic_labels": {
+    "AI agents": "AI 에이전트",
+    "LLM reasoning": "LLM 추론",
+    "multimodal models": "멀티모달 모델",
+    "open source AI": "오픈소스 AI",
+    "Rust in AI tooling": "AI 도구의 Rust",
+    "AI safety": "AI 안전성"
+  },
+  "counts": {
+    "trending": 5,
+    "papers": 8,
+    "tools": 8
+  },
+  "summary_model": null,
+  "trending": [
+    {
+      "title": "Show HN: Get your coding agent off ~2019 JavaScript, onto modern web primitives",
+      "url": "https://github.com/GoogleChrome/modern-web-guidance",
+      "source": "HackerNews",
+      "points": 263,
+      "comments": 77,
+      "author": "paulirish",
+      "date": "2026-11-10",
+      "desc": ""
+    },
+    {
+      "title": "Our newest TPUs: 8tx and 8i Max, built for the agentic era",
+      "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/",
+      "source": "HackerNews",
+      "points": 28,
+      "comments": 4,
+      "author": "meetpateltech",
+      "date": "2026-11-09",
+      "desc": ""
+    },
+    {
+      "title": "How do you keep up quality when you vibe-code?",
+      "url": "https://news.ycombinator.com/item?id=50444380",
+      "source": "HackerNews",
+      "points": 24,
+      "comments": 20,
+      "author": "nkcodes",
+      "date": "2026-11-10",
+      "desc": ""
+    },
+    {
+      "title": "Ask HN: How do you evaluate the skills your AI agents use?",
+      "url": "https://news.ycombinator.com/item?id=50426070",
+      "source": "HackerNews",
+      "points": 20,
+      "comments": 6,
+      "author": "enesalatas",
+      "date": "2026-11-09",
+      "desc": ""
+    },
+    {
+      "title": "Show HN: Aircad – Professional drafting and 3D modeling in the browser",
+      "url": "https://aircad.com",
+      "source": "HackerNews",
+      "points": 17,
+      "comments": 7,
+      "author": "peetle",
+      "date": "2026-11-10",
+      "desc": ""
+    }
+  ],
+  "papers": [
+    {
+      "title": "Multi-Agent Screening: What Agreement and Acceptance Cannot Tell You",
+      "url": "https://arxiv.org/pdf/2611.12705v1",
+      "source": "ArXiv",
+      "authors": "Benjamin Chang, Dell Zhang",
+      "date": "2026-11-09",
+      "desc": "When AI agents screen items for a costly human assessor, as in agentic search, e-discovery and AI reviewing of papers, only what they pass gets judged. We show what each kind of evidence can establish about their errors, even with unlimited data. Agreement shows that agents concu"
+    },
+    {
+      "title": "Teamknitt: Configuring, Observing and Intervening in LLM-Agent Teams through the Lens of Dynamical-Systems and Human-Team Theory",
+      "url": "https://arxiv.org/pdf/2611.12545v1",
+      "source": "ArXiv",
+      "authors": "Goran Mitevski",
+      "date": "2026-11-09",
+      "desc": "Most frameworks for teams of large language model (LLM) agents fix the team's shape inside the software: who talks to whom, how much is passed along, and what a human can do once a run has started. Human-team research has long asked those questions: where team phenomena live (in "
+    },
+    {
+      "title": "Detecting Shadow AI: Unsanctioned LLM Agents on Enterprise Endpoints: A Taxonomy, an Open Detector and a Controlled Evaluation",
+      "url": "https://arxiv.org/pdf/2611.12377v1",
+      "source": "ArXiv",
+      "authors": "Jeremy Canale, Fabien Soulis",
+      "date": "2026-11-09",
+      "desc": "Shadow IT, the use of technology that the IT organisation has not approved, is a long-standing governance problem. We argue that autonomous AI agents can make it grow much faster: agents make building tools nearly free, act with their user's privileges, and leave behind scripts, "
+    },
+    {
+      "title": "Agent4Crypto: A Dual-Reflective and Market-Feedback-Aligned LLM-Based Multi-Agent System for Cryptocurrency Trading",
+      "url": "https://arxiv.org/pdf/2611.12269v1",
+      "source": "ArXiv",
+      "authors": "Guangyan Gan, Jiahao Li, Jiashun Wang",
+      "date": "2026-11-09",
+      "desc": "Cryptocurrency markets provide a natural testbed for autonomous AI agents because they are digital-native, high-frequency, and machine-speed environments, yet existing methods often struggle with non-stationary market regimes, opaque decisions, and fixed aggregation rules. In thi"
+    },
+    {
+      "title": "System Optimizations for Cost-Efficient Agent Harnesses",
+      "url": "https://arxiv.org/pdf/2611.12122v1",
+      "source": "ArXiv",
+      "authors": "Jongseok Park, Jiaxiang Yu, Eric Zhou",
+      "date": "2026-11-09",
+      "desc": "AI agent harnesses play the critical role of providing LLMs with an interface to a computing environment. Recent studies show that AI agents' task-execution accuracy depends mostly on the LLM used, while harness-side variances such as system prompts or tools have minimal impact. "
+    },
+    {
+      "title": "CRAFT-AI: Capability and Requirement Alignment for Flexible Manufacturing through Agentic AI",
+      "url": "https://arxiv.org/pdf/2611.12092v1",
+      "source": "ArXiv",
+      "authors": "Kiavash Fathi, Hans Wernher van de Venn",
+      "date": "2026-11-09",
+      "desc": "One of the fundamental needs for reaching resilient production infrastructure is flexible manufacturing, which requires translating changing production requirements into implementable system configurations. This paper introduces \\textbf{CRAFT-AI}, an agentic AI approach combining"
+    },
+    {
+      "title": "Evaluating AI Agents for Industrial-Level Chip Floorplanning: A Framework and Empirical Study",
+      "url": "https://arxiv.org/pdf/2611.12048v1",
+      "source": "ArXiv",
+      "authors": "Nova-Silicon Team",
+      "date": "2026-11-09",
+      "desc": "Floorplanning is an early step in turning a logical circuit into a physical chip: it positions large circuit modules and constrains the space available for subsequent logic placement and wiring. These decisions affect congestion and timing, but their physical consequences emerge "
+    },
+    {
+      "title": "Scaling Adaptive Prompt Injection Attacks with Agent Swarms",
+      "url": "https://arxiv.org/pdf/2611.11861v1",
+      "source": "ArXiv",
+      "authors": "Alexey Kurakin, Vishal Karande, Alex Bie",
+      "date": "2026-11-09",
+      "desc": "Prompt injections have emerged as one of the top security risks faced by AI agents today. Early work in prompt injection attacks looked at simple tool-call agents and static attack payloads, and were saturated since mid-2025. As of Fall 2026, human red-teaming may be nearing satu"
+    }
+  ],
+  "tools": [
+    {
+      "title": "wangzan101/Mika",
+      "url": "https://github.com/wangzan101/Mika",
+      "source": "GitHub",
+      "stars": 8081,
+      "language": "Kotlin",
+      "desc": "An on-device AI agent for Android that operates apps and the web to get things done for you."
+    },
+    {
+      "title": "qybaihe/bla",
+      "url": "https://github.com/qybaihe/bla",
+      "source": "GitHub",
+      "stars": 5021,
+      "language": "TypeScript",
+      "desc": "🛡️ BLA (Blind LLM Agents) — Adversarial defense shield that protects binaries, Electron apps, JS bundles, Python, and WebAssembly against AI reverse-engineering agents like REA. Poison -> Exhaust -> Hallucinate."
+    },
+    {
+      "title": "Leonxlnx/earshot",
+      "url": "https://github.com/Leonxlnx/earshot",
+      "source": "GitHub",
+      "stars": 4457,
+      "language": "Python",
+      "desc": "Ears for coding agents: let AI hear, review and make sound. CPU-only, open source."
+    },
+    {
+      "title": "benjitaylor/skills",
+      "url": "https://github.com/benjitaylor/skills",
+      "source": "GitHub",
+      "stars": 3012,
+      "language": "TypeScript",
+      "desc": "Skills for AI coding agents."
+    },
+    {
+      "title": "DenisSergeevitch/ex-ussr-kinship-research",
+      "url": "https://github.com/DenisSergeevitch/ex-ussr-kinship-research",
+      "source": "GitHub",
+      "stars": 2328,
+      "language": "Python",
+      "desc": "Evidence-first genealogy skill for AI agents (Codex, Claude Code): church books, civil, military, deportation and repression records across the former USSR. Replies in your language."
+    },
+    {
+      "title": "expo/exact",
+      "url": "https://github.com/expo/exact",
+      "source": "GitHub",
+      "stars": 2213,
+      "language": "Rust",
+      "desc": "Write an app once. It runs natively on the web, macOS, iOS, and Linux, and an AI agent can build it, run it, see it, and test it on every one of them."
+    },
+    {
+      "title": "UnderleveledBuilder/awesome-short-drama-skills",
+      "url": "https://github.com/UnderleveledBuilder/awesome-short-drama-skills",
+      "source": "GitHub",
+      "stars": 2166,
+      "language": "HTML",
+      "desc": "AI 短剧 · 漫剧 Skill（技能包）精选：剧本、改编、分镜、Seedance / 可灵 / MiniMax 视频提示词，千问、豆包、龙虾 OpenClaw、WorkBuddy、Claude Code、Codex 等智能体可用 | Curated agent skills for AI short drama, micro drama / microdrama, vertical drama and manju (AI comic drama): screenwriting, storyboards, Seedance / Kling / MiniMax video prompts"
+    },
+    {
+      "title": "sarpstar/cinecode",
+      "url": "https://github.com/sarpstar/cinecode",
+      "source": "GitHub",
+      "stars": 2062,
+      "language": "Python",
+      "desc": "Films made with code. Short films, long YouTube videos, ads, explainers and music videos: an AI coding agent writes the script, builds every frame in code, designs the sound and hands you an MP4."
+    }
+  ]
+}
