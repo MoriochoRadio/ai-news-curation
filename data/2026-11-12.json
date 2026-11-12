@@ -1,0 +1,240 @@
+{
+  "date": "2026-11-12",
+  "generated_at": "2026-11-12T12:05:53+09:00",
+  "topics": [
+    "AI agents",
+    "LLM reasoning",
+    "multimodal models",
+    "open source AI",
+    "Rust in AI tooling",
+    "AI safety"
+  ],
+  "topic_labels": {
+    "AI agents": "AI 에이전트",
+    "LLM reasoning": "LLM 추론",
+    "multimodal models": "멀티모달 모델",
+    "open source AI": "오픈소스 AI",
+    "Rust in AI tooling": "AI 도구의 Rust",
+    "AI safety": "AI 안전성"
+  },
+  "counts": {
+    "trending": 8,
+    "papers": 8,
+    "tools": 8
+  },
+  "summary_model": null,
+  "trending": [
+    {
+      "title": "My AI agents found an unmapped Maya site?",
+      "url": "https://pietromiotti.com/latest/maya-site",
+      "source": "HackerNews",
+      "points": 937,
+      "comments": 339,
+      "author": "eyvindn",
+      "date": "2026-11-11",
+      "desc": ""
+    },
+    {
+      "title": "AWS emulator",
+      "url": "https://github.com/aws/aws-emulator",
+      "source": "HackerNews",
+      "points": 711,
+      "comments": 220,
+      "author": "super_linear",
+      "date": "2026-11-11",
+      "desc": ""
+    },
+    {
+      "title": "Show HN: Get your coding agent off ~2019 JavaScript, onto modern web primitives",
+      "url": "https://github.com/GoogleChrome/modern-web-guidance",
+      "source": "HackerNews",
+      "points": 425,
+      "comments": 142,
+      "author": "paulirish",
+      "date": "2026-11-10",
+      "desc": ""
+    },
+    {
+      "title": "United Airlines bans AI agents from booking flights on behalf of travelers",
+      "url": "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/",
+      "source": "HackerNews",
+      "points": 423,
+      "comments": 410,
+      "author": "herpderperator",
+      "date": "2026-11-11",
+      "desc": ""
+    },
+    {
+      "title": "Show HN: Klad, a paint app your coding agent can drive (source-available)",
+      "url": "https://github.com/klad-app/klad",
+      "source": "HackerNews",
+      "points": 72,
+      "comments": 30,
+      "author": "ambewas",
+      "date": "2026-11-11",
+      "desc": ""
+    },
+    {
+      "title": "Launch HN: Pomerado (YC F26) – Turn any website into an MCP for agents",
+      "url": "https://news.ycombinator.com/item?id=50455811",
+      "source": "HackerNews",
+      "points": 50,
+      "comments": 40,
+      "author": "alanjm23",
+      "date": "2026-11-11",
+      "desc": ""
+    },
+    {
+      "title": "Show HN: Aircad – Professional drafting and 3D modeling in the browser",
+      "url": "https://aircad.com",
+      "source": "HackerNews",
+      "points": 46,
+      "comments": 21,
+      "author": "peetle",
+      "date": "2026-11-10",
+      "desc": ""
+    },
+    {
+      "title": "How do you keep up quality when you vibe-code?",
+      "url": "https://news.ycombinator.com/item?id=50444380",
+      "source": "HackerNews",
+      "points": 35,
+      "comments": 35,
+      "author": "nkcodes",
+      "date": "2026-11-10",
+      "desc": ""
+    }
+  ],
+  "papers": [
+    {
+      "title": "Agentic AI Meets Formal Verification in the Era of Agentic Hardware Development",
+      "url": "https://arxiv.org/pdf/2611.13705v1",
+      "source": "ArXiv",
+      "authors": "Wenji Fang, Yuchao Wu, Jing Wang",
+      "date": "2026-11-10",
+      "desc": "As AI agents become increasingly capable of generating and optimizing hardware circuits, ensuring the correctness of AI-generated designs becomes more important. Meanwhile, advances in AI lower the barriers to developing and applying formal methods, creating new opportunities to "
+    },
+    {
+      "title": "Deep Personalization: Continuous Context Observation for Local Proactive Agents",
+      "url": "https://arxiv.org/pdf/2611.13457v1",
+      "source": "ArXiv",
+      "authors": "Yijia Shao, Song Bian, Junxian Guo",
+      "date": "2026-11-10",
+      "desc": "As AI agents become increasingly capable, users must still recognize when and how to ask for help, leaving many opportunities for useful support unrealized. Proactive agents hold the promise to close this gap, but effective proactivity requires understanding users' real-time acti"
+    },
+    {
+      "title": "No finite rulebook can certify every safe program: an impossibility theorem for gatekeeping AI agents",
+      "url": "https://arxiv.org/pdf/2611.13367v1",
+      "source": "ArXiv",
+      "authors": "Tomas Perez-Acle",
+      "date": "2026-11-09",
+      "desc": "An AI assistant writes small programs, and a gatekeeper must decide, from the code alone, whether each one may run. Suppose the rules are fixed: never perform a forbidden action, never let the output depend on a secret, always answer eventually. Can two rulebooks, one listing wha"
+    },
+    {
+      "title": "Do AI Agents need Preventive Care? An Epidemiologic Cohort Design for Agentic AI",
+      "url": "https://arxiv.org/pdf/2611.13333v1",
+      "source": "ArXiv",
+      "authors": "Shu Jiang, Graham A. Colditz",
+      "date": "2026-11-09",
+      "desc": "As AI agents increasingly perform tasks autonomously across sectors, including healthcare and biomedical research, understanding how their behaviors develop and influence outcomes over time becomes increasingly important. Existing evaluations largely focus on model capabilities a"
+    },
+    {
+      "title": "PegasusAI Studio: Legible Cyberinfrastructure and Accountable AI Agents for Scientific Workflows",
+      "url": "https://arxiv.org/pdf/2611.13309v1",
+      "source": "ArXiv",
+      "authors": "Komal Thareja, Mats Rynge, Berent Aldikacti",
+      "date": "2026-11-09",
+      "desc": "AI coding agents can now construct scientific workflows, but operating them on shared cyberinfrastructure (CI) raises problems that code generation does not solve. Agents need current knowledge of the workflow system and its execution sites and access to the runtime state of dist"
+    },
+    {
+      "title": "MRFoundry: Knowledge-guided agent loops for end-to-end MRI research",
+      "url": "https://arxiv.org/pdf/2611.13289v1",
+      "source": "ArXiv",
+      "authors": "Ke Wang, Atakan Topcu, Hossein Momeni",
+      "date": "2026-11-09",
+      "desc": "AI agents can write code, use scientific software, and revise computational workflows, opening new possibilities for MRI research. Effective assistance requires connecting acquisition physics, data conventions, specialized tools, and scientific validation. We present MRFoundry, a"
+    },
+    {
+      "title": "Autonomous Optimization of Numerical Algorithms by an AI Agent: Application to Atomistic Simulation",
+      "url": "https://arxiv.org/pdf/2611.13143v1",
+      "source": "ArXiv",
+      "authors": "Jeheon Woo",
+      "date": "2026-11-09",
+      "desc": "Coding agents built on large language models, run in automated improvement loops, can discover more efficient algorithms. We present AIOA, a framework that brings this approach to the numerical algorithms of atomistic simulation: an agent improves an algorithm against a pre-speci"
+    },
+    {
+      "title": "Multi-Agent Screening: What Agreement and Acceptance Cannot Tell You",
+      "url": "https://arxiv.org/pdf/2611.12705v1",
+      "source": "ArXiv",
+      "authors": "Benjamin Chang, Dell Zhang",
+      "date": "2026-11-09",
+      "desc": "When AI agents screen items for a costly human assessor, as in agentic search, e-discovery and AI reviewing of papers, only what they pass gets judged. We show what each kind of evidence can establish about their errors, even with unlimited data. Agreement shows that agents concu"
+    }
+  ],
+  "tools": [
+    {
+      "title": "wangzan101/Mika",
+      "url": "https://github.com/wangzan101/Mika",
+      "source": "GitHub",
+      "stars": 8261,
+      "language": "Kotlin",
+      "desc": "An on-device AI agent for Android that operates apps and the web to get things done for you."
+    },
+    {
+      "title": "qybaihe/bla",
+      "url": "https://github.com/qybaihe/bla",
+      "source": "GitHub",
+      "stars": 5325,
+      "language": "TypeScript",
+      "desc": "🛡️ BLA (Blind LLM Agents) — Adversarial defense shield that protects binaries, Electron apps, JS bundles, Python, and WebAssembly against AI reverse-engineering agents like REA. Poison -> Exhaust -> Hallucinate."
+    },
+    {
+      "title": "Leonxlnx/earshot",
+      "url": "https://github.com/Leonxlnx/earshot",
+      "source": "GitHub",
+      "stars": 4534,
+      "language": "Python",
+      "desc": "Ears for coding agents: let AI hear, review and make sound. CPU-only, open source."
+    },
+    {
+      "title": "benjitaylor/skills",
+      "url": "https://github.com/benjitaylor/skills",
+      "source": "GitHub",
+      "stars": 3116,
+      "language": "TypeScript",
+      "desc": "Skills for AI coding agents."
+    },
+    {
+      "title": "expo/exact",
+      "url": "https://github.com/expo/exact",
+      "source": "GitHub",
+      "stars": 2973,
+      "language": "Rust",
+      "desc": "Write an app once. It runs natively on the web, macOS, iOS, and Linux, and an AI agent can build it, run it, see it, and test it on every one of them."
+    },
+    {
+      "title": "DenisSergeevitch/ex-ussr-kinship-research",
+      "url": "https://github.com/DenisSergeevitch/ex-ussr-kinship-research",
+      "source": "GitHub",
+      "stars": 2361,
+      "language": "Python",
+      "desc": "Evidence-first genealogy skill for AI agents (Codex, Claude Code): church books, civil, military, deportation and repression records across the former USSR. Replies in your language."
+    },
+    {
+      "title": "sarpstar/cinecode",
+      "url": "https://github.com/sarpstar/cinecode",
+      "source": "GitHub",
+      "stars": 2227,
+      "language": "Python",
+      "desc": "Films made with code. Short films, long YouTube videos, ads, explainers and music videos: an AI coding agent writes the script, builds every frame in code, designs the sound and hands you an MP4."
+    },
+    {
+      "title": "cranebeaker/coop-anything",
+      "url": "https://github.com/cranebeaker/coop-anything",
+      "source": "GitHub",
+      "stars": 2068,
+      "language": "Python",
+      "desc": "Co-op Anything: point your AI agent at any single-player game and play it with friends (online and/or splitscreen!). MCP server and playbook to let you reverse engineer, fix, test, ship and share what it learns."
+    }
+  ]
+}

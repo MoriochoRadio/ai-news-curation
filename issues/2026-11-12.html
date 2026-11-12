@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The AI Brief — 2026년 11월 12일</title>
+<link rel="stylesheet" href="../assets/style.css" />
+
+<style>
+.tb-fixed{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;gap:8px;align-items:center;
+  padding:8px 14px;background:var(--paper,#fffdf8);border-bottom:1px solid var(--line,#e3ddd0);
+  box-shadow:0 1px 6px rgba(0,0,0,.05);font-family:var(--sans);}
+.tb-fixed input{flex:1;max-width:340px;padding:7px 12px;border:1px solid var(--line,#e3ddd0);
+  border-radius:20px;font-size:13px;background:var(--bg,#f4f1ea);color:var(--ink,#1c1a17);outline:none;}
+.tb-fixed .tb-btn{border:1px solid var(--line,#e3ddd0);background:transparent;color:var(--ink,#1c1a17);
+  border-radius:20px;padding:6px 12px;font-size:13px;cursor:pointer;line-height:1;}
+.tb-fixed .tb-btn:hover{border-color:var(--accent,#b4451f);color:var(--accent,#b4451f);}
+body.has-tb{padding-top:52px;}
+mark.hl{background:var(--accent-soft,#f3e7df);color:var(--accent,#b4451f);border-radius:3px;padding:0 2px;}
+#goog-gt-tt,#goog-te-banner{display:none!important;}
+.goog-te-gadget{font-size:0!important;}
+.goog-te-gadget .goog-te-combo{font-size:12px!important;padding:5px 6px;border-radius:14px;
+  border:1px solid var(--line,#e3ddd0);background:var(--bg,#f4f1ea);color:var(--ink,#1c1a17);}
+</style>
+
+</head>
+<body>
+
+<div class="tb-fixed">
+  <input id="siteSearch" type="search" placeholder="호 내 검색 (제목·설명)…" aria-label="검색" />
+  <button class="tb-btn" id="darkToggle" type="button">🌙 다크</button>
+  <div id="gt-mount"></div>
+</div>
+
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">The AI Brief</div>
+    <div class="issue-date">2026년 11월 12일</div>
+    <p class="tagline">매일 아침, AI 업계의 흐름을 한눈에</p>
+    <p class="topics">오늘의 주제 — AI agents · LLM reasoning · multimodal models · open source AI · Rust in AI tooling · AI safety</p>
+  </header>
+
+  
+    <section class="block tldr">
+      <header class="block-head">
+        <h2>한눈에 요약</h2>
+        <span class="block-sub">TL;DR</span>
+      </header>
+      <div class="block-body">
+        <p class="tldr-count">트렌딩 <b>8</b> · 논문 <b>8</b> · 프로젝트 <b>8</b> 건 수집</p>
+        <p class="tldr-topics">오늘 살펴본 주제 — AI 에이전트 · LLM 추론 · 멀티모달 모델 · 오픈소스 AI · AI 도구의 Rust · AI 안전성</p>
+        <ul class="tldr-picks"><li><span class="tldr-tag">오늘의 관심</span> My AI agents found an unmapped Maya site?</li><li><span class="tldr-tag">논문 픽</span> Agentic AI Meets Formal Verification in the Era of Agentic Hardware Development</li><li><span class="tldr-tag">프로젝트 픽</span> wangzan101/Mika</li></ul>
+      </div>
+    </section>
+  
+    <section class="block" data-section="trending">
+      <header class="block-head">
+        <h2>트렌딩</h2>
+        <span class="block-sub">지금 주목받는 AI 이야기</span>
+      </header>
+      <div class="block-body"><div class="grid">
+    <article class="card">
+      <a class="card-title" href="https://pietromiotti.com/latest/maya-site" target="_blank" rel="noopener">My AI agents found an unmapped Maya site?</a>
+      
+      <div class="card-foot"><span class="meta-line">▲ 937 · 💬 339</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/aws/aws-emulator" target="_blank" rel="noopener">AWS emulator</a>
+      
+      <div class="card-foot"><span class="meta-line">▲ 711 · 💬 220</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/GoogleChrome/modern-web-guidance" target="_blank" rel="noopener">Show HN: Get your coding agent off ~2019 JavaScript, onto modern web primitives</a>
+      
+      <div class="card-foot"><span class="meta-line">▲ 425 · 💬 142</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/" target="_blank" rel="noopener">United Airlines bans AI agents from booking flights on behalf of travelers</a>
+      
+      <div class="card-foot"><span class="meta-line">▲ 423 · 💬 410</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/klad-app/klad" target="_blank" rel="noopener">Show HN: Klad, a paint app your coding agent can drive (source-available)</a>
+      
+      <div class="card-foot"><span class="meta-line">▲ 72 · 💬 30</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://news.ycombinator.com/item?id=50455811" target="_blank" rel="noopener">Launch HN: Pomerado (YC F26) – Turn any website into an MCP for agents</a>
+      
+      <div class="card-foot"><span class="meta-line">▲ 50 · 💬 40</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://aircad.com" target="_blank" rel="noopener">Show HN: Aircad – Professional drafting and 3D modeling in the browser</a>
+      
+      <div class="card-foot"><span class="meta-line">▲ 46 · 💬 21</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://news.ycombinator.com/item?id=50444380" target="_blank" rel="noopener">How do you keep up quality when you vibe-code?</a>
+      
+      <div class="card-foot"><span class="meta-line">▲ 35 · 💬 35</span><span class="src">HackerNews</span></div>
+    </article></div></div>
+    </section>
+  
+    <section class="block" data-section="papers">
+      <header class="block-head">
+        <h2>논문</h2>
+        <span class="block-sub">새로 나온 연구</span>
+      </header>
+      <div class="block-body"><div class="rows">
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.13705v1" target="_blank" rel="noopener">Agentic AI Meets Formal Verification in the Era of Agentic Hardware Development</a>
+        <p class="item-desc">As AI agents become increasingly capable of generating and optimizing hardware circuits, ensuring the correctness of AI-generated designs becomes more important. Meanwhile, advances in AI lower the barriers to developing and applying formal methods, creating new opportunities to </p>
+        <div class="card-foot"><span class="byline">Wenji Fang, Yuchao Wu, Jing Wang</span><span class="date">2026-11-10</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.13457v1" target="_blank" rel="noopener">Deep Personalization: Continuous Context Observation for Local Proactive Agents</a>
+        <p class="item-desc">As AI agents become increasingly capable, users must still recognize when and how to ask for help, leaving many opportunities for useful support unrealized. Proactive agents hold the promise to close this gap, but effective proactivity requires understanding users&#x27; real-time acti</p>
+        <div class="card-foot"><span class="byline">Yijia Shao, Song Bian, Junxian Guo</span><span class="date">2026-11-10</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.13367v1" target="_blank" rel="noopener">No finite rulebook can certify every safe program: an impossibility theorem for gatekeeping AI agents</a>
+        <p class="item-desc">An AI assistant writes small programs, and a gatekeeper must decide, from the code alone, whether each one may run. Suppose the rules are fixed: never perform a forbidden action, never let the output depend on a secret, always answer eventually. Can two rulebooks, one listing wha</p>
+        <div class="card-foot"><span class="byline">Tomas Perez-Acle</span><span class="date">2026-11-09</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.13333v1" target="_blank" rel="noopener">Do AI Agents need Preventive Care? An Epidemiologic Cohort Design for Agentic AI</a>
+        <p class="item-desc">As AI agents increasingly perform tasks autonomously across sectors, including healthcare and biomedical research, understanding how their behaviors develop and influence outcomes over time becomes increasingly important. Existing evaluations largely focus on model capabilities a</p>
+        <div class="card-foot"><span class="byline">Shu Jiang, Graham A. Colditz</span><span class="date">2026-11-09</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.13309v1" target="_blank" rel="noopener">PegasusAI Studio: Legible Cyberinfrastructure and Accountable AI Agents for Scientific Workflows</a>
+        <p class="item-desc">AI coding agents can now construct scientific workflows, but operating them on shared cyberinfrastructure (CI) raises problems that code generation does not solve. Agents need current knowledge of the workflow system and its execution sites and access to the runtime state of dist</p>
+        <div class="card-foot"><span class="byline">Komal Thareja, Mats Rynge, Berent Aldikacti</span><span class="date">2026-11-09</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.13289v1" target="_blank" rel="noopener">MRFoundry: Knowledge-guided agent loops for end-to-end MRI research</a>
+        <p class="item-desc">AI agents can write code, use scientific software, and revise computational workflows, opening new possibilities for MRI research. Effective assistance requires connecting acquisition physics, data conventions, specialized tools, and scientific validation. We present MRFoundry, a</p>
+        <div class="card-foot"><span class="byline">Ke Wang, Atakan Topcu, Hossein Momeni</span><span class="date">2026-11-09</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.13143v1" target="_blank" rel="noopener">Autonomous Optimization of Numerical Algorithms by an AI Agent: Application to Atomistic Simulation</a>
+        <p class="item-desc">Coding agents built on large language models, run in automated improvement loops, can discover more efficient algorithms. We present AIOA, a framework that brings this approach to the numerical algorithms of atomistic simulation: an agent improves an algorithm against a pre-speci</p>
+        <div class="card-foot"><span class="byline">Jeheon Woo</span><span class="date">2026-11-09</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.12705v1" target="_blank" rel="noopener">Multi-Agent Screening: What Agreement and Acceptance Cannot Tell You</a>
+        <p class="item-desc">When AI agents screen items for a costly human assessor, as in agentic search, e-discovery and AI reviewing of papers, only what they pass gets judged. We show what each kind of evidence can establish about their errors, even with unlimited data. Agreement shows that agents concu</p>
+        <div class="card-foot"><span class="byline">Benjamin Chang, Dell Zhang</span><span class="date">2026-11-09</span><span class="src">ArXiv</span></div>
+      </div>
+    </article></div></div>
+    </section>
+  
+    <section class="block" data-section="tools">
+      <header class="block-head">
+        <h2>오픈소스</h2>
+        <span class="block-sub">움직이는 프로젝트</span>
+      </header>
+      <div class="block-body"><div class="grid">
+    <article class="card">
+      <a class="card-title" href="https://github.com/wangzan101/Mika" target="_blank" rel="noopener">wangzan101/Mika</a>
+      <p class="item-desc">An on-device AI agent for Android that operates apps and the web to get things done for you.</p>
+      <div class="card-foot"><span class="badges">★ 8.3k · Kotlin</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/qybaihe/bla" target="_blank" rel="noopener">qybaihe/bla</a>
+      <p class="item-desc">🛡️ BLA (Blind LLM Agents) — Adversarial defense shield that protects binaries, Electron apps, JS bundles, Python, and WebAssembly against AI reverse-engineering agents like REA. Poison -&gt; Exhaust -&gt; Hallucinate.</p>
+      <div class="card-foot"><span class="badges">★ 5.3k · TypeScript</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/Leonxlnx/earshot" target="_blank" rel="noopener">Leonxlnx/earshot</a>
+      <p class="item-desc">Ears for coding agents: let AI hear, review and make sound. CPU-only, open source.</p>
+      <div class="card-foot"><span class="badges">★ 4.5k · Python</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/benjitaylor/skills" target="_blank" rel="noopener">benjitaylor/skills</a>
+      <p class="item-desc">Skills for AI coding agents.</p>
+      <div class="card-foot"><span class="badges">★ 3.1k · TypeScript</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/expo/exact" target="_blank" rel="noopener">expo/exact</a>
+      <p class="item-desc">Write an app once. It runs natively on the web, macOS, iOS, and Linux, and an AI agent can build it, run it, see it, and test it on every one of them.</p>
+      <div class="card-foot"><span class="badges">★ 3.0k · Rust</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/DenisSergeevitch/ex-ussr-kinship-research" target="_blank" rel="noopener">DenisSergeevitch/ex-ussr-kinship-research</a>
+      <p class="item-desc">Evidence-first genealogy skill for AI agents (Codex, Claude Code): church books, civil, military, deportation and repression records across the former USSR. Replies in your language.</p>
+      <div class="card-foot"><span class="badges">★ 2.4k · Python</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/sarpstar/cinecode" target="_blank" rel="noopener">sarpstar/cinecode</a>
+      <p class="item-desc">Films made with code. Short films, long YouTube videos, ads, explainers and music videos: an AI coding agent writes the script, builds every frame in code, designs the sound and hands you an MP4.</p>
+      <div class="card-foot"><span class="badges">★ 2.2k · Python</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/cranebeaker/coop-anything" target="_blank" rel="noopener">cranebeaker/coop-anything</a>
+      <p class="item-desc">Co-op Anything: point your AI agent at any single-player game and play it with friends (online and/or splitscreen!). MCP server and playbook to let you reverse engineer, fix, test, ship and share what it learns.</p>
+      <div class="card-foot"><span class="badges">★ 2.1k · Python</span><span class="src">GitHub</span></div>
+    </article></div></div>
+    </section>
+
+  <footer class="site-foot">
+    <a href="../index.html">← 최신 호로</a> · <a href="../archive.html">전체 아카이브</a>
+    <p>자동 수집 · HackerNews · ArXiv · GitHub</p>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var b=document.body; b.classList.add('has-tb');
+  // 다크모드
+  var dt=document.getElementById('darkToggle');
+  var saved=localStorage.getItem('aibrief-theme');
+  if(saved==='dark'){document.documentElement.setAttribute('data-theme','dark');dt.textContent='☀️ 라이트';}
+  dt.addEventListener('click',function(){
+    var dark=dt.textContent.indexOf('라이트')===-1;
+    if(dark){localStorage.setItem('aibrief-theme','dark');document.documentElement.setAttribute('data-theme','dark');dt.textContent='☀️ 라이트';}
+    else{localStorage.setItem('aibrief-theme','light');document.documentElement.removeAttribute('data-theme');dt.textContent='🌙 다크';}
+  });
+  // 검색 (호 내 하이라이팅 + 필터)
+  var s=document.getElementById('siteSearch');
+  s.addEventListener('input',function(){
+    var q=s.value.trim().toLowerCase();
+    var cards=document.querySelectorAll('.card,.row');
+    cards.forEach(function(c){
+      var t=c.textContent.toLowerCase();
+      var hit=!q||t.indexOf(q)>-1;
+      c.style.display=hit?'':'none';
+      c.querySelectorAll('mark.hl').forEach(function(m){c.replaceChild(document.createTextNode(m.textContent),m);c.normalize();});
+      if(q&&hit){var tt=c.innerHTML;
+        try{c.innerHTML=tt.replace(new RegExp('('+q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','ig'),'<mark class="hl">$1</mark>');}catch(e){}}
+    });
+    document.querySelectorAll('.block').forEach(function(bl){
+      var any=[].slice.call(bl.querySelectorAll('.card,.row')).some(function(c){return c.style.display!=='none';});
+      bl.style.display=(q&&!any)?'none':'';
+    });
+  });
+  // Google 번역 위젯 (키 불필요)
+  var g=document.createElement('script');
+  g.src='https://translate.google.com/translate_a/element.js?cb=__aibT';
+  window.__aibT=function(){
+    new google.translate.TranslateElement({pageLanguage:'en',includedLanguages:'ko,en',layout:google.translate.TranslateElement.InlineLayout.SIMPLE,autoDisplay:false},'gt-mount');
+    var sel=document.querySelector('#gt-mount .goog-te-combo');
+    if(sel){var o=document.createElement('option');o.value='ko';o.text='한국어';sel.add(o,sel.options[0]);}
+  };
+  document.body.appendChild(g);
+})();
+</script>
+
+</body>
+</html>
