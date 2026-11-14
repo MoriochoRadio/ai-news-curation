@@ -1,0 +1,204 @@
+{
+  "date": "2026-11-14",
+  "generated_at": "2026-11-14T11:28:38+09:00",
+  "topics": [
+    "AI agents",
+    "LLM reasoning",
+    "multimodal models",
+    "open source AI",
+    "Rust in AI tooling",
+    "AI safety"
+  ],
+  "topic_labels": {
+    "AI agents": "AI 에이전트",
+    "LLM reasoning": "LLM 추론",
+    "multimodal models": "멀티모달 모델",
+    "open source AI": "오픈소스 AI",
+    "Rust in AI tooling": "AI 도구의 Rust",
+    "AI safety": "AI 안전성"
+  },
+  "counts": {
+    "trending": 4,
+    "papers": 8,
+    "tools": 8
+  },
+  "summary_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "trending": [
+    {
+      "title": "Show HN: AgentRun – open-source, Self-improving Managed Agents",
+      "url": "https://github.com/Parcha-ai/agentrun/blob/main/README.md",
+      "source": "HackerNews",
+      "points": 134,
+      "comments": 39,
+      "author": "miguelrios",
+      "date": "2026-11-12",
+      "desc": "",
+      "summary_ko": "AgentRun은 자기 개선형 관리 에이전트를 오픈소스로 제공해 자율적 작업 자동화를 쉽게 만든다."
+    },
+    {
+      "title": "Show HN: Kapso – Iterative learning from enterprise data",
+      "url": "https://news.ycombinator.com/item?id=50471281",
+      "source": "HackerNews",
+      "points": 58,
+      "comments": 13,
+      "author": "alirezamshi",
+      "date": "2026-11-12",
+      "desc": "",
+      "summary_ko": "Kapso는 기업 데이터를 반복 학습해 맞춤형 인사이트를 지속적으로 개선한다."
+    },
+    {
+      "title": "Relate – the agent-native graph database",
+      "url": "https://relatedb.ai/",
+      "source": "HackerNews",
+      "points": 22,
+      "comments": 9,
+      "author": "jonbaer",
+      "date": "2026-11-12",
+      "desc": "",
+      "summary_ko": "Relate는 에이전트 중심 그래프 DB로 복잡한 관계 데이터를 실시간 탐색 가능하게 한다."
+    },
+    {
+      "title": "AI agents have a big problem: Nobody wants to let them in",
+      "url": "https://www.pcworld.com/article/3283946/ai-agents-have-a-big-problem-nobody-wants-to-let-them-in.html",
+      "source": "HackerNews",
+      "points": 15,
+      "comments": 6,
+      "author": "PLenz",
+      "date": "2026-11-13",
+      "desc": "",
+      "summary_ko": "AI 에이전트 도입의 걸림돌은 신뢰와 보안 우려로 기업이 접근을 꺼린다는 점이다."
+    }
+  ],
+  "papers": [
+    {
+      "title": "Designing Institutions for Autonomous AI",
+      "url": "https://arxiv.org/pdf/2611.17114v1",
+      "source": "ArXiv",
+      "authors": "Petter Törnberg",
+      "date": "2026-11-12",
+      "desc": "As autonomous AI agents increasingly interact in persistent populations, their collective capabilities and alignment depend not only on individual models, but also on the institutions governing their interactions. Yet AI research has largely focused on individual agents. In this "
+    },
+    {
+      "title": "Singularity-Bench: Can Agents Build Agents?",
+      "url": "https://arxiv.org/pdf/2611.16591v1",
+      "source": "ArXiv",
+      "authors": "Yang Zhou, Krish Agarwal, Zhuoming Chen",
+      "date": "2026-11-12",
+      "desc": "Frontier AI agents increasingly succeed on realistic, long-horizon tasks and are beginning to improve the systems through which they operate. Yet existing benchmarks often restrict agents to narrow action spaces, use simplified environments, or rely on verification methods that a"
+    },
+    {
+      "title": "Contain, Conform, Compare (Extended Version): A Red-Teamed Evaluation Kit for Small Coding Agents and the Full Record of Its Experiments",
+      "url": "https://arxiv.org/pdf/2611.16485v1",
+      "source": "ArXiv",
+      "authors": "Nguyen Minh Thang",
+      "date": "2026-11-12",
+      "desc": "A hosted score in the Gemma 4 Developer Agent competition is one noisy number, so development needs a local evaluator that is fast, safe for agent-written code, and matching the hosted scorer's prompts. drydock-eval evaluates a small coding agent (Gemma 4 E4B) at about 250 runs p"
+    },
+    {
+      "title": "Evidence-Governed Adoption of Self-Generated Updates in Autonomous AI Agents",
+      "url": "https://arxiv.org/pdf/2611.16378v1",
+      "source": "ArXiv",
+      "authors": "Subodh Lonkar",
+      "date": "2026-11-12",
+      "desc": "Autonomous agents modify prompts, memories, tools, workflows, and policies using interaction histories. Yet a plausible modification is not necessarily suitable for persistent adoption: candidate selection is adaptive, evaluators may be imperfect, and local gains can hide degrada"
+    },
+    {
+      "title": "ORCHID-SAGE: Fully Reproducible CALPHAD Assessment from Evidence to Phase Diagram",
+      "url": "https://arxiv.org/pdf/2611.16308v1",
+      "source": "ArXiv",
+      "authors": "Raymundo Arróyave",
+      "date": "2026-11-12",
+      "desc": "Knowledge of phase stability is the first requirement for materials design, and predicting the conditions under which new materials can be synthesized has become a key capability of self-driving laboratories (SDLs). For inorganic materials, notably alloys, these predictions come "
+    },
+    {
+      "title": "When can an interpretability claim be trusted? Stability and certification of feature dimensionality, ridge leverage and the feature recovery rate",
+      "url": "https://arxiv.org/pdf/2611.16190v1",
+      "source": "ArXiv",
+      "authors": "Ali Tajfar, Behnam Tajfar",
+      "date": "2026-11-12",
+      "desc": "Interpretability tools increasingly support safety claims, such as that a sparse dictionary has recovered most of a model's features. Such claims rest on measurements with arbitrary thresholds, and small changes to the model weights, a different training seed or a different thres"
+    },
+    {
+      "title": "Gradient-Aware AI Agents for Autonomous Turbulence Model Discovery via Differentiable CFD",
+      "url": "https://arxiv.org/pdf/2611.16082v1",
+      "source": "ArXiv",
+      "authors": "Yi Liu, Xiantao Fan, Mingqi Xu",
+      "date": "2026-11-11",
+      "desc": "Turbulence modeling relies on human choices of closure form, physical inputs, and tunable parameters. Training closures a posteriori is efficient only with gradients through long chaotic rollouts, which few solvers provide. Most a posteriori approaches therefore resort to gradien"
+    },
+    {
+      "title": "Agentic Computational Algebra",
+      "url": "https://arxiv.org/pdf/2611.16073v1",
+      "source": "ArXiv",
+      "authors": "Ryan A. Anderson, Matthew Trager, Ben Bowman",
+      "date": "2026-11-11",
+      "desc": "We explore the use of AI agents for solving computational problems in algebra. For the problems we consider, the main challenge is not correctness but \\emph{time}: general-purpose algorithms are guaranteed to provide correct solutions but can be prohibitively slow, while reformul"
+    }
+  ],
+  "tools": [
+    {
+      "title": "wangzan101/Mika",
+      "url": "https://github.com/wangzan101/Mika",
+      "source": "GitHub",
+      "stars": 8531,
+      "language": "Kotlin",
+      "desc": "An on-device AI agent for Android that operates apps and the web to get things done for you."
+    },
+    {
+      "title": "qybaihe/bla",
+      "url": "https://github.com/qybaihe/bla",
+      "source": "GitHub",
+      "stars": 5566,
+      "language": "TypeScript",
+      "desc": "🛡️ BLA (bla-agents / Blind LLM Agents) — Open-source Blue Defense MCP server & CLI protecting JS/TS, Electron ASAR, WASM, Python, Native Binaries, SQLite, GGUF/Safetensors & Android DEX against AI reverse-engineering agents (REA)."
+    },
+    {
+      "title": "expo/exact",
+      "url": "https://github.com/expo/exact",
+      "source": "GitHub",
+      "stars": 4023,
+      "language": "Rust",
+      "desc": "Write an app once. It runs natively on the web, macOS, iOS, and Linux, and an AI agent can build it, run it, see it, and test it on every one of them."
+    },
+    {
+      "title": "benjitaylor/skills",
+      "url": "https://github.com/benjitaylor/skills",
+      "source": "GitHub",
+      "stars": 3271,
+      "language": "TypeScript",
+      "desc": "Skills for AI coding agents."
+    },
+    {
+      "title": "DenisSergeevitch/ex-ussr-kinship-research",
+      "url": "https://github.com/DenisSergeevitch/ex-ussr-kinship-research",
+      "source": "GitHub",
+      "stars": 2421,
+      "language": "Python",
+      "desc": "Evidence-first genealogy skill for AI agents (Codex, Claude Code): church books, civil, military, deportation and repression records across the former USSR. Replies in your language."
+    },
+    {
+      "title": "sarpstar/cinecode",
+      "url": "https://github.com/sarpstar/cinecode",
+      "source": "GitHub",
+      "stars": 2419,
+      "language": "Python",
+      "desc": "Films made with code. Short films, long YouTube videos, ads, explainers and music videos: an AI coding agent writes the script, builds every frame in code, designs the sound and hands you an MP4."
+    },
+    {
+      "title": "cranebeaker/coop-anything",
+      "url": "https://github.com/cranebeaker/coop-anything",
+      "source": "GitHub",
+      "stars": 2113,
+      "language": "Python",
+      "desc": "Co-op Anything: point your AI agent at any single-player game and play it with friends (online and/or splitscreen!). MCP server and playbook to let you reverse engineer, fix, test, ship and share what it learns."
+    },
+    {
+      "title": "DIYgod/pinky",
+      "url": "https://github.com/DIYgod/pinky",
+      "source": "GitHub",
+      "stars": 2081,
+      "language": "Go",
+      "desc": "Let AI use your iPhone or Android phone, with you in the loop: any MCP agent from macOS, Windows or Linux, or Pinky itself, right on the phone."
+    }
+  ]
+}
