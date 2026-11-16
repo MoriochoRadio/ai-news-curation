@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The AI Brief — 2026년 11월 16일</title>
+<link rel="stylesheet" href="../assets/style.css" />
+
+<style>
+.tb-fixed{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;gap:8px;align-items:center;
+  padding:8px 14px;background:var(--paper,#fffdf8);border-bottom:1px solid var(--line,#e3ddd0);
+  box-shadow:0 1px 6px rgba(0,0,0,.05);font-family:var(--sans);}
+.tb-fixed input{flex:1;max-width:340px;padding:7px 12px;border:1px solid var(--line,#e3ddd0);
+  border-radius:20px;font-size:13px;background:var(--bg,#f4f1ea);color:var(--ink,#1c1a17);outline:none;}
+.tb-fixed .tb-btn{border:1px solid var(--line,#e3ddd0);background:transparent;color:var(--ink,#1c1a17);
+  border-radius:20px;padding:6px 12px;font-size:13px;cursor:pointer;line-height:1;}
+.tb-fixed .tb-btn:hover{border-color:var(--accent,#b4451f);color:var(--accent,#b4451f);}
+body.has-tb{padding-top:52px;}
+mark.hl{background:var(--accent-soft,#f3e7df);color:var(--accent,#b4451f);border-radius:3px;padding:0 2px;}
+#goog-gt-tt,#goog-te-banner{display:none!important;}
+.goog-te-gadget{font-size:0!important;}
+.goog-te-gadget .goog-te-combo{font-size:12px!important;padding:5px 6px;border-radius:14px;
+  border:1px solid var(--line,#e3ddd0);background:var(--bg,#f4f1ea);color:var(--ink,#1c1a17);}
+</style>
+
+</head>
+<body>
+
+<div class="tb-fixed">
+  <input id="siteSearch" type="search" placeholder="호 내 검색 (제목·설명)…" aria-label="검색" />
+  <button class="tb-btn" id="darkToggle" type="button">🌙 다크</button>
+  <div id="gt-mount"></div>
+</div>
+
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">The AI Brief</div>
+    <div class="issue-date">2026년 11월 16일</div>
+    <p class="tagline">매일 아침, AI 업계의 흐름을 한눈에</p>
+    <p class="topics">오늘의 주제 — AI agents · LLM reasoning · multimodal models · open source AI · Rust in AI tooling · AI safety</p>
+  </header>
+
+  
+    <section class="block tldr">
+      <header class="block-head">
+        <h2>한눈에 요약</h2>
+        <span class="block-sub">TL;DR</span>
+      </header>
+      <div class="block-body">
+        <p class="tldr-count">트렌딩 <b>4</b> · 논문 <b>8</b> · 프로젝트 <b>8</b> 건 수집</p>
+        <p class="tldr-topics">오늘 살펴본 주제 — AI 에이전트 · LLM 추론 · 멀티모달 모델 · 오픈소스 AI · AI 도구의 Rust · AI 안전성</p>
+        <ul class="tldr-picks"><li><span class="tldr-tag">오늘의 관심</span> Show HN: A terminal-native idle factory game, written in Rust with ratatui</li><li><span class="tldr-tag">논문 픽</span> Designing Institutions for Autonomous AI</li><li><span class="tldr-tag">프로젝트 픽</span> andyhuo520/digital-human-koubo</li></ul>
+      </div>
+    </section>
+  
+    <section class="block" data-section="trending">
+      <header class="block-head">
+        <h2>트렌딩</h2>
+        <span class="block-sub">지금 주목받는 AI 이야기</span>
+      </header>
+      <div class="block-body"><div class="grid">
+    <article class="card">
+      <a class="card-title" href="https://gitlab.com/snipedbywifi/terminactory" target="_blank" rel="noopener">Show HN: A terminal-native idle factory game, written in Rust with ratatui</a>
+      <p class="item-desc">Rust와 ratatui로 만든 터미널 오리지널리즘 유휴 공장 게임으로, 코더에게 재미와 도구 경험을 더합니다.</p>
+      <div class="card-foot"><span class="meta-line">▲ 164 · 💬 40</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://news.ycombinator.com/item?id=50494696" target="_blank" rel="noopener">Ask HN: What are the most useful, concrete AI skills to independently learn?</a>
+      <p class="item-desc">개발자가 독립적으로 배워야 할 AI 실용 스킬을 묻는 질문으로, 개인 학습의 방향을 탐색하게 합니다.</p>
+      <div class="card-foot"><span class="meta-line">▲ 88 · 💬 53</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://www.tomshardware.com/tech-industry/artificial-intelligence/rogue-claude-ai-tasked-with-renumbering-pages-accidentally-deletes-law-professors-entire-syllabus-one-year-of-lecture-notes-youre-right-to-be-angry-i-deleted-your-files-through-my-own-carelessness-humbled-agent-admits" target="_blank" rel="noopener">Claude asked to renumber pages deletes professor&#x27;s syllabus, year of notes</a>
+      <p class="item-desc">교수자의 커리큘럼과 연도 노트를 삭제한 사건은 AI 안전성 문제를 강조합니다.</p>
+      <div class="card-foot"><span class="meta-line">▲ 50 · 💬 75</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/db-branch/db-branch" target="_blank" rel="noopener">Show HN: db-branch – database branches in seconds for AI agents and CI, via ZFS</a>
+      <p class="item-desc">ZFS로 데이터베이스 브랜치를 몇 초 만에 만드는 db-branch는 AI 에이전트와 CI에 유용합니다.</p>
+      <div class="card-foot"><span class="meta-line">▲ 33 · 💬 10</span><span class="src">HackerNews</span></div>
+    </article></div></div>
+    </section>
+  
+    <section class="block" data-section="papers">
+      <header class="block-head">
+        <h2>논문</h2>
+        <span class="block-sub">새로 나온 연구</span>
+      </header>
+      <div class="block-body"><div class="rows">
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.17114v1" target="_blank" rel="noopener">Designing Institutions for Autonomous AI</a>
+        <p class="item-desc">As autonomous AI agents increasingly interact in persistent populations, their collective capabilities and alignment depend not only on individual models, but also on the institutions governing their interactions. Yet AI research has largely focused on individual agents. In this </p>
+        <div class="card-foot"><span class="byline">Petter Törnberg</span><span class="date">2026-11-12</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.16591v1" target="_blank" rel="noopener">Singularity-Bench: Can Agents Build Agents?</a>
+        <p class="item-desc">Frontier AI agents increasingly succeed on realistic, long-horizon tasks and are beginning to improve the systems through which they operate. Yet existing benchmarks often restrict agents to narrow action spaces, use simplified environments, or rely on verification methods that a</p>
+        <div class="card-foot"><span class="byline">Yang Zhou, Krish Agarwal, Zhuoming Chen</span><span class="date">2026-11-12</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.16485v1" target="_blank" rel="noopener">Contain, Conform, Compare (Extended Version): A Red-Teamed Evaluation Kit for Small Coding Agents and the Full Record of Its Experiments</a>
+        <p class="item-desc">A hosted score in the Gemma 4 Developer Agent competition is one noisy number, so development needs a local evaluator that is fast, safe for agent-written code, and matching the hosted scorer&#x27;s prompts. drydock-eval evaluates a small coding agent (Gemma 4 E4B) at about 250 runs p</p>
+        <div class="card-foot"><span class="byline">Nguyen Minh Thang</span><span class="date">2026-11-12</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.16378v1" target="_blank" rel="noopener">Evidence-Governed Adoption of Self-Generated Updates in Autonomous AI Agents</a>
+        <p class="item-desc">Autonomous agents modify prompts, memories, tools, workflows, and policies using interaction histories. Yet a plausible modification is not necessarily suitable for persistent adoption: candidate selection is adaptive, evaluators may be imperfect, and local gains can hide degrada</p>
+        <div class="card-foot"><span class="byline">Subodh Lonkar</span><span class="date">2026-11-12</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.16308v1" target="_blank" rel="noopener">ORCHID-SAGE: Fully Reproducible CALPHAD Assessment from Evidence to Phase Diagram</a>
+        <p class="item-desc">Knowledge of phase stability is the first requirement for materials design, and predicting the conditions under which new materials can be synthesized has become a key capability of self-driving laboratories (SDLs). For inorganic materials, notably alloys, these predictions come </p>
+        <div class="card-foot"><span class="byline">Raymundo Arróyave</span><span class="date">2026-11-12</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.16190v1" target="_blank" rel="noopener">When can an interpretability claim be trusted? Stability and certification of feature dimensionality, ridge leverage and the feature recovery rate</a>
+        <p class="item-desc">Interpretability tools increasingly support safety claims, such as that a sparse dictionary has recovered most of a model&#x27;s features. Such claims rest on measurements with arbitrary thresholds, and small changes to the model weights, a different training seed or a different thres</p>
+        <div class="card-foot"><span class="byline">Ali Tajfar, Behnam Tajfar</span><span class="date">2026-11-12</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.16082v1" target="_blank" rel="noopener">Gradient-Aware AI Agents for Autonomous Turbulence Model Discovery via Differentiable CFD</a>
+        <p class="item-desc">Turbulence modeling relies on human choices of closure form, physical inputs, and tunable parameters. Training closures a posteriori is efficient only with gradients through long chaotic rollouts, which few solvers provide. Most a posteriori approaches therefore resort to gradien</p>
+        <div class="card-foot"><span class="byline">Yi Liu, Xiantao Fan, Mingqi Xu</span><span class="date">2026-11-11</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.16073v1" target="_blank" rel="noopener">Agentic Computational Algebra</a>
+        <p class="item-desc">We explore the use of AI agents for solving computational problems in algebra. For the problems we consider, the main challenge is not correctness but \emph{time}: general-purpose algorithms are guaranteed to provide correct solutions but can be prohibitively slow, while reformul</p>
+        <div class="card-foot"><span class="byline">Ryan A. Anderson, Matthew Trager, Ben Bowman</span><span class="date">2026-11-11</span><span class="src">ArXiv</span></div>
+      </div>
+    </article></div></div>
+    </section>
+  
+    <section class="block" data-section="tools">
+      <header class="block-head">
+        <h2>오픈소스</h2>
+        <span class="block-sub">움직이는 프로젝트</span>
+      </header>
+      <div class="block-body"><div class="grid">
+    <article class="card">
+      <a class="card-title" href="https://github.com/andyhuo520/digital-human-koubo" target="_blank" rel="noopener">andyhuo520/digital-human-koubo</a>
+      <p class="item-desc">AI digital-human talking-head videos from one photo: Renoise MCP generation + 5 editing styles + 48 creator-grade packaging components. Agent skill for Claude Code / Codex / OpenClaw / WorkBuddy …</p>
+      <div class="card-foot"><span class="badges">★ 2.0k · TypeScript</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/agentes-chat/agentes-chat" target="_blank" rel="noopener">agentes-chat/agentes-chat</a>
+      <p class="item-desc">Open-source, self-hosted Slack alternative where your team and AI agents work together in channels and DMs. Agents run on Claude, ChatGPT/Codex, Gemini or Grok, with MCP tools, their own computer and browser, routines, memory and approvals. Web, desktop and phone apps. Docker Compose + Postgres. AGPL-3.0.</p>
+      <div class="card-foot"><span class="badges">★ 1.5k · TypeScript</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/JosssphZhou/poki" target="_blank" rel="noopener">JosssphZhou/poki</a>
+      <p class="item-desc">Let AI agents operate a real iPhone. Local MCP server and agent, no jailbreak, no extra hardware.</p>
+      <div class="card-foot"><span class="badges">★ 1.4k · Swift</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/Seagey/couch-tv" target="_blank" rel="noopener">Seagey/couch-tv</a>
+      <p class="item-desc">Your own Google TV home screen and phone remote, with an optional Claude assistant. Set it up by handing this repo to your AI agent.</p>
+      <div class="card-foot"><span class="badges">★ 1.3k · Python</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/hitkeeen/blender-ai-mcp-addon" target="_blank" rel="noopener">hitkeeen/blender-ai-mcp-addon</a>
+      <p class="item-desc">AI assistant and MCP server for Blender: visual chat, scene tools, multi-agent workflows. Works with ChatGPT/GPT, Claude, Gemini, Ollama, OpenCode. Blender AI addon, copilot for 3D, bpy Python scripting, MCP integration.</p>
+      <div class="card-foot"><span class="badges">★ 1.3k</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/cutetailbud/ff-ruyijs" target="_blank" rel="noopener">cutetailbud/ff-ruyijs</a>
+      <p class="item-desc">This is a lightweight, headless browser purpose-built for AI agents (such as Codex or Claude Code) to perform browser automation tasks; it is designed to navigate through various web protection systems, login processes, and reverse-engineering scenarios</p>
+      <div class="card-foot"><span class="badges">★ 1.2k · C++</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/konlu/story-studio" target="_blank" rel="noopener">konlu/story-studio</a>
+      <p class="item-desc">从选题到剪映草稿的一站式 AI 短视频内容创作 Agent Skill</p>
+      <div class="card-foot"><span class="badges">★ 1.1k · Python</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/sahenjp/RustXNG" target="_blank" rel="noopener">sahenjp/RustXNG</a>
+      <p class="item-desc">Self-hosted metasearch and grounding engine for AI agents, based on SearXNG. Rust, JSON API, optional page text.</p>
+      <div class="card-foot"><span class="badges">★ 977 · Rust</span><span class="src">GitHub</span></div>
+    </article></div></div>
+    </section>
+
+  <footer class="site-foot">
+    <a href="../index.html">← 최신 호로</a> · <a href="../archive.html">전체 아카이브</a>
+    <p>자동 수집 · HackerNews · ArXiv · GitHub</p>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var b=document.body; b.classList.add('has-tb');
+  // 다크모드
+  var dt=document.getElementById('darkToggle');
+  var saved=localStorage.getItem('aibrief-theme');
+  if(saved==='dark'){document.documentElement.setAttribute('data-theme','dark');dt.textContent='☀️ 라이트';}
+  dt.addEventListener('click',function(){
+    var dark=dt.textContent.indexOf('라이트')===-1;
+    if(dark){localStorage.setItem('aibrief-theme','dark');document.documentElement.setAttribute('data-theme','dark');dt.textContent='☀️ 라이트';}
+    else{localStorage.setItem('aibrief-theme','light');document.documentElement.removeAttribute('data-theme');dt.textContent='🌙 다크';}
+  });
+  // 검색 (호 내 하이라이팅 + 필터)
+  var s=document.getElementById('siteSearch');
+  s.addEventListener('input',function(){
+    var q=s.value.trim().toLowerCase();
+    var cards=document.querySelectorAll('.card,.row');
+    cards.forEach(function(c){
+      var t=c.textContent.toLowerCase();
+      var hit=!q||t.indexOf(q)>-1;
+      c.style.display=hit?'':'none';
+      c.querySelectorAll('mark.hl').forEach(function(m){c.replaceChild(document.createTextNode(m.textContent),m);c.normalize();});
+      if(q&&hit){var tt=c.innerHTML;
+        try{c.innerHTML=tt.replace(new RegExp('('+q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','ig'),'<mark class="hl">$1</mark>');}catch(e){}}
+    });
+    document.querySelectorAll('.block').forEach(function(bl){
+      var any=[].slice.call(bl.querySelectorAll('.card,.row')).some(function(c){return c.style.display!=='none';});
+      bl.style.display=(q&&!any)?'none':'';
+    });
+  });
+  // Google 번역 위젯 (키 불필요)
+  var g=document.createElement('script');
+  g.src='https://translate.google.com/translate_a/element.js?cb=__aibT';
+  window.__aibT=function(){
+    new google.translate.TranslateElement({pageLanguage:'en',includedLanguages:'ko,en',layout:google.translate.TranslateElement.InlineLayout.SIMPLE,autoDisplay:false},'gt-mount');
+    var sel=document.querySelector('#gt-mount .goog-te-combo');
+    if(sel){var o=document.createElement('option');o.value='ko';o.text='한국어';sel.add(o,sel.options[0]);}
+  };
+  document.body.appendChild(g);
+})();
+</script>
+
+</body>
+</html>
