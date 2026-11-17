@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The AI Brief — 2026년 11월 17일</title>
+<link rel="stylesheet" href="../assets/style.css" />
+
+<style>
+.tb-fixed{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;gap:8px;align-items:center;
+  padding:8px 14px;background:var(--paper,#fffdf8);border-bottom:1px solid var(--line,#e3ddd0);
+  box-shadow:0 1px 6px rgba(0,0,0,.05);font-family:var(--sans);}
+.tb-fixed input{flex:1;max-width:340px;padding:7px 12px;border:1px solid var(--line,#e3ddd0);
+  border-radius:20px;font-size:13px;background:var(--bg,#f4f1ea);color:var(--ink,#1c1a17);outline:none;}
+.tb-fixed .tb-btn{border:1px solid var(--line,#e3ddd0);background:transparent;color:var(--ink,#1c1a17);
+  border-radius:20px;padding:6px 12px;font-size:13px;cursor:pointer;line-height:1;}
+.tb-fixed .tb-btn:hover{border-color:var(--accent,#b4451f);color:var(--accent,#b4451f);}
+body.has-tb{padding-top:52px;}
+mark.hl{background:var(--accent-soft,#f3e7df);color:var(--accent,#b4451f);border-radius:3px;padding:0 2px;}
+#goog-gt-tt,#goog-te-banner{display:none!important;}
+.goog-te-gadget{font-size:0!important;}
+.goog-te-gadget .goog-te-combo{font-size:12px!important;padding:5px 6px;border-radius:14px;
+  border:1px solid var(--line,#e3ddd0);background:var(--bg,#f4f1ea);color:var(--ink,#1c1a17);}
+</style>
+
+</head>
+<body>
+
+<div class="tb-fixed">
+  <input id="siteSearch" type="search" placeholder="호 내 검색 (제목·설명)…" aria-label="검색" />
+  <button class="tb-btn" id="darkToggle" type="button">🌙 다크</button>
+  <div id="gt-mount"></div>
+</div>
+
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">The AI Brief</div>
+    <div class="issue-date">2026년 11월 17일</div>
+    <p class="tagline">매일 아침, AI 업계의 흐름을 한눈에</p>
+    <p class="topics">오늘의 주제 — AI agents · LLM reasoning · multimodal models · open source AI · Rust in AI tooling · AI safety</p>
+  </header>
+
+  
+    <section class="block tldr">
+      <header class="block-head">
+        <h2>한눈에 요약</h2>
+        <span class="block-sub">TL;DR</span>
+      </header>
+      <div class="block-body">
+        <p class="tldr-count">트렌딩 <b>4</b> · 논문 <b>8</b> · 프로젝트 <b>8</b> 건 수집</p>
+        <p class="tldr-topics">오늘 살펴본 주제 — AI 에이전트 · LLM 추론 · 멀티모달 모델 · 오픈소스 AI · AI 도구의 Rust · AI 안전성</p>
+        <ul class="tldr-picks"><li><span class="tldr-tag">오늘의 관심</span> Show HN: Coral – Open-source gateway where agents write their own tools</li><li><span class="tldr-tag">논문 픽</span> HEAMS: Holistic Evaluation of Agent Memory Systems</li><li><span class="tldr-tag">프로젝트 픽</span> vercel-labs/ui</li></ul>
+      </div>
+    </section>
+  
+    <section class="block" data-section="trending">
+      <header class="block-head">
+        <h2>트렌딩</h2>
+        <span class="block-sub">지금 주목받는 AI 이야기</span>
+      </header>
+      <div class="block-body"><div class="grid">
+    <article class="card">
+      <a class="card-title" href="https://github.com/withcoral/coral" target="_blank" rel="noopener">Show HN: Coral – Open-source gateway where agents write their own tools</a>
+      <p class="item-desc">Coral – 오픈소스 게이트웨이로 에이전트가 직접 도구를 작성·실행하게 해 개발 생산성을 높인다.</p>
+      <div class="card-foot"><span class="meta-line">▲ 52 · 💬 24</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/db-branch/db-branch" target="_blank" rel="noopener">Show HN: db-branch – database branches in seconds for AI agents and CI, via ZFS</a>
+      <p class="item-desc">db-branch – ZFS 기반으로 초단위 DB 브랜치를 제공해 AI 에이전트와 CI 파이프라인의 테스트 속도를 획기적으로 줄인다.</p>
+      <div class="card-foot"><span class="meta-line">▲ 45 · 💬 16</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://gizmodo.com/the-fed-is-worried-ai-agents-could-trigger-a-bank-run-2000840566" target="_blank" rel="noopener">The Fed Is Worried AI Agents Could Trigger a Bank Run</a>
+      <p class="item-desc">연준이 AI 에이전트의 자금 이동 자동화가 예금 인출 폭주를 유발할 수 있다고 경고하며 금융 안정성 리스크를 지적한다.</p>
+      <div class="card-foot"><span class="meta-line">▲ 24 · 💬 10</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://cpldcpu.github.io/2026/11/14/touchsynth/" target="_blank" rel="noopener">Agentic AI Designs an Analog Synthesizer</a>
+      <p class="item-desc">에이전틱 AI가 아날로그 신시사이저를 스스로 설계해 하드웨어 창작에도 생성형 모델이 적용 가능함을 보여준다.</p>
+      <div class="card-foot"><span class="meta-line">▲ 15 · 💬 4</span><span class="src">HackerNews</span></div>
+    </article></div></div>
+    </section>
+  
+    <section class="block" data-section="papers">
+      <header class="block-head">
+        <h2>논문</h2>
+        <span class="block-sub">새로 나온 연구</span>
+      </header>
+      <div class="block-body"><div class="rows">
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.20144v1" target="_blank" rel="noopener">HEAMS: Holistic Evaluation of Agent Memory Systems</a>
+        <p class="item-desc">Memory systems allow AI agents to persist information across interactions, making them more personalized and more capable on long-horizon tasks. This persistence introduces new risks: stored information can be disclosed in inappropriate contexts, resist correction or deletion, be</p>
+        <div class="card-foot"><span class="byline">Chirag Goel, Jacob Lavoie, Amirhossein Naghshzan</span><span class="date">2026-11-15</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.19982v1" target="_blank" rel="noopener">Autonomous Multi-modal Agents for ITOps Observability</a>
+        <p class="item-desc">ITOps observability products must integrate data from different tools and systems. We present ITOps Observability Studio, a multi-modal multi-agent system that orchestrates observability workflows through collaborative AI agents. Its three-tier architecture features inter-agent c</p>
+        <div class="card-foot"><span class="byline">Gunjan Siddharth, Sanjana Garai, Utsav Shekhar</span><span class="date">2026-11-15</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.19812v1" target="_blank" rel="noopener">Reasoning in the loop: antibody lead optimization by probing mechanism and measurement</a>
+        <p class="item-desc">Lab-in-the-loop systems, in which a model proposes molecules, automated assays measure their properties and the results retrain the model, are a popular approach to antibody lead optimization. These systems optimize for a specification defined with metrics computed from instrumen</p>
+        <div class="card-foot"><span class="byline">Samuel Stanton, Aaron Solomon, Emily Delaney</span><span class="date">2026-11-15</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.19676v1" target="_blank" rel="noopener">Score-Based Stochastic Closure Modeling via Offline Indirect Learning and Online Data Assimilation</a>
+        <p class="item-desc">Stochastic closure modeling is an emerging area in reduced-order modeling of large and complex (e.g., multiscale, multi-physics) systems, for which the computationally affordable reduced-order physical descriptions (e.g., digital twins for additive manufacturing, world models for</p>
+        <div class="card-foot"><span class="byline">Xinghao Dong, Huchen Yang, Jin-Long Wu</span><span class="date">2026-11-15</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.19663v1" target="_blank" rel="noopener">When AI Agents Should Repair, Replan, or Abandon: A Threshold Theory of Plan Commitment</a>
+        <p class="item-desc">AI agents often discover mid-execution that their plan is broken, for example when an action fails or a tool is withdrawn. Deployed systems use conventions such as retry loops or &quot;always replan,&quot; and a recent benchmark finds no fixed strategy dominates. This paper derives the opt</p>
+        <div class="card-foot"><span class="byline">Gaurav Tewari</span><span class="date">2026-11-14</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.19564v1" target="_blank" rel="noopener">Behavioral Assurance for Socially Deployed AI Agents</a>
+        <p class="item-desc">AI agents are increasingly deployed in socially consequential settings, yet existing evaluations provide limited assurance that they behave consistently with their intended characteristics across diverse interactions. We introduce an evaluation framework for measuring the behavio</p>
+        <div class="card-foot"><span class="byline">Nicole H Brennan, Jiaee Cheong</span><span class="date">2026-11-14</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.19536v1" target="_blank" rel="noopener">Agent Authenticator: Passkey-Grade, Hardware-Bound Authentication for AI Agents</a>
+        <p class="item-desc">AI coding agents now push code, publish packages, call model APIs and operate cloud resources on behalf of developers. They authenticate to these services with the same bearer secrets humans use, personal access tokens, API keys and package-registry tokens, stored where the model</p>
+        <div class="card-foot"><span class="byline">Harish Santhanalakshmi Ganesan</span><span class="date">2026-11-14</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.19385v1" target="_blank" rel="noopener">Does a completed simulation run mean a usable urban wind result for AI agents?</a>
+        <p class="item-desc">AI agents based on large language models (LLMs) can now configure and run computational fluid dynamics (CFD) solvers, but a completed run does not ensure that delivered metrics can be recomputed from raw outputs. This gap was examined for urban wind simulation, where multi-case c</p>
+        <div class="card-foot"><span class="byline">Zhongke Qu, Yunwei Zhang, Junwei Su</span><span class="date">2026-11-14</span><span class="src">ArXiv</span></div>
+      </div>
+    </article></div></div>
+    </section>
+  
+    <section class="block" data-section="tools">
+      <header class="block-head">
+        <h2>오픈소스</h2>
+        <span class="block-sub">움직이는 프로젝트</span>
+      </header>
+      <div class="block-body"><div class="grid">
+    <article class="card">
+      <a class="card-title" href="https://github.com/vercel-labs/ui" target="_blank" rel="noopener">vercel-labs/ui</a>
+      <p class="item-desc">A library of behaviors for agents to build the next generation of user interfaces.</p>
+      <div class="card-foot"><span class="badges">★ 5.3k · TypeScript</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/mdiri-ai/SoduWork" target="_blank" rel="noopener">mdiri-ai/SoduWork</a>
+      <p class="item-desc">The AI-native engine for teams and their agents. Multi-harness, multi-agent, self-hosted.</p>
+      <div class="card-foot"><span class="badges">★ 1.2k · JavaScript</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/andrew-babo/muse4ai" target="_blank" rel="noopener">andrew-babo/muse4ai</a>
+      <p class="item-desc">Muse4AI — let your AI agent make the pictures and the videos. Local Windows bridge for Muse via REST, MCP, and OAuth.</p>
+      <div class="card-foot"><span class="badges">★ 1.0k · TypeScript</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/huaxialucaicaizi/ai-startup-skills" target="_blank" rel="noopener">huaxialucaicaizi/ai-startup-skills</a>
+      <p class="item-desc">创业公司做 AI 产品的 7 步 Agent Skill 合集：验证 → BP → 政策 → 路演 → 获客 → 定价 → 注册。</p>
+      <div class="card-foot"><span class="badges">★ 930 · Python</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/looplj/reveric" target="_blank" rel="noopener">looplj/reveric</a>
+      <p class="item-desc">Agent Native 一站式 AI 小说，短剧桌面创作工作台</p>
+      <div class="card-foot"><span class="badges">★ 887 · Dart</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/simpsoka/zigzag" target="_blank" rel="noopener">simpsoka/zigzag</a>
+      <p class="item-desc">Free, open-source embroidery software for Mac and Windows. Turn SVG artwork into machine embroidery, edit stitches visually, and create designs with AI agents via MCP.</p>
+      <div class="card-foot"><span class="badges">★ 878 · Rust</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/phone-harness/mcp" target="_blank" rel="noopener">phone-harness/mcp</a>
+      <p class="item-desc">Connect AI agents to real iPhones and Androids</p>
+      <div class="card-foot"><span class="badges">★ 812 · Python</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/Dodaios/ste80-humanizer" target="_blank" rel="noopener">Dodaios/ste80-humanizer</a>
+      <p class="item-desc">STE80 Humanizer: agent skill that removes AI tells and rewrites text 80% of the way to ASD-STE100 (Simplified Technical English), the method Andrej Karpathy shared.</p>
+      <div class="card-foot"><span class="badges">★ 749 · Python</span><span class="src">GitHub</span></div>
+    </article></div></div>
+    </section>
+
+  <footer class="site-foot">
+    <a href="../index.html">← 최신 호로</a> · <a href="../archive.html">전체 아카이브</a>
+    <p>자동 수집 · HackerNews · ArXiv · GitHub</p>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var b=document.body; b.classList.add('has-tb');
+  // 다크모드
+  var dt=document.getElementById('darkToggle');
+  var saved=localStorage.getItem('aibrief-theme');
+  if(saved==='dark'){document.documentElement.setAttribute('data-theme','dark');dt.textContent='☀️ 라이트';}
+  dt.addEventListener('click',function(){
+    var dark=dt.textContent.indexOf('라이트')===-1;
+    if(dark){localStorage.setItem('aibrief-theme','dark');document.documentElement.setAttribute('data-theme','dark');dt.textContent='☀️ 라이트';}
+    else{localStorage.setItem('aibrief-theme','light');document.documentElement.removeAttribute('data-theme');dt.textContent='🌙 다크';}
+  });
+  // 검색 (호 내 하이라이팅 + 필터)
+  var s=document.getElementById('siteSearch');
+  s.addEventListener('input',function(){
+    var q=s.value.trim().toLowerCase();
+    var cards=document.querySelectorAll('.card,.row');
+    cards.forEach(function(c){
+      var t=c.textContent.toLowerCase();
+      var hit=!q||t.indexOf(q)>-1;
+      c.style.display=hit?'':'none';
+      c.querySelectorAll('mark.hl').forEach(function(m){c.replaceChild(document.createTextNode(m.textContent),m);c.normalize();});
+      if(q&&hit){var tt=c.innerHTML;
+        try{c.innerHTML=tt.replace(new RegExp('('+q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','ig'),'<mark class="hl">$1</mark>');}catch(e){}}
+    });
+    document.querySelectorAll('.block').forEach(function(bl){
+      var any=[].slice.call(bl.querySelectorAll('.card,.row')).some(function(c){return c.style.display!=='none';});
+      bl.style.display=(q&&!any)?'none':'';
+    });
+  });
+  // Google 번역 위젯 (키 불필요)
+  var g=document.createElement('script');
+  g.src='https://translate.google.com/translate_a/element.js?cb=__aibT';
+  window.__aibT=function(){
+    new google.translate.TranslateElement({pageLanguage:'en',includedLanguages:'ko,en',layout:google.translate.TranslateElement.InlineLayout.SIMPLE,autoDisplay:false},'gt-mount');
+    var sel=document.querySelector('#gt-mount .goog-te-combo');
+    if(sel){var o=document.createElement('option');o.value='ko';o.text='한국어';sel.add(o,sel.options[0]);}
+  };
+  document.body.appendChild(g);
+})();
+</script>
+
+</body>
+</html>
