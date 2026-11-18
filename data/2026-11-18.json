@@ -1,0 +1,239 @@
+{
+  "date": "2026-11-18",
+  "generated_at": "2026-11-18T12:43:43+09:00",
+  "topics": [
+    "AI agents",
+    "LLM reasoning",
+    "multimodal models",
+    "open source AI",
+    "Rust in AI tooling",
+    "AI safety"
+  ],
+  "topic_labels": {
+    "AI agents": "AI 에이전트",
+    "LLM reasoning": "LLM 추론",
+    "multimodal models": "멀티모달 모델",
+    "open source AI": "오픈소스 AI",
+    "Rust in AI tooling": "AI 도구의 Rust",
+    "AI safety": "AI 안전성"
+  },
+  "counts": {
+    "trending": 7,
+    "papers": 8,
+    "tools": 8
+  },
+  "summary_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "summary_attempts": [
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "outcome": "ok",
+      "served_by": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "n": 1
+    }
+  ],
+  "trending": [
+    {
+      "title": "Harvard researchers find AI coding agents shifted the bottleneck to code review",
+      "url": "https://complexdiscovery.com/harvard-researchers-find-ai-coding-agents-shifted-the-bottleneck-to-code-review/",
+      "source": "HackerNews",
+      "points": 81,
+      "comments": 125,
+      "author": "judahmeek",
+      "date": "2026-11-17",
+      "desc": "",
+      "summary_ko": "{\"summaries\":[\"하버드 연구진이 AI 코딩 에이전트가 코드 리뷰를 병목으로 옮겼음을 밝혀, 리뷰 자동화 필요성을 강조했다.\",\"YC P25 스타트업 StarSling이 에이"
+    },
+    {
+      "title": "Launch HN: StarSling (YC P25) – Self-improving CI for agent-volume repos",
+      "url": "https://starsling.dev",
+      "source": "HackerNews",
+      "points": 60,
+      "comments": 34,
+      "author": "yonasb",
+      "date": "2026-11-17",
+      "desc": ""
+    },
+    {
+      "title": "Show HN: Coral – Open-source gateway where agents write their own tools",
+      "url": "https://github.com/withcoral/coral",
+      "source": "HackerNews",
+      "points": 52,
+      "comments": 24,
+      "author": "jcs",
+      "date": "2026-11-16",
+      "desc": ""
+    },
+    {
+      "title": "Show HN: TrnRT – An open-source LLM inference engine for AWS Trainium",
+      "url": "https://github.com/RunanywhereAI/trnrt",
+      "source": "HackerNews",
+      "points": 46,
+      "comments": 7,
+      "author": "sanchitmonga22",
+      "date": "2026-11-17",
+      "desc": ""
+    },
+    {
+      "title": "The Fed Is Worried AI Agents Could Trigger a Bank Run",
+      "url": "https://gizmodo.com/the-fed-is-worried-ai-agents-could-trigger-a-bank-run-2000840566",
+      "source": "HackerNews",
+      "points": 27,
+      "comments": 15,
+      "author": "pera",
+      "date": "2026-11-16",
+      "desc": ""
+    },
+    {
+      "title": "Show HN: Agav – an open-source terminal agent designed to waste fewer tokens",
+      "url": "https://github.com/prapaa-ai/agav",
+      "source": "HackerNews",
+      "points": 26,
+      "comments": 8,
+      "author": "GeradeMoleculee",
+      "date": "2026-11-17",
+      "desc": ""
+    },
+    {
+      "title": "Ask HN: Aren't the current cyber attacks suspicious?",
+      "url": "https://news.ycombinator.com/item?id=50538449",
+      "source": "HackerNews",
+      "points": 15,
+      "comments": 15,
+      "author": "arisAlexis",
+      "date": "2026-11-17",
+      "desc": ""
+    }
+  ],
+  "papers": [
+    {
+      "title": "Groups of AI agents underuse resources despite shared evidence of increased capacity",
+      "url": "https://arxiv.org/pdf/2611.22632v1",
+      "source": "ArXiv",
+      "authors": "Takahiro Ezaki, Naoto Imura, Katsuhiro Nishinari",
+      "date": "2026-11-17",
+      "desc": "When AI agents share limited resources, such as computing services or public infrastructure, their individual choices affect how much work they complete as a group. Can sharing evidence of what is available let a group make full use of its resources after capacity changes? We tes"
+    },
+    {
+      "title": "LMLineage: Content Lineage and Context Governance for LLM Agents",
+      "url": "https://arxiv.org/pdf/2611.22511v1",
+      "source": "ArXiv",
+      "authors": "Wei Hou, Jingxin Geng, Xin Chen",
+      "date": "2026-11-17",
+      "desc": "Interpretability for AI agents should not be confined to understanding the model's internal weights. It must also cover the agent's reasoning and decision-making process over multi-source context. We present LMLineage, an out-of-band system that attributes every output sentence o"
+    },
+    {
+      "title": "Reliable Evaluation of AI Agents for Investment Research: A Framework for Performance and Validity Assessment",
+      "url": "https://arxiv.org/pdf/2611.22338v1",
+      "source": "ArXiv",
+      "authors": "Dongnuan Tian, Yan Yu, Yangfan Liu",
+      "date": "2026-11-17",
+      "desc": "We consider the problem of evaluating AI agents undertaking investment-research tasks, where agents interact with external information sources and computational tools to produce financial analyses and research reports. An important challenge is that the quality of an agent's fina"
+    },
+    {
+      "title": "Readie: Low-Latency Code Sandboxes for AI Agents",
+      "url": "https://arxiv.org/pdf/2611.22171v1",
+      "source": "ArXiv",
+      "authors": "Arjun Sivaraman, Zhaoheng Li, Alan Shi",
+      "date": "2026-11-17",
+      "desc": "From quantitative research to personal assistance, AI agents act by iteratively generating and executing code. To decouple the agent harness from code execution, many agents offload execution to dedicated systems called code sandboxes. However, existing code sandboxes suffer from"
+    },
+    {
+      "title": "ATLAS-Finance: Benchmarking AI Agents in Realistic Banking Environments",
+      "url": "https://arxiv.org/pdf/2611.22085v1",
+      "source": "ArXiv",
+      "authors": "Elaine Lau, Antoine Pangas, Alexandre Finot",
+      "date": "2026-11-17",
+      "desc": "Professional work involves under-specified assignments, where relevant information is spread across workplace applications and may conflict or change over time. To evaluate how well frontier agents can perform economically valuable work in such settings, we introduce ATLAS-Financ"
+    },
+    {
+      "title": "Can You Undo It? Reversibility Classes for AI Agent Actions",
+      "url": "https://arxiv.org/pdf/2611.22075v1",
+      "source": "ArXiv",
+      "authors": "Deepak Waghmare, Shaad Sufi",
+      "date": "2026-11-17",
+      "desc": "Tool-using AI agents change files, databases, access rights and public information, yet permission to call a tool does not establish whether a mistake can be undone. We present Reversibility Classes, a declared five-level vocabulary with argument-sensitive rules, conservative def"
+    },
+    {
+      "title": "Eight in Ten LLMs Leak System-Prompt Secrets: Nevan, an Agentic Capture-the-Flag Study",
+      "url": "https://arxiv.org/pdf/2611.21956v1",
+      "source": "ArXiv",
+      "authors": "Ana Clara Zoppi Serpa, Anderson Rocha, Hélio Pedrini",
+      "date": "2026-11-16",
+      "desc": "We audit instruction-hierarchy enforcement across 363 text-in/text-out models from the OpenRouter catalog. The research question we answer with this experiment is which models disclose a protected secret embedded in the system prompt, and through which techniques. Each model guar"
+    },
+    {
+      "title": "DiscoveryAgent: A Framework for Scientist-centric Agentic AI",
+      "url": "https://arxiv.org/pdf/2611.21950v1",
+      "source": "ArXiv",
+      "authors": "Owen Queen, Ioana Ciuca, Emma Dann",
+      "date": "2026-11-16",
+      "desc": "AI agents can assist scientific research, but balancing autonomous investigation with scientists' ability to inspect and redirect ongoing work remains a central design challenge. We present DiscoveryAgent, a domain-agnostic, scientist-centric system that combines autonomous inves"
+    }
+  ],
+  "tools": [
+    {
+      "title": "anomalyco/browse",
+      "url": "https://github.com/anomalyco/browse",
+      "source": "GitHub",
+      "stars": 870,
+      "language": "TypeScript",
+      "desc": "Let your AI agents use your real browser: an MCP server and a Chromium extension"
+    },
+    {
+      "title": "hevnsnt/CVEngine",
+      "url": "https://github.com/hevnsnt/CVEngine",
+      "source": "GitHub",
+      "stars": 743,
+      "language": "Python",
+      "desc": "AI-first external attack surface assessment with continuous discovery, evidence-based vulnerability validation, and developer-agent MCP integration."
+    },
+    {
+      "title": "blakeandersonw/ai-app-playbook",
+      "url": "https://github.com/blakeandersonw/ai-app-playbook",
+      "source": "GitHub",
+      "stars": 654,
+      "language": "TypeScript",
+      "desc": "How to build useful, profitable apps in 2026. Clone it and point your coding agent at AGENTS.md."
+    },
+    {
+      "title": "ngocanhnckh/renderlint",
+      "url": "https://github.com/ngocanhnckh/renderlint",
+      "source": "GitHub",
+      "stars": 638,
+      "language": "JavaScript",
+      "desc": "Lint the rendered UI: catches overflowing text, low contrast, overlaps, broken responsive layouts, emoji icons and more in any web framework. Built for AI coding agents."
+    },
+    {
+      "title": "wanghao-SunSky/cs329z-chinese",
+      "url": "https://github.com/wanghao-SunSky/cs329z-chinese",
+      "source": "GitHub",
+      "stars": 614,
+      "language": "HTML",
+      "desc": "斯坦福 Stanford CS329Z Engineering AI Agents 中文教程：面向 Python 开发者的 AI 智能体课程，19 讲与 4 项实践，涵盖 LLM、RAG、工具调用、记忆、多智能体、评测与安全。完整 Markdown、在线与离线 HTML。Chinese course notes."
+    },
+    {
+      "title": "mileson/chaojifeng-video-design",
+      "url": "https://github.com/mileson/chaojifeng-video-design",
+      "source": "GitHub",
+      "stars": 549,
+      "language": "HTML",
+      "desc": "超级峰的视频设计方法论｜面向 AI Agent 的视频主线、分镜、声画节奏、制作与交付验收 Skill"
+    },
+    {
+      "title": "boringmarketer/boring-marketing-skills",
+      "url": "https://github.com/boringmarketer/boring-marketing-skills",
+      "source": "GitHub",
+      "stars": 547,
+      "language": "Python",
+      "desc": "32 free marketing skills for your AI agent: research, positioning, copy, pages, SEO, AI search, ads, email and content, plus a deep local-business pack. MIT."
+    },
+    {
+      "title": "aa1143/NamiAgent",
+      "url": "https://github.com/aa1143/NamiAgent",
+      "source": "GitHub",
+      "stars": 545,
+      "language": "Python",
+      "desc": "零基础入门 AI Agent 的基础教程。不只是教程，也是一个能在本地跑起来的 Agent：读写文件、执行命令、MCP、长期记忆，自带网页端看清每一步。从 100 行最小循环开始，一课加一个能力，最后拆解 Claude Code、Codex 等主流 Agent"
+    }
+  ]
+}

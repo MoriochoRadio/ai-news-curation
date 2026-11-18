@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The AI Brief — 2026년 11월 18일</title>
+<link rel="stylesheet" href="../assets/style.css" />
+
+<style>
+.tb-fixed{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;gap:8px;align-items:center;
+  padding:8px 14px;background:var(--paper,#fffdf8);border-bottom:1px solid var(--line,#e3ddd0);
+  box-shadow:0 1px 6px rgba(0,0,0,.05);font-family:var(--sans);}
+.tb-fixed input{flex:1;max-width:340px;padding:7px 12px;border:1px solid var(--line,#e3ddd0);
+  border-radius:20px;font-size:13px;background:var(--bg,#f4f1ea);color:var(--ink,#1c1a17);outline:none;}
+.tb-fixed .tb-btn{border:1px solid var(--line,#e3ddd0);background:transparent;color:var(--ink,#1c1a17);
+  border-radius:20px;padding:6px 12px;font-size:13px;cursor:pointer;line-height:1;}
+.tb-fixed .tb-btn:hover{border-color:var(--accent,#b4451f);color:var(--accent,#b4451f);}
+body.has-tb{padding-top:52px;}
+mark.hl{background:var(--accent-soft,#f3e7df);color:var(--accent,#b4451f);border-radius:3px;padding:0 2px;}
+#goog-gt-tt,#goog-te-banner{display:none!important;}
+.goog-te-gadget{font-size:0!important;}
+.goog-te-gadget .goog-te-combo{font-size:12px!important;padding:5px 6px;border-radius:14px;
+  border:1px solid var(--line,#e3ddd0);background:var(--bg,#f4f1ea);color:var(--ink,#1c1a17);}
+</style>
+
+</head>
+<body>
+
+<div class="tb-fixed">
+  <input id="siteSearch" type="search" placeholder="호 내 검색 (제목·설명)…" aria-label="검색" />
+  <button class="tb-btn" id="darkToggle" type="button">🌙 다크</button>
+  <div id="gt-mount"></div>
+</div>
+
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">The AI Brief</div>
+    <div class="issue-date">2026년 11월 18일</div>
+    <p class="tagline">매일 아침, AI 업계의 흐름을 한눈에</p>
+    <p class="topics">오늘의 주제 — AI agents · LLM reasoning · multimodal models · open source AI · Rust in AI tooling · AI safety</p>
+  </header>
+
+  
+    <section class="block tldr">
+      <header class="block-head">
+        <h2>한눈에 요약</h2>
+        <span class="block-sub">TL;DR</span>
+      </header>
+      <div class="block-body">
+        <p class="tldr-count">트렌딩 <b>7</b> · 논문 <b>8</b> · 프로젝트 <b>8</b> 건 수집</p>
+        <p class="tldr-topics">오늘 살펴본 주제 — AI 에이전트 · LLM 추론 · 멀티모달 모델 · 오픈소스 AI · AI 도구의 Rust · AI 안전성</p>
+        <ul class="tldr-picks"><li><span class="tldr-tag">오늘의 관심</span> Harvard researchers find AI coding agents shifted the bottleneck to code review</li><li><span class="tldr-tag">논문 픽</span> Groups of AI agents underuse resources despite shared evidence of increased capacity</li><li><span class="tldr-tag">프로젝트 픽</span> anomalyco/browse</li></ul>
+      </div>
+    </section>
+  
+    <section class="block" data-section="trending">
+      <header class="block-head">
+        <h2>트렌딩</h2>
+        <span class="block-sub">지금 주목받는 AI 이야기</span>
+      </header>
+      <div class="block-body"><div class="grid">
+    <article class="card">
+      <a class="card-title" href="https://complexdiscovery.com/harvard-researchers-find-ai-coding-agents-shifted-the-bottleneck-to-code-review/" target="_blank" rel="noopener">Harvard researchers find AI coding agents shifted the bottleneck to code review</a>
+      <p class="item-desc">{&quot;summaries&quot;:[&quot;하버드 연구진이 AI 코딩 에이전트가 코드 리뷰를 병목으로 옮겼음을 밝혀, 리뷰 자동화 필요성을 강조했다.&quot;,&quot;YC P25 스타트업 StarSling이 에이</p>
+      <div class="card-foot"><span class="meta-line">▲ 81 · 💬 125</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://starsling.dev" target="_blank" rel="noopener">Launch HN: StarSling (YC P25) – Self-improving CI for agent-volume repos</a>
+      
+      <div class="card-foot"><span class="meta-line">▲ 60 · 💬 34</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/withcoral/coral" target="_blank" rel="noopener">Show HN: Coral – Open-source gateway where agents write their own tools</a>
+      
+      <div class="card-foot"><span class="meta-line">▲ 52 · 💬 24</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/RunanywhereAI/trnrt" target="_blank" rel="noopener">Show HN: TrnRT – An open-source LLM inference engine for AWS Trainium</a>
+      
+      <div class="card-foot"><span class="meta-line">▲ 46 · 💬 7</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://gizmodo.com/the-fed-is-worried-ai-agents-could-trigger-a-bank-run-2000840566" target="_blank" rel="noopener">The Fed Is Worried AI Agents Could Trigger a Bank Run</a>
+      
+      <div class="card-foot"><span class="meta-line">▲ 27 · 💬 15</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/prapaa-ai/agav" target="_blank" rel="noopener">Show HN: Agav – an open-source terminal agent designed to waste fewer tokens</a>
+      
+      <div class="card-foot"><span class="meta-line">▲ 26 · 💬 8</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://news.ycombinator.com/item?id=50538449" target="_blank" rel="noopener">Ask HN: Aren&#x27;t the current cyber attacks suspicious?</a>
+      
+      <div class="card-foot"><span class="meta-line">▲ 15 · 💬 15</span><span class="src">HackerNews</span></div>
+    </article></div></div>
+    </section>
+  
+    <section class="block" data-section="papers">
+      <header class="block-head">
+        <h2>논문</h2>
+        <span class="block-sub">새로 나온 연구</span>
+      </header>
+      <div class="block-body"><div class="rows">
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.22632v1" target="_blank" rel="noopener">Groups of AI agents underuse resources despite shared evidence of increased capacity</a>
+        <p class="item-desc">When AI agents share limited resources, such as computing services or public infrastructure, their individual choices affect how much work they complete as a group. Can sharing evidence of what is available let a group make full use of its resources after capacity changes? We tes</p>
+        <div class="card-foot"><span class="byline">Takahiro Ezaki, Naoto Imura, Katsuhiro Nishinari</span><span class="date">2026-11-17</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.22511v1" target="_blank" rel="noopener">LMLineage: Content Lineage and Context Governance for LLM Agents</a>
+        <p class="item-desc">Interpretability for AI agents should not be confined to understanding the model&#x27;s internal weights. It must also cover the agent&#x27;s reasoning and decision-making process over multi-source context. We present LMLineage, an out-of-band system that attributes every output sentence o</p>
+        <div class="card-foot"><span class="byline">Wei Hou, Jingxin Geng, Xin Chen</span><span class="date">2026-11-17</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.22338v1" target="_blank" rel="noopener">Reliable Evaluation of AI Agents for Investment Research: A Framework for Performance and Validity Assessment</a>
+        <p class="item-desc">We consider the problem of evaluating AI agents undertaking investment-research tasks, where agents interact with external information sources and computational tools to produce financial analyses and research reports. An important challenge is that the quality of an agent&#x27;s fina</p>
+        <div class="card-foot"><span class="byline">Dongnuan Tian, Yan Yu, Yangfan Liu</span><span class="date">2026-11-17</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.22171v1" target="_blank" rel="noopener">Readie: Low-Latency Code Sandboxes for AI Agents</a>
+        <p class="item-desc">From quantitative research to personal assistance, AI agents act by iteratively generating and executing code. To decouple the agent harness from code execution, many agents offload execution to dedicated systems called code sandboxes. However, existing code sandboxes suffer from</p>
+        <div class="card-foot"><span class="byline">Arjun Sivaraman, Zhaoheng Li, Alan Shi</span><span class="date">2026-11-17</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.22085v1" target="_blank" rel="noopener">ATLAS-Finance: Benchmarking AI Agents in Realistic Banking Environments</a>
+        <p class="item-desc">Professional work involves under-specified assignments, where relevant information is spread across workplace applications and may conflict or change over time. To evaluate how well frontier agents can perform economically valuable work in such settings, we introduce ATLAS-Financ</p>
+        <div class="card-foot"><span class="byline">Elaine Lau, Antoine Pangas, Alexandre Finot</span><span class="date">2026-11-17</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.22075v1" target="_blank" rel="noopener">Can You Undo It? Reversibility Classes for AI Agent Actions</a>
+        <p class="item-desc">Tool-using AI agents change files, databases, access rights and public information, yet permission to call a tool does not establish whether a mistake can be undone. We present Reversibility Classes, a declared five-level vocabulary with argument-sensitive rules, conservative def</p>
+        <div class="card-foot"><span class="byline">Deepak Waghmare, Shaad Sufi</span><span class="date">2026-11-17</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.21956v1" target="_blank" rel="noopener">Eight in Ten LLMs Leak System-Prompt Secrets: Nevan, an Agentic Capture-the-Flag Study</a>
+        <p class="item-desc">We audit instruction-hierarchy enforcement across 363 text-in/text-out models from the OpenRouter catalog. The research question we answer with this experiment is which models disclose a protected secret embedded in the system prompt, and through which techniques. Each model guar</p>
+        <div class="card-foot"><span class="byline">Ana Clara Zoppi Serpa, Anderson Rocha, Hélio Pedrini</span><span class="date">2026-11-16</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.21950v1" target="_blank" rel="noopener">DiscoveryAgent: A Framework for Scientist-centric Agentic AI</a>
+        <p class="item-desc">AI agents can assist scientific research, but balancing autonomous investigation with scientists&#x27; ability to inspect and redirect ongoing work remains a central design challenge. We present DiscoveryAgent, a domain-agnostic, scientist-centric system that combines autonomous inves</p>
+        <div class="card-foot"><span class="byline">Owen Queen, Ioana Ciuca, Emma Dann</span><span class="date">2026-11-16</span><span class="src">ArXiv</span></div>
+      </div>
+    </article></div></div>
+    </section>
+  
+    <section class="block" data-section="tools">
+      <header class="block-head">
+        <h2>오픈소스</h2>
+        <span class="block-sub">움직이는 프로젝트</span>
+      </header>
+      <div class="block-body"><div class="grid">
+    <article class="card">
+      <a class="card-title" href="https://github.com/anomalyco/browse" target="_blank" rel="noopener">anomalyco/browse</a>
+      <p class="item-desc">Let your AI agents use your real browser: an MCP server and a Chromium extension</p>
+      <div class="card-foot"><span class="badges">★ 870 · TypeScript</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/hevnsnt/CVEngine" target="_blank" rel="noopener">hevnsnt/CVEngine</a>
+      <p class="item-desc">AI-first external attack surface assessment with continuous discovery, evidence-based vulnerability validation, and developer-agent MCP integration.</p>
+      <div class="card-foot"><span class="badges">★ 743 · Python</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/blakeandersonw/ai-app-playbook" target="_blank" rel="noopener">blakeandersonw/ai-app-playbook</a>
+      <p class="item-desc">How to build useful, profitable apps in 2026. Clone it and point your coding agent at AGENTS.md.</p>
+      <div class="card-foot"><span class="badges">★ 654 · TypeScript</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/ngocanhnckh/renderlint" target="_blank" rel="noopener">ngocanhnckh/renderlint</a>
+      <p class="item-desc">Lint the rendered UI: catches overflowing text, low contrast, overlaps, broken responsive layouts, emoji icons and more in any web framework. Built for AI coding agents.</p>
+      <div class="card-foot"><span class="badges">★ 638 · JavaScript</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/wanghao-SunSky/cs329z-chinese" target="_blank" rel="noopener">wanghao-SunSky/cs329z-chinese</a>
+      <p class="item-desc">斯坦福 Stanford CS329Z Engineering AI Agents 中文教程：面向 Python 开发者的 AI 智能体课程，19 讲与 4 项实践，涵盖 LLM、RAG、工具调用、记忆、多智能体、评测与安全。完整 Markdown、在线与离线 HTML。Chinese course notes.</p>
+      <div class="card-foot"><span class="badges">★ 614 · HTML</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/mileson/chaojifeng-video-design" target="_blank" rel="noopener">mileson/chaojifeng-video-design</a>
+      <p class="item-desc">超级峰的视频设计方法论｜面向 AI Agent 的视频主线、分镜、声画节奏、制作与交付验收 Skill</p>
+      <div class="card-foot"><span class="badges">★ 549 · HTML</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/boringmarketer/boring-marketing-skills" target="_blank" rel="noopener">boringmarketer/boring-marketing-skills</a>
+      <p class="item-desc">32 free marketing skills for your AI agent: research, positioning, copy, pages, SEO, AI search, ads, email and content, plus a deep local-business pack. MIT.</p>
+      <div class="card-foot"><span class="badges">★ 547 · Python</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/aa1143/NamiAgent" target="_blank" rel="noopener">aa1143/NamiAgent</a>
+      <p class="item-desc">零基础入门 AI Agent 的基础教程。不只是教程，也是一个能在本地跑起来的 Agent：读写文件、执行命令、MCP、长期记忆，自带网页端看清每一步。从 100 行最小循环开始，一课加一个能力，最后拆解 Claude Code、Codex 等主流 Agent</p>
+      <div class="card-foot"><span class="badges">★ 545 · Python</span><span class="src">GitHub</span></div>
+    </article></div></div>
+    </section>
+
+  <footer class="site-foot">
+    <a href="../index.html">← 최신 호로</a> · <a href="../archive.html">전체 아카이브</a>
+    <p>자동 수집 · HackerNews · ArXiv · GitHub</p>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var b=document.body; b.classList.add('has-tb');
+  // 다크모드
+  var dt=document.getElementById('darkToggle');
+  var saved=localStorage.getItem('aibrief-theme');
+  if(saved==='dark'){document.documentElement.setAttribute('data-theme','dark');dt.textContent='☀️ 라이트';}
+  dt.addEventListener('click',function(){
+    var dark=dt.textContent.indexOf('라이트')===-1;
+    if(dark){localStorage.setItem('aibrief-theme','dark');document.documentElement.setAttribute('data-theme','dark');dt.textContent='☀️ 라이트';}
+    else{localStorage.setItem('aibrief-theme','light');document.documentElement.removeAttribute('data-theme');dt.textContent='🌙 다크';}
+  });
+  // 검색 (호 내 하이라이팅 + 필터)
+  var s=document.getElementById('siteSearch');
+  s.addEventListener('input',function(){
+    var q=s.value.trim().toLowerCase();
+    var cards=document.querySelectorAll('.card,.row');
+    cards.forEach(function(c){
+      var t=c.textContent.toLowerCase();
+      var hit=!q||t.indexOf(q)>-1;
+      c.style.display=hit?'':'none';
+      c.querySelectorAll('mark.hl').forEach(function(m){c.replaceChild(document.createTextNode(m.textContent),m);c.normalize();});
+      if(q&&hit){var tt=c.innerHTML;
+        try{c.innerHTML=tt.replace(new RegExp('('+q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','ig'),'<mark class="hl">$1</mark>');}catch(e){}}
+    });
+    document.querySelectorAll('.block').forEach(function(bl){
+      var any=[].slice.call(bl.querySelectorAll('.card,.row')).some(function(c){return c.style.display!=='none';});
+      bl.style.display=(q&&!any)?'none':'';
+    });
+  });
+  // Google 번역 위젯 (키 불필요)
+  var g=document.createElement('script');
+  g.src='https://translate.google.com/translate_a/element.js?cb=__aibT';
+  window.__aibT=function(){
+    new google.translate.TranslateElement({pageLanguage:'en',includedLanguages:'ko,en',layout:google.translate.TranslateElement.InlineLayout.SIMPLE,autoDisplay:false},'gt-mount');
+    var sel=document.querySelector('#gt-mount .goog-te-combo');
+    if(sel){var o=document.createElement('option');o.value='ko';o.text='한국어';sel.add(o,sel.options[0]);}
+  };
+  document.body.appendChild(g);
+})();
+</script>
+
+</body>
+</html>
