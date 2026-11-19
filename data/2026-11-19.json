@@ -1,0 +1,249 @@
+{
+  "date": "2026-11-19",
+  "generated_at": "2026-11-19T12:35:42+09:00",
+  "topics": [
+    "AI agents",
+    "LLM reasoning",
+    "multimodal models",
+    "open source AI",
+    "Rust in AI tooling",
+    "AI safety"
+  ],
+  "topic_labels": {
+    "AI agents": "AI 에이전트",
+    "LLM reasoning": "LLM 추론",
+    "multimodal models": "멀티모달 모델",
+    "open source AI": "오픈소스 AI",
+    "Rust in AI tooling": "AI 도구의 Rust",
+    "AI safety": "AI 안전성"
+  },
+  "counts": {
+    "trending": 8,
+    "papers": 8,
+    "tools": 8
+  },
+  "summary_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "summary_attempts": [
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "outcome": "ok",
+      "served_by": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "n": 1
+    }
+  ],
+  "trending": [
+    {
+      "title": "AI agents ask better questions than KPMG accountants in audit trial",
+      "url": "https://europeanbusinessmagazine.com/ai-agents-better-questions-kpmg/",
+      "source": "HackerNews",
+      "points": 385,
+      "comments": 169,
+      "author": "Betelbuddy",
+      "date": "2026-11-18",
+      "desc": "",
+      "summary_ko": "{\"summaries\": [\"AI 에이전트가 KPMG 회계사보다 더 나은 감사 질문을 던져 감사 효율을 높인다.\", \"하버드 연구진이 AI 코딩 에이전트로 병목이 코드 리뷰로 이동했음을 밝혔다.\", \"YC P25 스타트업 StarSling이 에이"
+    },
+    {
+      "title": "Harvard researchers find AI coding agents shifted the bottleneck to code review",
+      "url": "https://complexdiscovery.com/harvard-researchers-find-ai-coding-agents-shifted-the-bottleneck-to-code-review/",
+      "source": "HackerNews",
+      "points": 320,
+      "comments": 440,
+      "author": "judahmeek",
+      "date": "2026-11-17",
+      "desc": ""
+    },
+    {
+      "title": "Launch HN: StarSling (YC P25) – Self-improving CI for agent-volume repos",
+      "url": "https://news.ycombinator.com/item?id=50536468",
+      "source": "HackerNews",
+      "points": 87,
+      "comments": 48,
+      "author": "yonasb",
+      "date": "2026-11-17",
+      "desc": ""
+    },
+    {
+      "title": "Launch HN: Maritime (YC F26) – A managed cloud for production AI agents",
+      "url": "https://news.ycombinator.com/item?id=50549188",
+      "source": "HackerNews",
+      "points": 45,
+      "comments": 40,
+      "author": "ashriv",
+      "date": "2026-11-18",
+      "desc": ""
+    },
+    {
+      "title": "Show HN: Agav – an open-source terminal agent designed to waste fewer tokens",
+      "url": "https://github.com/prapaa-ai/agav",
+      "source": "HackerNews",
+      "points": 26,
+      "comments": 10,
+      "author": "GeradeMoleculee",
+      "date": "2026-11-17",
+      "desc": ""
+    },
+    {
+      "title": "Claude Gets Hella Paranoid",
+      "url": "https://news.ycombinator.com/item?id=50543947",
+      "source": "HackerNews",
+      "points": 18,
+      "comments": 9,
+      "author": "noduerme",
+      "date": "2026-11-18",
+      "desc": ""
+    },
+    {
+      "title": "Ask HN: Aren't the current cyber attacks suspicious?",
+      "url": "https://news.ycombinator.com/item?id=50538449",
+      "source": "HackerNews",
+      "points": 17,
+      "comments": 17,
+      "author": "arisAlexis",
+      "date": "2026-11-17",
+      "desc": ""
+    },
+    {
+      "title": "Multi Agent Coordination Benchmark",
+      "url": "https://benchmarks.bespokelabs.ai/multi-agent-coordination-bench/",
+      "source": "HackerNews",
+      "points": 15,
+      "comments": 1,
+      "author": "madiator",
+      "date": "2026-11-18",
+      "desc": ""
+    }
+  ],
+  "papers": [
+    {
+      "title": "MoE-Context: Show the Model Only What It Needs",
+      "url": "https://arxiv.org/pdf/2611.24379v1",
+      "source": "ArXiv",
+      "authors": "Vedant Navale",
+      "date": "2026-11-18",
+      "desc": "AI agents read their whole history at every step. People do not work like that: we keep what the moment needs and hold the rest as a rough note we can recall. MoE-Context applies this to language models. The context is split into blocks. Before each step a fast yes or no pass dec"
+    },
+    {
+      "title": "RoboBuilder: Agentic Robot Co-Design with Real-world Video Feedback in the Loop",
+      "url": "https://arxiv.org/pdf/2611.23855v1",
+      "source": "ArXiv",
+      "authors": "Ghadi Nehme, Dahyun Nam, Akshay Govind Srinivasan",
+      "date": "2026-11-18",
+      "desc": "Can AI agents design robots that work in the real world? We introduce RoboBuilder, a benchmark in which coding agents co-design a robot's hardware and program from standard parts, motors and a custom 3D-printed part, and every design that passes in simulation is built and tested "
+    },
+    {
+      "title": "Lodestone: Automated Semantic Discovery of Datacenter Hardware Specialization",
+      "url": "https://arxiv.org/pdf/2611.23663v1",
+      "source": "ArXiv",
+      "authors": "Peizhe Liu, Akanksha Jain, Gerasimos Gerogiannis",
+      "date": "2026-11-18",
+      "desc": "Hardware specialization can improve datacenter efficiency. Unfortunately, identifying computations that justify dedicated hardware is difficult. Existing approaches analyze hot functions, instruction patterns, or overheads such as datacenter tax. They can miss fine-grained comput"
+    },
+    {
+      "title": "GUARD: Stabilizing Recursive Self-Improvement with Regret Guidance",
+      "url": "https://arxiv.org/pdf/2611.23476v1",
+      "source": "ArXiv",
+      "authors": "Minghe Zhang, Xuetao Kang, Yifei Ming",
+      "date": "2026-11-17",
+      "desc": "Autonomous AI agents pair a frozen base model with an editable harness of prompts, skills, tool rules, and memory. Recursive self-improvement (RSI) adapts this harness from experience without weight updates, yet self-editing without external graders often backfires: reflection an"
+    },
+    {
+      "title": "Agent Trust Infrastructure (ATI): A Federated Identity, Trust, Attestation, and Accountability Architecture for Cross-Organization Autonomous AI Agents",
+      "url": "https://arxiv.org/pdf/2611.23202v1",
+      "source": "ArXiv",
+      "authors": "Viet K. Nguyen, Mohammad I. Husain",
+      "date": "2026-11-17",
+      "desc": "AI agents increasingly collaborate across organizational boundaries, invoking tools and interacting with agents operated by independent entities. Although existing agent frameworks support planning and coordination, they lack a common mechanism for verifying cross-organizational "
+    },
+    {
+      "title": "Runtime Verification of Multiple Natural Language Criteria for Agent Governance",
+      "url": "https://arxiv.org/pdf/2611.23074v1",
+      "source": "ArXiv",
+      "authors": "Silviu Pitis, Parand A. Alamdari, Jessica Tang",
+      "date": "2026-11-17",
+      "desc": "AI agents are governed by hundreds of natural language criteria, yet existing verifiers cannot efficiently evaluate an agent's output against a large set of such criteria and report which are satisfied, violated, or inapplicable. We introduce the VFM, a tree-attention verifier th"
+    },
+    {
+      "title": "Verifying Agents in Rubric-Graded Environments",
+      "url": "https://arxiv.org/pdf/2611.22841v1",
+      "source": "ArXiv",
+      "authors": "Markus Dücker, Vaibhav Kumar, Yi Liu",
+      "date": "2026-11-17",
+      "desc": "As AI agents take on increasingly open-ended and complex tasks, verifying their outputs has proven to be difficult. Rubric-graded agent environments, where a verifier judges multiple natural-language criteria against the deliverables and environment state changes produced by the "
+    },
+    {
+      "title": "Groups of AI agents underuse resources despite shared evidence of increased capacity",
+      "url": "https://arxiv.org/pdf/2611.22632v1",
+      "source": "ArXiv",
+      "authors": "Takahiro Ezaki, Naoto Imura, Katsuhiro Nishinari",
+      "date": "2026-11-17",
+      "desc": "When AI agents share limited resources, such as computing services or public infrastructure, their individual choices affect how much work they complete as a group. Can sharing evidence of what is available let a group make full use of its resources after capacity changes? We tes"
+    }
+  ],
+  "tools": [
+    {
+      "title": "interfere-inc/landmines",
+      "url": "https://github.com/interfere-inc/landmines",
+      "source": "GitHub",
+      "stars": 621,
+      "language": "TypeScript",
+      "desc": "Oxlint rules that keep AI-written code honest: real implementations, real signals, no flake masking."
+    },
+    {
+      "title": "jmanico/grim-prompter",
+      "url": "https://github.com/jmanico/grim-prompter",
+      "source": "GitHub",
+      "stars": 546,
+      "language": "",
+      "desc": "Threat modeling for AI coding agents: point Claude Code, Codex or any agent at your repo and get an evidence-traced threat model. 36 architectures, 29 methods, MIT."
+    },
+    {
+      "title": "OmniJev/Flide",
+      "url": "https://github.com/OmniJev/Flide",
+      "source": "GitHub",
+      "stars": 543,
+      "language": "Python",
+      "desc": "🔥🔥 The extremely fast inference engine for decision model"
+    },
+    {
+      "title": "TIGER-AI-Lab/WebsiteBench",
+      "url": "https://github.com/TIGER-AI-Lab/WebsiteBench",
+      "source": "GitHub",
+      "stars": 537,
+      "language": "Python",
+      "desc": "Can AI agents rebuild websites through browser exploration?"
+    },
+    {
+      "title": "Wiselnn570/Co-Design-Bench",
+      "url": "https://github.com/Wiselnn570/Co-Design-Bench",
+      "source": "GitHub",
+      "stars": 118,
+      "language": "Python",
+      "desc": "Co-Design Bench: Multimodal Collaborative Coding Evaluation for Agentic Models"
+    },
+    {
+      "title": "KaiserWhoLearns/ReasoningEffortLLM",
+      "url": "https://github.com/KaiserWhoLearns/ReasoningEffortLLM",
+      "source": "GitHub",
+      "stars": 109,
+      "language": "Python",
+      "desc": "What Effort Level Should I Choose? On the Economics of Reasoning Effort in LLM Agents"
+    },
+    {
+      "title": "rust-spielberg/G.L.A.S.S",
+      "url": "https://github.com/rust-spielberg/G.L.A.S.S",
+      "source": "GitHub",
+      "stars": 59,
+      "language": "JavaScript",
+      "desc": "G.L.A.S.S. (Guided Language Agent for Software Synthesis) is an autonomous software synthesis engine built for real-time code generation, interactive execution, and self-healing debugging loops. Developed for the Nebius x NVIDIA Global AI Hackathon, bridges raw LLM reasoning with a visual software synthesis pipeline.Powered by open-source NVIDIA"
+    },
+    {
+      "title": "Agentic-System-Lab/agent-loop-visualizer",
+      "url": "https://github.com/Agentic-System-Lab/agent-loop-visualizer",
+      "source": "GitHub",
+      "stars": 57,
+      "language": "Python",
+      "desc": "This project is for learning: it shows how an agent loop works underneath, in a way more intuitive and visual than reading about it. Behind an agent's chat box runs a loop: step after step, the model proposes an action and the harness carries it out, until it stops."
+    }
+  ]
+}
