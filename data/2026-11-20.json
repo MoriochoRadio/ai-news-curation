@@ -1,0 +1,253 @@
+{
+  "date": "2026-11-20",
+  "generated_at": "2026-11-20T12:25:33+09:00",
+  "topics": [
+    "AI agents",
+    "LLM reasoning",
+    "multimodal models",
+    "open source AI",
+    "Rust in AI tooling",
+    "AI safety"
+  ],
+  "topic_labels": {
+    "AI agents": "AI 에이전트",
+    "LLM reasoning": "LLM 추론",
+    "multimodal models": "멀티모달 모델",
+    "open source AI": "오픈소스 AI",
+    "Rust in AI tooling": "AI 도구의 Rust",
+    "AI safety": "AI 안전성"
+  },
+  "counts": {
+    "trending": 8,
+    "papers": 8,
+    "tools": 8
+  },
+  "summary_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "summary_attempts": [
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "outcome": "ok",
+      "served_by": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "n": 5
+    }
+  ],
+  "trending": [
+    {
+      "title": "AI agents ask better questions than KPMG accountants in audit trial",
+      "url": "https://europeanbusinessmagazine.com/ai-agents-better-questions-kpmg/",
+      "source": "HackerNews",
+      "points": 485,
+      "comments": 253,
+      "author": "Betelbuddy",
+      "date": "2026-11-18",
+      "desc": "",
+      "summary_ko": "감사 시험에서 AI 에이전트가 KPMG 회계사보다 더 날카로운 질문을 던져 감사 품질 향상 가능성을 입증했다."
+    },
+    {
+      "title": "Show HN: Mastra Factory, the open-source software factory we use to build Mastra",
+      "url": "https://news.ycombinator.com/item?id=50548660",
+      "source": "HackerNews",
+      "points": 140,
+      "comments": 42,
+      "author": "codekarate",
+      "date": "2026-11-18",
+      "desc": "",
+      "summary_ko": "마스트라 팩토리는 마스트라를 구축하는 데 쓰이는 오픈소스 소프트웨어 팩토리로, 재현 가능한 빌드 환경을 제공한다."
+    },
+    {
+      "title": "Show HN: Foolscap – a writing app that reads your book and never writes for you",
+      "url": "https://foolscap.works/",
+      "source": "HackerNews",
+      "points": 103,
+      "comments": 84,
+      "author": "atugard",
+      "date": "2026-11-19",
+      "desc": "",
+      "summary_ko": "풀스캡은 사용자의 원고를 읽고 분석만 하며 직접 글을 쓰지 않는 글쓰기 보조 앱이다."
+    },
+    {
+      "title": "Launch HN: Maritime (YC F26) – A managed cloud for production AI agents",
+      "url": "https://news.ycombinator.com/item?id=50549188",
+      "source": "HackerNews",
+      "points": 58,
+      "comments": 57,
+      "author": "ashriv",
+      "date": "2026-11-18",
+      "desc": "",
+      "summary_ko": "마리타임은 YC F26 출신으로, 프로덕션 AI 에이전트를 위한 관리형 클라우드 플랫폼을 제공한다."
+    },
+    {
+      "title": "Show HN: Watch weight-space programming in action with WebGPU",
+      "url": "https://tabbyml.github.io/weight-space-playground/",
+      "source": "HackerNews",
+      "points": 33,
+      "comments": 4,
+      "author": "wsxiaoys",
+      "date": "2026-11-19",
+      "desc": "",
+      "summary_ko": "웹GPU로 구현된 가중치 공간 프로그래밍 시연을 통해 브라우저에서 고성능 모델 조작이 가능함을 보여준다."
+    },
+    {
+      "title": "An FBI agent called a Claude user about his chats",
+      "url": "https://austinpatrick.substack.com/p/when-should-ai-labs-alert-police",
+      "source": "HackerNews",
+      "points": 27,
+      "comments": 20,
+      "author": "AustinLikesAI",
+      "date": "2026-11-19",
+      "desc": ""
+    },
+    {
+      "title": "Claude Gets Hella Paranoid",
+      "url": "https://news.ycombinator.com/item?id=50543947",
+      "source": "HackerNews",
+      "points": 19,
+      "comments": 11,
+      "author": "noduerme",
+      "date": "2026-11-18",
+      "desc": ""
+    },
+    {
+      "title": "Show HN: AgentMall – Let your AI agent buy groceries",
+      "url": "https://getagentmall.com",
+      "source": "HackerNews",
+      "points": 18,
+      "comments": 4,
+      "author": "desilva78_",
+      "date": "2026-11-19",
+      "desc": ""
+    }
+  ],
+  "papers": [
+    {
+      "title": "AI agents can redesign engineering parts with more than a thousand CAD parameters and nonlinear simulations",
+      "url": "https://arxiv.org/pdf/2611.26003v1",
+      "source": "ArXiv",
+      "authors": "Alexandra Starostina, Alexander Hermann, Mahish Guru",
+      "date": "2026-11-19",
+      "desc": "Simulation-driven design of real engineering components has to meet three conditions at once. It runs on few solves, since a nonlinear finite-element simulation of a 3D part takes hours; its design space has many values, the hundreds to thousands of values of the part's CAD model"
+    },
+    {
+      "title": "Law at the Speed of AI: Critical Legal Infrastructure for the Machine Age: Autonomy Under Law Architecture (AULA)",
+      "url": "https://arxiv.org/pdf/2611.25985v1",
+      "source": "ArXiv",
+      "authors": "Natasha E Blycha, James Myint, Chen Feng",
+      "date": "2026-11-19",
+      "desc": "The global deployment of autonomous AI agents within and across organisations exceeds the governance infrastructure available to constrain it. Agent communication and authentication protocols, principally the Model Context Protocol and the Agent2Agent Protocol, are maturing quick"
+    },
+    {
+      "title": "Tether: Verified Stateful Policy Engine for System-Level Monitoring of Agents",
+      "url": "https://arxiv.org/pdf/2611.25599v1",
+      "source": "ArXiv",
+      "authors": "Meghana Aparna Sistla, Alaia Solko-Breslin, Somesh Jha",
+      "date": "2026-11-19",
+      "desc": "Autonomous AI agents are increasingly deployed for long-running tasks that execute arbitrary shell commands or programs. However, these actions can result in unauthorized network requests or persistent, malicious changes to the user's file system, processes, or privileges. Existi"
+    },
+    {
+      "title": "Toward a Science of AI Agent Societies",
+      "url": "https://arxiv.org/pdf/2611.25404v1",
+      "source": "ArXiv",
+      "authors": "Geon Lee, Fanchen Bu, Soo Yong Lee",
+      "date": "2026-11-19",
+      "desc": "AI agents are rapidly evolving from isolated personal assistants into networked actors that interact with one another at scale. We envision the emergence of AI agent societies, with their own social and economic dynamics, as a new research frontier. We argue that AI agent societi"
+    },
+    {
+      "title": "AppSci-Bench: Can LLMs Build AI Agents and Make Them Better?",
+      "url": "https://arxiv.org/pdf/2611.25360v1",
+      "source": "ArXiv",
+      "authors": "Sanjari Srivastava, Manpreet Kaur, Cheng Chang",
+      "date": "2026-11-19",
+      "desc": "Large language models (LLMs) are increasingly used not only to power AI agents but also to build them. While many benchmarks assess the quality of LLM- powered agents, few ascertain how good LLMs are at building them. To this end, we introduce AppSci-Bench, where we construct a s"
+    },
+    {
+      "title": "An AI-Powered Multiverse Analysis of Empirical Finance Research: Evidence from Reused Natural Experiments",
+      "url": "https://arxiv.org/pdf/2611.25184v1",
+      "source": "ArXiv",
+      "authors": "Ruijiang Gao, Steven Chong Xiao",
+      "date": "2026-11-18",
+      "desc": "Empirical finance research often reuses natural experiments to study other outcomes, raising concerns about multiple testing and publication bias. We use AI agents to run a multiverse analysis of 324 papers that reuse 13 natural experiments. The agents rebuild the data, reproduce"
+    },
+    {
+      "title": "EverydayBench: Evaluating Satisfactory Completion of Live User-Facing Digital Work",
+      "url": "https://arxiv.org/pdf/2611.25146v1",
+      "source": "ArXiv",
+      "authors": "Fangrui Huang, Bingyang Wang, Chuhan Li",
+      "date": "2026-11-18",
+      "desc": "Everyday digital tasks, from selecting products and planning trips to conducting research and creating artifacts, require AI agents to deliver useful outcomes rather than merely retrieve web information. Yet evaluating these outcomes on the live web is challenging, as a single re"
+    },
+    {
+      "title": "An LLM-Agentic Framework for Intelligent Work Order Management in Industrial Maintenance",
+      "url": "https://arxiv.org/pdf/2611.25070v1",
+      "source": "ArXiv",
+      "authors": "Nianjun Zhou, Dhaval Patel",
+      "date": "2026-11-18",
+      "desc": "This paper presents an AI-driven framework, CodeReAct agent, designed to enhance industrial equipment maintenance through natural language (NL) interactions. The framework employs an advanced AI agentic approach to interpret human instructions, providing knowledge extraction, ass"
+    }
+  ],
+  "tools": [
+    {
+      "title": "simplexai-labs/linger",
+      "url": "https://github.com/simplexai-labs/linger",
+      "source": "GitHub",
+      "stars": 1838,
+      "language": "TypeScript",
+      "desc": "Linger is An Open-Source Personal Agent That Runs Fully on Your PC.  We aim to break Big Tech’s grip on AI by bringing powerful local AI to everyday computers through efficient model–harness co-design, so everyone can run their own."
+    },
+    {
+      "title": "bookwjitchieni1986/blender-ai-mcp-addon",
+      "url": "https://github.com/bookwjitchieni1986/blender-ai-mcp-addon",
+      "source": "GitHub",
+      "stars": 684,
+      "language": "",
+      "desc": "AI assistant and MCP server for Blender: visual chat, scene tools, multi-agent workflows. Works with ChatGPT/GPT, Claude, Gemini, Ollama, OpenCode. Blender AI addon, copilot for 3D, bpy Python scripting, MCP integration."
+    },
+    {
+      "title": "ai-timon/timon",
+      "url": "https://github.com/ai-timon/timon",
+      "source": "GitHub",
+      "stars": 620,
+      "language": "TypeScript",
+      "desc": "Timon is an Agentic Workstation who let you orchestrates all your AI agents in the same place"
+    },
+    {
+      "title": "felipebasurto/unslop-ui",
+      "url": "https://github.com/felipebasurto/unslop-ui",
+      "source": "GitHub",
+      "stars": 579,
+      "language": "HTML",
+      "desc": "Agent skill that cuts AI tells from UI copy, charts and dashboards: eyebrows, numbering, botsplaining, decorative icons, badges and status dots. Opt-in surface rules."
+    },
+    {
+      "title": "StarTrail-org/DRPixel",
+      "url": "https://github.com/StarTrail-org/DRPixel",
+      "source": "GitHub",
+      "stars": 43,
+      "language": "Python",
+      "desc": "DR Pixel: Page-Native Deep Research with Vision-Language Models — benchmark, evaluation harness and training code"
+    },
+    {
+      "title": "InternLM/Sage-S2.1-Flash",
+      "url": "https://github.com/InternLM/Sage-S2.1-Flash",
+      "source": "GitHub",
+      "stars": 35,
+      "language": "",
+      "desc": "Sage S2.1 Flash — A scientific multimodal model. Explore through reasoning. Verify through action."
+    },
+    {
+      "title": "andykear/Peer",
+      "url": "https://github.com/andykear/Peer",
+      "source": "GitHub",
+      "stars": 28,
+      "language": "Python",
+      "desc": "Peer makes Claude act like an experienced colleague you can use as a sounding board, so you can work through ideas and problems without the frustrating AI habits of echoing you back, flattering you, agreeing too easily and shotgunning lists at you. It holds its view when you push back without a reason, and changes it when you give one."
+    },
+    {
+      "title": "sii-nex/Nex-N2.6",
+      "url": "https://github.com/sii-nex/Nex-N2.6",
+      "source": "GitHub",
+      "stars": 26,
+      "language": "",
+      "desc": "Nex-N2.6: Multimodal Agentic Model for Computer Use and Long-Horizon Workflows"
+    }
+  ]
+}
