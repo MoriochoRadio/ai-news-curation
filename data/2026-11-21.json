@@ -1,0 +1,234 @@
+{
+  "date": "2026-11-21",
+  "generated_at": "2026-11-21T12:15:09+09:00",
+  "topics": [
+    "AI agents",
+    "LLM reasoning",
+    "multimodal models",
+    "open source AI",
+    "Rust in AI tooling",
+    "AI safety"
+  ],
+  "topic_labels": {
+    "AI agents": "AI 에이전트",
+    "LLM reasoning": "LLM 추론",
+    "multimodal models": "멀티모달 모델",
+    "open source AI": "오픈소스 AI",
+    "Rust in AI tooling": "AI 도구의 Rust",
+    "AI safety": "AI 안전성"
+  },
+  "counts": {
+    "trending": 6,
+    "papers": 8,
+    "tools": 8
+  },
+  "summary_model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+  "summary_attempts": [
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "outcome": "empty",
+      "finish": "length"
+    },
+    {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "outcome": "ok",
+      "served_by": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "n": 1
+    }
+  ],
+  "trending": [
+    {
+      "title": "Restricting AI agents in mobile operating systems platforms from capturing data",
+      "url": "https://signal.org/blog/protecting-your-privacy/",
+      "source": "HackerNews",
+      "points": 523,
+      "comments": 309,
+      "author": "dotcoma",
+      "date": "2026-11-20",
+      "desc": "",
+      "summary_ko": "{\"summaries\": [\"모바일 OS가 AI 에이전트의 데이터 캡처를 제한해 개인정보 보호에 직접 기여한다.\", \"Foolscap은 책 읽는 습관을 돕고 AI가 직접 글을 쓰게 하지 않아 창의성 유지에 도움된다.\", \"Web"
+    },
+    {
+      "title": "Show HN: Foolscap – a writing app that reads your book and never writes for you",
+      "url": "https://foolscap.works/",
+      "source": "HackerNews",
+      "points": 118,
+      "comments": 92,
+      "author": "atugard",
+      "date": "2026-11-19",
+      "desc": ""
+    },
+    {
+      "title": "Show HN: Watch weight-space programming in action with WebGPU",
+      "url": "https://tabbyml.github.io/weight-space-playground/",
+      "source": "HackerNews",
+      "points": 40,
+      "comments": 6,
+      "author": "wsxiaoys",
+      "date": "2026-11-19",
+      "desc": ""
+    },
+    {
+      "title": "An FBI agent called a Claude user about his chats",
+      "url": "https://austinpatrick.substack.com/p/when-should-ai-labs-alert-police",
+      "source": "HackerNews",
+      "points": 32,
+      "comments": 31,
+      "author": "AustinLikesAI",
+      "date": "2026-11-19",
+      "desc": ""
+    },
+    {
+      "title": "Show HN: AgentMall – Let your AI agent buy groceries",
+      "url": "https://getagentmall.com",
+      "source": "HackerNews",
+      "points": 20,
+      "comments": 9,
+      "author": "desilva78_",
+      "date": "2026-11-19",
+      "desc": ""
+    },
+    {
+      "title": "Apple is building an AI agent",
+      "url": "https://www.theverge.com/tech/1038227/apple-ai-agent-engineer-job-listing",
+      "source": "HackerNews",
+      "points": 19,
+      "comments": 11,
+      "author": "lavendermon",
+      "date": "2026-11-20",
+      "desc": ""
+    }
+  ],
+  "papers": [
+    {
+      "title": "PlayCraft: Designing Engaging Games from Agent Play Experience",
+      "url": "https://arxiv.org/pdf/2611.26624v1",
+      "source": "ArXiv",
+      "authors": "Weihao Cheng",
+      "date": "2026-11-19",
+      "desc": "Recent AI agents can generate playable games, but these games are not necessarily engaging. Mastery is a key source of engagement, yet designing for it requires extensive human play and tuning. We propose PlayCraft, an automated framework that uses a vision-based agent to play ga"
+    },
+    {
+      "title": "JARVIS: An Agent That Designs, Builds, and Tests Circuit Boards on Its Own",
+      "url": "https://arxiv.org/pdf/2611.26503v1",
+      "source": "ArXiv",
+      "authors": "Shibo Zhou, Tianqi Hong, Zheng Yan",
+      "date": "2026-11-19",
+      "desc": "Power electronics is central to the energy transition, but developing new hardware still relies on human-led design, fabrication, testing, and iteration. We present JARVIS, an embodied AI agent that autonomously closes this loop for circuit boards. JARVIS maintains machine-specif"
+    },
+    {
+      "title": "ClosureBench: A Benchmark for Reasoning under Closure Assumptions",
+      "url": "https://arxiv.org/pdf/2611.26335v1",
+      "source": "ArXiv",
+      "authors": "Francesco Belardinelli, Flavio Corradini, Matteo Leonesi",
+      "date": "2026-11-19",
+      "desc": "AI agents built on large language models (LLMs) often answer questions from incomplete records. Missing information might be interpreted as unknown or false, depending on the completeness of the source. Current evaluations fail to distinguish these two aspects, as they are usuall"
+    },
+    {
+      "title": "SKILL.PNG: Learning Agent Skills in Pixel Space",
+      "url": "https://arxiv.org/pdf/2611.26296v1",
+      "source": "ArXiv",
+      "authors": "Maximilian Seeth, Chengzhi Martin Hu, Marie Kempkes",
+      "date": "2026-11-19",
+      "desc": "AI agents are commonly specialized for new tasks and domains using skills, i.e. natural language instructions placed in their context. However, the discrete nature of textual skills prevents continuous optimization. Gradient-based approaches such as finetuning, on the other hand,"
+    },
+    {
+      "title": "TwinLab-Bench: Evaluating AI Scientists in Agentic Twins of Real Labs",
+      "url": "https://arxiv.org/pdf/2611.26248v1",
+      "source": "ArXiv",
+      "authors": "Yang Wan, Linchao Zhu",
+      "date": "2026-11-19",
+      "desc": "AI agents are increasingly expected to act as AI scientists, which requires three increasingly open abilities: carrying out a given computational workflow correctly, choosing the next measurements from a given design space, and designing their own experiments. Existing benchmarks"
+    },
+    {
+      "title": "AI agents can redesign engineering parts with more than a thousand CAD parameters and nonlinear simulations",
+      "url": "https://arxiv.org/pdf/2611.26003v1",
+      "source": "ArXiv",
+      "authors": "Alexandra Starostina, Alexander Hermann, Mahish Guru",
+      "date": "2026-11-19",
+      "desc": "Simulation-driven design of real engineering components has to meet three conditions at once. It runs on few solves, since a nonlinear finite-element simulation of a 3D part takes hours; its design space has many values, the hundreds to thousands of values of the part's CAD model"
+    },
+    {
+      "title": "Law at the Speed of AI: Critical Legal Infrastructure for the Machine Age: Autonomy Under Law Architecture (AULA)",
+      "url": "https://arxiv.org/pdf/2611.25985v1",
+      "source": "ArXiv",
+      "authors": "Natasha E Blycha, James Myint, Chen Feng",
+      "date": "2026-11-19",
+      "desc": "The global deployment of autonomous AI agents within and across organisations exceeds the governance infrastructure available to constrain it. Agent communication and authentication protocols, principally the Model Context Protocol and the Agent2Agent Protocol, are maturing quick"
+    },
+    {
+      "title": "Tether: Verified Stateful Policy Engine for System-Level Monitoring of Agents",
+      "url": "https://arxiv.org/pdf/2611.25599v1",
+      "source": "ArXiv",
+      "authors": "Meghana Aparna Sistla, Alaia Solko-Breslin, Somesh Jha",
+      "date": "2026-11-19",
+      "desc": "Autonomous AI agents are increasingly deployed for long-running tasks that execute arbitrary shell commands or programs. However, these actions can result in unauthorized network requests or persistent, malicious changes to the user's file system, processes, or privileges. Existi"
+    }
+  ],
+  "tools": [
+    {
+      "title": "01NGVI-QINGYI/ARIA-X",
+      "url": "https://github.com/01NGVI-QINGYI/ARIA-X",
+      "source": "GitHub",
+      "stars": 69,
+      "language": "Python",
+      "desc": "Local-first state-space reasoning engine for security research. Fuses ARTEX, Cairn & PentAGI. Python, zero dependencies."
+    },
+    {
+      "title": "ironsparrows/swift-language-models",
+      "url": "https://github.com/ironsparrows/swift-language-models",
+      "source": "GitHub",
+      "stars": 24,
+      "language": "Swift",
+      "desc": "A unified Swift API for Apple’s Foundation Models-style experience across cloud and local LLM providers. Bring OpenRouter, Ollama, Claude, GPT, Gemini and more into a consistent LanguageModelSession interface, with tool calling, guided generation, streaming, reasoning and typed model catalogs. Multi-provider support, with more integrations coming."
+    },
+    {
+      "title": "swagshaw/verispoof",
+      "url": "https://github.com/swagshaw/verispoof",
+      "source": "GitHub",
+      "stars": 17,
+      "language": "Python",
+      "desc": "VeriSpoof: one audio LLM for speech deepfake detection, source verification and grounded reasoning"
+    },
+    {
+      "title": "humanoiseLABS/plus62",
+      "url": "https://github.com/humanoiseLABS/plus62",
+      "source": "GitHub",
+      "stars": 17,
+      "language": "TypeScript",
+      "desc": "+62 Mode & Anti-Yapping Layer for Coding Agents. Langsung to-the-point ke baris bug, zero basa-basi korporat, dan anti-reasoning dump. (Claude Code, Antigravity, OpenCode, Qoder, Codex, Hermes, Cursor)"
+    },
+    {
+      "title": "LENS-Lab-AI/Awesome-Frontier-Model-Robotics",
+      "url": "https://github.com/LENS-Lab-AI/Awesome-Frontier-Model-Robotics",
+      "source": "GitHub",
+      "stars": 17,
+      "language": "",
+      "desc": "Curated evaluations of frontier language and multimodal models in robotics: control, reasoning, coding agents, safety, and benchmarks."
+    },
+    {
+      "title": "fujc683/qwen4-max-api",
+      "url": "https://github.com/fujc683/qwen4-max-api",
+      "source": "GitHub",
+      "stars": 14,
+      "language": "",
+      "desc": "Qwen4 Max API: chat completions, streaming defaults and reasoning tokens."
+    },
+    {
+      "title": "haris525/local-multimodal-rag",
+      "url": "https://github.com/haris525/local-multimodal-rag",
+      "source": "GitHub",
+      "stars": 14,
+      "language": "Python",
+      "desc": "Cited answers from your own documents (PDF, Excel, CSV, text, images) with local models on one GPU"
+    },
+    {
+      "title": "InternLM/Sage-SciPerception",
+      "url": "https://github.com/InternLM/Sage-SciPerception",
+      "source": "GitHub",
+      "stars": 14,
+      "language": "JavaScript",
+      "desc": "Scientific perception for language models: connect crystals, spectra, biological sequences and biosignals through trained projectors."
+    }
+  ]
+}

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The AI Brief — 2026년 11월 21일</title>
+<link rel="stylesheet" href="../assets/style.css" />
+
+<style>
+.tb-fixed{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;gap:8px;align-items:center;
+  padding:8px 14px;background:var(--paper,#fffdf8);border-bottom:1px solid var(--line,#e3ddd0);
+  box-shadow:0 1px 6px rgba(0,0,0,.05);font-family:var(--sans);}
+.tb-fixed input{flex:1;max-width:340px;padding:7px 12px;border:1px solid var(--line,#e3ddd0);
+  border-radius:20px;font-size:13px;background:var(--bg,#f4f1ea);color:var(--ink,#1c1a17);outline:none;}
+.tb-fixed .tb-btn{border:1px solid var(--line,#e3ddd0);background:transparent;color:var(--ink,#1c1a17);
+  border-radius:20px;padding:6px 12px;font-size:13px;cursor:pointer;line-height:1;}
+.tb-fixed .tb-btn:hover{border-color:var(--accent,#b4451f);color:var(--accent,#b4451f);}
+body.has-tb{padding-top:52px;}
+mark.hl{background:var(--accent-soft,#f3e7df);color:var(--accent,#b4451f);border-radius:3px;padding:0 2px;}
+#goog-gt-tt,#goog-te-banner{display:none!important;}
+.goog-te-gadget{font-size:0!important;}
+.goog-te-gadget .goog-te-combo{font-size:12px!important;padding:5px 6px;border-radius:14px;
+  border:1px solid var(--line,#e3ddd0);background:var(--bg,#f4f1ea);color:var(--ink,#1c1a17);}
+</style>
+
+</head>
+<body>
+
+<div class="tb-fixed">
+  <input id="siteSearch" type="search" placeholder="호 내 검색 (제목·설명)…" aria-label="검색" />
+  <button class="tb-btn" id="darkToggle" type="button">🌙 다크</button>
+  <div id="gt-mount"></div>
+</div>
+
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">The AI Brief</div>
+    <div class="issue-date">2026년 11월 21일</div>
+    <p class="tagline">매일 아침, AI 업계의 흐름을 한눈에</p>
+    <p class="topics">오늘의 주제 — AI agents · LLM reasoning · multimodal models · open source AI · Rust in AI tooling · AI safety</p>
+  </header>
+
+  
+    <section class="block tldr">
+      <header class="block-head">
+        <h2>한눈에 요약</h2>
+        <span class="block-sub">TL;DR</span>
+      </header>
+      <div class="block-body">
+        <p class="tldr-count">트렌딩 <b>6</b> · 논문 <b>8</b> · 프로젝트 <b>8</b> 건 수집</p>
+        <p class="tldr-topics">오늘 살펴본 주제 — AI 에이전트 · LLM 추론 · 멀티모달 모델 · 오픈소스 AI · AI 도구의 Rust · AI 안전성</p>
+        <ul class="tldr-picks"><li><span class="tldr-tag">오늘의 관심</span> Restricting AI agents in mobile operating systems platforms from capturing data</li><li><span class="tldr-tag">논문 픽</span> PlayCraft: Designing Engaging Games from Agent Play Experience</li><li><span class="tldr-tag">프로젝트 픽</span> 01NGVI-QINGYI/ARIA-X</li></ul>
+      </div>
+    </section>
+  
+    <section class="block" data-section="trending">
+      <header class="block-head">
+        <h2>트렌딩</h2>
+        <span class="block-sub">지금 주목받는 AI 이야기</span>
+      </header>
+      <div class="block-body"><div class="grid">
+    <article class="card">
+      <a class="card-title" href="https://signal.org/blog/protecting-your-privacy/" target="_blank" rel="noopener">Restricting AI agents in mobile operating systems platforms from capturing data</a>
+      <p class="item-desc">{&quot;summaries&quot;: [&quot;모바일 OS가 AI 에이전트의 데이터 캡처를 제한해 개인정보 보호에 직접 기여한다.&quot;, &quot;Foolscap은 책 읽는 습관을 돕고 AI가 직접 글을 쓰게 하지 않아 창의성 유지에 도움된다.&quot;, &quot;Web</p>
+      <div class="card-foot"><span class="meta-line">▲ 523 · 💬 309</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://foolscap.works/" target="_blank" rel="noopener">Show HN: Foolscap – a writing app that reads your book and never writes for you</a>
+      
+      <div class="card-foot"><span class="meta-line">▲ 118 · 💬 92</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://tabbyml.github.io/weight-space-playground/" target="_blank" rel="noopener">Show HN: Watch weight-space programming in action with WebGPU</a>
+      
+      <div class="card-foot"><span class="meta-line">▲ 40 · 💬 6</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://austinpatrick.substack.com/p/when-should-ai-labs-alert-police" target="_blank" rel="noopener">An FBI agent called a Claude user about his chats</a>
+      
+      <div class="card-foot"><span class="meta-line">▲ 32 · 💬 31</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://getagentmall.com" target="_blank" rel="noopener">Show HN: AgentMall – Let your AI agent buy groceries</a>
+      
+      <div class="card-foot"><span class="meta-line">▲ 20 · 💬 9</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://www.theverge.com/tech/1038227/apple-ai-agent-engineer-job-listing" target="_blank" rel="noopener">Apple is building an AI agent</a>
+      
+      <div class="card-foot"><span class="meta-line">▲ 19 · 💬 11</span><span class="src">HackerNews</span></div>
+    </article></div></div>
+    </section>
+  
+    <section class="block" data-section="papers">
+      <header class="block-head">
+        <h2>논문</h2>
+        <span class="block-sub">새로 나온 연구</span>
+      </header>
+      <div class="block-body"><div class="rows">
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.26624v1" target="_blank" rel="noopener">PlayCraft: Designing Engaging Games from Agent Play Experience</a>
+        <p class="item-desc">Recent AI agents can generate playable games, but these games are not necessarily engaging. Mastery is a key source of engagement, yet designing for it requires extensive human play and tuning. We propose PlayCraft, an automated framework that uses a vision-based agent to play ga</p>
+        <div class="card-foot"><span class="byline">Weihao Cheng</span><span class="date">2026-11-19</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.26503v1" target="_blank" rel="noopener">JARVIS: An Agent That Designs, Builds, and Tests Circuit Boards on Its Own</a>
+        <p class="item-desc">Power electronics is central to the energy transition, but developing new hardware still relies on human-led design, fabrication, testing, and iteration. We present JARVIS, an embodied AI agent that autonomously closes this loop for circuit boards. JARVIS maintains machine-specif</p>
+        <div class="card-foot"><span class="byline">Shibo Zhou, Tianqi Hong, Zheng Yan</span><span class="date">2026-11-19</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.26335v1" target="_blank" rel="noopener">ClosureBench: A Benchmark for Reasoning under Closure Assumptions</a>
+        <p class="item-desc">AI agents built on large language models (LLMs) often answer questions from incomplete records. Missing information might be interpreted as unknown or false, depending on the completeness of the source. Current evaluations fail to distinguish these two aspects, as they are usuall</p>
+        <div class="card-foot"><span class="byline">Francesco Belardinelli, Flavio Corradini, Matteo Leonesi</span><span class="date">2026-11-19</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.26296v1" target="_blank" rel="noopener">SKILL.PNG: Learning Agent Skills in Pixel Space</a>
+        <p class="item-desc">AI agents are commonly specialized for new tasks and domains using skills, i.e. natural language instructions placed in their context. However, the discrete nature of textual skills prevents continuous optimization. Gradient-based approaches such as finetuning, on the other hand,</p>
+        <div class="card-foot"><span class="byline">Maximilian Seeth, Chengzhi Martin Hu, Marie Kempkes</span><span class="date">2026-11-19</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.26248v1" target="_blank" rel="noopener">TwinLab-Bench: Evaluating AI Scientists in Agentic Twins of Real Labs</a>
+        <p class="item-desc">AI agents are increasingly expected to act as AI scientists, which requires three increasingly open abilities: carrying out a given computational workflow correctly, choosing the next measurements from a given design space, and designing their own experiments. Existing benchmarks</p>
+        <div class="card-foot"><span class="byline">Yang Wan, Linchao Zhu</span><span class="date">2026-11-19</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.26003v1" target="_blank" rel="noopener">AI agents can redesign engineering parts with more than a thousand CAD parameters and nonlinear simulations</a>
+        <p class="item-desc">Simulation-driven design of real engineering components has to meet three conditions at once. It runs on few solves, since a nonlinear finite-element simulation of a 3D part takes hours; its design space has many values, the hundreds to thousands of values of the part&#x27;s CAD model</p>
+        <div class="card-foot"><span class="byline">Alexandra Starostina, Alexander Hermann, Mahish Guru</span><span class="date">2026-11-19</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.25985v1" target="_blank" rel="noopener">Law at the Speed of AI: Critical Legal Infrastructure for the Machine Age: Autonomy Under Law Architecture (AULA)</a>
+        <p class="item-desc">The global deployment of autonomous AI agents within and across organisations exceeds the governance infrastructure available to constrain it. Agent communication and authentication protocols, principally the Model Context Protocol and the Agent2Agent Protocol, are maturing quick</p>
+        <div class="card-foot"><span class="byline">Natasha E Blycha, James Myint, Chen Feng</span><span class="date">2026-11-19</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.25599v1" target="_blank" rel="noopener">Tether: Verified Stateful Policy Engine for System-Level Monitoring of Agents</a>
+        <p class="item-desc">Autonomous AI agents are increasingly deployed for long-running tasks that execute arbitrary shell commands or programs. However, these actions can result in unauthorized network requests or persistent, malicious changes to the user&#x27;s file system, processes, or privileges. Existi</p>
+        <div class="card-foot"><span class="byline">Meghana Aparna Sistla, Alaia Solko-Breslin, Somesh Jha</span><span class="date">2026-11-19</span><span class="src">ArXiv</span></div>
+      </div>
+    </article></div></div>
+    </section>
+  
+    <section class="block" data-section="tools">
+      <header class="block-head">
+        <h2>오픈소스</h2>
+        <span class="block-sub">움직이는 프로젝트</span>
+      </header>
+      <div class="block-body"><div class="grid">
+    <article class="card">
+      <a class="card-title" href="https://github.com/01NGVI-QINGYI/ARIA-X" target="_blank" rel="noopener">01NGVI-QINGYI/ARIA-X</a>
+      <p class="item-desc">Local-first state-space reasoning engine for security research. Fuses ARTEX, Cairn &amp; PentAGI. Python, zero dependencies.</p>
+      <div class="card-foot"><span class="badges">★ 69 · Python</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/ironsparrows/swift-language-models" target="_blank" rel="noopener">ironsparrows/swift-language-models</a>
+      <p class="item-desc">A unified Swift API for Apple’s Foundation Models-style experience across cloud and local LLM providers. Bring OpenRouter, Ollama, Claude, GPT, Gemini and more into a consistent LanguageModelSession interface, with tool calling, guided generation, streaming, reasoning and typed model catalogs. Multi-provider support, with more integrations coming.</p>
+      <div class="card-foot"><span class="badges">★ 24 · Swift</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/swagshaw/verispoof" target="_blank" rel="noopener">swagshaw/verispoof</a>
+      <p class="item-desc">VeriSpoof: one audio LLM for speech deepfake detection, source verification and grounded reasoning</p>
+      <div class="card-foot"><span class="badges">★ 17 · Python</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/humanoiseLABS/plus62" target="_blank" rel="noopener">humanoiseLABS/plus62</a>
+      <p class="item-desc">+62 Mode &amp; Anti-Yapping Layer for Coding Agents. Langsung to-the-point ke baris bug, zero basa-basi korporat, dan anti-reasoning dump. (Claude Code, Antigravity, OpenCode, Qoder, Codex, Hermes, Cursor)</p>
+      <div class="card-foot"><span class="badges">★ 17 · TypeScript</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/LENS-Lab-AI/Awesome-Frontier-Model-Robotics" target="_blank" rel="noopener">LENS-Lab-AI/Awesome-Frontier-Model-Robotics</a>
+      <p class="item-desc">Curated evaluations of frontier language and multimodal models in robotics: control, reasoning, coding agents, safety, and benchmarks.</p>
+      <div class="card-foot"><span class="badges">★ 17</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/fujc683/qwen4-max-api" target="_blank" rel="noopener">fujc683/qwen4-max-api</a>
+      <p class="item-desc">Qwen4 Max API: chat completions, streaming defaults and reasoning tokens.</p>
+      <div class="card-foot"><span class="badges">★ 14</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/haris525/local-multimodal-rag" target="_blank" rel="noopener">haris525/local-multimodal-rag</a>
+      <p class="item-desc">Cited answers from your own documents (PDF, Excel, CSV, text, images) with local models on one GPU</p>
+      <div class="card-foot"><span class="badges">★ 14 · Python</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/InternLM/Sage-SciPerception" target="_blank" rel="noopener">InternLM/Sage-SciPerception</a>
+      <p class="item-desc">Scientific perception for language models: connect crystals, spectra, biological sequences and biosignals through trained projectors.</p>
+      <div class="card-foot"><span class="badges">★ 14 · JavaScript</span><span class="src">GitHub</span></div>
+    </article></div></div>
+    </section>
+
+  <footer class="site-foot">
+    <a href="../index.html">← 최신 호로</a> · <a href="../archive.html">전체 아카이브</a>
+    <p>자동 수집 · HackerNews · ArXiv · GitHub</p>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var b=document.body; b.classList.add('has-tb');
+  // 다크모드
+  var dt=document.getElementById('darkToggle');
+  var saved=localStorage.getItem('aibrief-theme');
+  if(saved==='dark'){document.documentElement.setAttribute('data-theme','dark');dt.textContent='☀️ 라이트';}
+  dt.addEventListener('click',function(){
+    var dark=dt.textContent.indexOf('라이트')===-1;
+    if(dark){localStorage.setItem('aibrief-theme','dark');document.documentElement.setAttribute('data-theme','dark');dt.textContent='☀️ 라이트';}
+    else{localStorage.setItem('aibrief-theme','light');document.documentElement.removeAttribute('data-theme');dt.textContent='🌙 다크';}
+  });
+  // 검색 (호 내 하이라이팅 + 필터)
+  var s=document.getElementById('siteSearch');
+  s.addEventListener('input',function(){
+    var q=s.value.trim().toLowerCase();
+    var cards=document.querySelectorAll('.card,.row');
+    cards.forEach(function(c){
+      var t=c.textContent.toLowerCase();
+      var hit=!q||t.indexOf(q)>-1;
+      c.style.display=hit?'':'none';
+      c.querySelectorAll('mark.hl').forEach(function(m){c.replaceChild(document.createTextNode(m.textContent),m);c.normalize();});
+      if(q&&hit){var tt=c.innerHTML;
+        try{c.innerHTML=tt.replace(new RegExp('('+q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','ig'),'<mark class="hl">$1</mark>');}catch(e){}}
+    });
+    document.querySelectorAll('.block').forEach(function(bl){
+      var any=[].slice.call(bl.querySelectorAll('.card,.row')).some(function(c){return c.style.display!=='none';});
+      bl.style.display=(q&&!any)?'none':'';
+    });
+  });
+  // Google 번역 위젯 (키 불필요)
+  var g=document.createElement('script');
+  g.src='https://translate.google.com/translate_a/element.js?cb=__aibT';
+  window.__aibT=function(){
+    new google.translate.TranslateElement({pageLanguage:'en',includedLanguages:'ko,en',layout:google.translate.TranslateElement.InlineLayout.SIMPLE,autoDisplay:false},'gt-mount');
+    var sel=document.querySelector('#gt-mount .goog-te-combo');
+    if(sel){var o=document.createElement('option');o.value='ko';o.text='한국어';sel.add(o,sel.options[0]);}
+  };
+  document.body.appendChild(g);
+})();
+</script>
+
+</body>
+</html>
