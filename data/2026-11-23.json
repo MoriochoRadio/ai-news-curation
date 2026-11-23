@@ -1,0 +1,190 @@
+{
+  "date": "2026-11-23",
+  "generated_at": "2026-11-23T11:51:49+09:00",
+  "topics": [
+    "AI agents",
+    "LLM reasoning",
+    "multimodal models",
+    "open source AI",
+    "Rust in AI tooling",
+    "AI safety"
+  ],
+  "topic_labels": {
+    "AI agents": "AI 에이전트",
+    "LLM reasoning": "LLM 추론",
+    "multimodal models": "멀티모달 모델",
+    "open source AI": "오픈소스 AI",
+    "Rust in AI tooling": "AI 도구의 Rust",
+    "AI safety": "AI 안전성"
+  },
+  "counts": {
+    "trending": 2,
+    "papers": 8,
+    "tools": 8
+  },
+  "summary_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "summary_attempts": [
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "outcome": "ok",
+      "served_by": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "n": 2
+    }
+  ],
+  "trending": [
+    {
+      "title": "ClawDOS – An AI coding agent for DOS",
+      "url": "http://ricapar.net/ClawDOS/",
+      "source": "HackerNews",
+      "points": 174,
+      "comments": 52,
+      "author": "Ricapar",
+      "date": "2026-11-21",
+      "desc": "",
+      "summary_ko": "ClawDOS는 DOS 환경에서 코드 생성을 자동화하는 AI 에이전트로, 레거시 시스템 유지보수 효율을 높인다."
+    },
+    {
+      "title": "Pandex – Official European Law for AI Agents, over MCP",
+      "url": "https://www.pandex.io",
+      "source": "HackerNews",
+      "points": 139,
+      "comments": 33,
+      "author": "vasie",
+      "date": "2026-11-21",
+      "desc": "",
+      "summary_ko": "Pandex는 MCP 기반 유럽 공식 AI 에이전트 법규로, 규제 준수와 신뢰성 확보를 체계적으로 지원한다."
+    }
+  ],
+  "papers": [
+    {
+      "title": "Omo: Giving Continuing AI-Agent Work a Place to Return To",
+      "url": "https://arxiv.org/pdf/2611.27107v1",
+      "source": "ArXiv",
+      "authors": "Kaviru Hapuarachchi, Harrison Edwards",
+      "date": "2026-11-20",
+      "desc": "AI coding agents now keep working while the people who started them are away. Coming back is the hard part: a session list tells you which agent is where, but not what it was asked to do, what it changed, or what to tell it next. We present Omo, which gives each piece of continui"
+    },
+    {
+      "title": "Exercised, Rarely Recovered: What Public Reports Say About Recovery in 50 AI Agent Harnesses and Runtimes",
+      "url": "https://arxiv.org/pdf/2611.27090v1",
+      "source": "ArXiv",
+      "authors": "Kaviru Hapuarachchi",
+      "date": "2026-11-20",
+      "desc": "When an AI coding agent deletes the wrong files or a long agent run crashes, users fall back on recovery mechanisms: resume from a checkpoint, undo, ask for approval, read the log. Research runtimes promise stronger guarantees, such as saga-style compensation and transactional ro"
+    },
+    {
+      "title": "Keep the Process, Change the Supplier: Runtime Governance for Tool-Using AI Agents",
+      "url": "https://arxiv.org/pdf/2611.26966v1",
+      "source": "ArXiv",
+      "authors": "Deepak Waghmare, Shaad Sufi",
+      "date": "2026-11-20",
+      "desc": "Tool-using AI agents propose actions whose authorization and external effects cannot be inferred from generated text alone. We study an execution boundary that separates agent proposals from business-controlled authority, context disclosure, and supplier selection. The Open Proce"
+    },
+    {
+      "title": "CodeReviewBench: An Automated Benchmark for Evaluating the Software Factory",
+      "url": "https://arxiv.org/pdf/2611.26942v1",
+      "source": "ArXiv",
+      "authors": "Ashley Zhang, Narmeen Fatimah Oozeer, Aleksandr Zverianskii",
+      "date": "2026-11-20",
+      "desc": "As AI agents ship more code with minimal human oversight, code review becomes the critical quality-control checkpoint -- but one without a reliable, objective verifier: review quality is nuanced and ultimately a judgment call by the PR author. Existing benchmarks are structurally"
+    },
+    {
+      "title": "Multi-Tier Edge Triage: Optimizing Latency for Safe Clinical Agents",
+      "url": "https://arxiv.org/pdf/2611.26914v1",
+      "source": "ArXiv",
+      "authors": "Joshua Broyde, Sarita A. Joshi",
+      "date": "2026-11-20",
+      "desc": "Deploying generative AI agents in enterprise clinical workflows requires enforcing multi-dimensional safety and compliance policies--preventing HIPAA Protected Health Information (PHI) exposure, maintaining clinical scope-of-practice boundaries, ensuring patient-appropriate readi"
+    },
+    {
+      "title": "Self-verifiable LLM-driven science and why it needs human researchers",
+      "url": "https://arxiv.org/pdf/2611.26754v1",
+      "source": "ArXiv",
+      "authors": "Michael G. Medvedev, Nikolai V. Krivoshchapov, Stepan N. Ostarkov",
+      "date": "2026-11-19",
+      "desc": "Language models are now used throughout all sciences - for reading literature, extracting numbers from tables and spectra, analyzing data, drafting conclusions - and their answers arrive in the same polished confident tone whether they are right or wrong, so a result has to be re"
+    },
+    {
+      "title": "PlayCraft: Designing Engaging Games from Agent Play Experience",
+      "url": "https://arxiv.org/pdf/2611.26624v1",
+      "source": "ArXiv",
+      "authors": "Weihao Cheng",
+      "date": "2026-11-19",
+      "desc": "Recent AI agents can generate playable games, but these games are not necessarily engaging. Mastery is a key source of engagement, yet designing for it requires extensive human play and tuning. We propose PlayCraft, an automated framework that uses a vision-based agent to play ga"
+    },
+    {
+      "title": "JARVIS: An Agent That Designs, Builds, and Tests Circuit Boards on Its Own",
+      "url": "https://arxiv.org/pdf/2611.26503v1",
+      "source": "ArXiv",
+      "authors": "Shibo Zhou, Tianqi Hong, Zheng Yan",
+      "date": "2026-11-19",
+      "desc": "Power electronics is central to the energy transition, but developing new hardware still relies on human-led design, fabrication, testing, and iteration. We present JARVIS, an embodied AI agent that autonomously closes this loop for circuit boards. JARVIS maintains machine-specif"
+    }
+  ],
+  "tools": [
+    {
+      "title": "wangzan101/Mika",
+      "url": "https://github.com/wangzan101/Mika",
+      "source": "GitHub",
+      "stars": 9649,
+      "language": "Kotlin",
+      "desc": "An on-device AI agent for Android that operates apps and the web to get things done for you."
+    },
+    {
+      "title": "qybaihe/bla",
+      "url": "https://github.com/qybaihe/bla",
+      "source": "GitHub",
+      "stars": 6429,
+      "language": "TypeScript",
+      "desc": "🛡️ BLA (bla-agents / Blind LLM Agents) — Open-source Blue Defense MCP server & CLI protecting JS/TS, Electron ASAR, WASM, Python, Native Binaries, SQLite, GGUF/Safetensors & Android DEX against AI reverse-engineering agents (REA)."
+    },
+    {
+      "title": "expo/exact",
+      "url": "https://github.com/expo/exact",
+      "source": "GitHub",
+      "stars": 4921,
+      "language": "Rust",
+      "desc": "Write an app once. It runs natively on the web, macOS, iOS, and Linux, and an AI agent can build it, run it, see it, and test it on every one of them."
+    },
+    {
+      "title": "benjitaylor/skills",
+      "url": "https://github.com/benjitaylor/skills",
+      "source": "GitHub",
+      "stars": 4009,
+      "language": "TypeScript",
+      "desc": "Skills for AI coding agents."
+    },
+    {
+      "title": "sarpstar/cinecode",
+      "url": "https://github.com/sarpstar/cinecode",
+      "source": "GitHub",
+      "stars": 2885,
+      "language": "Python",
+      "desc": "Films made with code. Short films, long YouTube videos, ads, explainers and music videos: an AI coding agent writes the script, builds every frame in code, designs the sound and hands you an MP4."
+    },
+    {
+      "title": "DenisSergeevitch/ex-ussr-kinship-research",
+      "url": "https://github.com/DenisSergeevitch/ex-ussr-kinship-research",
+      "source": "GitHub",
+      "stars": 2736,
+      "language": "Python",
+      "desc": "Evidence-first genealogy skill for AI agents (Codex, Claude Code): church books, civil, military, deportation and repression records across the former USSR. Replies in your language."
+    },
+    {
+      "title": "DIYgod/pinky",
+      "url": "https://github.com/DIYgod/pinky",
+      "source": "GitHub",
+      "stars": 2679,
+      "language": "Go",
+      "desc": "Let AI use your iPhone or Android phone, with you in the loop: any MCP agent from macOS, Windows or Linux, or Pinky itself, right on the phone."
+    },
+    {
+      "title": "pierridotite/mobile-agent-testers",
+      "url": "https://github.com/pierridotite/mobile-agent-testers",
+      "source": "GitHub",
+      "stars": 632,
+      "language": "Python",
+      "desc": "20 AI testers on 20 different phones, in parallel, on GitHub's free runners: Claude Code agents on iOS Simulators and Android emulators that find broken flows, translation, layout and accessibility bugs"
+    }
+  ]
+}
