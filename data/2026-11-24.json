@@ -1,0 +1,263 @@
+{
+  "date": "2026-11-24",
+  "generated_at": "2026-11-24T15:06:50+09:00",
+  "topics": [
+    "AI agents",
+    "LLM reasoning",
+    "multimodal models",
+    "open source AI",
+    "Rust in AI tooling",
+    "AI safety"
+  ],
+  "topic_labels": {
+    "AI agents": "AI 에이전트",
+    "LLM reasoning": "LLM 추론",
+    "multimodal models": "멀티모달 모델",
+    "open source AI": "오픈소스 AI",
+    "Rust in AI tooling": "AI 도구의 Rust",
+    "AI safety": "AI 안전성"
+  },
+  "counts": {
+    "trending": 8,
+    "papers": 8,
+    "tools": 8
+  },
+  "summary_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "summary_attempts": [
+    {
+      "model": "google/gemma-4-31b-it:free",
+      "outcome": "rate_limited",
+      "status": 429
+    },
+    {
+      "model": "google/gemma-4-26b-a4b-it:free",
+      "outcome": "rate_limited",
+      "status": 429
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "outcome": "ok",
+      "served_by": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "n": 5
+    }
+  ],
+  "trending": [
+    {
+      "title": "Skip the DRAM Tier: MoRI UMBP Runs the Agentic KV Cache on NVMe",
+      "url": "https://vllm.ai/blog/2026-11-23-skip-the-dram-tier",
+      "source": "HackerNews",
+      "points": 1,
+      "comments": 0,
+      "author": "jinqueeny",
+      "date": "2026-11-24",
+      "desc": "",
+      "summary_ko": "MoRI UMBP가 DRAM 없이 NVMe에서 에이전트 KV 캐시를 실행해 메모리 비용을 줄이고 대규모 추론을 가능하게 한다."
+    },
+    {
+      "title": "An on-device AI agent for Android",
+      "url": "https://github.com/wangzan101/mika",
+      "source": "HackerNews",
+      "points": 1,
+      "comments": 0,
+      "author": "snasan",
+      "date": "2026-11-24",
+      "desc": "",
+      "summary_ko": "안드로이드용 온디바이스 AI 에이전트가 클라우드 없이 실시간 추론과 개인정보 보호를 동시에 제공한다."
+    },
+    {
+      "title": "Show HN: Merget – Merge queue using deep static analysis to resolve GitHub PRs",
+      "url": "https://merget.ai/",
+      "source": "HackerNews",
+      "points": 4,
+      "comments": 0,
+      "author": "kulkved9",
+      "date": "2026-11-24",
+      "desc": "",
+      "summary_ko": "Merget은 정적 분석으로 PR 병합 큐를 자동화해 충돌 해결과 CI 대기 시간을 크게 단축한다."
+    },
+    {
+      "title": "Show HN: Gal – local-first agent runtime with per-call permissions and rollback",
+      "url": "https://agent-home.ai/index.html",
+      "source": "HackerNews",
+      "points": 4,
+      "comments": 0,
+      "author": "qingwind_gal",
+      "date": "2026-11-24",
+      "desc": "",
+      "summary_ko": "Gal은 로컬 퍼스트 에이전트 런타임으로 호출별 권한과 롤백을 지원해 안전하고 투명한 자율 실행을 가능하게 한다."
+    },
+    {
+      "title": "Anthropic launches Claude Ship, agents review, fix, & approve code changes now",
+      "url": "https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/",
+      "source": "HackerNews",
+      "points": 4,
+      "comments": 2,
+      "author": "nitroedge",
+      "date": "2026-11-23",
+      "desc": "",
+      "summary_ko": "Anthropic의 Claude Ship은 에이전트가 코드 변경을 검토·수정·승인까지 수행해 개발 워크플로를 완전 자동화한다."
+    },
+    {
+      "title": "Securing AI agents against intent hijacking with Semantic governance policies",
+      "url": "https://developers.googleblog.com/did-the-user-ask-for-this-securing-ai-agents-against-intent-hijacking-with-semantic-governance-policies/",
+      "source": "HackerNews",
+      "points": 2,
+      "comments": 0,
+      "author": "thevilish",
+      "date": "2026-11-23",
+      "desc": ""
+    },
+    {
+      "title": "What Is NotiBuddy? Approve AI Agents from Your iPhone with Face ID",
+      "url": "https://notibuddy.app/blog/what-is-notibuddy",
+      "source": "HackerNews",
+      "points": 1,
+      "comments": 0,
+      "author": "deegles",
+      "date": "2026-11-23",
+      "desc": ""
+    },
+    {
+      "title": "Internal Changelogs unlock autonomous coding agents",
+      "url": "https://rallywith.ai/blog/internal-changelogs/",
+      "source": "HackerNews",
+      "points": 2,
+      "comments": 0,
+      "author": "ajuhasz",
+      "date": "2026-11-23",
+      "desc": ""
+    }
+  ],
+  "papers": [
+    {
+      "title": "TrialAgentBench: Evaluating AI Agents for Clinical-Trial Analysis and Long-Horizon Drug-Development Decisions",
+      "url": "https://arxiv.org/pdf/2611.30916v1",
+      "source": "ArXiv",
+      "authors": "Bradley Segal, William Bolton, Philip Torr",
+      "date": "2026-11-23",
+      "desc": "Clinical drug development is a long-horizon, high-stakes process requiring sequential decisions based on information that costs money and time to acquire. AI agents have demonstrated capabilities for scientific analysis, but there is no established way to evaluate them on these d"
+    },
+    {
+      "title": "AvatarAnyone: Agentic Reconstruction of Mesh-Based Layered Avatars from YouTube Video",
+      "url": "https://arxiv.org/pdf/2611.30777v1",
+      "source": "ArXiv",
+      "authors": "Aymen Mir, Peter Wonka, Stefanos Zafeiriou",
+      "date": "2026-11-23",
+      "desc": "We introduce AvatarAnyone, a method for reconstructing avatars from casual YouTube videos as layered meshes, with each garment and footwear as a separate mesh layered on top of the body mesh. In such videos, people differ in garment classes, clothing types, and layers, and each c"
+    },
+    {
+      "title": "SchemaCaps: When a Compatible Tool Update Silently Widens an AI Agent's Authority",
+      "url": "https://arxiv.org/pdf/2611.30750v1",
+      "source": "ArXiv",
+      "authors": "Yulliwas Ameur, Samia Bouzefrane, Soumya Banerjee",
+      "date": "2026-11-23",
+      "desc": "The tools users approve for their AI agents keep changing their JSON input schemas. Of 8 surveyed MCP clients and scanners, none is observed or documented to re-approve a tool whose input schema widens (two not determinable). We define non-amplification over the coordinates visib"
+    },
+    {
+      "title": "Interrogation Protocols for AI Control",
+      "url": "https://arxiv.org/pdf/2611.30583v1",
+      "source": "ArXiv",
+      "authors": "Aniruddh Pramod, Matthew Khoriaty, James Lucassen",
+      "date": "2026-11-23",
+      "desc": "As the intelligence of an AI agent increases relative to a trusted monitor, so does the risk that the monitor will fail to understand the agent's actions or to evaluate them confidently. We introduce interrogation protocols to a high-stakes AI control setting, and allow the monit"
+    },
+    {
+      "title": "MMMem: Self-Improving Agents with Task-Aware Multimodal Experience Consolidation",
+      "url": "https://arxiv.org/pdf/2611.30287v1",
+      "source": "ArXiv",
+      "authors": "Yuxuan Chen, Changwei Lv, Yunfei Li",
+      "date": "2026-11-23",
+      "desc": "AI agents accumulate conversations, images, and documents through long-term interactions with users. Answering later questions often requires connecting evidence across these records, yet the resulting understanding is rarely retained, allowing mistakes to recur on related questi"
+    },
+    {
+      "title": "Adopting AI Technologies without Traps: A Multi-Agent Reinforcement Learning Framework",
+      "url": "https://arxiv.org/pdf/2611.30200v1",
+      "source": "ArXiv",
+      "authors": "Jitong Yang, Avinash Reddy Mudireddy, Ziqing Lu",
+      "date": "2026-11-23",
+      "desc": "AI technologies and AI agents play increasingly important roles in human society, including in education, economics, and research. Adopting AI technologies can bring immediate, and sometimes tremendous, rewards such as through productivity boost, but they can also bring negative "
+    },
+    {
+      "title": "Causal Evidence for the Emergence and Spread of Reward Hacking in AI Agent Swarms",
+      "url": "https://arxiv.org/pdf/2611.30185v1",
+      "source": "ArXiv",
+      "authors": "Sumer S. Vaid",
+      "date": "2026-11-23",
+      "desc": "Autonomous AI agents that coordinate and collaborate among each other have become pervasive across domains ranging from scientific research to finance and engineering. The opportunity to share messages and build upon each other's work also creates the potential for misaligned beh"
+    },
+    {
+      "title": "Sequential Selection against an Adaptive Opponent",
+      "url": "https://arxiv.org/pdf/2611.30006v1",
+      "source": "ArXiv",
+      "authors": "Zhongyuan Lyu, Xiaocong Xu",
+      "date": "2026-11-23",
+      "desc": "Selecting a strategy by testing it against an opponent is common in game-playing AI, red-teaming of language models, and safety evaluations of AI agents. In many of these settings, the opponent adapts to what it observes, so a strategy that keeps winning in practice may already h"
+    }
+  ],
+  "tools": [
+    {
+      "title": "andyhuo520/digital-human-koubo",
+      "url": "https://github.com/andyhuo520/digital-human-koubo",
+      "source": "GitHub",
+      "stars": 2091,
+      "language": "TypeScript",
+      "desc": "AI digital-human talking-head videos from one photo: Renoise MCP generation + 5 editing styles + 48 creator-grade packaging components. Agent skill for Claude Code / Codex / OpenClaw / WorkBuddy …"
+    },
+    {
+      "title": "agentes-chat/agentes-chat",
+      "url": "https://github.com/agentes-chat/agentes-chat",
+      "source": "GitHub",
+      "stars": 1996,
+      "language": "TypeScript",
+      "desc": "Open-source, self-hosted Slack alternative where your team and AI agents work together in channels and DMs. Agents run on Claude, ChatGPT/Codex, Gemini or Grok, with MCP tools, their own computer and browser, routines, memory and approvals. Web, desktop and phone apps. Docker Compose + Postgres. AGPL-3.0."
+    },
+    {
+      "title": "konlu/story-studio",
+      "url": "https://github.com/konlu/story-studio",
+      "source": "GitHub",
+      "stars": 1238,
+      "language": "Python",
+      "desc": "从选题到剪映草稿的一站式 AI 短视频内容创作 Agent Skill"
+    },
+    {
+      "title": "cutetailbud/ff-ruyijs",
+      "url": "https://github.com/cutetailbud/ff-ruyijs",
+      "source": "GitHub",
+      "stars": 977,
+      "language": "C++",
+      "desc": "This is a lightweight, headless browser purpose-built for AI agents (such as Codex or Claude Code) to perform browser automation tasks; it is designed to navigate through various web protection systems, login processes, and reverse-engineering scenarios"
+    },
+    {
+      "title": "ThreatDefence/agentic-attack-detections",
+      "url": "https://github.com/ThreatDefence/agentic-attack-detections",
+      "source": "GitHub",
+      "stars": 577,
+      "language": "Python",
+      "desc": "Detection rules and IOCs for AI agent attack frameworks: ARTEX, Cairn, PentAGI, HexStrike, CyberStrikeAI, Strix, Hermes Agent, Agent Zero, RedAmon, Xalgorix, Pentest Swarm AI. KQL hunts for Microsoft Sentinel and Defender XDR, Sigma, Suricata, Zeek, YARA, Splunk, Elastic, STIX 2.1."
+    },
+    {
+      "title": "fendouai/ViralForge",
+      "url": "https://github.com/fendouai/ViralForge",
+      "source": "GitHub",
+      "stars": 556,
+      "language": "TypeScript",
+      "desc": "Agent-native viral video studio: deconstruct scripts, replicate structures, export editable projects and costed variants. Website: https://wearai.net/ai-video-generator"
+    },
+    {
+      "title": "berkantay/gpucanvas",
+      "url": "https://github.com/berkantay/gpucanvas",
+      "source": "GitHub",
+      "stars": 552,
+      "language": "TypeScript",
+      "desc": "Put thousands of live DOM nodes on an infinite canvas: the GPU draws them, an editor selects, moves and resizes them, shaders and transitions run on them, and an AI agent can read them and point at them."
+    },
+    {
+      "title": "Tencent/WePocketModel",
+      "url": "https://github.com/Tencent/WePocketModel",
+      "source": "GitHub",
+      "stars": 130,
+      "language": "Python",
+      "desc": "A compact, unified multimodal model family with a single shared vision–language backbone, built for on-device and in-app intelligence."
+    }
+  ]
+}
