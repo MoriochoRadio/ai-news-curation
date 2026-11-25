@@ -1,0 +1,232 @@
+{
+  "date": "2026-11-25",
+  "generated_at": "2026-11-25T13:55:15+09:00",
+  "topics": [
+    "AI agents",
+    "LLM reasoning",
+    "multimodal models",
+    "open source AI",
+    "Rust in AI tooling",
+    "AI safety"
+  ],
+  "topic_labels": {
+    "AI agents": "AI 에이전트",
+    "LLM reasoning": "LLM 추론",
+    "multimodal models": "멀티모달 모델",
+    "open source AI": "오픈소스 AI",
+    "Rust in AI tooling": "AI 도구의 Rust",
+    "AI safety": "AI 안전성"
+  },
+  "counts": {
+    "trending": 4,
+    "papers": 8,
+    "tools": 8
+  },
+  "summary_model": null,
+  "summary_attempts": [
+    {
+      "model": "google/gemma-4-31b-it:free",
+      "outcome": "rate_limited",
+      "status": 429
+    },
+    {
+      "model": "google/gemma-4-26b-a4b-it:free",
+      "outcome": "rate_limited",
+      "status": 429
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "outcome": "empty",
+      "finish": "length"
+    },
+    {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "outcome": "empty",
+      "finish": "length"
+    },
+    {
+      "model": "openrouter/free",
+      "outcome": "empty",
+      "finish": "length"
+    },
+    {
+      "model": "openrouter/free",
+      "outcome": "empty",
+      "finish": "length"
+    }
+  ],
+  "trending": [
+    {
+      "title": "Launch HN: Versine (YC F26) – MCP to send and receive money",
+      "url": "https://news.ycombinator.com/item?id=50634426",
+      "source": "HackerNews",
+      "points": 77,
+      "comments": 62,
+      "author": "harshithl1777",
+      "date": "2026-11-24",
+      "desc": ""
+    },
+    {
+      "title": "Compiling web applications into verified operations for AI agents",
+      "url": "https://protocolis.co/paper/",
+      "source": "HackerNews",
+      "points": 34,
+      "comments": 12,
+      "author": "vahagnb",
+      "date": "2026-11-24",
+      "desc": ""
+    },
+    {
+      "title": "Ask HN: Am I the only one whose AI hype is cooling down a lot?",
+      "url": "https://news.ycombinator.com/item?id=50633601",
+      "source": "HackerNews",
+      "points": 22,
+      "comments": 14,
+      "author": "redleathercouch",
+      "date": "2026-11-24",
+      "desc": ""
+    },
+    {
+      "title": "Show HN: KradleBench – Multi-agent AI evals in Minecraft",
+      "url": "https://www.kradle.ai?1",
+      "source": "HackerNews",
+      "points": 15,
+      "comments": 5,
+      "author": "jamest",
+      "date": "2026-11-23",
+      "desc": ""
+    }
+  ],
+  "papers": [
+    {
+      "title": "Attestation is All You Need: Toward a Zero-Trust Architecture for HPC AI Agents",
+      "url": "https://arxiv.org/pdf/2611.32958v1",
+      "source": "ArXiv",
+      "authors": "Jie Li, Chenxu Niu, Tongyang Wang",
+      "date": "2026-11-24",
+      "desc": "AI agents are beginning to automate data analysis, orchestration, and simulation steering in HPC environments, but they introduce a security problem that existing cluster defenses do not address: the hijacked authorized agent. An adversary can subvert an agent through prompt inje"
+    },
+    {
+      "title": "ShellBench: What Matters More for AI Agents, Models, or Harness for Everyday Tasks",
+      "url": "https://arxiv.org/pdf/2611.32946v1",
+      "source": "ArXiv",
+      "authors": "Vincent Koc, Aditya Washikar, Rishab Naveen Venkataraman",
+      "date": "2026-11-24",
+      "desc": "The use of AI agents among the general public has been increasing exponentially throughout 2026, though it is often hard for users to determine which configuration is most effective for their personal use. To help provide clarity here we introduce ShellBench, 100 day-to-day tasks"
+    },
+    {
+      "title": "Lazy Agents Answer Against Their Own Beliefs: Reinforcement Learning with Verifiable Beliefs Teaches Them to Act on What They Believe",
+      "url": "https://arxiv.org/pdf/2611.32884v1",
+      "source": "ArXiv",
+      "authors": "Richmond Sin Jing Xuan, Peilin Feng, Wenbin Wang",
+      "date": "2026-11-24",
+      "desc": "AI agents working on long tasks often commit to an answer before they have enough evidence, a behavior called laziness. In our evaluations, they frequently commit even while their stated belief still names several possible answers. An outcome reward at the end of the episode scor"
+    },
+    {
+      "title": "Interactive Neural Computers",
+      "url": "https://arxiv.org/pdf/2611.32811v1",
+      "source": "ArXiv",
+      "authors": "Ross Murphy, Marcel Hedman, Gabriel Brostow",
+      "date": "2026-11-24",
+      "desc": "Computers and their interfaces are usually treated as fixed, so a person, or increasingly an AI agent, must adapt to whatever the operating system presents. This is limiting when someone needs a different workflow, or an interface suited to hands-free use or a disability. We expl"
+    },
+    {
+      "title": "CAPTA: Identifying LLMs Behind AI Agents",
+      "url": "https://arxiv.org/pdf/2611.32686v1",
+      "source": "ArXiv",
+      "authors": "Kailun Yan, Yue Huang, Sisi Duan",
+      "date": "2026-11-24",
+      "desc": "Large language model (LLM)-based agents access remote services through tools to complete user tasks, often via API calls. In this setting, a remote service may want to identify the backend LLM of an agent to launch model-specific attacks, including prompt injection or selective d"
+    },
+    {
+      "title": "Within-task hazards of AI agents: unidentified by time-horizon curves, identified by repeated runs",
+      "url": "https://arxiv.org/pdf/2611.32415v1",
+      "source": "ArXiv",
+      "authors": "Ruiqi Zhao",
+      "date": "2026-11-24",
+      "desc": "The time horizon of an AI agent is read off a curve: the probability that the agent completes a task, plotted against the time a human needs for it. Several recent analyses fit survival models to this curve and conclude that agents' hazard of failure declines as a task goes on. T"
+    },
+    {
+      "title": "FigmaEval: A Benchmark for Evaluating AI Agents in Professional UI Design",
+      "url": "https://arxiv.org/pdf/2611.32321v1",
+      "source": "ArXiv",
+      "authors": "Xinyue Huang, Yongyong Gao, Zhengyuan Pan",
+      "date": "2026-11-24",
+      "desc": "Recent advances in AI agents have enabled autonomous UI design using professional tools such as Figma, yet evaluating their design capabilities remains challenging due to the open-ended nature of design tasks and the absence of unique ground truths. We introduce FigmaEval, a benc"
+    },
+    {
+      "title": "Structure-Aware Transformers for Hierarchical Authorization in Personal AI Agents",
+      "url": "https://arxiv.org/pdf/2611.32018v1",
+      "source": "ArXiv",
+      "authors": "Dongyu Cui, Jie Ding, Xuan Bi",
+      "date": "2026-11-24",
+      "desc": "Personal AI agents can carry out complex, multi-step tasks on users' behalf, but doing so often involves numerous permission requests. Manually reviewing each request is time-consuming, while indiscriminate approval poses privacy and security risks. Predicting users' authorizatio"
+    }
+  ],
+  "tools": [
+    {
+      "title": "mdiri-ai/SoduWork",
+      "url": "https://github.com/mdiri-ai/SoduWork",
+      "source": "GitHub",
+      "stars": 7677,
+      "language": "JavaScript",
+      "desc": "The AI-native engine for teams and their agents. Multi-harness, multi-agent, self-hosted."
+    },
+    {
+      "title": "simpsoka/zigzag",
+      "url": "https://github.com/simpsoka/zigzag",
+      "source": "GitHub",
+      "stars": 1132,
+      "language": "Rust",
+      "desc": "Free, open-source embroidery software for Mac and Windows. Turn SVG artwork into machine embroidery, edit stitches visually, and create designs with AI agents via MCP."
+    },
+    {
+      "title": "Dodaios/ste80-humanizer",
+      "url": "https://github.com/Dodaios/ste80-humanizer",
+      "source": "GitHub",
+      "stars": 1124,
+      "language": "Python",
+      "desc": "STE80 Humanizer: agent skill that removes AI tells and rewrites text 80% of the way to ASD-STE100 (Simplified Technical English), the method Andrej Karpathy shared."
+    },
+    {
+      "title": "andrew-babo/muse4ai",
+      "url": "https://github.com/andrew-babo/muse4ai",
+      "source": "GitHub",
+      "stars": 680,
+      "language": "TypeScript",
+      "desc": "Muse4AI — let your AI agent make the pictures and the videos. Local Windows bridge for Muse via REST, MCP, and OAuth."
+    },
+    {
+      "title": "erkamyaman/safe-anything",
+      "url": "https://github.com/erkamyaman/safe-anything",
+      "source": "GitHub",
+      "stars": 640,
+      "language": "Rust",
+      "desc": "Find the holes before someone else does. A fast, 100% Rust vulnerability scanner: XSS, SQL injection, leaked secrets, dependency CVEs and AI agent setups."
+    },
+    {
+      "title": "Developing-Gamer/agent-sim",
+      "url": "https://github.com/Developing-Gamer/agent-sim",
+      "source": "GitHub",
+      "stars": 571,
+      "language": "Rust",
+      "desc": "iOS simulators for AI agents, on Linux. The agent layer for x86Sim."
+    },
+    {
+      "title": "w01fb0ss/PiBot",
+      "url": "https://github.com/w01fb0ss/PiBot",
+      "source": "GitHub",
+      "stars": 564,
+      "language": "TypeScript",
+      "desc": "Open-source, local-first AI agent team for your desktop: multi-agent group chats, computer use, browser, MCP, routines and approvals. macOS, Windows, Linux + Android. Built on pi."
+    },
+    {
+      "title": "liujh0729-jpg/AI-enterprise-OEM",
+      "url": "https://github.com/liujh0729-jpg/AI-enterprise-OEM",
+      "source": "GitHub",
+      "stars": 525,
+      "language": "Dart",
+      "desc": "项目简介：AI企业服务，包括Agent、营销、内容创作、CRM、OA、BI、RPA、邮箱、OKR等，支持财税、供销网络、法律服务、智库、物流、灵活用工、跨境出海等。支持SNS商务人脉挖掘，大数据挖掘。"
+    }
+  ]
+}
