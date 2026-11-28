@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The AI Brief — 2026년 11월 28일</title>
+<link rel="stylesheet" href="../assets/style.css" />
+
+<style>
+.tb-fixed{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;gap:8px;align-items:center;
+  padding:8px 14px;background:var(--paper,#fffdf8);border-bottom:1px solid var(--line,#e3ddd0);
+  box-shadow:0 1px 6px rgba(0,0,0,.05);font-family:var(--sans);}
+.tb-fixed input{flex:1;max-width:340px;padding:7px 12px;border:1px solid var(--line,#e3ddd0);
+  border-radius:20px;font-size:13px;background:var(--bg,#f4f1ea);color:var(--ink,#1c1a17);outline:none;}
+.tb-fixed .tb-btn{border:1px solid var(--line,#e3ddd0);background:transparent;color:var(--ink,#1c1a17);
+  border-radius:20px;padding:6px 12px;font-size:13px;cursor:pointer;line-height:1;}
+.tb-fixed .tb-btn:hover{border-color:var(--accent,#b4451f);color:var(--accent,#b4451f);}
+body.has-tb{padding-top:52px;}
+mark.hl{background:var(--accent-soft,#f3e7df);color:var(--accent,#b4451f);border-radius:3px;padding:0 2px;}
+#goog-gt-tt,#goog-te-banner{display:none!important;}
+.goog-te-gadget{font-size:0!important;}
+.goog-te-gadget .goog-te-combo{font-size:12px!important;padding:5px 6px;border-radius:14px;
+  border:1px solid var(--line,#e3ddd0);background:var(--bg,#f4f1ea);color:var(--ink,#1c1a17);}
+</style>
+
+</head>
+<body>
+
+<div class="tb-fixed">
+  <input id="siteSearch" type="search" placeholder="호 내 검색 (제목·설명)…" aria-label="검색" />
+  <button class="tb-btn" id="darkToggle" type="button">🌙 다크</button>
+  <div id="gt-mount"></div>
+</div>
+
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">The AI Brief</div>
+    <div class="issue-date">2026년 11월 28일</div>
+    <p class="tagline">매일 아침, AI 업계의 흐름을 한눈에</p>
+    <p class="topics">오늘의 주제 — AI agents · LLM reasoning · multimodal models · open source AI · Rust in AI tooling · AI safety</p>
+  </header>
+
+  
+    <section class="block tldr">
+      <header class="block-head">
+        <h2>한눈에 요약</h2>
+        <span class="block-sub">TL;DR</span>
+      </header>
+      <div class="block-body">
+        <p class="tldr-count">트렌딩 <b>4</b> · 논문 <b>8</b> · 프로젝트 <b>8</b> 건 수집</p>
+        <p class="tldr-topics">오늘 살펴본 주제 — AI 에이전트 · LLM 추론 · 멀티모달 모델 · 오픈소스 AI · AI 도구의 Rust · AI 안전성</p>
+        <ul class="tldr-picks"><li><span class="tldr-tag">오늘의 관심</span> Google Will Make AI Agents Use Its MCP Servers. The Gmail One Can&#x27;t Send Email</li><li><span class="tldr-tag">논문 픽</span> Attack Policy Selection can Mislead Monitor Evaluators</li><li><span class="tldr-tag">프로젝트 픽</span> simplexai-labs/linger</li></ul>
+      </div>
+    </section>
+  
+    <section class="block" data-section="trending">
+      <header class="block-head">
+        <h2>트렌딩</h2>
+        <span class="block-sub">지금 주목받는 AI 이야기</span>
+      </header>
+      <div class="block-body"><div class="grid">
+    <article class="card">
+      <a class="card-title" href="https://techstackups.com/articles/google-workspace-ai-agents-mcp/" target="_blank" rel="noopener">Google Will Make AI Agents Use Its MCP Servers. The Gmail One Can&#x27;t Send Email</a>
+      <p class="item-desc">구글이 AI 에이전트에 MCP 서버를 의무화했으나 Gmail 에이전트는 이메일 발송이 안 돼 실용성이 떨어진다.</p>
+      <div class="card-foot"><span class="meta-line">▲ 420 · 💬 333</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://the-decoder.com/ai-agents-now-control-part-of-deepminds-compute-for-gemini-experiments-but-recursive-self-improvement-remains-distant/" target="_blank" rel="noopener">AI agents now control part of DeepMind&#x27;s compute for Gemini experiments</a>
+      <p class="item-desc">딥마인드가 제미나이 실험용 컴퓨팅 자원 일부를 AI 에이전트에 위임해 자율적 연구 가속화를 꾀한다.</p>
+      <div class="card-foot"><span class="meta-line">▲ 56 · 💬 28</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://sessiongraph.ai/" target="_blank" rel="noopener">SessionGraph: Visualize all your coding agent sessions in one interactive graph</a>
+      <p class="item-desc">세션그래프가 코딩 에이전트 세션 전체를 하나의 인터랙티브 그래프로 보여줘 디버깅과 협업을 단순화한다.</p>
+      <div class="card-foot"><span class="meta-line">▲ 35 · 💬 17</span><span class="src">HackerNews</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://www.theguardian.com/business/2026/nov/27/ai-agent-cardless-transaction-pizza-papa-john-uk-fca-truelayer" target="_blank" rel="noopener">Pizza history: AI agent&#x27;s cardless purchase is a first for UK</a>
+      <p class="item-desc">영국 최초로 AI 에이전트가 카드 없이 피자를 주문·결제해 무카드 상거래 가능성을 입증했다.</p>
+      <div class="card-foot"><span class="meta-line">▲ 20 · 💬 41</span><span class="src">HackerNews</span></div>
+    </article></div></div>
+    </section>
+  
+    <section class="block" data-section="papers">
+      <header class="block-head">
+        <h2>논문</h2>
+        <span class="block-sub">새로 나온 연구</span>
+      </header>
+      <div class="block-body"><div class="rows">
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.34934v1" target="_blank" rel="noopener">Attack Policy Selection can Mislead Monitor Evaluators</a>
+        <p class="item-desc">AI monitors, classifiers that flag dangerous behaviour by AI agents, are often evaluated against transcripts generated by attack policies acting as proxies for dangerous behaviour in deployment. We evaluate an ex-production OpenAI monitor as a case study and find that measured fa</p>
+        <div class="card-foot"><span class="byline">Charlie Griffin, Oliver Makins, Asa Cooper Stickland</span><span class="date">2026-11-25</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.34754v1" target="_blank" rel="noopener">AutoRSP: An AI Agent for Radar Sensing Pipeline Design</a>
+        <p class="item-desc">Radar sensing demands a pipeline that is well-thought-out across hardware and software. We ask whether an AI agent can automatically design radar sensing pipelines at a fraction of the time, cost, and expertise that current practice needs. We present AutoRSP, an agent that embeds</p>
+        <div class="card-foot"><span class="byline">Zhi Zheng, Xincheng Xie, Avery Gump</span><span class="date">2026-11-25</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.34646v1" target="_blank" rel="noopener">REE: A Scientific Research Entrance Exam for AI Agents</a>
+        <p class="item-desc">Autonomous research agents are emerging as a promising approach to scientific problem-solving across disciplines, owing to their growing ability to improve a solution through repeated experiments. Evaluating this ability requires benchmarks that pose open-ended research problems </p>
+        <div class="card-foot"><span class="byline">Zeqi Zhou, Minghao Liu, Jiarui Liu</span><span class="date">2026-11-25</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.34536v1" target="_blank" rel="noopener">Kant-Q: A Q-Learning Algorithm for Kantian Equilibrium in Symmetric Markov Games</a>
+        <p class="item-desc">AI agents increasingly interact with one another, and many of these interactions are mixed-motive games, which have posed a persistent challenge for learning algorithms. Most multi-agent reinforcement learning (MARL) algorithms are designed to reach Nash equilibria, yet in many s</p>
+        <div class="card-foot"><span class="byline">Rishi Bharadwaj, Sujit Gujar, Yadati Narahari</span><span class="date">2026-11-25</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.33926v1" target="_blank" rel="noopener">Connecting AI Agents to Live Discrete Element Simulations via the Model Context Protocol</a>
+        <p class="item-desc">This paper describes a Model Context Protocol (MCP) server through which a general-purpose AI agent operates a discrete element engine, commercial or open-source, while the simulation runs. The agent submits a long simulation to the engine and, while it computes, reads the runnin</p>
+        <div class="card-foot"><span class="byline">Yusong Han, Ryosuke Uzuoka, Kyohei Ueda</span><span class="date">2026-11-25</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.33513v1" target="_blank" rel="noopener">Learning to Reason in Real-Time</a>
+        <p class="item-desc">AI agents that operate in the real world must reason correctly and on-time, yet they currently do not account for how time should alter their reasoning. Modern agents learn to do tasks in environments that are entirely synchronous: where the world waits for the agent to act befor</p>
+        <div class="card-foot"><span class="byline">Xavier Schneider, Benjamin Schneider, Sun Sun</span><span class="date">2026-11-24</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.33459v1" target="_blank" rel="noopener">AI-human hybrid conversations: Can AI Agents Improve Discourse Quality?</a>
+        <p class="item-desc">Conversations are central to how people exchange information, share experiences, and develop collective understanding. Yet, across conversational settings, discussions often suffer from uneven participation, unanswered contributions, and a narrow range of perspectives. As generat</p>
+        <div class="card-foot"><span class="byline">Ishita Chakraborty, Xingjian You, Shrabastee Banerjee</span><span class="date">2026-11-24</span><span class="src">ArXiv</span></div>
+      </div>
+    </article>
+    <article class="row">
+      <div class="row-main">
+        <a class="row-title" href="https://arxiv.org/pdf/2611.33394v1" target="_blank" rel="noopener">Confidence scores for gated automation of large language models</a>
+        <p class="item-desc">AI agents built on large language models (LLMs) demonstrate strong capabilities in automated decision-making. However, LLMs may produce incorrect answers with high confidence, limiting their applicability in decisions that affect individuals and organizations. Reliable confidence</p>
+        <div class="card-foot"><span class="byline">Luiz G. A. Alves, Aaron Vermeersch</span><span class="date">2026-11-24</span><span class="src">ArXiv</span></div>
+      </div>
+    </article></div></div>
+    </section>
+  
+    <section class="block" data-section="tools">
+      <header class="block-head">
+        <h2>오픈소스</h2>
+        <span class="block-sub">움직이는 프로젝트</span>
+      </header>
+      <div class="block-body"><div class="grid">
+    <article class="card">
+      <a class="card-title" href="https://github.com/simplexai-labs/linger" target="_blank" rel="noopener">simplexai-labs/linger</a>
+      <p class="item-desc">Linger is An Open-Source Personal Agent That Runs Fully on Your PC.  We aim to break Big Tech’s grip on AI by bringing powerful local AI to everyday computers through efficient model–harness co-design, so everyone can run their own.</p>
+      <div class="card-foot"><span class="badges">★ 5.1k · TypeScript</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/ai-timon/timon" target="_blank" rel="noopener">ai-timon/timon</a>
+      <p class="item-desc">Timon is an Agentic Workstation who let you orchestrates all your AI agents in the same place</p>
+      <div class="card-foot"><span class="badges">★ 794 · TypeScript</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/findavoulot1973/Blender-AI-MCP-Suite" target="_blank" rel="noopener">findavoulot1973/Blender-AI-MCP-Suite</a>
+      <p class="item-desc">Blender AI MCP Suite is an AI assistant and built-in Model Context Protocol MCP server for Blender that turns plain-language briefs into inspected, approved and reversible 3D scene operations — with a visual Studio workspace, multi-agent teams, 21+ scene tools and your choice of AI models. · blender ai mcp suite · blender ai mcp · ai for blender</p>
+      <div class="card-foot"><span class="badges">★ 495</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/benzgasfuncring197110/blender-ai-copilot-bridge" target="_blank" rel="noopener">benzgasfuncring197110/blender-ai-copilot-bridge</a>
+      <p class="item-desc">An MCP bridge for Blender that exposes 27 supervised scene tools to OpenCode and any compatible client—authenticated Streamable HTTP on a local endpoint, with the visual chat studio and agent teams on the inside. · blender-ai-copilot-bridge · blender · blender 3d · blender addon · blender plugin · blender extension · blender scripting</p>
+      <div class="card-foot"><span class="badges">★ 494</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/jackson-cmd/risk-aware-trading-agents" target="_blank" rel="noopener">jackson-cmd/risk-aware-trading-agents</a>
+      <p class="item-desc">AI trading agents for US stocks with news backtesting that can&#x27;t see the future: a public LLM trading agent leaderboard (rta-bench-1), frozen point-in-time 2020/2022/2026 markets (prices, VIX, news), a look-ahead check on every run, LLM agents over MCP, and paper/live trading on 10 brokers. 风险感知美股交易智能体 · 新闻回测 · LLM 榜单</p>
+      <div class="card-foot"><span class="badges">★ 489 · Python</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/sqwishai/ippon" target="_blank" rel="noopener">sqwishai/ippon</a>
+      <p class="item-desc">Run decision models on your Mac, down to 51 ms text (14 ms cached), 39 ms audio, 179 ms image, 828 ms video on M5 Pro. No PyTorch or cloud API.</p>
+      <div class="card-foot"><span class="badges">★ 59 · Python</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/StarTrail-org/DRPixel" target="_blank" rel="noopener">StarTrail-org/DRPixel</a>
+      <p class="item-desc">DR Pixel: Page-Native Deep Research with Vision-Language Models — benchmark, evaluation harness and training code</p>
+      <div class="card-foot"><span class="badges">★ 43 · Python</span><span class="src">GitHub</span></div>
+    </article>
+    <article class="card">
+      <a class="card-title" href="https://github.com/InternLM/Sage-S2.1-Flash" target="_blank" rel="noopener">InternLM/Sage-S2.1-Flash</a>
+      <p class="item-desc">Sage S2.1 Flash — A scientific multimodal model. Explore through reasoning. Verify through action.</p>
+      <div class="card-foot"><span class="badges">★ 37</span><span class="src">GitHub</span></div>
+    </article></div></div>
+    </section>
+
+  <footer class="site-foot">
+    <a href="../index.html">← 최신 호로</a> · <a href="../archive.html">전체 아카이브</a>
+    <p>자동 수집 · HackerNews · ArXiv · GitHub</p>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var b=document.body; b.classList.add('has-tb');
+  // 다크모드
+  var dt=document.getElementById('darkToggle');
+  var saved=localStorage.getItem('aibrief-theme');
+  if(saved==='dark'){document.documentElement.setAttribute('data-theme','dark');dt.textContent='☀️ 라이트';}
+  dt.addEventListener('click',function(){
+    var dark=dt.textContent.indexOf('라이트')===-1;
+    if(dark){localStorage.setItem('aibrief-theme','dark');document.documentElement.setAttribute('data-theme','dark');dt.textContent='☀️ 라이트';}
+    else{localStorage.setItem('aibrief-theme','light');document.documentElement.removeAttribute('data-theme');dt.textContent='🌙 다크';}
+  });
+  // 검색 (호 내 하이라이팅 + 필터)
+  var s=document.getElementById('siteSearch');
+  s.addEventListener('input',function(){
+    var q=s.value.trim().toLowerCase();
+    var cards=document.querySelectorAll('.card,.row');
+    cards.forEach(function(c){
+      var t=c.textContent.toLowerCase();
+      var hit=!q||t.indexOf(q)>-1;
+      c.style.display=hit?'':'none';
+      c.querySelectorAll('mark.hl').forEach(function(m){c.replaceChild(document.createTextNode(m.textContent),m);c.normalize();});
+      if(q&&hit){var tt=c.innerHTML;
+        try{c.innerHTML=tt.replace(new RegExp('('+q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','ig'),'<mark class="hl">$1</mark>');}catch(e){}}
+    });
+    document.querySelectorAll('.block').forEach(function(bl){
+      var any=[].slice.call(bl.querySelectorAll('.card,.row')).some(function(c){return c.style.display!=='none';});
+      bl.style.display=(q&&!any)?'none':'';
+    });
+  });
+  // Google 번역 위젯 (키 불필요)
+  var g=document.createElement('script');
+  g.src='https://translate.google.com/translate_a/element.js?cb=__aibT';
+  window.__aibT=function(){
+    new google.translate.TranslateElement({pageLanguage:'en',includedLanguages:'ko,en',layout:google.translate.TranslateElement.InlineLayout.SIMPLE,autoDisplay:false},'gt-mount');
+    var sel=document.querySelector('#gt-mount .goog-te-combo');
+    if(sel){var o=document.createElement('option');o.value='ko';o.text='한국어';sel.add(o,sel.options[0]);}
+  };
+  document.body.appendChild(g);
+})();
+</script>
+
+</body>
+</html>
